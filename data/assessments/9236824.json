@@ -1,0 +1,54 @@
+{
+  "id": "9236824",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-06-29",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study explicitly examines Plasmodium falciparum infection. Title states 'Higher resistance to Plasmodium falciparum infection' and methods describe malarial parasite detection via blood films in field samples."
+      },
+      "reports_resistance_markers": {
+        "met": false,
+        "evidence": "The paper does not report molecular drug-resistance markers (pfk13, pfcrt, pfmdr1, dhfr, dhps, etc.). It is a clinical epidemiological study examining malaria prevalence in relation to sickle cell genotypes (HbAA, HbAS, HbSS), not molecular resistance genotyping."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No extractable per-locus marker frequencies are provided. The study reports malaria prevalence by hemoglobin genotype (e.g., '44.1% in HbAAs, 36.2% in HbASs, 20% in HbSSs'), which are clinical outcomes, not drug-resistance allele frequencies."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from Western Kenya (Kisumu area) near Lake Victoria. Methods state: 'study population was West Kenyan residents of the Kisumu area' and 'indigenous patients...who had resided in the area for at least 6 months or had migrated from an equally endemic area were included.' These are field/clinical isolates from Africa."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study—a cross-sectional survey of 773 subjects over 12 months with blood sampling, Hb-electrophoresis, and parasitology. Not a review, meta-analysis, or modelling paper."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "The paper describes a hospital-based cross-sectional survey with no mention of samples being part of a larger consortium, named cohort, or prior dataset collection. Routine single-site field collection with no evidence of overlap with other studies."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No reference to supplementary tables or online data repositories. The paper presents its core results (malaria prevalence by genotype and relative risk estimates) directly in the main text and tables. No pointer to supplementary frequency data."
+    },
+    "markers_found": [],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      1997
+    ],
+    "sample_size": 728,
+    "summary": "This is a cross-sectional survey of 728 West Kenyan residents examining P. falciparum parasitemia in relation to sickle cell hemoglobin genotypes. While it is a primary study of African field samples with P. falciparum, it does NOT report molecular drug-resistance markers or their frequencies. Instead, it reports clinical malaria prevalence. The paper is ineligible because it lacks the required molecular resistance marker data (criterion 2) and extractable per-locus marker frequencies (criterion 3).",
+    "exclusion_reasons": [
+      "Does not report molecular drug-resistance markers (pfk13, pfcrt, pfmdr1, dhfr, dhps, etc.); instead examines clinical malaria prevalence in relation to host hemoglobin genotype.",
+      "Does not report extractable per-locus resistance marker frequencies; reports only malaria prevalence (presence/absence of parasitemia) by hemoglobin genotype."
+    ]
+  }
+}

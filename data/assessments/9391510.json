@@ -1,0 +1,58 @@
+{
+  "id": "9391510",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-06-29",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "The study explicitly states it investigates 'Plasmodium falciparum' infections and focuses on 'infected blood samples taken from Tanzanian children.' The title and methods confirm P. falciparum monoinfection as an inclusion criterion."
+      },
+      "reports_resistance_markers": {
+        "met": true,
+        "evidence": "The study reports multiple molecular drug-resistance markers in the DHFR gene: codons 16, 51, 59, 108, and 164. The abstract states 'The occurrence of active site mutations in the Plasmodium falciparum gene sequence coding for dihydrofolate reductase (DHFR) is known to confer resistance to pyrimethamine.'"
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 provides clear numerator/denominator counts for each DHFR mutation pattern. For example: '108-Asn only: 2 (8.0%)' out of 25 sensitive samples; '108-Asn + 51-Ile + 59-Arg: 21 (84.0%)' out of 25 sensitive and '12 (63.3%)' out of 19 resistant samples. These are extractable per-locus frequencies with both counts and percentages."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from 'infected blood samples taken from Tanzanian children' in 'the village of Magoda, Tanga region, Tanzania.' The study explicitly includes only human field/clinical isolates: 'monoinfection with P. falciparum, an asexual parasitaemia of 800–80,000/ml blood' from enrolled children."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study: 'a second therapeutic study was undertaken in 1995 in the same area...to assess possible associations between in vivo test results and point mutations.' It reports original data collection and molecular analysis, not a review or meta-analysis."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "The study states samples were from a 1995 therapeutic study in Tanga region following a 1994 study by the same group (Rønn et al. 1996). While there is a relationship to a prior study from the same geographic area, the text clearly indicates these are new field collections from a distinct 1995 therapeutic trial with separate patient enrollment and molecular analysis. No evidence of sample overlap or use of a pre-existing consortium dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All extractable frequency data are presented in the main text Table 1, which shows DHFR mutation patterns with numerators and percentages for both sensitive (n=25) and resistant (n=19) groups. The PCR and restriction digestion methods are fully described in the Methods section. No reference to supplementary tables is made."
+    },
+    "markers_found": [
+      "DHFR_51_asparagine",
+      "DHFR_59_cysteine",
+      "DHFR_108_serine",
+      "DHFR_108_asparagine",
+      "DHFR_16_alanine",
+      "DHFR_164_isoleucine"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 44,
+    "summary": "This 1995 primary study examined DHFR mutations in 44 P. falciparum isolates from Tanzanian children treated with sulfadoxine/pyrimethamine. All 44 samples carried at least one DHFR mutation (codons 51, 59, or 108), with 75% showing the triple mutation 108-Asn + 51-Ile + 59-Arg. Extractable frequencies are clearly reported in Table 1. Samples are human field isolates from Tanzania. Notably, the study found no significant association between DHFR mutations and clinical resistance outcome.",
+    "exclusion_reasons": []
+  }
+}

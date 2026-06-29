@@ -1,0 +1,11 @@
+id,source,status,eligible,confidence,duplicate_risk,needs_supplement,markers,countries,years,sample_size,spec_version,model,first_seen,last_assessed,supp_attempts,flag_evidence,notes
+2187200,master,INELIGIBLE,False,high,none,False,,,,,1,haiku,2026-06-29,2026-06-29,0,,
+8888283,master,INELIGIBLE,False,high,none,False,,Gabon,1995; 1996,15,1,haiku,2026-06-29,2026-06-29,0,,
+9076734,master,INELIGIBLE,False,high,none,False,DHPS_S436F; DHPS_A437G; DHPS_A581G; DHPS_A613S; DHFR_S108N; DHFR_N51I; DHFR_C59R,Honduras; Kenya; Gambia; Thailand; Indochina,,,1,haiku,2026-06-29,2026-06-29,0,,
+9236824,master,INELIGIBLE,False,high,low,False,,Kenya,1997,766,1,haiku,2026-06-29,2026-06-29,0,,
+9391510,master,ELIGIBLE,True,high,low,False,DHFR codon 16; DHFR codon 51 (asparagine to isoleucine); DHFR codon 59 (cysteine to arginine); DHFR codon 108 (serine to asparagine); DHFR codon 164,Tanzania,1995,44,1,haiku,2026-06-29,2026-06-29,0,,
+9393853,master,INELIGIBLE,False,high,low,False,cg2 (encoding ~330 kDa protein); cg1; pfmdr1; dhfr/ts; eba175,Sudan; Uganda; Kenya; Mali; Thailand; Indochina; Brazil; South Africa,,,1,haiku,2026-06-29,2026-06-29,0,,
+9395372,master,ELIGIBLE,True,high,low,False,"DHFR 108; DHFR 51; DHFR 59; DHFR 164; DHFR 50 (new); DHFR 30 (Bolivia repeat, new); DHPS 437; DHPS 436; DHPS 613; DHPS 581; DHPS 540 (new)",Mali; Kenya; Malawi; Bolivia,1993; 1994; 1995; 1996,218,1,haiku,2026-06-29,2026-06-29,0,,
+9449279,master,ELIGIBLE,True,high,low,False,"DHFR codon 51 (Asn-51 wild-type, Ile-51 mutant); DHFR codon 59 (Cys-59 wild-type, Arg-59 mutant); DHFR codon 108 (Ser-108 wild-type, Asn-108 mutant); DHFR codon 164 (Ile-164 wild-type)",Kenya,1993; 1994; 1995,69,1,haiku,2026-06-29,2026-06-29,0,,
+9661026,master,INELIGIBLE,False,high,low,False,DHFR_51; DHFR_59; DHFR_108; DHFR_164; DHPS_436; DHPS_437; DHPS_540; DHPS_581; DHPS_613,Cameroon,1998,6,1,haiku,2026-06-29,2026-06-29,0,,
+9735930,master,ELIGIBLE,True,high,low,False,DHFR_16; DHFR_51; DHFR_59; DHFR_108; DHFR_164; DHPS_436; DHPS_437; DHPS_540; DHPS_581; DHPS_613,Tanzania,1995; 1996,72,1,haiku,2026-06-29,2026-06-29,0,,

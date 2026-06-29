@@ -1,0 +1,17 @@
+# --- Secrets: NEVER commit these ---
+# The real protection is keeping the key OUTSIDE this folder entirely; these
+# patterns are a backstop in case it ever lands in here.
+.env
+*-key.json
+*service-account*.json
+*credentials*.json
+client_secret*.json
+
+# --- Downloaded papers (may be closed-access / copyright) ---
+papers/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/

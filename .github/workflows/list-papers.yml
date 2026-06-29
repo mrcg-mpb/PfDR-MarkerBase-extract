@@ -1,0 +1,47 @@
+name: List papers
+
+# Runs on a schedule (roughly every 30 min — GitHub may delay it; that's fine),
+# and can also be triggered by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+# Needed so the job can commit the updated paper_list.txt back to the repo.
+permissions:
+  contents: write
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth
+
+      # Write the service-account key from the secret to a temp file OUTSIDE the
+      # repo working dir, so it can never be committed.
+      - name: Write service-account key
+        run: printf '%s' "$DRIVE_SA_KEY" > "$RUNNER_TEMP/key.json"
+        env:
+          DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
+
+      - name: List papers
+        run: python list_papers.py
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/key.json
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+
+      # Commit only if paper_list.txt actually changed (no noisy empty commits).
+      - name: Commit the updated list
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add paper_list.txt
+          git commit -m "Update paper list" || echo "No changes to commit"
+          git push || echo "Nothing to push"

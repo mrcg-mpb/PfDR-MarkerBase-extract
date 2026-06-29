@@ -143,13 +143,13 @@ already has a slot for it.
 
 ## A note on committed paper text
 
-The repo is **public** on purpose, for transparency of the code. `roster.csv`
-holds only safe, structured fields (status, booleans, marker names, countries,
-years) plus a one-line `flag_evidence` quote carried *only* for flagged papers.
-Short quotes are fine — a journal owns the typesetting, not the underlying facts
-or a sentence of text. The firm rule is simply: **never store a whole paper's
-text** (and the PDFs themselves are never committed — they're fetched in memory,
-and `papers/` is gitignored).
+The repo is **public** on purpose, for transparency of the code. `roster.csv` is
+lightweight — status + a few booleans, no paper text at all. The reasoning
+(per-criterion evidence quotes, exclusion reasons, the model's summary) lives in
+`data/assessments/<id>.json`. Those are short snippets, which is fine — a journal
+owns the typesetting, not the underlying facts or a sentence of text. The firm
+rule is simply: **never store a whole paper's text** (and the PDFs themselves are
+never committed — they're fetched in memory, and `papers/` is gitignored).
 
 ## Secret hygiene
 
@@ -165,7 +165,7 @@ The README is deliberately high-level; the detail lives here.
 
 ```
 src/     all the code
-data/    state — roster.csv (bot), exclude.txt + decisions.yaml (you)
+data/    state — roster.csv + assessments/<id>.json (bot), exclude.txt + decisions.yaml (you)
 docs/    NOTES.md + the generated stats.svg
 .github/ the two scheduled workflows
 requirements.txt   pipeline deps (top level, by convention)
@@ -186,7 +186,8 @@ requirements.txt   pipeline deps (top level, by convention)
 
 | File | Owner | Purpose |
 |---|---|---|
-| `data/roster.csv` | bot | One row per paper: status + light metadata. |
+| `data/roster.csv` | bot | Lightweight: one row per paper — status + at-a-glance flags. |
+| `data/assessments/<id>.json` | bot | The full eligibility decision per paper (the "why"). |
 | `data/exclude.txt` | you | Papers to skip entirely. One filename per line. |
 | `data/decisions.yaml` | you | `duplicate` / `unique` rulings on flagged papers. |
 

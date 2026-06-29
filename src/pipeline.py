@@ -36,6 +36,7 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 ROSTER = DATA / "roster.csv"
 EXCLUDE = DATA / "exclude.txt"
 DECISIONS = DATA / "decisions.yaml"
+ASSESS = DATA / "assessments"   # per-paper <id>.json eligibility decisions
 
 MODEL = os.environ.get("MARKERBASE_MODEL", "haiku")
 MAX_PER_RUN = int(os.environ.get("MARKERBASE_MAX_PER_RUN", "100"))
@@ -45,10 +46,6 @@ TRUE_STRINGS = {"true", "1", "yes"}
 
 def today():
     return date.today().isoformat()
-
-
-def join(values):
-    return "; ".join(str(v) for v in values)
 
 
 def is_true(value):
@@ -65,18 +62,15 @@ def apply_decisions(roster, decisions):
             continue  # only act on papers currently awaiting your ruling
         if verdict in ("duplicate", "dup", "exclude"):
             row["status"] = store.DUPLICATE
-            row["flag_evidence"] = ""
             row["notes"] = "ruled duplicate via decisions.yaml"
         elif verdict in ("unique", "proceed", "keep"):
             # Cleared as unique. If the stored assessment also wanted a
             # supplement, send it there; otherwise it's ready for extraction.
             if is_true(row.get("needs_supplement")):
                 row["status"] = store.AWAIT_SUPPLEMENT
-                row["flag_evidence"] = ""
                 row["notes"] = "ruled unique; now awaiting supplement"
             else:
                 row["status"] = store.ELIGIBLE
-                row["flag_evidence"] = ""
                 row["notes"] = "ruled unique via decisions.yaml"
 
 
@@ -89,7 +83,6 @@ def _base_row(existing, s, source=None):
         "source": source if source is not None else existing.get("source", ""),
         "first_seen": existing.get("first_seen") or today(),
         "notes": existing.get("notes", ""),
-        "flag_evidence": "",
     }
 
 
@@ -103,13 +96,13 @@ def collision_row(existing, s, files):
     row = _base_row(existing, s)
     sources = ", ".join(sorted({f["source"] or "root" for f in files}))
     row.update(status=store.NAME_COLLISION,
-               flag_evidence=f"{len(files)} files share this name (in: {sources})",
-               notes="rename so each PDF has a unique name")
+               notes=f"{len(files)} files share this name (in: {sources}) — rename so each is unique")
     return row
 
 
 def route(existing, s, assessment, mode, source):
-    """Turn an assessment into the paper's new roster row."""
+    """Decide the new status, write the full per-paper decision, and return the
+    lightweight roster row."""
     row = _base_row(existing, s, source)
     attempts = int((existing or {}).get("supp_attempts") or 0)
     if mode == "resume":
@@ -122,27 +115,34 @@ def route(existing, s, assessment, mode, source):
         return row
 
     a = assessment
+    # The roster keeps only at-a-glance flags...
     row.update(
         eligible=a.eligible,
         confidence=a.confidence.value,
         duplicate_risk=a.duplicate_risk.level.value,
         needs_supplement=a.supplement.needed,
-        markers=join(a.markers_found),
-        countries=join(a.countries),
-        years=join(a.collection_years),
-        sample_size="" if a.sample_size is None else a.sample_size,
     )
+    # ...while the full reasoning (every criterion + evidence, exclusion reasons,
+    # markers, countries, years, sample size) goes to assessments/<id>.json.
+    store.save_assessment(ASSESS, s, {
+        "id": s,
+        "source": source,
+        "model": MODEL,
+        "spec_version": markerbase.SPEC_VERSION,
+        "assessed": today(),
+        "assessment": a.model_dump(mode="json"),
+    })
 
     if not a.eligible:
         row["status"] = store.INELIGIBLE
         return row
     if a.duplicate_risk.level.value == "high":
-        row.update(status=store.REVIEW_DUPLICATE, flag_evidence=a.duplicate_risk.evidence[:300])
+        row["status"] = store.REVIEW_DUPLICATE
         return row
     if a.supplement.needed:
-        note = "supplement uploaded but data still not found" if mode == "resume" else ""
-        row.update(status=store.AWAIT_SUPPLEMENT,
-                   flag_evidence=a.supplement.evidence[:300], notes=note)
+        row["status"] = store.AWAIT_SUPPLEMENT
+        if mode == "resume":
+            row["notes"] = "supplement uploaded but data still not found"
         return row
     row["status"] = store.ELIGIBLE
     return row

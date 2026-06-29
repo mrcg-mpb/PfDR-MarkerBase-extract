@@ -22,7 +22,9 @@ from pathlib import Path
 
 import store
 
-ROSTER = Path(__file__).resolve().parent.parent / "data" / "roster.csv"
+DATA = Path(__file__).resolve().parent.parent / "data"
+ROSTER = DATA / "roster.csv"
+ASSESS = DATA / "assessments"
 MARKER = "<!-- markerbase-attention -->"   # hidden tag to re-find our issue
 TITLE = "📋 MarkerBase: papers needing attention"
 
@@ -30,7 +32,7 @@ SECTIONS = [
     (store.REVIEW_DUPLICATE, "🔁 Possible duplicates — rule on each in `decisions.yaml`",
      "Add a line `id: duplicate` or `id: unique` to decisions.yaml."),
     (store.AWAIT_SUPPLEMENT, "📎 Waiting on supplementary files",
-     "Upload the files to Drive under `supplement/<id>/`, then the pipeline resumes them."),
+     "Upload the files to Drive in a folder named `<id>` under the supplements folder."),
     (store.NAME_COLLISION, "⚠️ Duplicate filenames in Drive",
      "Two files share this name — rename so each PDF is unique."),
 ]
@@ -41,6 +43,21 @@ def load_rows():
         return []
     with open(ROSTER, newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
+
+
+def flag_reason(row):
+    """The short 'why' for a flagged paper — pulled from its assessment file
+    (or the roster note for collisions, which have no assessment)."""
+    status = row.get("status")
+    if status == store.NAME_COLLISION:
+        return row.get("notes", "")
+    rec = store.load_assessment(ASSESS, row["id"]) or {}
+    a = rec.get("assessment", {})
+    if status == store.REVIEW_DUPLICATE:
+        return a.get("duplicate_risk", {}).get("evidence", "") or row.get("notes", "")
+    if status == store.AWAIT_SUPPLEMENT:
+        return a.get("supplement", {}).get("evidence", "") or row.get("notes", "")
+    return row.get("notes", "")
 
 
 def build_body(rows):
@@ -62,7 +79,7 @@ def build_body(rows):
         lines.append(f"_{action}_")
         lines.append("")
         for r in sorted(items, key=lambda x: x["id"]):
-            note = r.get("flag_evidence") or r.get("notes") or ""
+            note = flag_reason(r)
             extra = f" — {note}" if note else ""
             lines.append(f"- `{r['id']}`{extra}")
         lines.append("")

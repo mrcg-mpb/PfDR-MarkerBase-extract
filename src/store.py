@@ -3,17 +3,21 @@ State files for the pipeline.
 
 Three files, split by who edits them (see NOTES.md):
 
-  roster.csv     — BOT-OWNED. One row per paper, its current state + light,
-                   safe-to-commit metadata. You only ever *read* this.
-  exclude.txt    — YOU edit (in the GitHub web UI). One filename per line,
-                   '#' for comments. Papers here are skipped, never assessed.
-  decisions.yaml — YOU edit. A flat mapping `id: verdict` where verdict is
-                   `duplicate` or `unique`, resolving duplicate-risk flags.
+  roster.csv          — BOT-OWNED. One LIGHTWEIGHT row per paper: its current
+                        state + a few at-a-glance flags. You only ever *read* it.
+  assessments/<id>.json — BOT-OWNED. The full eligibility decision for one paper:
+                        every criterion with its evidence, exclusion reasons, the
+                        duplicate-risk and supplement findings. The "why".
+  exclude.txt         — YOU edit (in the GitHub web UI). One filename per line,
+                        '#' for comments. Papers here are skipped, never assessed.
+  decisions.yaml      — YOU edit. A flat mapping `id: verdict` where verdict is
+                        `duplicate` or `unique`, resolving duplicate-risk flags.
 
 Anything you hand-edit is a line-based text format (plain lines / flat YAML),
 never CSV — so a spreadsheet can never mangle a PubMed-ID key.
 """
 import csv
+import json
 from pathlib import Path
 
 # --- Status values (a paper's current stage) ------------------------------
@@ -28,14 +32,14 @@ NAME_COLLISION = "NAME_COLLISION"      # two Drive files share this name — ren
 # Statuses that need your attention — surfaced in the weekly digest.
 OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, NAME_COLLISION)
 
-# CSV column order. Kept to safe, structured fields (no free-text quotes from
-# papers) except `flag_evidence`, a one-line reason carried only for flagged rows.
+# CSV column order — deliberately lightweight: state + routing flags only. The
+# detail (markers, countries, evidence, exclusion reasons, sample size) lives in
+# the per-paper assessments/<id>.json, not here.
 ROSTER_FIELDS = [
     "id", "source", "status", "eligible", "confidence",
     "duplicate_risk", "needs_supplement",
-    "markers", "countries", "years", "sample_size",
     "spec_version", "model", "first_seen", "last_assessed",
-    "supp_attempts", "flag_evidence", "notes",
+    "supp_attempts", "notes",
 ]
 
 
@@ -64,6 +68,26 @@ def save_roster(path, rows):
         for rid in sorted(rows):
             row = rows[rid]
             writer.writerow({k: row.get(k, "") for k in ROSTER_FIELDS})
+
+
+def assessment_path(assess_dir, paper_id):
+    return Path(assess_dir) / f"{paper_id}.json"
+
+
+def save_assessment(assess_dir, paper_id, record):
+    """Write the full eligibility decision for one paper as pretty JSON."""
+    path = assessment_path(assess_dir, paper_id)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n",
+                    encoding="utf-8")
+
+
+def load_assessment(assess_dir, paper_id):
+    """Return the per-paper assessment record, or None if there isn't one."""
+    path = assessment_path(assess_dir, paper_id)
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def load_exclude(path):

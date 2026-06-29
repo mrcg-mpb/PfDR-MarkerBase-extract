@@ -1,0 +1,58 @@
+name: Process papers
+
+# Runs every 4 hours, and can be triggered by hand from the Actions tab.
+# This step is silent — it never notifies you; the weekly digest does that.
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+# Needed so the job can commit the updated roster back to the repo.
+permissions:
+  contents: write
+
+# Don't let two scheduled runs overlap and race on the commit.
+concurrency:
+  group: process
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Write the service-account key OUTSIDE the repo working dir so it can
+      # never be committed.
+      - name: Write service-account key
+        run: printf '%s' "$DRIVE_SA_KEY" > "$RUNNER_TEMP/key.json"
+        env:
+          DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
+
+      - name: Run pipeline
+        run: python pipeline.py
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/key.json
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+          DRIVE_SUPPLEMENT_FOLDER_ID: ${{ secrets.DRIVE_SUPPLEMENT_FOLDER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MARKERBASE_MODEL: haiku
+          MARKERBASE_MAX_PER_RUN: "100"
+
+      # Commit only if the roster actually changed (no noisy empty commits).
+      - name: Commit the updated roster
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add roster.csv
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Update roster"
+          git pull --rebase --autostash
+          git push

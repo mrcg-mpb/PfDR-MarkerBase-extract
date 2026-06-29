@@ -1,0 +1,14 @@
+# Your rulings on papers the pipeline flagged as possible duplicates
+# (status REVIEW_DUPLICATE in roster.csv, listed in the weekly digest).
+#
+# One line per paper:  <id>: <verdict>
+#   verdict = duplicate  -> paper is dropped (terminal status DUPLICATE)
+#   verdict = unique     -> paper proceeds (to extraction, or to awaiting its
+#                           supplement if it also needs one)
+#
+# Use the same id as in roster.csv (the filename without ".pdf"). A trailing
+# "# comment" is fine. Edit this directly in the GitHub web UI.
+#
+# Example:
+#   12345678: duplicate   # subset of the 7-country consortium paper
+#   23456789: unique      # distinct cohort, keep

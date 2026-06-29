@@ -1,0 +1,5 @@
+id,status,eligible,confidence,duplicate_risk,needs_supplement,markers,countries,years,sample_size,spec_version,model,first_seen,last_assessed,supp_attempts,flag_evidence,notes
+111,INELIGIBLE,False,,,,pfk13; pfcrt,,,,,,,,,,
+222,REVIEW_DUPLICATE,,,,True,,,,,,,,,,part of the 7-country cohort,
+333,AWAIT_SUPPLEMENT,,,,,,,,,,,,,,counts in Suppl. Table S3,
+444,NAME_COLLISION,,,,,,,,,,,,,,2 Drive files share this name,

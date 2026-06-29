@@ -1,0 +1,30 @@
+name: Weekly digest
+
+# Friday 06:00 UTC. London is UTC in winter (GMT) and UTC+1 in summer (BST),
+# so this lands at 06:00 your time in winter and 07:00 in summer — GitHub cron
+# has no daylight-saving awareness. Also triggerable by hand for testing.
+on:
+  schedule:
+    - cron: "0 6 * * 5"
+  workflow_dispatch:
+
+# Needed to open/update/close the attention issue.
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build digest
+        run: python digest.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}

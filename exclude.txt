@@ -1,0 +1,9 @@
+# Manual exclude list — papers to skip entirely (never assessed).
+#
+# One filename per line; the trailing ".pdf" is optional. Use the same
+# structured name you give the PDF in Drive (e.g. a PubMed ID). Lines starting
+# with "#" and blank lines are ignored. Edit this directly in the GitHub web UI.
+#
+# Example:
+#   12345678
+#   23456789.pdf   # off-topic editorial

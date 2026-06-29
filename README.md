@@ -1,63 +1,90 @@
-# Anthropic API exploration
+# PfDR MarkerBase — extraction pipeline
 
-Five tiny scripts to get a feel for the Claude API. Each costs a fraction of a
-cent to run — your $20 covers thousands of these.
+Automated triage of papers for a database of *P. falciparum* drug-resistance
+marker frequencies. PDFs land in a Google Drive folder; this repo watches that
+folder, judges each paper for eligibility, and tracks where every paper is in
+the pipeline — all via GitHub Actions, with a weekly digest of anything that
+needs a human.
 
-## One-time setup
+## The flow
 
-Install the libraries (just once — this has nothing to do with the API key):
+```
+Drive inbox (PDFs)
+      │   process.yml — every 4h, silent
+      ▼
+  GATE 1: on exclude.txt?  ── yes ─► EXCLUDED            (terminal)
+      │ no
+      ▼
+  GATE 2: eligibility agent (markerbase.py)
+      ├─ not eligible ─────────────► INELIGIBLE          (terminal, the majority)
+      ├─ high duplicate risk ──────► REVIEW_DUPLICATE     (you rule in decisions.yaml)
+      ├─ data in missing supplement ► AWAIT_SUPPLEMENT    (you upload to Drive)
+      └─ clean ────────────────────► ELIGIBLE            (ready for extraction, stage 2)
 
-```bash
-pip install anthropic pydantic
+digest.yml — Friday 06:00 UTC ─► one GitHub issue listing everything outstanding
 ```
 
-## Each terminal session
+## Files you edit (in the GitHub web UI)
 
-Set the key in the specific terminal where you want to run these. It lives only
-in that terminal and vanishes when you close it:
-
-```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
-```
-
-Keeping it per-terminal (rather than in `~/.zshrc`) is deliberate: only this
-terminal bills the API. Claude Code and everything else keep using your
-subscription — a globally-set key would get picked up by Claude Code and billed
-to the API instead.
-
-Check what a terminal currently has (without printing the secret):
-
-```bash
-[ -n "$ANTHROPIC_API_KEY" ] && echo "API key set" || echo "no API key here"
-```
-
-## Run them
-
-```bash
-python 01_hello.py
-python 02_system_prompt.py
-python 03_structured_output.py
-python 04_eligibility.py
-python 05_count_tokens.py
-```
-
-## What each one teaches
-
-| Script | Idea |
+| File | What it's for |
 |---|---|
-| `01_hello.py` | A basic call + reading token usage (your cost meter). |
-| `02_system_prompt.py` | Steering the model's role/behaviour with a system prompt. |
-| `03_structured_output.py` | **Forcing schema-shaped output — the core of the extraction pipeline.** |
-| `04_eligibility.py` | A yes/no judgment with reasoning (mirrors pipeline Step 4). |
-| `05_count_tokens.py` | Estimating cost before sending (a free call). |
+| [`exclude.txt`](exclude.txt) | Papers to skip entirely. One filename per line. |
+| [`decisions.yaml`](decisions.yaml) | Your `duplicate` / `unique` ruling on flagged papers. |
 
-## Things to try
+## Files the bot owns (you only read)
 
-- In any script, change `MODEL` between `claude-haiku-4-5` (cheapest),
-  `claude-sonnet-4-6` (balanced), and `claude-opus-4-8` (smartest) and rerun the
-  same prompt. Comparing them is the single most useful exercise here — it's the
-  same Sonnet-vs-Opus tradeoff your real pipeline depends on.
-- Linger on `03_structured_output.py`: feed it messier or ambiguous text and
-  watch how it copes. That's exactly the probing the real validation step does.
-- Watch the token counts printed at the end of each run — that's your cost
-  intuition building.
+| File | What it is |
+|---|---|
+| `roster.csv` | One row per paper: its current status + light metadata. The source of truth. |
+
+## Code
+
+| File | Role |
+|---|---|
+| [`pipeline.py`](pipeline.py) | The processing driver (run by `process.yml`). |
+| [`digest.py`](digest.py) | The weekly digest (run by `digest.yml`). |
+| [`markerbase.py`](markerbase.py) | Eligibility spec + the structured assessment call. |
+| [`drive.py`](drive.py) | Google Drive access (list / fetch / supplements). |
+| [`store.py`](store.py) | Reads/writes the roster, exclude list, and decisions. |
+
+## Secrets (repo settings → Secrets and variables → Actions)
+
+| Secret | Used for |
+|---|---|
+| `DRIVE_SA_KEY` | Drive service-account JSON key (full file contents). |
+| `DRIVE_FOLDER_ID` | Top `papers` folder (walked recursively — see below). |
+| `DRIVE_SUPPLEMENT_FOLDER_ID` | Top supplements folder, same tree shape (optional). |
+| `ANTHROPIC_API_KEY` | The eligibility assessment (billed per new paper). |
+
+`GITHUB_TOKEN` is provided automatically — no setup needed for the digest.
+
+## Drive layout & contributor access
+
+```
+papers/                ← shared with the SERVICE ACCOUNT (Viewer)
+├── master/            ←   your own PDFs (incl. institutional-access ones)
+│     └── 111.pdf
+├── alice/             ← shared with alice only (Editor) — she sees ONLY this
+│     └── 222.pdf
+└── bob/               ← shared with bob only (Editor)
+      └── 333.pdf
+```
+
+The pipeline **walks** this tree read-only (it never moves files) and tags each
+PDF with its source folder (the `source` column in the roster). Contributors
+only ever see their own folder, so institutional PDFs in `master/` stay private.
+The supplements folder mirrors this shape, with a `<paper-id>/` folder inside any
+contributor's subfolder. Adding a contributor = create + share their subfolder;
+no secret or code change needed.
+
+See [NOTES.md](NOTES.md) for how the Drive access works and the design rationale.
+
+## Running locally
+
+```bash
+pip install -r requirements.txt
+export GOOGLE_APPLICATION_CREDENTIALS=~/.secrets/pfdr-markerbase-key.json
+export DRIVE_FOLDER_ID=...            # and DRIVE_SUPPLEMENT_FOLDER_ID if used
+export ANTHROPIC_API_KEY=sk-ant-...
+python pipeline.py
+```

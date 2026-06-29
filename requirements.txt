@@ -1,0 +1,7 @@
+# Pipeline dependencies (used by process.yml / pipeline.py).
+# The weekly digest (digest.py) needs none of these — it's stdlib only.
+google-api-python-client
+google-auth
+anthropic
+pydantic
+pyyaml

@@ -18,10 +18,11 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 import store
 
-ROSTER = "roster.csv"
+ROSTER = Path(__file__).resolve().parent.parent / "data" / "roster.csv"
 MARKER = "<!-- markerbase-attention -->"   # hidden tag to re-find our issue
 TITLE = "📋 MarkerBase: papers needing attention"
 

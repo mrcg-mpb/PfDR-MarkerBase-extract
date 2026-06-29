@@ -26,14 +26,16 @@ import os
 import sys
 from collections import Counter
 from datetime import date
+from pathlib import Path
 
 import drive
 import markerbase
 import store
 
-ROSTER = "roster.csv"
-EXCLUDE = "exclude.txt"
-DECISIONS = "decisions.yaml"
+DATA = Path(__file__).resolve().parent.parent / "data"
+ROSTER = DATA / "roster.csv"
+EXCLUDE = DATA / "exclude.txt"
+DECISIONS = DATA / "decisions.yaml"
 
 MODEL = os.environ.get("MARKERBASE_MODEL", "haiku")
 MAX_PER_RUN = int(os.environ.get("MARKERBASE_MAX_PER_RUN", "100"))
@@ -210,6 +212,13 @@ def main():
         print(f"  · {s}: {roster[s]['status']}")
 
     store.save_roster(ROSTER, roster)
+
+    # Refresh the status visual embedded in the README. Non-fatal if it fails.
+    try:
+        import stats
+        stats.generate()
+    except Exception as e:
+        print(f"(stats SVG not updated: {e})")
 
     counts = Counter(r.get("status", "") for r in roster.values())
     print(f"\nAssessed {assessed} this run "

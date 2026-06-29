@@ -143,15 +143,88 @@ already has a slot for it.
 
 ## A note on committed paper text
 
-`roster.csv` holds only safe, structured fields (status, booleans, marker names,
-countries, years) plus a one-line `flag_evidence` quote carried *only* for
-flagged papers (so the digest can tell you why). If this repo is **public**, even
-those short quotes are paper-derived text. The clean fix is to make the repo
-**private** — then storing fuller assessment output is fine too. Recommended,
-given the repo now holds assessment results rather than just filenames.
+The repo is **public** on purpose, for transparency of the code. `roster.csv`
+holds only safe, structured fields (status, booleans, marker names, countries,
+years) plus a one-line `flag_evidence` quote carried *only* for flagged papers.
+Short quotes are fine — a journal owns the typesetting, not the underlying facts
+or a sentence of text. The firm rule is simply: **never store a whole paper's
+text** (and the PDFs themselves are never committed — they're fetched in memory,
+and `papers/` is gitignored).
 
 ## Secret hygiene
 
 - Both secrets live **outside** the repo (`~/.secrets/…`), referenced via env vars.
 - `.gitignore` is a backstop (excludes key files, `.env`, `papers/`).
 - The real protection is keeping the JSON key out of the project folder entirely.
+
+## Repository reference
+
+The README is deliberately high-level; the detail lives here.
+
+### Layout
+
+```
+src/     all the code
+data/    state — roster.csv (bot), exclude.txt + decisions.yaml (you)
+docs/    NOTES.md + the generated stats.svg
+.github/ the two scheduled workflows
+requirements.txt   pipeline deps (top level, by convention)
+```
+
+### Code
+
+| File | Role |
+|---|---|
+| `src/pipeline.py` | The processing driver (run by `process.yml`). |
+| `src/digest.py` | The weekly digest (run by `digest.yml`). |
+| `src/stats.py` | Regenerates `docs/stats.svg` from the roster. |
+| `src/markerbase.py` | Eligibility spec + the structured assessment call. |
+| `src/drive.py` | Google Drive access (walk / fetch / supplements). |
+| `src/store.py` | Reads/writes the roster, exclude list, and decisions. |
+
+### State files
+
+| File | Owner | Purpose |
+|---|---|---|
+| `data/roster.csv` | bot | One row per paper: status + light metadata. |
+| `data/exclude.txt` | you | Papers to skip entirely. One filename per line. |
+| `data/decisions.yaml` | you | `duplicate` / `unique` rulings on flagged papers. |
+
+### Secrets (repo settings → Secrets and variables → Actions)
+
+| Secret | Used for |
+|---|---|
+| `DRIVE_SA_KEY` | Drive service-account JSON key (full file contents). |
+| `DRIVE_FOLDER_ID` | Top `papers` folder (walked recursively). |
+| `DRIVE_SUPPLEMENT_FOLDER_ID` | Top supplements folder, same tree shape (optional). |
+| `ANTHROPIC_API_KEY` | The eligibility assessment (billed per new paper). |
+
+`GITHUB_TOKEN` is provided automatically — no setup needed for the digest.
+
+### Drive layout & contributor access
+
+```
+papers/                ← shared with the SERVICE ACCOUNT (Viewer)
+├── master/            ←   your own PDFs (incl. institutional-access ones)
+│     └── 111.pdf
+├── alice/             ← shared with alice only (Editor) — she sees ONLY this
+│     └── 222.pdf
+└── bob/               ← shared with bob only (Editor)
+      └── 333.pdf
+```
+
+The pipeline walks this tree read-only (never moves files), tagging each PDF with
+its source folder. Contributors see only their own folder, so institutional PDFs
+in `master/` stay private. Supplements mirror this shape, with a `<paper-id>/`
+folder inside any contributor's subfolder. Adding a contributor = create + share
+their subfolder; no secret or code change needed.
+
+### Running locally
+
+```bash
+pip install -r requirements.txt
+export GOOGLE_APPLICATION_CREDENTIALS=~/.secrets/pfdr-markerbase-key.json
+export DRIVE_FOLDER_ID=...            # and DRIVE_SUPPLEMENT_FOLDER_ID if used
+export ANTHROPIC_API_KEY=sk-ant-...
+python src/pipeline.py
+```

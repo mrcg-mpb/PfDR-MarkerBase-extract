@@ -37,7 +37,7 @@ jobs:
           DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
 
       - name: Run pipeline
-        run: python pipeline.py
+        run: python src/pipeline.py
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/key.json
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
@@ -46,12 +46,12 @@ jobs:
           MARKERBASE_MODEL: haiku
           MARKERBASE_MAX_PER_RUN: "100"
 
-      # Commit only if the roster actually changed (no noisy empty commits).
-      - name: Commit the updated roster
+      # Commit only if something actually changed (no noisy empty commits).
+      - name: Commit the updated roster + stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add roster.csv
+          git add data/roster.csv docs/stats.svg
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "Update roster"
           git pull --rebase --autostash

@@ -1,7 +1,7 @@
-name: Process papers
+name: Eligibility
 
-# Runs every 4 hours, and can be triggered by hand from the Actions tab.
-# This step is silent — it never notifies you; the weekly digest does that.
+# Stage 1. Runs every 4 hours, and can be triggered by hand from the Actions tab.
+# Silent — it never notifies you; the weekly digest does that.
 on:
   schedule:
     - cron: "0 */4 * * *"
@@ -13,11 +13,11 @@ permissions:
 
 # Don't let two scheduled runs overlap and race on the commit.
 concurrency:
-  group: process
+  group: eligibility
   cancel-in-progress: false
 
 jobs:
-  process:
+  eligibility:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,8 +36,8 @@ jobs:
         env:
           DRIVE_SA_KEY: ${{ secrets.DRIVE_SA_KEY }}
 
-      - name: Run pipeline
-        run: python src/pipeline.py
+      - name: Run eligibility
+        run: python src/run_eligibility.py
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/key.json
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
@@ -47,12 +47,12 @@ jobs:
           MARKERBASE_MAX_PER_RUN: "100"
 
       # Commit only if something actually changed (no noisy empty commits).
-      - name: Commit the updated roster + stats
+      - name: Commit the updated roster + eligibility records
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/roster.csv data/assessments docs/stats.svg
+          git add data/roster.csv data/eligibility docs/stats.svg
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Update roster"
+          git commit -m "Update roster (eligibility)"
           git pull --rebase --autostash
           git push

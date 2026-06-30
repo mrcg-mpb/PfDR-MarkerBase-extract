@@ -1,18 +1,19 @@
 """
-The processing driver — run on a schedule by .github/workflows/process.yml.
+Stage 1 — the eligibility driver. Run on a schedule by
+.github/workflows/eligibility.yml.
 
 Each run:
   1. Lists the PDFs currently in the Drive inbox folder.
-  2. Applies your rulings from decisions.yaml to any parked duplicates.
+  2. Applies your rulings from duplicate_decisions.yaml to any parked duplicates.
   3. Figures out what to work on:
        - new papers (in Drive, not yet in roster.csv)
        - AWAIT_SUPPLEMENT papers whose supplement folder has now appeared
      ...skipping anything on exclude.txt or with a clashing filename.
   4. Assesses up to MARKERBASE_MAX_PER_RUN papers (the rest wait for next run).
-  5. Routes each to a status and writes roster.csv.
+  5. Routes each to a status, writes roster.csv + eligibility/<id>.json.
 
 It never notifies you — the weekly digest (digest.py) does that. The roster is
-the durable queue in between.
+the durable queue between this stage and extraction.
 
 Env:
   GOOGLE_APPLICATION_CREDENTIALS  path to the Drive service-account key
@@ -29,14 +30,14 @@ from datetime import date
 from pathlib import Path
 
 import drive
-import markerbase
+import eligibility as agent
 import store
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 ROSTER = DATA / "roster.csv"
 EXCLUDE = DATA / "exclude.txt"
-DECISIONS = DATA / "decisions.yaml"
-ASSESS = DATA / "assessments"   # per-paper <id>.json eligibility decisions
+DECISIONS = DATA / "duplicate_decisions.yaml"
+ASSESS = DATA / "eligibility"   # per-paper <id>.json eligibility decisions
 
 MODEL = os.environ.get("MARKERBASE_MODEL", "haiku")
 MAX_PER_RUN = int(os.environ.get("MARKERBASE_MAX_PER_RUN", "100"))
@@ -55,14 +56,14 @@ def is_true(value):
 # --- Applying your duplicate rulings ---------------------------------------
 
 def apply_decisions(roster, decisions):
-    """Resolve papers parked at REVIEW_DUPLICATE using decisions.yaml."""
+    """Resolve papers parked at REVIEW_DUPLICATE using duplicate_decisions.yaml."""
     for s, verdict in decisions.items():
         row = roster.get(s)
         if not row or row.get("status") != store.REVIEW_DUPLICATE:
             continue  # only act on papers currently awaiting your ruling
         if verdict in ("duplicate", "dup", "exclude"):
             row["status"] = store.DUPLICATE
-            row["notes"] = "ruled duplicate via decisions.yaml"
+            row["notes"] = "ruled duplicate via duplicate_decisions.yaml"
         elif verdict in ("unique", "proceed", "keep"):
             # Cleared as unique. If the stored assessment also wanted a
             # supplement, send it there; otherwise it's ready for extraction.
@@ -71,7 +72,7 @@ def apply_decisions(roster, decisions):
                 row["notes"] = "ruled unique; now awaiting supplement"
             else:
                 row["status"] = store.ELIGIBLE
-                row["notes"] = "ruled unique via decisions.yaml"
+                row["notes"] = "ruled unique via duplicate_decisions.yaml"
 
 
 # --- Row builders ----------------------------------------------------------
@@ -107,7 +108,7 @@ def route(existing, s, assessment, mode, source):
     attempts = int((existing or {}).get("supp_attempts") or 0)
     if mode == "resume":
         attempts += 1
-    row.update(last_assessed=today(), spec_version=markerbase.SPEC_VERSION,
+    row.update(last_assessed=today(), spec_version=agent.SPEC_VERSION,
                model=MODEL, supp_attempts=attempts)
 
     if assessment is None:
@@ -123,12 +124,12 @@ def route(existing, s, assessment, mode, source):
         needs_supplement=a.supplement.needed,
     )
     # ...while the full reasoning (every criterion + evidence, exclusion reasons,
-    # markers, countries, years, sample size) goes to assessments/<id>.json.
+    # markers, countries, years, sample size) goes to eligibility/<id>.json.
     store.save_assessment(ASSESS, s, {
         "id": s,
         "source": source,
         "model": MODEL,
-        "spec_version": markerbase.SPEC_VERSION,
+        "spec_version": agent.SPEC_VERSION,
         "assessed": today(),
         "assessment": a.model_dump(mode="json"),
     })
@@ -202,7 +203,7 @@ def main():
         try:
             supp = drive.fetch_supplement_pdfs(svc, supp_folder_id, s) if mode == "resume" else None
             pdf_bytes = drive.fetch_bytes(svc, fid)
-            resp = markerbase.assess_pdf_bytes(pdf_bytes, model_key=MODEL, supplement_bytes=supp)
+            resp = agent.assess_pdf_bytes(pdf_bytes, model_key=MODEL, supplement_bytes=supp)
         except Exception as e:  # don't let one bad paper abort the whole run
             print(f"  ! {s}: {e}")
             failed += 1

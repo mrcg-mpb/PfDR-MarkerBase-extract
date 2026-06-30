@@ -161,35 +161,52 @@ never committed — they're fetched in memory, and `papers/` is gitignored).
 
 The README is deliberately high-level; the detail lives here.
 
+### Two stages
+
+- **Stage 1 — eligibility** (`run_eligibility.py`, `eligibility.yml`, every 4h):
+  triage PDFs against the eligibility spec; ELIGIBLE papers wait for stage 2.
+- **Stage 2 — extraction** (`run_extraction.py`, `extraction.yml`, manual): pull
+  STAVE-shaped data from ELIGIBLE papers and validate it with the real STAVE R
+  package, repairing up to 5× before giving up (EXTRACTION_FAILED). Output lands
+  in `data/extracted/<id>/`. Pushing to the separate data repo is a later step.
+
 ### Layout
 
 ```
-src/     all the code
-data/    state — roster.csv + assessments/<id>.json (bot), exclude.txt + decisions.yaml (you)
+config/  target_loci.csv — the curated target codon positions (you maintain)
+src/     all the code (+ stave_validate.R, the R guardrail)
+data/    state — roster.csv, eligibility/<id>.json, extracted/<id>/ (bot);
+         exclude.txt, duplicate_decisions.yaml (you)
 docs/    NOTES.md + the generated stats.svg
-.github/ the two scheduled workflows
-requirements.txt   pipeline deps (top level, by convention)
+.github/ eligibility.yml, extraction.yml, digest.yml
+requirements.txt   Python deps (top level, by convention)
 ```
 
 ### Code
 
 | File | Role |
 |---|---|
-| `src/pipeline.py` | The processing driver (run by `process.yml`). |
+| `src/run_eligibility.py` | Stage-1 driver (run by `eligibility.yml`). |
+| `src/eligibility.py` | Eligibility spec + the structured assessment call. |
+| `src/run_extraction.py` | Stage-2 driver + STAVE validate/repair loop (`extraction.yml`). |
+| `src/extraction.py` | Extractor schema/rules + writes the four output files. |
+| `src/stave_validate.R` | Validates a study's files against the STAVE R package. |
+| `src/targets.py` | Loads `config/target_loci.csv`. |
 | `src/digest.py` | The weekly digest (run by `digest.yml`). |
 | `src/stats.py` | Regenerates `docs/stats.svg` from the roster. |
-| `src/markerbase.py` | Eligibility spec + the structured assessment call. |
 | `src/drive.py` | Google Drive access (walk / fetch / supplements). |
-| `src/store.py` | Reads/writes the roster, exclude list, and decisions. |
+| `src/store.py` | Roster, exclude list, decisions, per-paper eligibility files. |
 
-### State files
+### State / config files
 
 | File | Owner | Purpose |
 |---|---|---|
+| `config/target_loci.csv` | you | The 51 target codon positions (WHO compendium v1.0). |
 | `data/roster.csv` | bot | Lightweight: one row per paper — status + at-a-glance flags. |
-| `data/assessments/<id>.json` | bot | The full eligibility decision per paper (the "why"). |
+| `data/eligibility/<id>.json` | bot | The full eligibility decision per paper (the "why"). |
+| `data/extracted/<id>/` | bot | STAVE output: study.yaml, surveys.csv, counts.csv, README.md. |
 | `data/exclude.txt` | you | Papers to skip entirely. One filename per line. |
-| `data/decisions.yaml` | you | `duplicate` / `unique` rulings on flagged papers. |
+| `data/duplicate_decisions.yaml` | you | `duplicate` / `unique` rulings on flagged papers. |
 
 ### Secrets (repo settings → Secrets and variables → Actions)
 
@@ -198,9 +215,25 @@ requirements.txt   pipeline deps (top level, by convention)
 | `DRIVE_SA_KEY` | Drive service-account JSON key (full file contents). |
 | `DRIVE_FOLDER_ID` | Top `papers` folder (walked recursively). |
 | `DRIVE_SUPPLEMENT_FOLDER_ID` | Top supplements folder, same tree shape (optional). |
-| `ANTHROPIC_API_KEY` | The eligibility assessment (billed per new paper). |
+| `ANTHROPIC_API_KEY` | The eligibility and extraction model calls (billed per paper). |
 
 `GITHUB_TOKEN` is provided automatically — no setup needed for the digest.
+
+### STAVE extraction notes
+
+- Targets are the codon positions in `config/target_loci.csv` (genes mapped to
+  variantstring tokens via the `vs_gene` column). Encoding follows the
+  `variantstring` grammar (`gene:pos:aa`; underscores for within-gene haplotypes;
+  `;` across genes; reference AA for wild type; `/` for mixed calls).
+- Resolution preference: prefer multi-locus haplotype encoding unless its N is
+  <80% of the per-locus N. Wild-type imputed only where the sequenced range is
+  known. Every non-trivial call is written into the study's `README.md`.
+- The R validator is the guardrail: extraction is only accepted once STAVE's
+  `append_data()` accepts it. The output format (14-col surveys with
+  `sample_source`, short gene tokens `crt`/`k13`/`dhfr`/`dhps`/`mdr1`/`cytb`,
+  reference-AA wild-type rows, the `pmid_` study_id prefix STAVE needs since it
+  rejects digit-leading IDs) was validated against a local STAVE 2.0.3 install.
+  The repair loop still guards against per-paper surprises.
 
 ### Drive layout & contributor access
 

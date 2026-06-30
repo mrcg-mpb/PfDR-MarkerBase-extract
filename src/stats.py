@@ -5,7 +5,7 @@ The README markdown never changes; it just embeds this image. Each pipeline run
 regenerates the SVG from the roster, so the numbers under the README update
 automatically without ever editing README.md itself.
 
-Run standalone (`python src/stats.py`) or via pipeline.py at the end of a run.
+Run standalone (`python src/stats.py`) or via the stage drivers at end of a run.
 """
 import csv
 from datetime import date

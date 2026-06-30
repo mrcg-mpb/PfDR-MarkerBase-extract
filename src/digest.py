@@ -24,17 +24,19 @@ import store
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 ROSTER = DATA / "roster.csv"
-ASSESS = DATA / "assessments"
+ASSESS = DATA / "eligibility"
 MARKER = "<!-- markerbase-attention -->"   # hidden tag to re-find our issue
 TITLE = "📋 MarkerBase: papers needing attention"
 
 SECTIONS = [
-    (store.REVIEW_DUPLICATE, "🔁 Possible duplicates — rule on each in `decisions.yaml`",
-     "Add a line `id: duplicate` or `id: unique` to decisions.yaml."),
+    (store.REVIEW_DUPLICATE, "🔁 Possible duplicates — rule on each in `duplicate_decisions.yaml`",
+     "Add a line `id: duplicate` or `id: unique` to duplicate_decisions.yaml."),
     (store.AWAIT_SUPPLEMENT, "📎 Waiting on supplementary files",
      "Upload the files to Drive in a folder named `<id>` under the supplements folder."),
     (store.NAME_COLLISION, "⚠️ Duplicate filenames in Drive",
      "Two files share this name — rename so each PDF is unique."),
+    (store.EXTRACTION_FAILED, "🔧 Extraction failed (hit the retry limit)",
+     "STAVE rejected the extraction 5×; see data/extracted/<id>/EXTRACTION_FAILED.md."),
 ]
 
 
@@ -46,10 +48,10 @@ def load_rows():
 
 
 def flag_reason(row):
-    """The short 'why' for a flagged paper — pulled from its assessment file
-    (or the roster note for collisions, which have no assessment)."""
+    """The short 'why' for a flagged paper — from its eligibility assessment file
+    for stage-1 flags, or the roster note (collisions, extraction failures)."""
     status = row.get("status")
-    if status == store.NAME_COLLISION:
+    if status in (store.NAME_COLLISION, store.EXTRACTION_FAILED):
         return row.get("notes", "")
     rec = store.load_assessment(ASSESS, row["id"]) or {}
     a = rec.get("assessment", {})

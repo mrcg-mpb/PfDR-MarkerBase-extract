@@ -5,13 +5,14 @@ Three files, split by who edits them (see NOTES.md):
 
   roster.csv          — BOT-OWNED. One LIGHTWEIGHT row per paper: its current
                         state + a few at-a-glance flags. You only ever *read* it.
-  assessments/<id>.json — BOT-OWNED. The full eligibility decision for one paper:
+  eligibility/<id>.json — BOT-OWNED. The full eligibility decision for one paper:
                         every criterion with its evidence, exclusion reasons, the
                         duplicate-risk and supplement findings. The "why".
+  extracted/<id>/     — BOT-OWNED. Stage-2 STAVE output for one study.
   exclude.txt         — YOU edit (in the GitHub web UI). One filename per line,
                         '#' for comments. Papers here are skipped, never assessed.
-  decisions.yaml      — YOU edit. A flat mapping `id: verdict` where verdict is
-                        `duplicate` or `unique`, resolving duplicate-risk flags.
+  duplicate_decisions.yaml — YOU edit. A flat mapping `id: verdict` where verdict
+                        is `duplicate` or `unique`, resolving duplicate-risk flags.
 
 Anything you hand-edit is a line-based text format (plain lines / flat YAML),
 never CSV — so a spreadsheet can never mangle a PubMed-ID key.
@@ -21,20 +22,24 @@ import json
 from pathlib import Path
 
 # --- Status values (a paper's current stage) ------------------------------
+# Stage 1 — eligibility
 EXCLUDED = "EXCLUDED"                  # on exclude.txt — terminal
 INELIGIBLE = "INELIGIBLE"             # failed the criteria — terminal (the majority)
-DUPLICATE = "DUPLICATE"              # ruled a duplicate via decisions.yaml — terminal
-ELIGIBLE = "ELIGIBLE"               # passed, no flags — ready for extraction (stage 2)
+DUPLICATE = "DUPLICATE"              # ruled a duplicate via duplicate_decisions.yaml — terminal
+ELIGIBLE = "ELIGIBLE"               # passed eligibility — ready for extraction (stage 2)
 REVIEW_DUPLICATE = "REVIEW_DUPLICATE"  # parked: high duplicate risk, awaiting your ruling
 AWAIT_SUPPLEMENT = "AWAIT_SUPPLEMENT"  # parked: needs supplementary files you must upload
 NAME_COLLISION = "NAME_COLLISION"      # two Drive files share this name — rename one
+# Stage 2 — extraction
+EXTRACTED = "EXTRACTED"               # extracted + passed STAVE validation — terminal
+EXTRACTION_FAILED = "EXTRACTION_FAILED"  # hit the validation retry limit — needs your attention
 
 # Statuses that need your attention — surfaced in the weekly digest.
-OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, NAME_COLLISION)
+OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, NAME_COLLISION, EXTRACTION_FAILED)
 
 # CSV column order — deliberately lightweight: state + routing flags only. The
 # detail (markers, countries, evidence, exclusion reasons, sample size) lives in
-# the per-paper assessments/<id>.json, not here.
+# the per-paper eligibility/<id>.json, not here.
 ROSTER_FIELDS = [
     "id", "source", "status", "eligible", "confidence",
     "duplicate_risk", "needs_supplement",

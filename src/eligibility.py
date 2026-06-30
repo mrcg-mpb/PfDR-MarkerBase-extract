@@ -1,20 +1,21 @@
 """
-Shared core for the MarkerBase pipeline: the eligibility spec, the structured
-schema the model fills in, and the single assessment call.
+Stage 1 core: the eligibility spec, the structured schema the model fills in, and
+the single assessment call.
 
 The schema does three jobs in one call:
   1. Eligibility — does the paper meet the extraction criteria?
   2. Duplicate risk — might its samples overlap with / be a subset of another study?
-  3. Supplement check — does the extractable data live in supplementary files
-     that aren't in the PDF we were given?
+  3. Supplement check — does data we'd need live in supplementary files not provided?
 
-This module is imported (by pipeline.py), not run directly.
+This module is imported (by run_eligibility.py), not run directly.
 """
 import base64
 from enum import Enum
 
 import anthropic
 from pydantic import BaseModel
+
+import targets
 
 # Bump this when the eligibility spec/schema changes materially. It's stamped on
 # every assessed row so we can tell which papers were judged under an old spec.
@@ -50,8 +51,10 @@ class Criterion(BaseModel):
 
 class EligibilityChecks(BaseModel):
     is_p_falciparum: Criterion
-    reports_resistance_markers: Criterion
+    reports_target_markers: Criterion            # >=1 of the curated target positions
     reports_extractable_frequencies: Criterion
+    sub_country_location: Criterion              # placeable below country level
+    collection_window_within_3y: Criterion
     african_field_samples: Criterion
     is_primary_study: Criterion
 
@@ -71,7 +74,7 @@ class SupplementNeed(BaseModel):
 
 
 class Assessment(BaseModel):
-    eligible: bool                  # True only if ALL five checks are met
+    eligible: bool                  # True only if ALL checks are met
     confidence: Confidence
     checks: EligibilityChecks
     duplicate_risk: DuplicateRisk
@@ -86,21 +89,28 @@ class Assessment(BaseModel):
 
 # --- The spec the model is judged against ----------------------------------
 
+TARGET_SUMMARY = targets.summary()
+
 CRITERIA = (
     "A paper is ELIGIBLE only if ALL of the following are true:\n"
-    "1. It studies Plasmodium falciparum (not solely P. vivax or another species).\n"
-    "2. It reports molecular drug-resistance markers (e.g. pfk13, pfcrt, pfmdr1, "
-    "dhfr, dhps, pfpm2/3, k13 propeller mutations).\n"
-    "3. It reports EXTRACTABLE marker frequencies — numerator/denominator counts "
-    "or percentages per locus — not merely that a mutation was 'present' or 'detected'.\n"
-    "4. The samples are human field/clinical isolates collected in an African country "
+    "1. P. falciparum — studies Plasmodium falciparum (not solely P. vivax or another species).\n"
+    "2. Target markers — reports at least ONE of these curated drug-resistance codon "
+    f"positions: {TARGET_SUMMARY}.\n"
+    "3. Extractable frequencies — gives numerator/denominator counts or percentages per "
+    "locus for those markers, not merely that a mutation was 'present' or 'detected'.\n"
+    "4. Sub-country location — the sample sites can be placed BELOW country level (a named "
+    "sub-national admin unit, town, site, clinic, or explicit coordinates). Reported ONLY "
+    "at country level is NOT eligible. If finer locations are likely in supplementary "
+    "material, flag the supplement rather than failing this criterion.\n"
+    "5. Collection window <= 3 years — the sampling period spans at most three years (or can "
+    "be narrowed to <=3 years). A wider or unstated window is NOT eligible.\n"
+    "6. African field samples — human field/clinical isolates collected in an African country "
     "(exclude lab strains, imported/traveller cases, and non-African sites).\n"
-    "5. It is a primary empirical study (exclude reviews, meta-analyses, commentaries, "
-    "and pure modelling papers).\n\n"
-    "Assess each criterion independently and cite the evidence you used. Set "
-    "`eligible` to true only when every criterion is met. When a criterion is unmet "
-    "or unclear, record it in `exclusion_reasons`. If the PDF text is unreadable or "
-    "the relevant section is missing, prefer low confidence over guessing."
+    "7. Primary study — a primary empirical study (exclude reviews, meta-analyses, "
+    "commentaries, and pure modelling papers).\n\n"
+    "Assess each criterion independently and cite the evidence you used. Set `eligible` to "
+    "true only when EVERY criterion is met. When a criterion is unmet or unclear, record it "
+    "in `exclusion_reasons`. Prefer low confidence over guessing."
 )
 
 DUPLICATE_GUIDANCE = (
@@ -113,12 +123,13 @@ DUPLICATE_GUIDANCE = (
 )
 
 SUPPLEMENT_GUIDANCE = (
-    "SUPPLEMENT CHECK: decide whether the EXTRACTABLE per-locus frequency data "
-    "appears to live in SUPPLEMENTARY materials that are NOT included in the "
-    "document(s) provided to you (e.g. the text points to 'Supplementary Table SX' "
-    "for the counts, or says full genotype tables are online). Set "
-    "`supplement.needed` to true and quote the pointer in `supplement.evidence`. "
-    "If supplementary PDFs ARE included below and they contain the data, set it false."
+    "SUPPLEMENT CHECK: decide whether data we'd need for extraction appears to live in "
+    "SUPPLEMENTARY materials NOT included in the document(s) provided — either (a) the "
+    "EXTRACTABLE per-locus frequency counts (e.g. the text points to 'Supplementary Table "
+    "SX'), or (b) finer SPATIAL detail (site-level locations) that would lift an otherwise "
+    "country-only paper above the sub-country resolution floor. Set `supplement.needed` to "
+    "true and quote the pointer in `supplement.evidence`. If supplementary PDFs ARE included "
+    "below and contain the data, set it false."
 )
 
 SYSTEM = (

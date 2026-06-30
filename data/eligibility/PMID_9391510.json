@@ -1,0 +1,63 @@
+{
+  "id": "PMID_9391510",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-06-30",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study investigates mutations in DHFR gene of Plasmodium falciparum; inclusion criterion was monoinfection with P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr codons 51 (asparagine/isoleucine), 59 (cysteine/arginine), and 108 (serine/asparagine), all curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives counts and percentages per mutation pattern across 44 samples (e.g. 108-Asn+51-Ile+59-Arg 33 (75.0%); 108-Asn+59-Arg 6 (13.6%)), enabling locus-level frequency extraction."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "'Forty-four children... were enrolled in the study in the village of Magoda, Tanga region, Tanzania.' Village-level location given."
+      },
+      "collection_window_within_3y": {
+        "met": true,
+        "evidence": "'a second therapeutic study was undertaken in 1995' — single year collection window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field clinical isolates from blood of Tanzanian children in Magoda, Tanga region, Tanzania (laboratory strains used only as controls)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical therapeutic/molecular field study with patient enrollment, DNA extraction, PCR-RFLP genotyping and results."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "'a second therapeutic study was undertaken in 1995 in the same area among the same population as in 1994' (Rønn et al. 1996), indicating an overlapping/related cohort in the same village; molecular data here are from 1995 samples."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency data are in Table 1 in the main text; no supplementary materials are referenced."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 44,
+    "summary": "Primary field study of 44 P. falciparum-infected children in Magoda village, Tanga region, Tanzania (sampled 1995). PCR-RFLP genotyping of Pfdhfr codons 51, 59, 108 with extractable mutation frequencies in Table 1. Meets all eligibility criteria; some overlap with a 1994 study in the same population (duplicate risk medium).",
+    "exclusion_reasons": []
+  }
+}

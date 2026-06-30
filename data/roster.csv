@@ -1,0 +1,3 @@
+id,source,status,eligible,confidence,duplicate_risk,needs_supplement,spec_version,model,first_seen,last_assessed,supp_attempts,notes
+PMID_9236824,master,INELIGIBLE,False,high,none,False,1,opus,2026-06-30,2026-06-30,0,
+PMID_9391510,master,ELIGIBLE,True,high,medium,False,1,opus,2026-06-30,2026-06-30,0,

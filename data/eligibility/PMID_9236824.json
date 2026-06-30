@@ -1,0 +1,60 @@
+{
+  "id": "PMID_9236824",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-06-30",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study examines Plasmodium falciparum infection prevalence in western Kenya residents."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Paper studies human sickle haemoglobin (HbS) genotypes and malaria parasite prevalence; no P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfk13, etc.) are examined."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Reports malaria prevalence by host genotype, not parasite drug-resistance codon frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Kisumu area / Western Kenya near Lake Victoria - sub-national location given."
+      },
+      "collection_window_within_3y": {
+        "met": true,
+        "evidence": "'Blood samples were taken from 773 subjects over a period of 12 months.'"
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical samples from West Kenyan residents of the Kisumu area."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Cross-sectional survey, primary empirical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Single-site cross-sectional survey, no mention of consortium or shared dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary materials referenced; the study does not concern drug-resistance markers regardless."
+    },
+    "markers_found": [],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [],
+    "sample_size": 728,
+    "summary": "This 1997 cross-sectional study examines the protective effect of sickle cell haemoglobin genotypes (HbAA/HbAS/HbSS) against P. falciparum malaria infection in West Kenyan residents of the Kisumu area. It reports malaria prevalence by host genotype but contains no parasite drug-resistance marker data.",
+    "exclusion_reasons": [
+      "No curated P. falciparum drug-resistance markers reported",
+      "No extractable per-locus drug-resistance frequencies; study is about host sickle cell genetics and malaria prevalence"
+    ]
+  }
+}

@@ -68,10 +68,13 @@ def _legend():
 
 def render(c):
     total = sum(c.values())
-    passed = c.get(store.ELIGIBLE, 0)
+    # "passed" = made it through eligibility — whether still awaiting extraction
+    # (ELIGIBLE) or already extracted (EXTRACTED).
+    passed = c.get(store.ELIGIBLE, 0) + c.get(store.EXTRACTED, 0)
     failed = c.get(store.INELIGIBLE, 0)
+    # "needs you" = the open flags, including a failed extraction.
     attention = (c.get(store.REVIEW_DUPLICATE, 0) + c.get(store.AWAIT_SUPPLEMENT, 0)
-                 + c.get(store.NAME_COLLISION, 0))
+                 + c.get(store.NAME_COLLISION, 0) + c.get(store.EXTRACTION_FAILED, 0))
     dropped = c.get(store.EXCLUDED, 0) + c.get(store.DUPLICATE, 0)
 
     parts = [(passed, GREEN), (failed, GREY), (attention, AMBER), (dropped, MUTE)]

@@ -44,8 +44,8 @@ jobs:
           GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           Rscript -e 'install.packages(c("remotes","yaml","dplyr","lubridate","R6","stringr","tidyr"))'
-          Rscript -e 'remotes::install_github("mrc-ide/variantstring@v1.8.6", upgrade="never")'
-          Rscript -e 'remotes::install_github("mrc-ide/STAVE@v2.0.3", upgrade="never")'
+          Rscript -e 'remotes::install_github("mrc-ide/variantstring@v1.8.7", upgrade="never")'
+          Rscript -e 'remotes::install_github("mrc-ide/STAVE@v2.0.4", upgrade="never")'
 
       - name: Write service-account key
         run: printf '%s' "$DRIVE_SA_KEY" > "$RUNNER_TEMP/key.json"

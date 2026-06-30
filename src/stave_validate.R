@@ -4,7 +4,8 @@
 #
 # Prints exactly "OK" on success, or "STAVE_ERROR: <message>" on failure, and
 # always exits 0 (the Python caller reads stdout and feeds any error back to the
-# agent for repair). Requires STAVE (>=2.0.3) and variantstring installed.
+# agent for repair). Requires STAVE (>=2.0.4) and variantstring (>=1.8.7) — these
+# surface real validation messages (earlier versions could raise an empty error).
 
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) != 3) {

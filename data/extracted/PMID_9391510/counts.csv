@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_9391510,PMID_9391510,dhfr:51_59_108:N_C_N,2,44,"Table 1: '108-Asn only' = 2 (4.5%). Encoded as 51-wt(N), 59-wt(C), 108-mut(N)."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_S,1,44,"Table 1: '51-Ile only' = 1 (2.3%). 51-mut(I), 59-wt(C), 108-wt(S)."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_N,1,44,"Table 1: '108-Asn + 51-Ile only' = 1 (2.3%). 51-mut(I), 59-wt(C), 108-mut(N)."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:N_R_N,6,44,"Table 1: '108-Asn + 59-Arg only' = 6 (13.6%). 51-wt(N), 59-mut(R), 108-mut(N)."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_S,1,44,"Table 1: '51-Ile + 59-Arg only' = 1 (2.3%). 51-mut(I), 59-mut(R), 108-wt(S)."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_N,33,44,Table 1: '108-Asn + 51-Ile + 59-Arg' = 33 (75.0%). Triple mutant. Total of all haplotypes = 2+1+1+6+1+33 = 44.

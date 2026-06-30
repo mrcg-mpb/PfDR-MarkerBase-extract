@@ -1,0 +1,63 @@
+{
+  "id": "PMID_9391510",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-06-30",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "The study explicitly investigates 'Plasmodium falciparum' mutations in isolates from Tanzania. Title and throughout the paper refer to P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "The paper reports mutations at Pfdhfr codons 51 (asparagine to isoleucine), 59 (cysteine to arginine), and 108 (serine to asparagine), all of which are in the curated target list (51, 59, 108)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 provides numerator/denominator counts for each DHFR mutation pattern across sensitive and resistant groups. For example: '108-Asn only: 2 (8.0%) sensitive, 0 resistant, 2 (4.5%) total'; '108-Asn + 51-Ile + 59-Arg: 21 (84.0%) sensitive, 12 (63.3%) resistant, 33 (75.0%) total.' These are explicit frequency counts."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "The study specifies: 'Forty-four children aged 1–10 years were enrolled in the study in the village of Magoda, Tanga region, Tanzania.' This identifies a specific village (Magoda) within Tanga region, which is below country level."
+      },
+      "collection_window_within_3y": {
+        "met": true,
+        "evidence": "The study states: 'In 1994, however, a therapeutic study among children in Tanga region...' and 'In order to assess possible associations...a second therapeutic study was undertaken in 1995 in the same area among the same population as in 1994.' The collection window spans 1994–1995, which is 1 year, well within the 3-year limit."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from children in the village of Magoda, Tanga region, Tanzania (an African country), with monoinfection confirmed by microscopy. These are field/clinical isolates from symptomatic and asymptomatic children, not laboratory strains."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study describing a therapeutic trial and molecular analysis. The authors performed their own field work, patient enrollment, blood collection, DNA extraction, PCR, and enzyme digestion analysis. It is not a review, meta-analysis, or commentary."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "The study is a discrete therapeutic trial conducted in 1995 in Magoda village. While the authors reference their own prior 1994 study in the same population, the 1995 study is clearly described as a new second study undertaken to assess associations between in vivo results and DHFR mutations. There is no evidence of samples being part of a larger consortium, named cohort, or multi-site surveillance network that would overlap with other published datasets."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All required data for extraction are present in the main document. Table 1 provides complete numerator/denominator frequencies for DHFR mutations by phenotype. The spatial location (village of Magoda, Tanga region, Tanzania) is explicitly stated in the text. No reference to supplementary material is made, and no data appear to be missing from the provided PDF."
+    },
+    "markers_found": [
+      "Pfdhfr_51",
+      "Pfdhfr_59",
+      "Pfdhfr_108"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 44,
+    "summary": "This is a primary empirical study from Tanzania (1995) investigating DHFR mutations in 44 P. falciparum isolates collected from children in the village of Magoda, Tanga region. Three target Pfdhfr codons were analysed (51, 59, 108), with complete frequency data presented in Table 1. All isolates carried mutations at one or more of these codons. The study meets all eligibility criteria: it is a primary study of P. falciparum, reports extractable frequencies for curated drug-resistance markers, provides sub-country level location detail, falls within a 1-year collection window, uses African field samples, and includes all necessary data in the main document.",
+    "exclusion_reasons": []
+  }
+}

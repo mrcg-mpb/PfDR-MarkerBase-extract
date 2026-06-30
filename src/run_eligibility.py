@@ -20,7 +20,7 @@ Env:
   DRIVE_FOLDER_ID                 the inbox folder of PDFs
   DRIVE_SUPPLEMENT_FOLDER_ID      (optional) parent of the supplement/<id>/ folders
   ANTHROPIC_API_KEY               for the assessment call
-  MARKERBASE_MODEL                haiku | sonnet | opus   (default: haiku)
+  MARKERBASE_MODEL                haiku | sonnet | opus   (default: opus)
   MARKERBASE_MAX_PER_RUN          cost cap per run         (default: 100)
 """
 import os
@@ -39,7 +39,7 @@ EXCLUDE = DATA / "exclude.txt"
 DECISIONS = DATA / "duplicate_decisions.yaml"
 ASSESS = DATA / "eligibility"   # per-paper <id>.json eligibility decisions
 
-MODEL = os.environ.get("MARKERBASE_MODEL", "haiku")
+MODEL = os.environ.get("MARKERBASE_MODEL", "opus")
 MAX_PER_RUN = int(os.environ.get("MARKERBASE_MAX_PER_RUN", "100"))
 
 TRUE_STRINGS = {"true", "1", "yes"}

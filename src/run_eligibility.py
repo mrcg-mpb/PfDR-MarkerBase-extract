@@ -209,6 +209,11 @@ def main():
                 print(f"    {s}: no re-check — matched {nfolders} folder(s) named '{s}' under the "
                       f"supplement root, {len(files)} file(s): {files}; fp={fp!r}, "
                       f"last_examined={existing.get('supplement_fp')!r}")
+                if nfolders == 0:
+                    tree = drive.folder_tree(svc, supp_folder_id)
+                    print("      folders visible to the service account under the supplement root: "
+                          + (str(tree) if tree else "(NONE — the supplement root is not shared "
+                             "with the service account, or DRIVE_SUPPLEMENT_FOLDER_ID is wrong)"))
 
     # A parked paper whose main PDF has left the inbox is never reached above.
     for s, row in roster.items():

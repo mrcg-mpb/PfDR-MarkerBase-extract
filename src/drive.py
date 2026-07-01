@@ -122,6 +122,22 @@ def fetch_supplement_files(svc, supplement_root_id, stem):
             for f in _supplement_files(svc, supplement_root_id, stem)]
 
 
+def folder_tree(svc, root_id, max_items=60):
+    """Folder names the service account can SEE under root_id (depth-indented),
+    for diagnostics. An empty list means the account can't read anything under
+    root_id — the folder isn't shared with the service account, or the ID is wrong."""
+    out, frontier = [], [(root_id, 0)]
+    while frontier and len(out) < max_items:
+        fid, depth = frontier.pop()
+        for f in _list_folder(svc, fid):
+            if f["mimeType"] != FOLDER_MIME:
+                continue
+            out.append(f"{'  ' * depth}{f['name']!r}")
+            if depth < MAX_DEPTH:
+                frontier.append((f["id"], depth + 1))
+    return out
+
+
 def supplement_listing(svc, supplement_root_id, stem):
     """(matched_folder_count, [file names]) for the `<stem>` supplement folder(s)
     — a cheap, download-free peek used for diagnostics."""

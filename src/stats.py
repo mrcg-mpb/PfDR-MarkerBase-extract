@@ -110,11 +110,12 @@ def render(c):
 
 # --- README roster table ---------------------------------------------------
 
-def _rows():
+def _rows_and_fields():
     if not ROSTER.exists():
-        return []
+        return [], []
     with ROSTER.open(newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        reader = csv.DictReader(f)
+        return list(reader), (reader.fieldnames or [])
 
 
 def _row_cost(r):
@@ -122,14 +123,16 @@ def _row_cost(r):
             + pricing.cost_usd(r.get("extract_model"), r.get("extract_tok_in"), r.get("extract_tok_out")))
 
 
-def _toks(r, stage):
-    ti, to = pricing._int(r.get(f"{stage}_tok_in")), pricing._int(r.get(f"{stage}_tok_out"))
-    return f"{ti:,} / {to:,}" if (ti or to) else "—"
+def _cell(v):
+    return str(v if v is not None else "").replace("|", "\\|").replace("\n", " ").strip()
 
 
 def roster_markdown():
-    """Markdown block (summary + table) written between the README markers."""
-    rows = sorted(_rows(), key=lambda r: r.get("id", ""))
+    """Markdown block written between the README markers: a spend summary plus the
+    FULL roster table (every column in roster.csv, in file order) with a derived
+    est_$ column appended."""
+    rows, fields = _rows_and_fields()
+    rows.sort(key=lambda r: r.get("id", ""))
     total_cost = sum(_row_cost(r) for r in rows)
     elig_cost = sum(pricing.cost_usd(r.get("elig_model"), r.get("elig_tok_in"), r.get("elig_tok_out"))
                     for r in rows)
@@ -143,17 +146,19 @@ def roster_markdown():
         out += ["_No papers in the roster yet._", "", RM_END]
         return "\n".join(out)
 
-    out += ["| Study | Status | Model | Elig tok (in/out) | Extract tok (in/out) | Est. $ |",
-            "|---|---|---|--:|--:|--:|"]
+    header = fields + ["est_$"]
+    out.append("| " + " | ".join(header) + " |")
+    out.append("|" + "|".join("---" for _ in header) + "|")
     for r in rows[:RM_MAX_ROWS]:
-        model = r.get("elig_model") or r.get("extract_model") or r.get("model") or "—"
-        out.append(f"| `{r.get('id','')}` | {r.get('status','')} | {model} | "
-                   f"{_toks(r,'elig')} | {_toks(r,'extract')} | {_row_cost(r):.4f} |")
+        cells = [_cell(r.get(c, "")) for c in fields] + [f"{_row_cost(r):.4f}"]
+        out.append("| " + " | ".join(cells) + " |")
     if len(rows) > RM_MAX_ROWS:
-        out.append(f"| … | _{len(rows) - RM_MAX_ROWS} more_ | | | | |")
+        cells = [f"… {len(rows) - RM_MAX_ROWS} more rows"] + [""] * len(fields)
+        out.append("| " + " | ".join(cells) + " |")
     out += ["",
-            "_Full sortable, searchable table: [`data/roster.csv`](data/roster.csv) "
-            "(GitHub renders CSVs as an interactive table)._", "", RM_END]
+            "_The table above is a static snapshot. For a searchable, filterable view "
+            "(paginated for large sets), open [`data/roster.csv`](data/roster.csv) — GitHub "
+            "renders CSV files as an interactive table._", "", RM_END]
     return "\n".join(out)
 
 

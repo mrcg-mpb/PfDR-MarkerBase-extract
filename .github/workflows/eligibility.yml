@@ -48,7 +48,7 @@ jobs:
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
           DRIVE_SUPPLEMENT_FOLDER_ID: ${{ secrets.DRIVE_SUPPLEMENT_FOLDER_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MARKERBASE_MODEL: opus
+          MARKERBASE_MODEL: haiku
           MARKERBASE_MAX_PER_RUN: "100"
 
       # Commit only if something actually changed (no noisy empty commits).

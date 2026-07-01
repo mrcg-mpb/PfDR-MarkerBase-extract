@@ -1,7 +1,0 @@
-study_id,survey_id,variant_string,variant_num,total_num,notes
-PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_N,33,44,"Table 1: 108-Asn + 51-Ile + 59-Arg triple mutant, 33/44 (75.0%). All 44 samples were genotyped at codons 51, 59, 108 (denominator=44)."
-PMID_9391510,PMID_9391510,dhfr:51_59_108:N_C_N,2,44,"Table 1: 108-Asn only, 2/44 (4.5%). Wild type at 51 (N) and 59 (C)."
-PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_S,1,44,"Table 1: 51-Ile only, 1/44 (2.3%). Wild type at 59 (C) and 108 (S)."
-PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_N,1,44,"Table 1: 108-Asn + 51-Ile only, 1/44 (2.3%). Wild type at 59 (C)."
-PMID_9391510,PMID_9391510,dhfr:51_59_108:N_R_N,6,44,"Table 1: 108-Asn + 59-Arg only, 6/44 (13.6%). Wild type at 51 (N)."
-PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_S,1,44,"Table 1: 51-Ile + 59-Arg only, 1/44 (2.3%). Wild type at 108 (S)."

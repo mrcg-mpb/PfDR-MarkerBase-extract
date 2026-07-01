@@ -15,7 +15,7 @@ Pushing the results to the separate data repo is a deliberately later step.
 
 Env:
   GOOGLE_APPLICATION_CREDENTIALS, DRIVE_FOLDER_ID, DRIVE_SUPPLEMENT_FOLDER_ID,
-  ANTHROPIC_API_KEY, EXTRACT_MODEL (default opus), EXTRACT_MAX_PER_RUN (default 10),
+  ANTHROPIC_API_KEY, EXTRACT_MODEL (default haiku), EXTRACT_MAX_PER_RUN (default 10),
   EXTRACT_MAX_REPAIRS (default 5).
 """
 import os
@@ -38,7 +38,7 @@ ELIG = DATA / "eligibility"
 EXTRACTED = DATA / "extracted"
 VALIDATOR = ROOT / "stave_validate.R"
 
-MODEL = os.environ.get("EXTRACT_MODEL", "opus")
+MODEL = os.environ.get("EXTRACT_MODEL", "haiku")
 MAX_PER_RUN = int(os.environ.get("EXTRACT_MAX_PER_RUN", "10"))
 MAX_REPAIRS = int(os.environ.get("EXTRACT_MAX_REPAIRS", "5"))
 

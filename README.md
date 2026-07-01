@@ -16,19 +16,9 @@ human only when it genuinely needs a decision.
 
 <!-- ROSTER:START -->
 
-**7 paper(s) · estimated spend $0.00** (eligibility $0.00 · extraction $0.00) · updated 2026-07-01
+**0 paper(s) · estimated spend $0.00** (eligibility $0.00 · extraction $0.00) · updated 2026-07-01
 
-| Study | Status | Model | Elig tok (in/out) | Extract tok (in/out) | Est. $ |
-|---|---|---|--:|--:|--:|
-| `PMID_30898164` | EXTRACTED | opus | — | — | 0.0000 |
-| `PMID_38461239` | EXCLUDED | — | — | — | 0.0000 |
-| `PMID_38594679` | EXTRACTED | opus | — | — | 0.0000 |
-| `PMID_40666313` | EXCLUDED | — | — | — | 0.0000 |
-| `PMID_41379859` | AWAIT_SUPPLEMENT | opus | — | — | 0.0000 |
-| `PMID_9236824` | INELIGIBLE | opus | — | — | 0.0000 |
-| `PMID_9391510` | EXTRACTED | opus | — | — | 0.0000 |
-
-_Full sortable, searchable table: [`data/roster.csv`](data/roster.csv) (GitHub renders CSVs as an interactive table)._
+_No papers in the roster yet._
 
 <!-- ROSTER:END -->
 

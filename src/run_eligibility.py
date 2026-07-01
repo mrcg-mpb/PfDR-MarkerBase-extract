@@ -161,6 +161,8 @@ def main():
     if not folder_id:
         sys.exit("Set DRIVE_FOLDER_ID.")
     supp_folder_id = os.environ.get("DRIVE_SUPPLEMENT_FOLDER_ID")  # optional
+    if not supp_folder_id:
+        print("(!) DRIVE_SUPPLEMENT_FOLDER_ID is not set — supplement re-checks are disabled.")
 
     svc = drive.service()
     pdfs = drive.list_pdfs(svc, folder_id)
@@ -201,6 +203,18 @@ def main():
             fp = drive.supplement_fingerprint(svc, supp_folder_id, s)
             if fp and fp != (existing.get("supplement_fp") or ""):
                 queue.append((s, lst[0]["id"], source, "resume", fp))
+            else:
+                # Diagnose why a parked paper isn't being re-checked.
+                nfolders, files = drive.supplement_listing(svc, supp_folder_id, s)
+                print(f"    {s}: no re-check — matched {nfolders} folder(s) named '{s}' under the "
+                      f"supplement root, {len(files)} file(s): {files}; fp={fp!r}, "
+                      f"last_examined={existing.get('supplement_fp')!r}")
+
+    # A parked paper whose main PDF has left the inbox is never reached above.
+    for s, row in roster.items():
+        if (row.get("status") in (store.AWAIT_SUPPLEMENT, store.SUPPLEMENT_INSUFFICIENT)
+                and s not in by_stem):
+            print(f"(!) {s}: {row['status']} but its PDF is not in the inbox — cannot re-check.")
 
     # Process, capped.
     assessed = deferred = failed = 0

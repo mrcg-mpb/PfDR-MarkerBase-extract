@@ -122,6 +122,14 @@ def fetch_supplement_files(svc, supplement_root_id, stem):
             for f in _supplement_files(svc, supplement_root_id, stem)]
 
 
+def supplement_listing(svc, supplement_root_id, stem):
+    """(matched_folder_count, [file names]) for the `<stem>` supplement folder(s)
+    — a cheap, download-free peek used for diagnostics."""
+    folders = find_named_folders(svc, supplement_root_id, stem)
+    names = [f["name"] for f in _supplement_files(svc, supplement_root_id, stem)]
+    return len(folders), names
+
+
 def supplement_fingerprint(svc, supplement_root_id, stem):
     """A stable digest of the `<stem>` folder's contents, so the eligibility
     re-check can tell when new/changed files have been uploaded (rather than

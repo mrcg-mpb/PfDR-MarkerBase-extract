@@ -157,10 +157,10 @@ def route(existing, s, assessment, mode, source):
 # --- Main ------------------------------------------------------------------
 
 def main():
-    folder_id = os.environ.get("DRIVE_FOLDER_ID")
+    folder_id = os.environ.get("DRIVE_FOLDER_ID", "").strip()
     if not folder_id:
         sys.exit("Set DRIVE_FOLDER_ID.")
-    supp_folder_id = os.environ.get("DRIVE_SUPPLEMENT_FOLDER_ID")  # optional
+    supp_folder_id = os.environ.get("DRIVE_SUPPLEMENT_FOLDER_ID", "").strip()  # optional
     if not supp_folder_id:
         print("(!) DRIVE_SUPPLEMENT_FOLDER_ID is not set — supplement re-checks are disabled.")
 

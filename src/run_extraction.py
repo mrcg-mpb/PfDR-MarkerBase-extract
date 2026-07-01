@@ -126,10 +126,10 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
 
 
 def main():
-    folder_id = os.environ.get("DRIVE_FOLDER_ID")
+    folder_id = os.environ.get("DRIVE_FOLDER_ID", "").strip()
     if not folder_id:
         sys.exit("Set DRIVE_FOLDER_ID.")
-    supp_folder_id = os.environ.get("DRIVE_SUPPLEMENT_FOLDER_ID")  # optional
+    supp_folder_id = os.environ.get("DRIVE_SUPPLEMENT_FOLDER_ID", "").strip()  # optional
 
     svc = drive.service()
     by_stem = {store.stem(p["name"]): p for p in drive.list_pdfs(svc, folder_id)}

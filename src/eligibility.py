@@ -19,7 +19,7 @@ import targets
 
 # Bump this when the eligibility spec/schema changes materially. It's stamped on
 # every assessed row so we can tell which papers were judged under an old spec.
-SPEC_VERSION = 2
+SPEC_VERSION = 1
 
 # Short name -> (full model ID, input $/1M, output $/1M).
 MODELS = {

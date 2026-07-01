@@ -1,0 +1,75 @@
+{
+  "id": "PMID_40666313",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-01",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum malaria: 'Among 903 people with P. falciparum malaria' and keywords include Plasmodium falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfk13 (R622I, C580Y), Pfcrt (K76T, N75E, A220S, N326S, R371I), Pfmdr1 86 (N86), Pfdhfr (N51I, C59R, S108N), Pfdhps (A437G, K540E, A581G)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Explicit frequencies/counts: 'R622I mutation was found in 369/833 samples (44.3%)'; dhfr N51I 99.4%, S108N 99.2%, C59R 31.1%; dhps A437G 88.8%, K540E 89.1%, A581G 5.0%; crt CVIET 98.1%, A220S 84.9%, N326S 76.4%, R371I 92.5%; mdr1 N86 99.8%."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Two districts Gondar Zuria and Tach Armachiho, Amhara region, with 26 named Kebeles (villages) and coordinates used for rainfall; Figure S3 gives per-Kebele prevalence."
+      },
+      "collection_window_within_3y": {
+        "met": true,
+        "evidence": "'The study was conducted from November 01, 2022 to October 31, 2023' - a single year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates collected in northwest Ethiopia from microscopically confirmed P. falciparum patients at health centers."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary genomic surveillance study with MIP and WGS sequencing of collected samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Same research group (Bailey/Fola/Brhane) has multiple Ethiopia Amhara studies (Fola et al. 2023; Brhane et al. 2024). This is described as new in-depth sampling for 2022-2023, distinct window, but part of ongoing surveillance in overlapping region; funded via EACCR consortium and NIH R01AI177791."
+    },
+    "supplement": {
+      "needed": true,
+      "evidence": "Per-locus and per-Kebele frequency counts are in supplementary tables not provided: 'Table S1' (overall), 'Table S2' (per district), 'Table S3' (per Kebele), and site-level finer detail; 'available in the supplementary tables.'"
+    },
+    "markers_found": [
+      "Pfk13 R622I",
+      "Pfk13 C580Y",
+      "Pfcrt 76 (K76T)",
+      "Pfcrt 75 (N75E)",
+      "Pfcrt 220 (A220S)",
+      "Pfcrt 326 (N326S)",
+      "Pfcrt 371 (R371I)",
+      "Pfmdr1 86 (N86)",
+      "Pfdhfr 51 (N51I)",
+      "Pfdhfr 59 (C59R)",
+      "Pfdhfr 108 (S108N)",
+      "Pfdhps 437 (A437G)",
+      "Pfdhps 540 (K540E)",
+      "Pfdhps 581 (A581G)"
+    ],
+    "countries": [
+      "Ethiopia"
+    ],
+    "collection_years": [
+      2022,
+      2023
+    ],
+    "sample_size": 903,
+    "summary": "Primary genomic surveillance study of 903 P. falciparum patients collected over one year (Nov 2022-Oct 2023) in two districts (Gondar Zuria, Tach Armachiho), Amhara region, Ethiopia, with sub-country resolution down to 26 Kebeles. Reports extractable frequencies for numerous curated markers in Pfk13, Pfcrt, Pfmdr1, Pfdhfr, and Pfdhps. Eligible on all criteria. Detailed per-locus and per-site tables are in supplementary materials not provided.",
+    "exclusion_reasons": []
+  }
+}

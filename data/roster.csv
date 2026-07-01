@@ -1,3 +1,4 @@
 id,source,status,eligible,confidence,duplicate_risk,needs_supplement,spec_version,model,first_seen,last_assessed,supp_attempts,notes
+PMID_40666313,master,AWAIT_SUPPLEMENT,True,high,medium,True,1,opus,2026-07-01,2026-07-01,0,
 PMID_9236824,master,INELIGIBLE,False,high,none,False,1,opus,2026-06-30,2026-06-30,0,
 PMID_9391510,master,EXTRACTED,True,high,medium,False,1,opus,2026-06-30,2026-06-30,0,"1 survey(s), 6 count rows"

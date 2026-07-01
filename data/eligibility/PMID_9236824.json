@@ -1,0 +1,63 @@
+{
+  "id": "PMID_9236824",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-07-01",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "The paper explicitly studies P. falciparum infection in relation to sickle cell genotypes in western Kenya. Title states 'Higher resistance to Plasmodium falciparum infection' and text refers to 'malarial parasites' confirmed by blood film microscopy."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper reports only P. falciparum infection prevalence (presence/absence) by blood film microscopy. It does not genotype or report frequencies at any of the curated drug-resistance loci: Pfcrt, Pfcytb, Pfdhfr, Pfdhps, Pfk13, or Pfmdr1 codon positions. The study focuses on host hemoglobin genotype (HbAA, HbAS, HbSS) and malaria parasitemia, not parasite drug-resistance markers."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "While the paper provides numerator/denominator counts for malaria prevalence (e.g. '261 (35.8%) HbAAs', '42 (5.8%) HbASs', '4 (0.5%) HbSSs'), these frequencies describe malaria presence/absence in host populations, not allele or genotype frequencies at drug-resistance loci. No per-locus marker frequencies are reported."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples are from the Kisumu area, West Kenya, which is a named sub-national location. The study specifies 'West Kenyan residents of the Kisumu area' and 'place of residence' was recorded, meeting sub-country resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Blood samples were collected 'over a period of 12 months', which is well within the 3-year threshold for temporal resolution."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from 'indigenous patients' in the Kisumu area, western Kenya, 'who had resided in the area for at least 6 months or had migrated from an equally endemic area'. These are human field/clinical isolates collected in Africa (Kenya), not lab strains or imported cases."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study: a cross-sectional survey with original data collection. The paper reports new field data and analysis, not a review, meta-analysis, or modelling exercise."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "No evidence of sample overlap with a prior study, consortium, or named cohort. The paper describes a single, de novo cross-sectional survey of hospital laboratory attendees in Kisumu during a 12-month period. No mention of participation in a multi-site network or reuse of a pre-existing dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary material is referenced or required. All reported data (malaria prevalence by host genotype, sample sizes, geographic location, collection period) are fully presented in the main text and tables."
+    },
+    "markers_found": [],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      1997
+    ],
+    "sample_size": 728,
+    "summary": "This is a primary empirical field study from Kenya examining the relationship between host hemoglobin genotype (HbSS, HbAS, HbAA) and P. falciparum infection prevalence. While the study meets criteria 1 (P. falciparum), 4 (sub-country location, Kisumu), 5 (temporal resolution within 3 years, 12 months), 6 (African field samples, Kenya), and 7 (primary study), it FAILS criterion 2 (target markers) and criterion 3 (extractable frequencies). The paper reports only malaria parasitemia (presence/absence) stratified by host hemoglobin type; it does not genotype parasite drug-resistance loci or report allele/genotype frequencies at any of the curated markers (Pfcrt, Pfcytb, Pfdhfr, Pfdhps, Pfk13, Pfmdr1). This is a host-genetics study, not a parasite drug-resistance marker surveillance study, and thus is ineligible for the database.",
+    "exclusion_reasons": [
+      "Does not report frequencies at any curated drug-resistance marker loci (Pfcrt, Pfcytb, Pfdhfr, Pfdhps, Pfk13, Pfmdr1)",
+      "Reports only malaria parasitemia prevalence by host hemoglobin genotype, not parasite genetic markers",
+      "No extractable numerator/denominator or percentage data per drug-resistance locus"
+    ]
+  }
+}

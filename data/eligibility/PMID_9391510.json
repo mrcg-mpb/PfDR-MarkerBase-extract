@@ -1,0 +1,65 @@
+{
+  "id": "PMID_9391510",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-07-01",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "The paper explicitly studies Plasmodium falciparum: title and throughout text focus on P. falciparum isolates from Tanzanian children."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr mutations at codons 51, 59, and 108, all of which are curated target markers: 'Changes were restricted to codons 51-asparagine, 59-cysteine, and 108-serine.'"
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 provides numerator/denominator counts for DHFR mutation patterns: e.g., '108-Asn + 51-Ile + 59-Arg: 21 (84.0%) [sensitive], 12 (63.3%) [resistant], 33 (75.0%) [total]', with n=44 total samples."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected from 'the village of Magoda, Tanga region, Tanzania' – a named sub-national location (village and region specified, not just country-level)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "The paper states samples were 'taken from Tanzanian children' in 1995 during 'a second therapeutic study'. However, the exact collection dates and temporal binning are not specified. The 1994 study reference (Rønn et al. 1996) indicates related collections, but no clear statement that all frequencies reported here span ≤3 years or are binned by year/period. Temporal window cannot be definitively confirmed from the text."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from 'infected blood samples taken from Tanzanian children' collected as part of a clinical treatment trial, and Tanzania is in East Africa. These are field/clinical isolates, not lab strains or imported cases."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study reporting original laboratory analysis of parasite DNA from field samples, with detailed methods and results. Not a review, meta-analysis, or modelling paper."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "The paper is a discrete therapeutic study conducted in 1995 in Magoda village, Tanga region. Although it references a prior 1994 study by Rønn et al. in the same area, the 1995 cohort is presented as new enrollment ('a second therapeutic study was undertaken in 1995 in the same area among the same population as in 1994'), suggesting distinct new sampling. No explicit statement of samples being part of a larger consortium or named cohort overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "The paper provides all extractable marker frequencies (Table 1) and sample size (n=44) in the main text. Temporal resolution details are absent from both main text and supplementary materials (none provided), but this is a data-reporting issue, not a supplementary-material availability issue."
+    },
+    "markers_found": [
+      "Pfdhfr_51",
+      "Pfdhfr_59",
+      "Pfdhfr_108"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 44,
+    "summary": "This 1997 primary study from Tanzania reports Pfdhfr codon 51, 59, and 108 mutations in 44 P. falciparum isolates from a clinical treatment trial in Magoda village, Tanga region, with extractable numerator/denominator frequencies in Table 1. Location is sub-national (village/region). However, the temporal collection window is not explicitly stated and cannot be confirmed to be ≤3 years, failing criterion 5.",
+    "exclusion_reasons": [
+      "Temporal resolution unclear: the paper does not specify the exact collection period or date range for the 44 samples, and does not state whether all frequencies are binned within a ≤3-year window. The 1995 study is mentioned as 'undertaken in 1995', but without a precise collection window or monthly/quarterly/annual breakdown, temporal resolution cannot be verified to meet the ≤3-year criterion."
+    ]
+  }
+}

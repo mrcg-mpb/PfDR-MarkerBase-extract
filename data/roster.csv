@@ -1,5 +1,8 @@
 id,source,status,eligible,confidence,duplicate_risk,needs_supplement,spec_version,model,first_seen,last_assessed,supp_attempts,notes
 PMID_ 38461239,master,REVIEW_DUPLICATE,True,high,high,False,1,opus,2026-07-01,2026-07-01,0,
-PMID_40666313,master,AWAIT_SUPPLEMENT,True,high,medium,True,1,opus,2026-07-01,2026-07-01,0,
+PMID_30898164,master,ELIGIBLE,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,
+PMID_38461239,master,REVIEW_DUPLICATE,True,high,high,False,1,opus,2026-07-01,2026-07-01,0,
+PMID_38594679,master,ELIGIBLE,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,
+PMID_40666313,master,EXCLUDED,,,,,,,2026-07-01,,,on exclude.txt
 PMID_9236824,master,INELIGIBLE,False,high,none,False,1,opus,2026-07-01,2026-07-01,0,
 PMID_9391510,master,ELIGIBLE,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,

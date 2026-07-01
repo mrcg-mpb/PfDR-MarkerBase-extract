@@ -1,0 +1,64 @@
+{
+  "id": "PMID_30898164",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-01",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated falciparum malaria; analysed Pfk13 and Pfmdr1 in P. falciparum isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Pfmdr1 codon N86Y analysed (target marker Pfmdr1:86). Also Pfk13 propeller codons 440-600 including target codons 446,458,476,493,539,543,553,561,568,574,580 etc."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 4 gives per-site N86 prevalence: Kibaha 79 (98.8), Mkuzi 87 (98.9), Mlimba 87 (98.9), Ujiji 88 (100.0), Total 341 (99.1); also 184F and D1246 counts."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies broken down by four sentinel sites: Kibaha (Coast), Mkuzi (Tanga/Muheza), Mlimba (Morogoro/Kilombero), Ujiji (Kigoma), with health centre locations named."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "All samples collected at enrolment (day 0) between April and October 2016 - a single year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Clinical isolates (DBS) collected from patients at four sites in mainland Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Single-arm prospective in vivo therapeutic efficacy study with primary molecular analysis."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples processed at CDC under 'US President's Malaria Initiative-supported Antimalarial Resistance Monitoring in Africa (PARMA) Network' and data shared with WHO as part of global TES monitoring; part of NMCP sentinel site surveillance. Potential overlap with network datasets."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-locus Pfmdr1 SNP frequencies by site are in Table 4 within the main text; Pfk13 non-synonymous mutations described in text. Supplemental Table 1 concerns adverse event timing, not marker frequencies."
+    },
+    "markers_found": [
+      "Pfmdr1 N86",
+      "Pfmdr1 184F",
+      "Pfmdr1 D1246",
+      "Pfk13 propeller (440-600)"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2016
+    ],
+    "sample_size": 344,
+    "summary": "Therapeutic efficacy study of AL in mainland Tanzania (2016) at four sentinel sites reporting site-level Pfmdr1 SNP prevalences (including target codon 86) and Pfk13 propeller mutations. Provides extractable per-site frequencies within a single-year collection window, meeting all eligibility criteria. Some duplicate risk due to PARMA network/WHO TES data sharing.",
+    "exclusion_reasons": []
+  }
+}

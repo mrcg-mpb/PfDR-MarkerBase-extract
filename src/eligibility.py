@@ -19,7 +19,7 @@ import targets
 
 # Bump this when the eligibility spec/schema changes materially. It's stamped on
 # every assessed row so we can tell which papers were judged under an old spec.
-SPEC_VERSION = 1
+SPEC_VERSION = 2
 
 # Short name -> (full model ID, input $/1M, output $/1M).
 MODELS = {
@@ -53,8 +53,8 @@ class EligibilityChecks(BaseModel):
     is_p_falciparum: Criterion
     reports_target_markers: Criterion            # >=1 of the curated target positions
     reports_extractable_frequencies: Criterion
-    sub_country_location: Criterion              # placeable below country level
-    collection_window_within_3y: Criterion
+    sub_country_location: Criterion              # every datapoint placeable below country level
+    temporal_resolution_within_3y: Criterion     # every datapoint tied to a <=3-year window
     african_field_samples: Criterion
     is_primary_study: Criterion
 
@@ -98,12 +98,21 @@ CRITERIA = (
     f"positions: {TARGET_SUMMARY}.\n"
     "3. Extractable frequencies — gives numerator/denominator counts or percentages per "
     "locus for those markers, not merely that a mutation was 'present' or 'detected'.\n"
-    "4. Sub-country location — the sample sites can be placed BELOW country level (a named "
-    "sub-national admin unit, town, site, clinic, or explicit coordinates). Reported ONLY "
-    "at country level is NOT eligible. If finer locations are likely in supplementary "
-    "material, flag the supplement rather than failing this criterion.\n"
-    "5. Collection window <= 3 years — the sampling period spans at most three years (or can "
-    "be narrowed to <=3 years). A wider or unstated window is NOT eligible.\n"
+    "4. Sub-country resolution — every extractable frequency can be tied to a location BELOW "
+    "country level (a named sub-national admin unit, town, site, clinic, or explicit coordinates). "
+    "This is about RESOLUTION, not extent: broad geographic coverage is fine and welcome — a "
+    "nationwide study spanning many regions is desirable (more data). What fails is a frequency "
+    "that can ONLY be placed at country level (e.g. a single national pooled total with no "
+    "sub-national breakdown). A paper reporting both national totals AND a sub-national breakdown "
+    "PASSES. If finer locations are likely in supplementary material, flag the supplement rather "
+    "than failing this criterion.\n"
+    "5. Temporal resolution <= 3 years — every extractable frequency can be tied to a collection "
+    "window of at most three years. This is about the REPORTING INTERVAL, not the study's total "
+    "length: a study running over many years is fine and welcome (more data), PROVIDED its data are "
+    "binned finely enough in time. A 2016-2021 study that reports per-year (or per-<=3-year-block) "
+    "frequencies PASSES; what fails is a single pooled frequency whose samples span MORE than three "
+    "years, because it cannot be placed precisely enough in time. Judge the finest temporal "
+    "breakdown the paper reports, not the overall span.\n"
     "6. African field samples — human field/clinical isolates collected in an African country "
     "(exclude lab strains, imported/traveller cases, and non-African sites).\n"
     "7. Primary study — a primary empirical study (exclude reviews, meta-analyses, "

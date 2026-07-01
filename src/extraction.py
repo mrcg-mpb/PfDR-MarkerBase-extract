@@ -148,6 +148,10 @@ RULES = (
     "NOT fabricate — extract only the uniquely-determinable subset and document what was dropped.\n"
     "5. Aim to extract the MAXIMUM information the paper supports, balanced against never inventing "
     "samples.\n"
+    "6. Resolution & no pooling: extract at the FINEST spatial and temporal breakdown the paper "
+    "reports (per site, per time bin). If the paper ALSO gives pooled totals (national, whole-study, "
+    "or multi-year), do NOT additionally extract those — they duplicate the disaggregated counts. "
+    "Broader or longer studies therefore yield MORE surveys, never coarser ones.\n"
 )
 
 SPATIAL = (
@@ -165,10 +169,12 @@ IDENTIFIERS = (
 )
 
 TEMPORAL = (
-    "TEMPORAL: `collection_day` is required (ISO YYYY-MM-DD). If the paper gives an exact day, use it. "
-    "If a range, set `collection_start`/`collection_end` to the range and `collection_day` to the "
-    "midpoint. If only a year, use Jan 1 / Dec 31 and the midpoint (~Jul 2). Record the method in "
-    "`time_method`/`time_notes`.\n"
+    "TEMPORAL: create a SEPARATE survey for each reported time bin — a multi-year study reported "
+    "per-year (or per-block) becomes many surveys, one per (site x time bin), which preserves "
+    "temporal resolution; never pool counts across a window wider than the paper reports. "
+    "`collection_day` is required (ISO YYYY-MM-DD) for each survey: exact day -> use it; a range -> "
+    "set `collection_start`/`collection_end` to the range and `collection_day` to the midpoint; only "
+    "a year -> Jan 1 / Dec 31 and the midpoint (~Jul 2). Record the method in `time_method`/`time_notes`.\n"
 )
 
 DOCUMENTATION = (

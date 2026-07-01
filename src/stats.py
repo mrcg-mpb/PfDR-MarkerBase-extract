@@ -22,13 +22,16 @@ INK = "#1f2328"
 GREEN = "#2da44e"
 BLUE = "#0969da"
 AMBER = "#bf8700"
+ORANGE = "#bc4c00"
+RED = "#cf222e"
+PURPLE = "#8250df"
 GREY = "#57606a"
 MUTE = "#afb8c1"
 TRACK = "#eaeef2"
 
 LABEL_X = 24        # x of each row's label
-BAR_X = 200         # x where the bar tracks start
-BAR_W = 452         # track width (count sits just past the fill)
+BAR_X = 248         # x where the bar tracks start (room for full labels)
+BAR_W = 400         # track width (count sits just past the fill)
 BAR_H = 16
 ROW_H = 30
 TOP = 102           # y of the first bar
@@ -60,20 +63,31 @@ def _bar(y, label, n, colour, maxn):
 
 def render(c):
     total = sum(c.values())
-    # Five outcome groups that together cover EVERY roster status, so the bars
-    # always sum to the total shown in the header.
-    cats = [
-        ("Extracted",             c.get(store.EXTRACTED, 0),  GREEN),
-        ("Eligible (to extract)", c.get(store.ELIGIBLE, 0),   BLUE),
-        ("Needs attention",       c.get(store.REVIEW_DUPLICATE, 0) + c.get(store.AWAIT_SUPPLEMENT, 0)
-                                   + c.get(store.NAME_COLLISION, 0) + c.get(store.EXTRACTION_FAILED, 0), AMBER),
-        ("Ineligible",            c.get(store.INELIGIBLE, 0), GREY),
-        ("Excluded / duplicate",  c.get(store.EXCLUDED, 0) + c.get(store.DUPLICATE, 0), MUTE),
+    # Every roster status maps to exactly one group, so the bars always sum to
+    # the total. Empty groups are dropped below, so the card only shows what's
+    # actually in the pipeline (and each row reappears the moment it has a paper).
+    groups = [
+        ("Extracted",                    [store.EXTRACTED],                 GREEN),
+        ("Eligible — to extract",   [store.ELIGIBLE],                  BLUE),
+        ("Possible duplicate (to rule)", [store.REVIEW_DUPLICATE],          AMBER),
+        ("Awaiting supplement",          [store.AWAIT_SUPPLEMENT],          ORANGE),
+        ("Extraction failed",            [store.EXTRACTION_FAILED],         RED),
+        ("Filename collision",           [store.NAME_COLLISION],            PURPLE),
+        ("Ineligible",                   [store.INELIGIBLE],                GREY),
+        ("Excluded / duplicate",         [store.EXCLUDED, store.DUPLICATE], MUTE),
     ]
-    maxn = max((n for _, n, _ in cats), default=0)
-    height = int(TOP + len(cats) * ROW_H + 16)
-    rows = "".join(_bar(TOP + i * ROW_H, label, n, colour, maxn)
-                   for i, (label, n, colour) in enumerate(cats))
+    cats = [(label, sum(c.get(s, 0) for s in statuses), colour)
+            for label, statuses, colour in groups]
+    cats = [row for row in cats if row[1] > 0]      # hide empty groups
+
+    maxn = max((n for _, n, _ in cats), default=1)
+    height = int(TOP + max(len(cats), 1) * ROW_H + 16)
+    if cats:
+        rows = "".join(_bar(TOP + i * ROW_H, label, n, colour, maxn)
+                       for i, (label, n, colour) in enumerate(cats))
+    else:
+        rows = (f'<text x="{LABEL_X}" y="{TOP + 12}" font-size="13" fill="{GREY}">'
+                "No papers in the pipeline yet.</text>")
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="720" height="{height}" viewBox="0 0 720 {height}" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
   <rect x="1" y="1" width="718" height="{height - 2}" rx="12" fill="#ffffff" stroke="#d0d7de"/>

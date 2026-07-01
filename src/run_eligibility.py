@@ -32,6 +32,7 @@ from pathlib import Path
 import drive
 import eligibility as agent
 import store
+import supplements
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 ROSTER = DATA / "roster.csv"
@@ -173,7 +174,7 @@ def main():
     # Your rulings on previously-parked duplicates.
     apply_decisions(roster, decisions)
 
-    # Build the work queue: (stem, drive_id, source, mode).
+    # Build the work queue: (stem, drive_id, source, mode, supplement_fp).
     queue = []
     for s, lst in by_stem.items():
         source = lst[0]["source"]
@@ -186,30 +187,41 @@ def main():
             continue
         existing = roster.get(s)
         if existing is None:
-            queue.append((s, lst[0]["id"], source, "new"))
-        elif existing.get("status") == store.AWAIT_SUPPLEMENT:
-            # Resume once per upload: only if a supplement has appeared and we
-            # haven't already re-assessed against it.
-            if (supp_folder_id and int(existing.get("supp_attempts") or 0) < 1
-                    and drive.supplement_ready(svc, supp_folder_id, s)):
-                queue.append((s, lst[0]["id"], source, "resume"))
+            queue.append((s, lst[0]["id"], source, "new", None))
+        elif existing.get("status") == store.AWAIT_SUPPLEMENT and supp_folder_id:
+            # Re-assess when the supplement folder's CONTENTS have changed since
+            # our last look (new/corrected uploads) — not just once, and not on
+            # an unchanged folder (which would needlessly re-bill every run).
+            fp = drive.supplement_fingerprint(svc, supp_folder_id, s)
+            if fp and fp != (existing.get("supplement_fp") or ""):
+                queue.append((s, lst[0]["id"], source, "resume", fp))
 
     # Process, capped.
     assessed = deferred = failed = 0
-    for s, fid, source, mode in queue:
+    for s, fid, source, mode, fp in queue:
         if assessed >= MAX_PER_RUN:
             deferred += 1
             continue
         try:
-            supp = drive.fetch_supplement_pdfs(svc, supp_folder_id, s) if mode == "resume" else None
+            supp_blocks = None
+            if mode == "resume":
+                files = drive.fetch_supplement_files(svc, supp_folder_id, s)
+                supp_blocks, summary = supplements.load(files)
+                print(f"    supplement for {s}: {summary}")
             pdf_bytes = drive.fetch_bytes(svc, fid)
-            resp = agent.assess_pdf_bytes(pdf_bytes, model_key=MODEL, supplement_bytes=supp)
+            resp = agent.assess_pdf_bytes(pdf_bytes, model_key=MODEL, supplement_blocks=supp_blocks)
         except Exception as e:  # don't let one bad paper abort the whole run
             print(f"  ! {s}: {e}")
             failed += 1
             continue
         assessed += 1
-        roster[s] = route(roster.get(s), s, resp.parsed_output, mode, source)
+        row = route(roster.get(s), s, resp.parsed_output, mode, source)
+        # Remember what we assessed against, so we only re-check on real changes.
+        if row.get("status") == store.AWAIT_SUPPLEMENT:
+            if fp is None:
+                fp = drive.supplement_fingerprint(svc, supp_folder_id, s) if supp_folder_id else ""
+            row["supplement_fp"] = fp or ""
+        roster[s] = row
         print(f"  · {s}: {roster[s]['status']}")
 
     store.save_roster(ROSTER, roster)

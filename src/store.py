@@ -44,7 +44,7 @@ ROSTER_FIELDS = [
     "id", "source", "status", "eligible", "confidence",
     "duplicate_risk", "needs_supplement",
     "spec_version", "model", "first_seen", "last_assessed",
-    "supp_attempts", "notes",
+    "supp_attempts", "supplement_fp", "notes",
 ]
 
 

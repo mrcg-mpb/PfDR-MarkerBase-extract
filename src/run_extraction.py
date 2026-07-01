@@ -29,6 +29,7 @@ from pathlib import Path
 import drive
 import extraction
 import store
+import supplements
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT.parent / "data"
@@ -72,7 +73,7 @@ def _set(roster, rid, status, notes):
     roster[rid] = row
 
 
-def extract_one(rid, pdf, supp, elig_ctx, roster):
+def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
     """Extract + validate-repair loop for a single paper. Returns True on success."""
     sid = extraction.stave_id(rid)            # STAVE-valid study_id (letter-first)
     out_dir = EXTRACTED / sid
@@ -81,7 +82,7 @@ def extract_one(rid, pdf, supp, elig_ctx, roster):
     try:
         for attempt in range(1, MAX_REPAIRS + 1):
             try:
-                resp = extraction.extract(pdf, sid, model_key=MODEL, supplement_bytes=supp,
+                resp = extraction.extract(pdf, sid, model_key=MODEL, supplement_blocks=supp_blocks,
                                           eligibility_record=elig_ctx, repair=repair)
             except Exception as e:
                 last_err = f"extractor error: {e}"
@@ -147,9 +148,14 @@ def main():
             print(f"  ! {rid}: PDF no longer in Drive; skipping")
             continue
         pdf = drive.fetch_bytes(svc, p["id"])
-        supp = drive.fetch_supplement_pdfs(svc, supp_folder_id, rid) if supp_folder_id else None
+        supp_blocks = None
+        if supp_folder_id:
+            files = drive.fetch_supplement_files(svc, supp_folder_id, rid)
+            supp_blocks, summary = supplements.load(files)
+            if files:
+                print(f"    supplement for {rid}: {summary}")
         elig = store.load_assessment(ELIG, rid) or {}
-        if extract_one(rid, pdf, supp, elig.get("assessment", {}), roster):
+        if extract_one(rid, pdf, supp_blocks, elig.get("assessment", {}), roster):
             done += 1
         else:
             failed += 1

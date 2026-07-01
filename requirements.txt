@@ -5,3 +5,9 @@ google-auth
 anthropic
 pydantic
 pyyaml
+
+# Supplement-file conversion (src/supplements.py): spreadsheets and Word docs.
+# Legacy .doc additionally uses LibreOffice (soffice), preinstalled on the runner.
+openpyxl        # .xlsx
+xlrd            # .xls (legacy Excel)
+python-docx     # .docx

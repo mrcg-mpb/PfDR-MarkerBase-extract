@@ -202,24 +202,26 @@ def _pdf_block(pdf_bytes):
             "source": {"type": "base64", "media_type": "application/pdf", "data": b64}}
 
 
-def extract(pdf_bytes, study_id, model_key="haiku", supplement_bytes=None,
+def extract(pdf_bytes, study_id, model_key="haiku", supplement_blocks=None,
             eligibility_record=None, repair=None, client=None, max_tokens=8000):
     """Run the extractor. Returns the raw response; `resp.parsed_output` is an
     `Extraction` (or None on refusal).
 
+    `supplement_blocks` are pre-built content blocks from supplements.load()
+    (PDFs native; spreadsheets/CSV/Word converted to text).
     repair: optional {"error": str, "previous": dict} to drive a fix-up retry.
     """
     client = client or anthropic.Anthropic()
     model = MODELS[model_key][0]
-    supplement_bytes = supplement_bytes or []
+    supplement_blocks = supplement_blocks or []
 
     content = [_pdf_block(pdf_bytes)]
-    for sb in supplement_bytes:
-        content.append(_pdf_block(sb))
+    content.extend(supplement_blocks)
 
     instr = [f"Extract this paper. Use study_id = '{study_id}' verbatim for every record."]
-    if supplement_bytes:
-        instr.append(f"{len(supplement_bytes)} supplementary PDF(s) are included above — use them.")
+    if supplement_blocks:
+        instr.append(f"{len(supplement_blocks)} supplementary file(s) are included above "
+                     "(spreadsheets/CSV/Word as text) — use them.")
     if eligibility_record:
         instr.append("Context from the eligibility stage (markers/countries/years already spotted): "
                      + str(eligibility_record))

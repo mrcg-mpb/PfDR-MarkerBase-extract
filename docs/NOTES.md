@@ -121,12 +121,15 @@ them can't mangle an all-digit PubMed-ID key (Excel turns `12345678` into
   flags `REVIEW_DUPLICATE`; you resolve by adding `id: duplicate` / `id: unique`
   to `decisions.yaml`; the next run routes accordingly.
 - **Missing supplement** resolves itself. The agent flags `AWAIT_SUPPLEMENT`; you
-  upload files to Drive `supplement/<id>/` (one folder per paper, keyed by the
-  PDF's name); the next run detects the folder and re-assesses *with* the
-  supplement included. It re-tries **once** per upload (tracked by
-  `supp_attempts`) so a non-readable supplement can't loop and re-bill forever.
-  Only PDF supplements are sent to the model — spreadsheets count as "present"
-  but their data can't be read at this stage.
+  upload files to Drive under a `<id>/` folder (one per paper, keyed by the PDF's
+  name) beneath the supplement root; the next eligibility run re-assesses *with*
+  the supplement included. It re-checks whenever the folder's **contents change**
+  (a content fingerprint is stored in `supplement_fp`), so a corrected re-upload
+  gets another chance while an unchanged folder never re-bills. `src/supplements.py`
+  converts the files for the model: PDFs pass through natively; **spreadsheets
+  (xlsx/xls), CSV/TSV/text, and Word (docx/doc)** are converted to text. Legacy
+  `.doc` uses LibreOffice (preinstalled on the runner); unsupported types are
+  skipped with a note.
 
 ### Spec versioning
 

@@ -12,6 +12,7 @@ never moving anything) and collect every PDF, tagging each with the folder it
 came from. Supplements use the same shape: a `<paper-id>` folder may live under
 any contributor's subfolder, so we search for it by name anywhere in the tree.
 """
+import hashlib
 import io
 import os
 import sys
@@ -42,7 +43,7 @@ def _list_folder(svc, folder_id):
     while True:
         resp = svc.files().list(
             q=f"'{folder_id}' in parents and trashed=false",
-            fields="nextPageToken, files(id, name, mimeType)",
+            fields="nextPageToken, files(id, name, mimeType, md5Checksum, size, modifiedTime)",
             pageSize=200,
             pageToken=token,
             supportsAllDrives=True,
@@ -105,25 +106,29 @@ def fetch_bytes(svc, file_id):
     return buf.getvalue()
 
 
-def supplement_ready(svc, supplement_root_id, stem):
-    """True if a `<stem>` folder exists anywhere under the supplement root and
-    holds at least one file."""
-    for folder in find_named_folders(svc, supplement_root_id, stem):
-        if _list_folder(svc, folder["id"]):
-            return True
-    return False
-
-
-def fetch_supplement_pdfs(svc, supplement_root_id, stem):
-    """Return the bytes of every PDF in any `<stem>` supplement folder.
-
-    Only PDFs are returned — the model can read PDF documents but not
-    spreadsheets. Non-PDF supplements (xlsx/csv) still count toward
-    `supplement_ready`, but their data can't be passed to the model here.
-    """
-    out = []
+def _supplement_files(svc, supplement_root_id, stem):
+    """Every non-folder file across all `<stem>` supplement folders."""
     for folder in find_named_folders(svc, supplement_root_id, stem):
         for f in _list_folder(svc, folder["id"]):
-            if _is_pdf(f):
-                out.append(fetch_bytes(svc, f["id"]))
-    return out
+            if f["mimeType"] != FOLDER_MIME:
+                yield f
+
+
+def fetch_supplement_files(svc, supplement_root_id, stem):
+    """Return [{'name', 'bytes'}, ...] for every file in any `<stem>` supplement
+    folder — ALL types, not just PDFs. The supplements loader decides what it can
+    convert; unreadable formats are skipped there, not here."""
+    return [{"name": f["name"], "bytes": fetch_bytes(svc, f["id"])}
+            for f in _supplement_files(svc, supplement_root_id, stem)]
+
+
+def supplement_fingerprint(svc, supplement_root_id, stem):
+    """A stable digest of the `<stem>` folder's contents, so the eligibility
+    re-check can tell when new/changed files have been uploaded (rather than
+    re-billing on an unchanged folder). Empty string if no folder/files."""
+    items = sorted(
+        (f["name"], f.get("md5Checksum") or f.get("modifiedTime") or f.get("size") or "")
+        for f in _supplement_files(svc, supplement_root_id, stem))
+    if not items:
+        return ""
+    return hashlib.sha1(repr(items).encode("utf-8")).hexdigest()[:16]

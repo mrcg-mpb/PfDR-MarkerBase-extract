@@ -156,23 +156,26 @@ def _pdf_block(pdf_bytes):
     }
 
 
-def assess_pdf_bytes(pdf_bytes, model_key="haiku", client=None, supplement_bytes=None):
-    """Send the paper (and any supplementary PDFs) to the model.
+def assess_pdf_bytes(pdf_bytes, model_key="haiku", client=None, supplement_blocks=None):
+    """Send the paper (and any supplementary files) to the model.
+
+    `supplement_blocks` are pre-built content blocks from supplements.load() —
+    PDFs pass through natively, other formats (spreadsheets, CSV, Word) are
+    already converted to text there.
 
     Returns the raw response object so the caller can inspect stop_reason /
     usage; `resp.parsed_output` is the validated `Assessment` (or None on refusal).
     """
     client = client or anthropic.Anthropic()
     model = MODELS[model_key][0]
-    supplement_bytes = supplement_bytes or []
+    supplement_blocks = supplement_blocks or []
 
     content = [_pdf_block(pdf_bytes)]
-    for sb in supplement_bytes:
-        content.append(_pdf_block(sb))
+    content.extend(supplement_blocks)
 
-    if supplement_bytes:
-        note = (f"The main paper PDF is provided, along with {len(supplement_bytes)} "
-                "supplementary PDF(s). ")
+    if supplement_blocks:
+        note = (f"The main paper PDF is provided, along with {len(supplement_blocks)} "
+                "supplementary file(s) (spreadsheets/CSV/Word are included as text). ")
     else:
         note = "The main paper PDF is provided. "
     content.append({

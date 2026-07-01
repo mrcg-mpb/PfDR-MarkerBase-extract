@@ -3,6 +3,6 @@ PMID_30898164,master,EXTRACTED,True,high,medium,False,1,opus,2026-07-01,2026-07-
 PMID_38461239,master,EXCLUDED,,,,,,,2026-07-01,,,,on exclude.txt
 PMID_38594679,master,EXTRACTED,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,,"5 survey(s), 5 count rows"
 PMID_40666313,master,EXCLUDED,,,,,,,2026-07-01,,,,on exclude.txt
-PMID_41379859,master,AWAIT_SUPPLEMENT,True,high,low,True,1,opus,2026-07-01,2026-07-01,0,,
+PMID_41379859,master,ELIGIBLE,True,high,low,False,1,opus,2026-07-01,2026-07-01,1,,
 PMID_9236824,master,INELIGIBLE,False,high,none,False,1,opus,2026-07-01,2026-07-01,0,,
 PMID_9391510,master,EXTRACTED,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,,"1 survey(s), 6 count rows"

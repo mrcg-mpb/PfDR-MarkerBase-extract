@@ -159,8 +159,12 @@ def _doc_to_text(data):
             fh.write(data)
         soffice = shutil.which("soffice") or shutil.which("libreoffice")
         if soffice:
-            subprocess.run([soffice, "--headless", "--convert-to", "txt:Text",
-                            "--outdir", tmp, src], capture_output=True, timeout=120)
+            # Isolated per-call profile dir so concurrent/repeated headless runs
+            # don't clash on the default LibreOffice profile lock.
+            subprocess.run([soffice, "--headless",
+                            f"-env:UserInstallation=file://{os.path.join(tmp, 'loprofile')}",
+                            "--convert-to", "txt:Text", "--outdir", tmp, src],
+                           capture_output=True, timeout=120)
             out = os.path.join(tmp, "in.txt")
             if os.path.exists(out):
                 with open(out, "rb") as fh:

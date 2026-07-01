@@ -29,6 +29,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # LibreOffice converts legacy .doc/.xls supplements (xlsx/docx/csv are
+      # handled by Python libs). Guarantees an office reader is present.
+      - name: Install LibreOffice
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-writer libreoffice-calc
+
       # Write the service-account key OUTSIDE the repo working dir so it can
       # never be committed.
       - name: Write service-account key

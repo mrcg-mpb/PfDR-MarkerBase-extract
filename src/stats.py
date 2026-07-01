@@ -11,11 +11,18 @@ import csv
 from datetime import date
 from pathlib import Path
 
+import pricing
 import store
 
 ROOT = Path(__file__).resolve().parent.parent
 ROSTER = ROOT / "data" / "roster.csv"
 OUT = ROOT / "docs" / "stats.svg"
+README = ROOT / "README.md"
+
+# Markers in README.md between which the roster table is (re)written each run.
+RM_START = "<!-- ROSTER:START -->"
+RM_END = "<!-- ROSTER:END -->"
+RM_MAX_ROWS = 60          # cap the inline table; full data is linked as CSV
 
 # Palette (GitHub-ish) and bar-chart layout.
 INK = "#1f2328"
@@ -101,9 +108,74 @@ def render(c):
 '''
 
 
+# --- README roster table ---------------------------------------------------
+
+def _rows():
+    if not ROSTER.exists():
+        return []
+    with ROSTER.open(newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def _row_cost(r):
+    return (pricing.cost_usd(r.get("elig_model"), r.get("elig_tok_in"), r.get("elig_tok_out"))
+            + pricing.cost_usd(r.get("extract_model"), r.get("extract_tok_in"), r.get("extract_tok_out")))
+
+
+def _toks(r, stage):
+    ti, to = pricing._int(r.get(f"{stage}_tok_in")), pricing._int(r.get(f"{stage}_tok_out"))
+    return f"{ti:,} / {to:,}" if (ti or to) else "—"
+
+
+def roster_markdown():
+    """Markdown block (summary + table) written between the README markers."""
+    rows = sorted(_rows(), key=lambda r: r.get("id", ""))
+    total_cost = sum(_row_cost(r) for r in rows)
+    elig_cost = sum(pricing.cost_usd(r.get("elig_model"), r.get("elig_tok_in"), r.get("elig_tok_out"))
+                    for r in rows)
+    extract_cost = total_cost - elig_cost
+
+    out = [RM_START, "",
+           f"**{len(rows)} paper(s) · estimated spend ${total_cost:.2f}** "
+           f"(eligibility ${elig_cost:.2f} · extraction ${extract_cost:.2f}) · "
+           f"updated {date.today().isoformat()}", ""]
+    if not rows:
+        out += ["_No papers in the roster yet._", "", RM_END]
+        return "\n".join(out)
+
+    out += ["| Study | Status | Model | Elig tok (in/out) | Extract tok (in/out) | Est. $ |",
+            "|---|---|---|--:|--:|--:|"]
+    for r in rows[:RM_MAX_ROWS]:
+        model = r.get("elig_model") or r.get("extract_model") or r.get("model") or "—"
+        out.append(f"| `{r.get('id','')}` | {r.get('status','')} | {model} | "
+                   f"{_toks(r,'elig')} | {_toks(r,'extract')} | {_row_cost(r):.4f} |")
+    if len(rows) > RM_MAX_ROWS:
+        out.append(f"| … | _{len(rows) - RM_MAX_ROWS} more_ | | | | |")
+    out += ["",
+            "_Full sortable, searchable table: [`data/roster.csv`](data/roster.csv) "
+            "(GitHub renders CSVs as an interactive table)._", "", RM_END]
+    return "\n".join(out)
+
+
+def update_readme():
+    """Rewrite the roster block between the markers in README.md, if present."""
+    if not README.exists():
+        return
+    text = README.read_text(encoding="utf-8")
+    if RM_START not in text or RM_END not in text:
+        return
+    before = text.split(RM_START)[0]
+    after = text.split(RM_END, 1)[1]
+    README.write_text(before + roster_markdown() + after, encoding="utf-8")
+
+
 def generate():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(render(counts()), encoding="utf-8")
+    try:
+        update_readme()
+    except Exception as e:
+        print(f"(README roster table not updated: {e})")
     return OUT
 
 

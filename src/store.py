@@ -45,8 +45,11 @@ OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, SUPPLEMENT_INSUFFICIENT,
 ROSTER_FIELDS = [
     "id", "source", "status", "eligible", "confidence",
     "duplicate_risk", "needs_supplement",
-    "spec_version", "model", "first_seen", "last_assessed",
-    "supp_attempts", "supplement_fp", "notes",
+    "spec_version", "first_seen", "last_assessed", "supp_attempts", "supplement_fp",
+    # Per-stage model (full versioned id) + token usage, so cost is reconstructable.
+    "elig_model", "elig_tok_in", "elig_tok_out",
+    "extract_model", "extract_tok_in", "extract_tok_out",
+    "notes",
 ]
 
 

@@ -56,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/roster.csv data/eligibility docs/stats.svg
+          git add data/roster.csv data/eligibility docs/stats.svg README.md
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "Update roster (eligibility)"
           git pull --rebase --autostash

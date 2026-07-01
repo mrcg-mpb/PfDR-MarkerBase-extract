@@ -110,7 +110,7 @@ def route(existing, s, assessment, mode, source):
     if mode == "resume":
         attempts += 1
     row.update(last_assessed=today(), spec_version=agent.SPEC_VERSION,
-               model=MODEL, supp_attempts=attempts)
+               elig_model=agent.MODELS[MODEL][0], supp_attempts=attempts)
 
     if assessment is None:
         row.update(status=store.INELIGIBLE, notes="model returned no structured result")
@@ -240,7 +240,12 @@ def main():
             failed += 1
             continue
         assessed += 1
+        prev_in = int((roster.get(s) or {}).get("elig_tok_in") or 0)
+        prev_out = int((roster.get(s) or {}).get("elig_tok_out") or 0)
         row = route(roster.get(s), s, resp.parsed_output, mode, source)
+        # Accumulate eligibility tokens across the initial assessment + any resumes.
+        row["elig_tok_in"] = prev_in + getattr(resp.usage, "input_tokens", 0)
+        row["elig_tok_out"] = prev_out + getattr(resp.usage, "output_tokens", 0)
         # Record the fingerprint of the supplement we EXAMINED — empty on a first
         # ('new') assessment, which doesn't load one — so we re-check only when the
         # folder contents change (and a folder already present at first assessment

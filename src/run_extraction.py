@@ -66,10 +66,14 @@ def run_stave(work):
     return False, out or (proc.stderr or "").strip() or "no output from validator"
 
 
-def _set(roster, rid, status, notes):
+def _set(roster, rid, status, notes, model=None, tok_in=0, tok_out=0):
     row = roster.get(rid) or {"id": rid}
     row["status"] = status
     row["notes"] = notes
+    if model is not None:
+        row["extract_model"] = model
+        row["extract_tok_in"] = tok_in
+        row["extract_tok_out"] = tok_out
     roster[rid] = row
 
 
@@ -78,7 +82,8 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
     sid = extraction.stave_id(rid)            # STAVE-valid study_id (letter-first)
     out_dir = EXTRACTED / sid
     work = Path(tempfile.mkdtemp(prefix=f"extract_{sid}_"))
-    repair, last_err = None, ""
+    model_id = extraction.MODELS[MODEL][0]
+    repair, last_err, tok_in, tok_out = None, "", 0, 0
     try:
         for attempt in range(1, MAX_REPAIRS + 1):
             try:
@@ -88,6 +93,8 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
                 last_err = f"extractor error: {e}"
                 print(f"  ! {rid} attempt {attempt}: {last_err}")
                 break
+            tok_in += getattr(resp.usage, "input_tokens", 0)
+            tok_out += getattr(resp.usage, "output_tokens", 0)
             ex = resp.parsed_output
             if ex is None:
                 last_err = f"no structured output (stop_reason {resp.stop_reason})"
@@ -104,7 +111,8 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
                 if fail.exists():
                     fail.unlink()
                 _set(roster, rid, store.EXTRACTED,
-                     f"{len(ex.surveys)} survey(s), {len(ex.counts)} count rows")
+                     f"{len(ex.surveys)} survey(s), {len(ex.counts)} count rows",
+                     model=model_id, tok_in=tok_in, tok_out=tok_out)
                 print(f"  · {rid}: EXTRACTED (attempt {attempt})")
                 return True
 
@@ -120,7 +128,8 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
         f"# Extraction failed — study {rid}\n\n"
         f"Hit the validation retry limit ({MAX_REPAIRS}) on {today()}.\n\n"
         f"Last STAVE error:\n\n```\n{last_err}\n```\n", encoding="utf-8")
-    _set(roster, rid, store.EXTRACTION_FAILED, f"STAVE: {last_err[:160]}")
+    _set(roster, rid, store.EXTRACTION_FAILED, f"STAVE: {last_err[:160]}",
+         model=model_id, tok_in=tok_in, tok_out=tok_out)
     print(f"  ! {rid}: EXTRACTION_FAILED — {last_err[:140]}")
     return False
 

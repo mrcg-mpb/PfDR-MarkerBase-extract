@@ -1,0 +1,65 @@
+{
+  "id": "PMID_ 38461239",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-01",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study targets P. falciparum kelch 13 and pfmdr1; enrolled patients had P. falciparum mono-infections confirmed by PET-PCR at species level."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfmdr1 codon 86 (N86Y) — a curated target marker. k13 propeller domain codons 430-726 also sequenced but only R622I (validated) found; pfmdr1 86 is explicitly tabulated."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 3 gives per-region per-year counts and percentages for N86 (e.g., Kigoma 2016: 118 (100.0%)); Table 2 gives k13 mutant counts per region/year."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies reported by region and sentinel site (Kigoma, Morogoro, Pwani, Tanga, Mbeya, Mtwara, Tabora, Mwanza) with named health centres/sites (Igombe, Ipinda, Yombo, Mkuzi, Mlimba, Nagaga, Simbo, Ujiji)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Tables 2 and 3 report data per single collection year (2016, 2018, 2019, 2020, 2021), well within 3-year windows."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "DBS samples collected from enrolled malaria patients at TES sentinel sites in Mainland Tanzania, an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analyzing molecularly genotyped field samples collected in TES 2016-2021."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "Samples come from TES conducted by NMCP; '2016 study has been published [22], 2018 and 2019 studies are available online [25, 26]'; part of PARMA network. Data may overlap with prior TES publications and country-wide surveillance."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-region, per-year frequency counts and percentages for N86 (pfmdr1) and k13 mutations are given directly in Tables 2 and 3 in the main text."
+    },
+    "markers_found": [
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2016,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "sample_size": 2015,
+    "summary": "Retrospective analysis of 2,015 P. falciparum DBS samples from TES at eight NMCP sentinel sites across Mainland Tanzania (2016-2021), genotyping k13 and pfmdr1. Reports extractable per-region, per-year frequencies for pfmdr1 N86 (target marker) plus Y184F, D1246Y and k13 mutations. Sub-national resolution and single-year temporal binning satisfy all criteria. Duplicate risk high because these are TES/PARMA samples with several years already published elsewhere.",
+    "exclusion_reasons": []
+  }
+}

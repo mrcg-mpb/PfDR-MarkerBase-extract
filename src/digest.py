@@ -39,6 +39,10 @@ SECTIONS = [
      "Add a line `id: duplicate` or `id: unique` to duplicate_decisions.yaml."),
     (store.AWAIT_SUPPLEMENT, "📎 Waiting on supplementary files",
      "Upload the files to Drive in a folder named `<id>` under the supplements folder."),
+    (store.SUPPLEMENT_INSUFFICIENT, "🧩 Supplement examined but still insufficient",
+     "The uploaded supplement was read but didn't contain the needed data — replace/add the "
+     "right files in that `<id>` folder (a change re-triggers assessment), or add the paper to "
+     "exclude.txt if it can't be extracted."),
     (store.NAME_COLLISION, "⚠️ Duplicate filenames in Drive",
      "Two files share this name — rename so each PDF is unique."),
     (store.EXTRACTION_FAILED, "🔧 Extraction failed (hit the retry limit)",
@@ -63,7 +67,7 @@ def flag_reason(row):
     a = rec.get("assessment", {})
     if status == store.REVIEW_DUPLICATE:
         return a.get("duplicate_risk", {}).get("evidence", "") or row.get("notes", "")
-    if status == store.AWAIT_SUPPLEMENT:
+    if status in (store.AWAIT_SUPPLEMENT, store.SUPPLEMENT_INSUFFICIENT):
         return a.get("supplement", {}).get("evidence", "") or row.get("notes", "")
     return row.get("notes", "")
 

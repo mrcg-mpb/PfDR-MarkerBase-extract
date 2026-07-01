@@ -28,14 +28,16 @@ INELIGIBLE = "INELIGIBLE"             # failed the criteria — terminal (the ma
 DUPLICATE = "DUPLICATE"              # ruled a duplicate via duplicate_decisions.yaml — terminal
 ELIGIBLE = "ELIGIBLE"               # passed eligibility — ready for extraction (stage 2)
 REVIEW_DUPLICATE = "REVIEW_DUPLICATE"  # parked: high duplicate risk, awaiting your ruling
-AWAIT_SUPPLEMENT = "AWAIT_SUPPLEMENT"  # parked: needs supplementary files you must upload
+AWAIT_SUPPLEMENT = "AWAIT_SUPPLEMENT"  # parked: needs supplementary files not yet uploaded
+SUPPLEMENT_INSUFFICIENT = "SUPPLEMENT_INSUFFICIENT"  # supplement WAS examined but still lacked the needed data
 NAME_COLLISION = "NAME_COLLISION"      # two Drive files share this name — rename one
 # Stage 2 — extraction
 EXTRACTED = "EXTRACTED"               # extracted + passed STAVE validation — terminal
 EXTRACTION_FAILED = "EXTRACTION_FAILED"  # hit the validation retry limit — needs your attention
 
 # Statuses that need your attention — surfaced in the weekly digest.
-OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, NAME_COLLISION, EXTRACTION_FAILED)
+OPEN_FLAGS = (REVIEW_DUPLICATE, AWAIT_SUPPLEMENT, SUPPLEMENT_INSUFFICIENT,
+              NAME_COLLISION, EXTRACTION_FAILED)
 
 # CSV column order — deliberately lightweight: state + routing flags only. The
 # detail (markers, countries, evidence, exclusion reasons, sample size) lives in

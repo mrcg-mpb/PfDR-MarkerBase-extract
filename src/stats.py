@@ -23,6 +23,7 @@ GREEN = "#2da44e"
 BLUE = "#0969da"
 AMBER = "#bf8700"
 ORANGE = "#bc4c00"
+PINK = "#bf3989"
 RED = "#cf222e"
 PURPLE = "#8250df"
 GREY = "#57606a"
@@ -71,6 +72,7 @@ def render(c):
         ("Eligible — to extract",   [store.ELIGIBLE],                  BLUE),
         ("Possible duplicate (to rule)", [store.REVIEW_DUPLICATE],          AMBER),
         ("Awaiting supplement",          [store.AWAIT_SUPPLEMENT],          ORANGE),
+        ("Supplement insufficient",      [store.SUPPLEMENT_INSUFFICIENT],   PINK),
         ("Extraction failed",            [store.EXTRACTION_FAILED],         RED),
         ("Filename collision",           [store.NAME_COLLISION],            PURPLE),
         ("Ineligible",                   [store.INELIGIBLE],                GREY),

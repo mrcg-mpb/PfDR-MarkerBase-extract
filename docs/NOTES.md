@@ -129,7 +129,10 @@ them can't mangle an all-digit PubMed-ID key (Excel turns `12345678` into
   converts the files for the model: PDFs pass through natively; **spreadsheets
   (xlsx/xls), CSV/TSV/text, and Word (docx/doc)** are converted to text. Legacy
   `.doc` uses LibreOffice (preinstalled on the runner); unsupported types are
-  skipped with a note.
+  skipped with a note. If a supplement IS examined but still doesn't contain the
+  needed data, the paper is flagged `SUPPLEMENT_INSUFFICIENT` — distinct from
+  `AWAIT_SUPPLEMENT` (nothing uploaded yet) so you can tell "waiting on you" from
+  "what you gave us wasn't enough". Both re-check when the folder contents change.
 
 ### Spec versioning
 

@@ -142,9 +142,13 @@ def route(existing, s, assessment, mode, source):
         row["status"] = store.REVIEW_DUPLICATE
         return row
     if a.supplement.needed:
-        row["status"] = store.AWAIT_SUPPLEMENT
+        # Distinguish "still waiting for files" from "we examined the files and
+        # they still didn't contain the needed data".
         if mode == "resume":
-            row["notes"] = "supplement uploaded but data still not found"
+            row["status"] = store.SUPPLEMENT_INSUFFICIENT
+            row["notes"] = "supplement examined but required data still not found"
+        else:
+            row["status"] = store.AWAIT_SUPPLEMENT
         return row
     row["status"] = store.ELIGIBLE
     return row
@@ -188,10 +192,12 @@ def main():
         existing = roster.get(s)
         if existing is None:
             queue.append((s, lst[0]["id"], source, "new", None))
-        elif existing.get("status") == store.AWAIT_SUPPLEMENT and supp_folder_id:
+        elif (existing.get("status") in (store.AWAIT_SUPPLEMENT, store.SUPPLEMENT_INSUFFICIENT)
+              and supp_folder_id):
             # Re-assess when the supplement folder's CONTENTS have changed since
             # our last look (new/corrected uploads) — not just once, and not on
-            # an unchanged folder (which would needlessly re-bill every run).
+            # an unchanged folder (which would needlessly re-bill every run). This
+            # also re-checks a SUPPLEMENT_INSUFFICIENT paper if you upload better files.
             fp = drive.supplement_fingerprint(svc, supp_folder_id, s)
             if fp and fp != (existing.get("supplement_fp") or ""):
                 queue.append((s, lst[0]["id"], source, "resume", fp))
@@ -216,10 +222,11 @@ def main():
             continue
         assessed += 1
         row = route(roster.get(s), s, resp.parsed_output, mode, source)
-        # Remember what we assessed against, so we only re-check on real changes.
-        if row.get("status") == store.AWAIT_SUPPLEMENT:
-            if fp is None:
-                fp = drive.supplement_fingerprint(svc, supp_folder_id, s) if supp_folder_id else ""
+        # Record the fingerprint of the supplement we EXAMINED — empty on a first
+        # ('new') assessment, which doesn't load one — so we re-check only when the
+        # folder contents change (and a folder already present at first assessment
+        # still gets examined on the next run, since "" != its fingerprint).
+        if row.get("status") in (store.AWAIT_SUPPLEMENT, store.SUPPLEMENT_INSUFFICIENT):
             row["supplement_fp"] = fp or ""
         roster[s] = row
         print(f"  · {s}: {roster[s]['status']}")

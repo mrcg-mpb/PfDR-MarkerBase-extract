@@ -145,11 +145,13 @@ def main():
         api("PATCH", f"{base}/{existing['number']}", token,
             {"title": TITLE, "body": body, "state": "open", "assignees": ASSIGNEES})
         # A body edit doesn't notify; a comment does. Only comment when the set
-        # of outstanding papers actually changed, to avoid weekly noise.
+        # of outstanding papers actually changed, to avoid weekly noise. The
+        # comment repeats the full actionable list (minus the hidden marker) so
+        # the notification email is self-contained and informative.
         if changed:
+            visible = body.split("\n", 2)[2] if body.startswith(MARKER + "\n") else body
             api("POST", f"{base}/{existing['number']}/comments", token,
-                {"body": f"🔔 Updated — {total} paper(s) now need your attention "
-                         "(see the issue description above)."})
+                {"body": "🔔 **The attention list changed.**\n\n" + visible})
             print(f"Updated + commented on issue #{existing['number']} — {total} item(s).")
         else:
             print(f"Issue #{existing['number']} unchanged — {total} item(s), no comment.")

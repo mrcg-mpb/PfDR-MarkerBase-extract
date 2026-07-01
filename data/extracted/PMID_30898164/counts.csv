@@ -1,0 +1,35 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_30898164,PMID_30898164_kibaha_2016,mdr1:86:N,79,80,SNP codon N86Y: wild-type N allele. One sample had N86I mutation; remainder had either N86 or N86Y.
+PMID_30898164,PMID_30898164_kibaha_2016,mdr1:86:Y,1,80,"SNP codon N86Y: mutant Y allele. One sample from Kibaha had N86Y (2 samples total with Y allele across all sites: 1 from Kibaha, 1 from Mkuzi)."
+PMID_30898164,PMID_30898164_kibaha_2016,mdr1:184:F,34,80,SNP codon Y184F: mutant F allele at position 184.
+PMID_30898164,PMID_30898164_kibaha_2016,mdr1:184:Y,46,80,SNP codon Y184F: wild-type Y allele. Imputed from 80 total - 34 with 184F.
+PMID_30898164,PMID_30898164_kibaha_2016,mdr1:1246:D,80,80,SNP codon D1246Y: wild-type D allele. All 80 samples at Kibaha had D1246 (100%).
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:86:N,87,88,SNP codon N86Y: wild-type N allele. One sample from Mkuzi had N86Y (part of the 2 total N86Y across all sites).
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:86:Y,1,88,SNP codon N86Y: mutant Y allele. One sample from Mkuzi had N86Y.
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:184:F,41,88,SNP codon Y184F: mutant F allele at position 184.
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:184:Y,47,88,SNP codon Y184F: wild-type Y allele. Imputed from 88 total - 41 with 184F.
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:1246:D,87,88,SNP codon D1246Y: wild-type D allele. 87 out of 88 samples at Mkuzi had D1246 (98.9%).
+PMID_30898164,PMID_30898164_mkuzi_2016,mdr1:1246:Y,1,88,"SNP codon D1246Y: mutant Y allele. One sample from Mkuzi had D1246Y (from Table 4, 87 out of 88 had D1246, so 1 had D1246Y)."
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:86:N,86,88,SNP codon N86Y: wild-type N allele. One sample from Mlimba had N86I mutation (footnote to Table 4); remainder had N86 or N86Y.
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:86:I,1,88,"SNP codon N86: one sample from Mlimba had N86I mutation (non-standard variant, noted in Table 4 footnote). Counts as 1 variant at this position."
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:86:Y,0,88,SNP codon N86Y: mutant Y allele. No samples from Mlimba had N86Y; the N86 variant mutations in Mlimba were only N86I (1 sample).
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:184:F,30,88,SNP codon Y184F: mutant F allele at position 184. Mlimba had lowest prevalence (34.1%) across sites.
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:184:Y,58,88,SNP codon Y184F: wild-type Y allele. Imputed from 88 total - 30 with 184F.
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:1246:D,87,88,SNP codon D1246Y: wild-type D allele. 87 out of 88 samples at Mlimba had D1246 (98.9%).
+PMID_30898164,PMID_30898164_mlimba_2016,mdr1:1246:Y,1,88,SNP codon D1246Y: mutant Y allele. One sample from Mlimba had D1246Y.
+PMID_30898164,PMID_30898164_ujiji_2016,mdr1:86:N,88,88,SNP codon N86Y: wild-type N allele. All 88 samples at Ujiji had N86 (100%).
+PMID_30898164,PMID_30898164_ujiji_2016,mdr1:184:F,32,88,SNP codon Y184F: mutant F allele at position 184.
+PMID_30898164,PMID_30898164_ujiji_2016,mdr1:184:Y,56,88,SNP codon Y184F: wild-type Y allele. Imputed from 88 total - 32 with 184F.
+PMID_30898164,PMID_30898164_ujiji_2016,mdr1:1246:D,88,88,SNP codon D1246Y: wild-type D allele. All 88 samples at Ujiji had D1246 (100%).
+PMID_30898164,PMID_30898164_kibaha_2016,k13:441:P,80,80,Pfk13 propeller domain (codons 440-600): wild-type P allele at position 441. No non-synonymous mutations reported at Kibaha for k13 variants.
+PMID_30898164,PMID_30898164_mkuzi_2016,k13:441:P,79,80,Pfk13 propeller domain (codons 440-600): wild-type P allele at position 441. One sample from Mkuzi had R471S non-synonymous mutation (not at position 441 but elsewhere in propeller domain).
+PMID_30898164,PMID_30898164_mkuzi_2016,k13:471:R,79,80,Pfk13 propeller domain: wild-type R allele at position 471. One sample from Mkuzi had R471S non-synonymous mutation.
+PMID_30898164,PMID_30898164_mkuzi_2016,k13:471:S,1,80,Pfk13 propeller domain: mutant S allele at position 471. One sample from Mkuzi had R471S mutation (not previously associated with artemisinin resistance).
+PMID_30898164,PMID_30898164_mlimba_2016,k13:433:E,79,88,Pfk13 propeller domain: wild-type E allele at position 433. Two samples from Mlimba had non-synonymous mutations: E433D and A578S. Note: total_num is 88 but only 79 sequenced successfully for position 433 based on reported k13 sequencing success rate of 92.7% (319/344).
+PMID_30898164,PMID_30898164_mlimba_2016,k13:433:D,1,88,Pfk13 propeller domain: mutant D allele at position 433. One sample from Mlimba had E433D non-synonymous mutation.
+PMID_30898164,PMID_30898164_mlimba_2016,k13:578:A,87,88,Pfk13 propeller domain: wild-type A allele at position 578. One sample from Mlimba had A578S mutation. Counts include ~1 sample unsequenced.
+PMID_30898164,PMID_30898164_mlimba_2016,k13:578:S,1,88,Pfk13 propeller domain: mutant S allele at position 578. One sample from Mlimba had A578S non-synonymous mutation.
+PMID_30898164,PMID_30898164_ujiji_2016,k13:416:I,87,88,Pfk13 propeller domain: wild-type I allele at position 416. One sample from Ujiji had I416V non-synonymous mutation.
+PMID_30898164,PMID_30898164_ujiji_2016,k13:416:V,1,88,Pfk13 propeller domain: mutant V allele at position 416. One sample from Ujiji had I416V non-synonymous mutation.
+PMID_30898164,PMID_30898164_ujiji_2016,k13:613:Q,86,88,Pfk13 propeller domain: wild-type Q allele at position 613. Two samples from Ujiji had Q613E non-synonymous mutation.
+PMID_30898164,PMID_30898164_ujiji_2016,k13:613:E,2,88,Pfk13 propeller domain: mutant E allele at position 613. Two samples from Ujiji had Q613E non-synonymous mutation (not previously associated with artemisinin resistance).

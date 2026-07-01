@@ -1,5 +1,4 @@
 id,source,status,eligible,confidence,duplicate_risk,needs_supplement,spec_version,model,first_seen,last_assessed,supp_attempts,notes
-PMID_ 38461239,master,REVIEW_DUPLICATE,True,high,high,False,1,opus,2026-07-01,2026-07-01,0,
 PMID_30898164,master,EXTRACTED,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,"4 survey(s), 7 count rows"
 PMID_38461239,master,EXCLUDED,,,,,,,2026-07-01,,,on exclude.txt
 PMID_38594679,master,EXTRACTED,True,high,medium,False,1,opus,2026-07-01,2026-07-01,0,"5 survey(s), 5 count rows"

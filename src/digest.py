@@ -28,6 +28,12 @@ ASSESS = DATA / "eligibility"
 MARKER = "<!-- markerbase-attention -->"   # hidden tag to re-find our issue
 TITLE = "📋 MarkerBase: papers needing attention"
 
+# Assign the attention issue to these GitHub users so they get emailed: an
+# assignment (and a comment on each update) notifies you even on the low-noise
+# "Participating and @mentions" watch setting — a silent body edit never does.
+# Override with the DIGEST_ASSIGNEES env var (comma-separated usernames).
+ASSIGNEES = [u.strip() for u in os.environ.get("DIGEST_ASSIGNEES", "bobverity").split(",") if u.strip()]
+
 SECTIONS = [
     (store.REVIEW_DUPLICATE, "🔁 Possible duplicates — rule on each in `duplicate_decisions.yaml`",
      "Add a line `id: duplicate` or `id: unique` to duplicate_decisions.yaml."),
@@ -135,11 +141,21 @@ def main():
         return
 
     if existing:
+        changed = (existing.get("body") or "") != body
         api("PATCH", f"{base}/{existing['number']}", token,
-            {"title": TITLE, "body": body, "state": "open"})
-        print(f"Updated issue #{existing['number']} — {total} item(s).")
+            {"title": TITLE, "body": body, "state": "open", "assignees": ASSIGNEES})
+        # A body edit doesn't notify; a comment does. Only comment when the set
+        # of outstanding papers actually changed, to avoid weekly noise.
+        if changed:
+            api("POST", f"{base}/{existing['number']}/comments", token,
+                {"body": f"🔔 Updated — {total} paper(s) now need your attention "
+                         "(see the issue description above)."})
+            print(f"Updated + commented on issue #{existing['number']} — {total} item(s).")
+        else:
+            print(f"Issue #{existing['number']} unchanged — {total} item(s), no comment.")
     else:
-        created = api("POST", base, token, {"title": TITLE, "body": body})
+        created = api("POST", base, token,
+                      {"title": TITLE, "body": body, "assignees": ASSIGNEES})
         print(f"Opened issue #{created['number']} — {total} item(s).")
 
 

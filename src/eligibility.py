@@ -26,7 +26,6 @@ MODELS = {
     "haiku": ("claude-haiku-4-5", 1.0, 5.0),
     "sonnet": ("claude-sonnet-4-6", 3.0, 15.0),
     "opus": ("claude-opus-4-8", 5.0, 25.0),
-    "fable": ("claude-fable-5", 10.0, 50.0),
 }
 
 
@@ -187,10 +186,7 @@ def assess_pdf_bytes(pdf_bytes, model_key="haiku", client=None, supplement_block
 
     return client.messages.parse(
         model=model,
-        # Headroom for models with always-on thinking (e.g. Fable 5): thinking
-        # tokens count against max_tokens, so a tight cap truncates the structured
-        # output. It's a ceiling, not a target — non-thinking models bill on actual.
-        max_tokens=8000,
+        max_tokens=1800,
         system=SYSTEM,
         messages=[{"role": "user", "content": content}],
         output_format=Assessment,

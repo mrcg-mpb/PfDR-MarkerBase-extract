@@ -38,7 +38,6 @@ MODELS = {
     "haiku": ("claude-haiku-4-5", 1.0, 5.0),
     "sonnet": ("claude-sonnet-4-6", 3.0, 15.0),
     "opus": ("claude-opus-4-8", 5.0, 25.0),
-    "fable": ("claude-fable-5", 10.0, 50.0),
 }
 
 ACCESS_LEVEL = "public"   # every paper from this automated pipeline is public
@@ -204,7 +203,7 @@ def _pdf_block(pdf_bytes):
 
 
 def extract(pdf_bytes, study_id, model_key="haiku", supplement_blocks=None,
-            eligibility_record=None, repair=None, client=None, max_tokens=12000):
+            eligibility_record=None, repair=None, client=None, max_tokens=8000):
     """Run the extractor. Returns the raw response; `resp.parsed_output` is an
     `Extraction` (or None on refusal).
 

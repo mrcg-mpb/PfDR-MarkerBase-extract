@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       model:
-        description: "Model (haiku/sonnet/opus/fable)"
+        description: "Model (haiku/sonnet/opus)"
         default: "haiku"
 
 # Needed so the job can commit the updated roster back to the repo.

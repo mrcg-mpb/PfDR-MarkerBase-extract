@@ -1,0 +1,63 @@
+{
+  "id": "PMID_17176345",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum infections treated with amodiaquine in Kenya."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfmdr1 N86Y genotyping: '15N, 40Y and 17 mixed N/Y genotypes on day 0' — codon 86 is a target marker. Study focus is pfmdr1 gene amplification (copy number), which is not a curated codon."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "pfmdr1 N86Y distribution given as counts: 15N, 40Y, 17 mixed of the day-0 samples, allowing extractable frequency."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from clinical trial conducted in Western Kenya, Siaya Hospital, Nyanza Province — a sub-national location below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Clinical trial conducted between November and December 2004 in Western Kenya — a single, well-bounded collection window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates from children with uncomplicated P. falciparum malaria in Western Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study on 72 children treated with amodiaquine monotherapy."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'Samples for molecular analysis were derived from our clinical trial on AQ in monotherapy conducted between November and December 2004 in Western Kenya (Holmgren et al. 2006)'; the N86Y data is explicitly from that prior publication: 'The pfmdr1 N86Y genotyping analysis is described in a previous report (Holmgren et al. 2006).'"
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "N86Y counts are given in the main text; no supplementary pointers for additional per-locus data."
+    },
+    "markers_found": [
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      2004
+    ],
+    "sample_size": 72,
+    "summary": "Primary study of 72 children with P. falciparum malaria in Western Kenya (Siaya, Nyanza Province, Nov-Dec 2004) treated with amodiaquine monotherapy. The focus is pfmdr1 gene copy number/amplification (not a curated codon). It reports pfmdr1 N86Y genotype counts (15N, 40Y, 17 mixed on day 0), a target marker with extractable frequency, at sub-country resolution within a bounded time window. All criteria appear met, but the N86Y data derives from a prior publication (Holmgren et al. 2006), creating high duplicate risk.",
+    "exclusion_reasons": [
+      "High duplicate risk: the pfmdr1 N86Y genotype data is explicitly taken from a previously published report (Holmgren et al. 2006) using the same 2004 Western Kenya samples; this paper's novel contribution is copy-number amplification, not a curated codon frequency."
+    ]
+  }
+}

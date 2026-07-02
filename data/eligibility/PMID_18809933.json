@@ -1,0 +1,62 @@
+{
+  "id": "PMID_18809933",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This study investigates Plasmodium vivax resistance to chloroquine in Madagascar; it analyzes pvcrt-o and pvmdr1 (P. vivax genes), not P. falciparum. Two P. falciparum infections during follow-up were excluded."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Reports mutations in pvmdr1 (P. vivax) e.g. Y976F, S513R, and pvcrt-o. These are P. vivax orthologs, not the curated P. falciparum codon positions (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1 86, etc.)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 6 gives per-site allele frequencies (e.g., S513R 96.3%, Y976F 98.8%) with numerators and denominators — but for pvmdr1, not P. falciparum markers."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies reported by region/site (South, West, Central Highlands; six sentinel sites: Ejeda, Ihosy, Tsiroanomandidy, Moramanga/Saharevo, Maevatanana, Miandrivazo)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected in 2006 (Feb–June 2006), a single-year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Clinical isolates collected from patients at sentinel sites in Madagascar, an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study with clinical trial, sequencing, and field collection."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Acknowledgments: 'samples were obtained' from 'the national network for the surveillance of malaria resistance in Madagascar (Réseau d'Etude de la Résistance [RER])' — a surveillance network."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequency data are in main text tables (Table 6, 7, 8); no missing supplementary data needed."
+    },
+    "markers_found": [],
+    "countries": [
+      "Madagascar"
+    ],
+    "collection_years": [
+      2006
+    ],
+    "sample_size": 80,
+    "summary": "Study of Plasmodium vivax chloroquine resistance in Madagascar, analyzing pvmdr1 and pvcrt-o genes. It reports P. vivax markers only, not P. falciparum drug-resistance markers, so it fails the species and target-marker criteria.",
+    "exclusion_reasons": [
+      "Study is of Plasmodium vivax, not P. falciparum",
+      "Reports pvmdr1/pvcrt-o (P. vivax ortholog) markers, none of the curated P. falciparum drug-resistance codon positions"
+    ]
+  }
+}

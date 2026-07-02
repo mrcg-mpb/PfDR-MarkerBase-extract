@@ -1,0 +1,67 @@
+{
+  "id": "PMID_12447777",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum infections in children treated with chlorproguanil-dapsone in Tanzania."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr codons 51, 59, 108 and dhps codons 436, 437, 540, 581 — all curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives numerator/denominator per village: DHFR Ile51-Arg59-Asn108 Kwevihombo 15/42, Skimu 21/55, before; DHPS Ser436-Gly437-Glu540 15/41, 18/52; plus Gly581 counts (3/50 before, 2/40 after in Skimu)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies reported per village (Kwevihombo, Skimu) in the East Usambara Mountains, northeast Tanzania — sub-national resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected April 1999–June 1999 (single window well within 3 years)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from asymptomatic children in villages in northeast Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical drug trial with molecular genotyping of field samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Samples collected as part of a bednet trial preintervention survey; references prior related trials (ref 7 1995, ref 15) but this is a distinct 1999 collection."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-locus frequencies present in Table 1 of main text; no supplementary material required."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1999
+    ],
+    "sample_size": 263,
+    "summary": "Chlorproguanil-dapsone treatment trial in asymptomatic P. falciparum-infected children in villages (Kwevihombo, Skimu) in the East Usambara Mountains, NE Tanzania, April–June 1999. Reports dhfr (51,59,108) and dhps (436,437,540,581) genotype prevalences with extractable counts per village before/after treatment. Meets all criteria.",
+    "exclusion_reasons": []
+  }
+}

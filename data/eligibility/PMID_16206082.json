@@ -1,0 +1,62 @@
+{
+  "id": "PMID_16206082",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Gambian children with severe falciparum malaria, confirmed P. falciparum parasitemia."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt 76T and pfmdr1 86Y (plus pfmdr1 184F). Pfcrt 76 and Pfmdr1 86 are curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Prevalence of pfcrt 76T, pfmdr1 86Y, pfmdr1 184F were 63.9%, 45.4%, 85.8% among SM cases and 53.7%, 42.0%, 74.1% among controls; sample counts also given."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study conducted in Farafenni, The Gambia — a named town/site below country level; all samples from Farafenni hospital."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Patients enrolled September to December 2002, a single transmission season — well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from Gambian children admitted to Farafenni hospital, The Gambia."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary matched case-control field study with genotyping."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "194 of the controls participated in a trial of chloroquine plus SP versus coartemether described elsewhere (Sutherland CJ, Ord R, Dunyo S, et al. PLoS Med 2005;2:e92), and Farafenni area drug-resistance work is reported in refs 18,21,23 by the same group, indicating possible sample overlap with related publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies and locations are available in the main text and tables."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "The Gambia"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 234,
+    "summary": "Matched case-control study in Farafenni, The Gambia (Sept–Dec 2002) of 234 children with severe falciparum malaria. Reports allele frequencies for pfcrt 76T, pfmdr1 86Y and pfmdr1 184F in cases and controls, tied to a single town over a single transmission season, meeting all eligibility criteria. Duplicate risk is medium given overlap with related Farafenni trials/publications by the same group.",
+    "exclusion_reasons": []
+  }
+}

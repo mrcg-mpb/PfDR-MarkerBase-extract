@@ -1,0 +1,69 @@
+{
+  "id": "PMID_11807721",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated P. falciparum malaria in Malawian children; DHFR and DHPS genotyping of P. falciparum isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Analyzed DHFR codons 51, 59, 108 and DHPS codons 437, 540, 581, 613 — all curated target codons (Pfdhfr 51,59,108; Pfdhps 437,540,581,613)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Baseline prevalence reported: DHFR Ile-51/Glu-540 in 70%, Arg-59/Glu-540 65%, DHFR triple mutant 78%, quintuple 64% among 100 randomly selected samples; also counts in Tables 2-4."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "All samples from a single site: Ndirande Health Centre in Blantyre, Malawi. This is a single sub-national site so resolution is fine, but frequencies tie to one location only — actually sub-country resolution IS met (Blantyre/Ndirande)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Children enrolled and treated over the course of 1 year in a prospective trial; collection window within a single year (<=3y). Study conducted around 1999 (presented at ASTMH Dec 1999)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical field isolates collected from children presenting to Ndirande Health Centre, Blantyre, Malawi (African country)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study: prospective double-blind placebo-controlled trial with molecular genotyping of collected samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples are pretreatment samples from a clinical trial whose clinical results are reported elsewhere (Sulo et al., unpublished data); the same collection may be published in related papers."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequency data and codon results appear in main text and Tables 2-5; no critical extraction data pointed to supplementary material."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Malawi"
+    ],
+    "collection_years": [
+      1999
+    ],
+    "sample_size": 149,
+    "summary": "Prospective double-blind trial in children at Ndirande Health Centre, Blantyre, Malawi, genotyping P. falciparum DHFR (51,59,108) and DHPS (437,540,581,613) mutations in relation to SP and chlorproguanil-dapsone treatment outcomes. Baseline prevalence frequencies reported for a single site over a ~1-year window. Sub-country resolution is met (single named site), temporal resolution within 3y, African field samples, primary study, target markers with extractable frequencies. Eligibility hinges on whether frequencies are reported per-locus; genotype-level frequencies are given but individual codon frequencies (e.g., Arg-59, Glu-540) are extractable. Marked ineligible only due to uncertainty in per-locus extractability being reported mainly as combined genotypes.",
+    "exclusion_reasons": [
+      "Frequencies are largely reported as combined genotype categories (triple/quintuple mutant) rather than clean per-locus numerator/denominator counts, though some single-codon prevalences (e.g., Arg-59 65%, Glu-540) are extractable; per-locus extraction is partly ambiguous."
+    ]
+  }
+}

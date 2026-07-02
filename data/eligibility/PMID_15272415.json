@@ -1,0 +1,66 @@
+{
+  "id": "PMID_15272415",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum malaria epidemic in Kidal, Mali, confirmed by microscopy and PCR."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt K76T (position 76), dhfr S108N/N51I/C59R (108,51,59), and dhps A437G/K540E (437,540) — all curated positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "pfcrt 76T in 45/57 (79%), K76 11/57 (19%); among 22 samples dhfr S108N 45%, C59R 35%, N51I 30%; quintuple 0%."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from Kidal district, northern Mali — a sub-national administrative unit; survey in 5 nomadic camps."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Cross-sectional survey conducted 11–18 October 1999, single time point (<=3y)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates collected from patients in Kidal district, Mali (Africa) via finger-prick filter paper."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary cross-sectional field survey with original PCR data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection during a specific 1999 Kidal epidemic; no indication of consortium/network overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies given in main text and Figure 1; no supplement required for extraction."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfdhfr 108",
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Mali"
+    ],
+    "collection_years": [
+      1999
+    ],
+    "sample_size": 57,
+    "summary": "Cross-sectional survey during a 1999 P. falciparum epidemic in Kidal district, northern Mali. Reports pfcrt K76T (79% in 45/57), dhfr triple mutations (S108N 45%, C59R 35%, N51I 30%; among 22 samples), and dhps A437G in one patient with no quintuple mutant detected. Sub-national location (Kidal district) and single collection month (October 1999) both satisfy resolution criteria.",
+    "exclusion_reasons": []
+  }
+}

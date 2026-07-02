@@ -1,0 +1,75 @@
+{
+  "id": "PMID_16319183",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum isolates and cytb gene polymorphism (title and throughout)."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Pfcytb codon 268 examined (Y268S) by RFLP in all 477 isolates and sequencing of 270 isolates."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "No cytb mutation (0/477) detected in pre-treatment isolates; one Y268S in post-treatment isolate. Frequency of Y268S = 0/477 in field isolates is extractable."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Frequencies tied only to country of infection (Cameroon, Ivory Coast, Mali, Senegal, Comoro Islands, Madagascar). Samples were collected in France from returning travellers; no sub-national location within the African source countries."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "Samples collected between 1999 and 2004, a 6-year span, with cytb genotyping (0/477 mutations) pooled across the entire period, exceeding 3 years."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples are imported/traveller cases collected in French hospitals from patients returning from Africa and the Indian Ocean, not African field/clinical isolates collected in situ."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study collecting isolates and performing in vitro susceptibility and genotyping."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Samples collected through the French National Reference Centre surveillance; routine field collection, no explicit statement of overlap with a specific larger published dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced for finer spatial or temporal resolution; data are in main text and Table 1."
+    },
+    "markers_found": [
+      "Pfcytb 268"
+    ],
+    "countries": [
+      "Cameroon",
+      "Ivory Coast",
+      "Mali",
+      "Senegal",
+      "Comoros",
+      "Madagascar"
+    ],
+    "collection_years": [
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "sample_size": 477,
+    "summary": "Study of atovaquone susceptibility and cytb (codon 268) polymorphism in 477 P. falciparum isolates from French travellers returning from Africa and the Indian Ocean (1999-2004). No Y268S mutation found in pre-treatment isolates. However, the samples are imported traveller cases (not African field isolates), frequencies are only resolvable at country level, and the 0/477 genotyping frequency pools samples across a 6-year span.",
+    "exclusion_reasons": [
+      "Imported/traveller cases collected in France, not African field/clinical isolates",
+      "Frequencies resolvable only at country level, no sub-national resolution",
+      "cytb frequency pooled across 1999-2004 (6 years), exceeding 3-year temporal resolution"
+    ]
+  }
+}

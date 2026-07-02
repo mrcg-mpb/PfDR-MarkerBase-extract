@@ -1,0 +1,65 @@
+{
+  "id": "PMID_15941416",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyses P. falciparum isolates; inclusion required 'positive blood smear with P. falciparum mono-infection'."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr codons 51, 59, 108 and Pfdhps codons 437, 540 — all curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 3 gives WT/MX/MT counts and percentages per codon (e.g. codon 108: MT 75 (63.6%); 437: MT 105 (89%); 540: MT 88 (74.6%)), out of 118 successful assays."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected at Kasangati Medical Complex, Wakiso district, 20 km NE of Kampala — a single named sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Clinical/parasitological work carried out in 2000; samples collected on day 0 during year 2000, bounding collection to a single year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Blood samples on filter paper from 169 malaria patients in Kasangati, Uganda — African clinical field isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary clinical study with molecular genotyping of field isolates and original efficacy follow-up."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single-site field collection at Kasangati; mentions other Ugandan studies (Dorsey Mulago, nine sentinel sites) for comparison but these are distinct datasets, not overlapping samples."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All per-codon frequencies are in Table 3 within the main text; no supplementary tables referenced."
+    },
+    "markers_found": [
+      "Pfdhfr N51I",
+      "Pfdhfr C59R",
+      "Pfdhfr S108N",
+      "Pfdhps A437G",
+      "Pfdhps K540E"
+    ],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [
+      2000
+    ],
+    "sample_size": 118,
+    "summary": "Primary clinical study at Kasangati Medical Complex, Wakiso district, Uganda (samples collected in 2000). Reports extractable WT/MX/MT frequencies (n=118 successful assays) for Pfdhfr codons 51, 59, 108 and Pfdhps codons 437, 540 in Table 3, plus haplotype data in Table 4. Single sub-national site and single-year collection satisfy resolution criteria. All criteria met.",
+    "exclusion_reasons": []
+  }
+}

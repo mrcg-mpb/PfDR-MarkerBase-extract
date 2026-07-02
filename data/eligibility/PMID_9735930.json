@@ -1,0 +1,69 @@
+{
+  "id": "PMID_9735930",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum DHFR and DHPS gene polymorphisms in isolates from Tanzanian children; inclusion required monoinfection with P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports DHFR codons 51, 59, 108 and DHPS codons 436, 437, 540, 581, 613 — all curated target positions (Tables 1 and 2)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 and Table 2 give counts and percentages per codon, e.g. 51-asparagine 14 (31.1%) of n=45; 540-glutamic acid 36 (80%)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected in the village of Magoda, Tanga Region, north-east Tanzania — a specific named village below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Frequencies binned by year: 1995 (n=45) and 1996 (n=27 day 0, n=26 day 7), each a single collection year (Table 2)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children recruited in Magoda, Tanga Region, Tanzania; blood taken before treatment. Lab strains only used as PCR controls."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical field study with two therapeutic studies conducted in 1995 and 1996."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "DHFR results for the 1995 isolates were already published in Jelinek et al. 1997 (Trop Med Int Health 2,1075-1079); studies were within the same population as a 1994 study (Rønn et al. 1996)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Full per-codon frequency counts are provided in Tables 1 and 2 in the main text."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995,
+      1996
+    ],
+    "sample_size": 72,
+    "summary": "Field study in Magoda village, Tanga Region, Tanzania (1995 and 1996) reporting DHFR (51,59,108) and DHPS (436,437,540,581,613) codon frequencies per year in P. falciparum isolates from children. Extractable counts/percentages given by year and by day 0/day 7 in Tables 1 and 2. All criteria met. Note DHFR 1995 data previously published (Jelinek et al. 1997), giving medium duplicate risk.",
+    "exclusion_reasons": []
+  }
+}

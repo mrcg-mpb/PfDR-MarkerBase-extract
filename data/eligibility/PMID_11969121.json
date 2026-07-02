@@ -1,0 +1,65 @@
+{
+  "id": "PMID_11969121",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Entire review focuses on P. falciparum antifolate resistance and PfDHFR structure."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Discusses Pfdhfr mutations at codons 51, 59, 108 (e.g. 'Ser108Asn', 'Asn51Ile', 'Cys59Arg'), which are curated Pfdhfr positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "This is a review/modelling paper. It discusses mutations qualitatively ('the primary mutation to appear in the field is Ser108Asn') but reports no numerator/denominator counts or per-locus frequencies from field samples."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No field survey with sub-national locations; only references to strains (Thailand K1, Tanzanian F32, 'Camp', 'Uganda') from cited literature, no frequency data tied to locations."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No original field collection with dated sampling; it is a homology-modelling review."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "No original African field/clinical isolate data collected; the study is computational modelling of enzyme structure using lab strains and published sequences."
+      },
+      "is_primary_study": {
+        "met": false,
+        "evidence": "Title and abstract state 'This review focuses on the activity of drugs on DHFR'; it is a review combined with homology-modelling, not a primary empirical field study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "No field dataset presented; no cohort or surveillance overlap relevant."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No frequency data exists in this modelling review; supplementary materials would not contain extractable field frequencies."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a review and homology-modelling paper on antifolate resistance mechanisms in P. falciparum DHFR. It discusses resistance-associated Pfdhfr codons (51, 59, 108) structurally but reports no field-derived per-locus frequency data, no sub-country locations, and no dated African field samples. It fails multiple criteria and is not a primary empirical frequency study.",
+    "exclusion_reasons": [
+      "Not a primary empirical study — it is a review/modelling paper",
+      "No extractable per-locus frequencies (numerator/denominator) reported",
+      "No sub-country location data for any frequency",
+      "No dated field collection windows",
+      "No original African field/clinical isolate data"
+    ]
+  }
+}

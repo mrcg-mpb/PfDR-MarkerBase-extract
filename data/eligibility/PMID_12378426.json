@@ -1,0 +1,68 @@
+{
+  "id": "PMID_12378426",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a human genetics study of the G6PD locus (human glucose-6-phosphate dehydrogenase gene) examining human nucleotide diversity. P. falciparum is only mentioned as the malaria parasite context, not studied as an organism."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The study reports human G6PD SNPs (e.g., A, A-, Med variants at amino acid residues 68, 126, 188). No P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, etc.) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies reported are for human G6PD alleles, not parasite drug-resistance codons."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Human samples tied to sub-national ethnic groups/locations (e.g., Cameroon groups, Sierra Leone groups, Nigeria, Bakola Pygmies, Hadza, Maasai, Sandawe) — but these are human population samples, not parasite isolates."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No parasite sample collection dates given; the paper concerns archived human DNA samples."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples are human DNA from African populations, not P. falciparum field isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study sequencing G6PD in 216 individuals."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Not applicable to parasite drug-resistance database."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No parasite marker data exist in this human genetics paper."
+    },
+    "markers_found": [],
+    "countries": [
+      "Cameroon",
+      "Sierra Leone",
+      "Nigeria",
+      "Tanzania",
+      "Kenya",
+      "South Africa",
+      "Tunisia"
+    ],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a human population genetics study of the G6PD gene examining nucleotide diversity and balancing selection related to malaria resistance. It does not study Plasmodium falciparum parasites or any P. falciparum drug-resistance markers; it concerns human host genetics.",
+    "exclusion_reasons": [
+      "Not a P. falciparum study — analyzes the human G6PD gene, not the parasite",
+      "Reports no curated P. falciparum drug-resistance markers",
+      "Samples are human DNA, not P. falciparum field isolates",
+      "No parasite frequencies or collection dates"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "PMID_17990228",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated Plasmodium falciparum malaria in Burkina Faso."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Genotyping used msp-2, msp-1, and 4 microsatellites only to distinguish recrudescence from new infection; no drug-resistance codon markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) were genotyped or reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No molecular marker allele frequencies are reported; only clinical efficacy outcomes and treatment failure risks."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from 3 government health dispensaries (Colsama, Sarfalao, Ouezzinville) in Bobo-Dioulasso, western Burkina Faso."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No explicit collection dates given; study conducted around 2005-2007 but no drug-resistance data to bin temporally."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates collected in Bobo-Dioulasso, Burkina Faso."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Randomized clinical trial (ISRCTN94367569), a primary empirical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection from a clinical trial in Bobo-Dioulasso; no indication of overlap with a larger molecular surveillance dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary molecular marker data referenced; the study did not genotype drug-resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Burkina Faso"
+    ],
+    "collection_years": [],
+    "sample_size": 559,
+    "summary": "Randomized clinical trial comparing three antimalarial combination regimens (AQSP, artemether-lumefantrine, dihydroartemisinin-piperaquine) for uncomplicated P. falciparum malaria in Bobo-Dioulasso, Burkina Faso. Genotyping used only msp-2, msp-1, and microsatellites to distinguish recrudescence from new infection; no drug-resistance codon markers were assessed or reported. The study is therefore ineligible.",
+    "exclusion_reasons": [
+      "No curated drug-resistance codon markers (Pfcrt, Pfcytb, Pfdhfr, Pfdhps, Pfk13, Pfmdr1) were genotyped or reported",
+      "No extractable per-locus marker frequencies available"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "PMID_16779725",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum dhfr alleles in western Kenya; abstract and text throughout refer to P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr codons 51, 59, 108 (and 50, 164) — codons 51, 59, 108 are curated Pfdhfr targets."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "The paper reports genotypes and presence of mutations (e.g. '15 of 479 samples showed I164L') but does NOT provide per-locus numerator/denominator frequencies for codons 51/59/108. It explicitly states 'Only the presence of genotypes is reported' and samples were selected on basis of having I164L, precluding population frequencies. Authors state 'We cannot accurately assess the population prevalence of I164L.'"
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from Kisumu region of western Kenya — a sub-national location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected Oct 2002–March 2003 (Tables 4 and 5 footnotes), within a 3-year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical blood samples from HIV-infected/uninfected adults in a cotrimoxazole prophylaxis study in Kisumu, Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study with PCR sequencing, pyrosequencing, and microsatellite analysis of field samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples taken from a longitudinal cotrimoxazole prophylaxis study in Kisumu; associated with the Asembo Bay Cohort Project references, indicating a named cohort that may be reused across publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables cited that would provide extractable per-locus population frequencies; the paper deliberately does not report population prevalence."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhfr 164 (non-curated)",
+      "Pfdhfr 50 (non-curated)"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      2002,
+      2003
+    ],
+    "sample_size": 479,
+    "summary": "Primary study of P. falciparum dhfr antifolate-resistance alleles in western Kenya (Kisumu), 2002–2003, focused on origins/lineages of I164L and triple-mutant genotypes using microsatellites. Covers curated dhfr codons 51/59/108, sub-country location, and adequate temporal resolution. However, it does not report extractable per-locus frequency counts — samples were selected for I164L, only genotypes/presence are reported, and the authors explicitly state population prevalence cannot be assessed. Fails on extractable frequencies.",
+    "exclusion_reasons": [
+      "No extractable per-locus frequencies: only presence of mutations/genotypes reported; samples pre-selected for I164L; authors explicitly state population prevalence cannot be assessed."
+    ]
+  }
+}

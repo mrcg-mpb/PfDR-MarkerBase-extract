@@ -1,0 +1,62 @@
+{
+  "id": "PMID_15814601",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study genotypes P. falciparum isolates from infected pregnant and non-pregnant individuals in Senegal."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt K76T mutation, i.e. codon 76 (a curated Pfcrt position)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Provides counts: controls 26 mutant/6 wild-type/17 mixed of 49; at delivery 50 mutant/3 wild-type/5 mixed of 58 peripheral; placental 57/2/8 of 67; during pregnancy 47/11/4 of 62."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Conducted in the rural maternity hospital of Thiadiaye, Senegal — a named sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Women delivering between October 2001 and June 2002 — collection window under one year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates collected in Thiadiaye, Senegal."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study with PCR-RFLP genotyping of collected field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Women 'were part of a cohort study'; related publications (Jafari-Guemouri 2005; Tuikue Ndam 2004) draw on overlapping placental isolate collections from the same IRD Senegal unit."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency counts are given in the main text; no supplementary material referenced."
+    },
+    "markers_found": [
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Senegal"
+    ],
+    "collection_years": [
+      2001,
+      2002
+    ],
+    "sample_size": 118,
+    "summary": "Primary study in Thiadiaye, Senegal (Oct 2001-Jun 2002) genotyping pfcrt K76T in 69 pregnant women (peripheral/placental) and 49 non-pregnant controls, reporting extractable mutant/wild-type/mixed counts at a named sub-national site within a <3y window.",
+    "exclusion_reasons": []
+  }
+}

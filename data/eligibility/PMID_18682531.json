@@ -1,0 +1,64 @@
+{
+  "id": "PMID_18682531",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyses P. falciparum parasites from placental and venous blood; Pfcrt exon 2 sequencing."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Pfcrt exon 2 codons 74, 75, 76 reported (CVMNK/CVIET haplotypes, K76T mutation) — codons 74, 75, 76 are curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Frequency of 76T: 92% venous and 93% placenta; 42/69 individuals harboured 76K in periphery vs 10/59 in placenta; single-allele haplotypes CVMNK n=11, CVIET n=87; venous/placental proportions given."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected at maternity ward of Guediawaye, a suburb of Dakar — a specific sub-national site/town."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "'Samples were collected... during 2000 and 2001' — a two-year collection window (<=3 years)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human placental and venous blood field samples from pregnant women in Dakar, Senegal (Africa); residents declaring no travel outside the area."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study with 692 women recruited, sequencing of Pfcrt exon 2 in field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Study cites related work in same Dakar setting (Schleiermacher 2002, Sarr 2006) but this is a distinct 2000-2001 collection; mentions additional 96 samples sequenced. No explicit consortium/subset statement."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies and site are in main text and tables/figures; no supplementary data pointer for finer detail."
+    },
+    "markers_found": [
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Senegal"
+    ],
+    "collection_years": [
+      2000,
+      2001
+    ],
+    "sample_size": 141,
+    "summary": "Study of Pfcrt exon 2 (codons 74/75/76, CVMNK/CVIET) in matched placental and venous blood from pregnant women in Guediawaye, suburb of Dakar, Senegal, collected 2000-2001. Full sequence obtained for 141 samples (72 peripheral, 69 placenta). Reports extractable K76T frequencies (93% placenta, 92% venous) with numerator/denominator counts by compartment.",
+    "exclusion_reasons": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "PMID_15216481",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyzes pfcrt gene in 98 P. falciparum field isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Sequenced pfcrt codons 72-76 including K76T (position 76 is a target Pfcrt codon)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives per-site counts of pfcrt alleles among numbered samples (e.g., Manaus 37 samples, 33 S(tct)MNT, 3 CIET)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Table 1 breaks frequencies by named towns/states with coordinates: Manaus, Porto Velho, Peixoto de Azevedo/Apiacás, Tabatinga, Iquitos (Loreto)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection windows given per site: Manaus 2000-2002, Mato Grosso 1992-1994, Tabatinga July 2001, Iquitos 2001-2002 — all <=3 years."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "All samples collected in Brazil, Peru, and Colombia (Amazon Basin, South America); laboratory strains 7G8 and TM284 also included. No African field samples."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical field study genotyping 98 isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection; no stated consortium overlap, though references prior related collections (Wootton et al.)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-site pfcrt allele frequencies fully present in Table 1 of the main text."
+    },
+    "markers_found": [
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Brazil",
+      "Peru",
+      "Colombia"
+    ],
+    "collection_years": [
+      1992,
+      1993,
+      1994,
+      2000,
+      2001,
+      2002
+    ],
+    "sample_size": 98,
+    "summary": "Primary study genotyping pfcrt codons 72-76 (including K76T) in 98 P. falciparum field isolates across South American sites with sub-country resolution and adequate temporal binning. However, all samples are from Brazil, Peru, and Colombia — no African field samples — so it fails the African field-sample criterion.",
+    "exclusion_reasons": [
+      "Samples were collected in South America (Brazil, Peru, Colombia), not in an African country."
+    ]
+  }
+}

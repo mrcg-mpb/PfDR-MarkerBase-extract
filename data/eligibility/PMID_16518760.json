@@ -1,0 +1,67 @@
+{
+  "id": "PMID_16518760",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Patients with uncomplicated falciparum malaria; 'frequent exposure to Plasmodium falciparum'; markers in pfcrt, dhfr, dhps genes of P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "pfcrt Thr-76 (codon 76), dhfr Ile-51 (51), Asn-108 (108), dhps Gly-437 (437), Glu-540 (540) — all curated target codons; also dhfr 59 (not curated) and dhfr 164 (not curated)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 2 gives no. (%) of patients wild type/mixed/pure mutant per site for each mutation, e.g. dhps Gly-437 pure mutant Kanungu 274 (78)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Table 2 breaks down frequencies by 6 named sites: Kanungu, Mubende, Jinja, Arua, Tororo, Apac — all sub-national Ugandan locations shown on map (Figure 1)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "'conducted between December 2002 and May 2004' — collection window under 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Pretreatment samples from patients with uncomplicated malaria enrolled in clinical trials at 6 sites in Uganda; blood collected on filter paper on day of diagnosis."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analyzing genotypes from 2084 patients via nested PCR-RFLP."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples were from previously published antimalarial drug-efficacy studies [5,6] (Bakyaita et al 2005; Yeka et al 2005) at the same sites; also '[18]' Talisuna compared the same sites. Overlap with those prior collections is plausible."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All per-locus frequency counts and site-level breakdowns are in Table 2 of the main text; no supplementary data required."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfdhfr 51",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [
+      2002,
+      2003,
+      2004
+    ],
+    "sample_size": 2049,
+    "summary": "Cross-sectional molecular analysis of pretreatment isolates from 6 sites in Uganda (Dec 2002–May 2004) reporting per-site frequencies of pfcrt 76, dhfr 51/59/108/164, dhps 437/540 mutations. Table 2 provides extractable numerator/denominator counts per site; temporal window under 3 years. Meets all criteria; medium duplicate risk since samples derive from prior published efficacy trials at the same sites.",
+    "exclusion_reasons": []
+  }
+}

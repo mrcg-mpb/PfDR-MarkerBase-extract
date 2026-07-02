@@ -1,0 +1,61 @@
+{
+  "id": "PMID_10470338",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum isolates from Western Uganda."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The study genotypes only MSP1, MSP2 and GLURP polymorphic markers for population structure; no curated drug-resistance codon positions (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) are examined. It explicitly notes 'genetic polymorphisms determining susceptibility have not been described on loci of MSP 1 and 2, but on different genes.'"
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only allelic-family band prevalences and clone numbers are reported; no numerator/denominator frequencies for any target resistance codon."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from health centres in Kabarole and Bundibugyo Districts, Western Uganda — sub-national resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates or years are given for the field study."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human fingerprick field isolates collected in Uganda during an in vivo drug resistance study."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical field study with genotyping data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Samples derived from an in vivo drug resistance study in West Uganda; no evidence of consortium/network overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary data referenced; the paper simply does not assay the required drug-resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [],
+    "sample_size": 81,
+    "summary": "Field study genotyping P. falciparum isolates from Kabarole and Bundibugyo Districts, Western Uganda, using MSP1/MSP2/GLURP markers for population structure during an in vivo drug resistance trial. It does not assay any curated drug-resistance codon positions and reports no extractable resistance-marker frequencies, nor any collection year.",
+    "exclusion_reasons": [
+      "No curated drug-resistance markers assayed (only MSP1/MSP2/GLURP genotyping markers)",
+      "No extractable per-locus resistance frequencies",
+      "No collection dates/years given for temporal resolution"
+    ]
+  }
+}

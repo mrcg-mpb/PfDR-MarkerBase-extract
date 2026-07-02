@@ -1,0 +1,68 @@
+{
+  "id": "PMID_16135198",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study examines P. falciparum dhfr/dhps genotypes in children with uncomplicated malaria in northern Ghana."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped dhfr codons 51, 59, 108 and dhps codons 436, 437, 540, 581, 613 — all target curated positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Ile-51 56% (70/126), Arg-59 65% (82/126), Asn-108 72% (91/126); dhfr triple mutation 47% (59/126); Figure 1 shows prevalence per codon with denominators; Table 1 and Table 2 give counts."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All isolates collected in Tamale, Northern Region, Ghana — a named sub-national town/site below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Trial conducted at the end of the rainy season 2002 (August–December), i.e. a single-year collection window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from febrile children aged 6–59 months with uncomplicated malaria collected in Tamale, Ghana."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analysing 126 children from a treatment trial with genotyping data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples derive from a randomized SP treatment trial reported elsewhere (Mockenhaupt et al. 2005) and involved the Northern Region Malaria Project (NORMAP); the parent trial dataset may be published separately."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies with denominators are present in main text, Figure 1, Table 1 and Table 2; no supplementary material required."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Ghana"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 126,
+    "summary": "Primary study of 126 Ghanaian children with uncomplicated P. falciparum malaria collected in Tamale, Northern Region, Ghana in 2002. Reports extractable dhfr (51, 59, 108) and dhps (436, 437, 540, 581, 613) mutation frequencies with numerators/denominators at a sub-national town-level site within a single-year window. Eligible on all criteria; medium duplicate risk due to link to a parent treatment trial and NORMAP.",
+    "exclusion_reasons": []
+  }
+}

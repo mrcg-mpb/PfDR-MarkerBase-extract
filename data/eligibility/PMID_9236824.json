@@ -1,0 +1,60 @@
+{
+  "id": "PMID_9236824",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study concerns P. falciparum infection in western Kenya residents."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Paper studies host sickle cell haemoglobin genotypes (HbAA, HbAS, HbSS), not any P. falciparum drug-resistance marker codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only malaria prevalence and haemoglobin genotype counts are reported, no parasite drug-resistance loci frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Kisumu area / Western Kenya near Lake Victoria is a sub-national location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Blood samples taken over a period of 12 months (1997 publication)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field samples from indigenous residents of Kisumu area, Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary cross-sectional survey."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Independent local cross-sectional survey; no mention of consortium or shared dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary molecular data referenced; the paper simply does not study resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [],
+    "sample_size": 728,
+    "summary": "A 1997 cross-sectional survey in the Kisumu area of western Kenya examining the relationship between sickle cell haemoglobin genotypes and P. falciparum malaria prevalence. It reports malaria prevalence by host genotype but contains no P. falciparum drug-resistance marker genotyping or frequencies.",
+    "exclusion_reasons": [
+      "No curated P. falciparum drug-resistance marker codons reported",
+      "No extractable per-locus resistance marker frequencies; study focuses on host sickle cell genotypes and malaria prevalence"
+    ]
+  }
+}

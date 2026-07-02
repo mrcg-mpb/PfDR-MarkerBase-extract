@@ -1,0 +1,63 @@
+{
+  "id": "PMID_10558957",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Tanzanian children with P. falciparum malaria (mild and cerebral malaria defined by P. falciparum parasitemia)."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper studies human host genetic polymorphisms (NOS2 promoter G-954C and CCTTT microsatellite), not any P. falciparum drug-resistance markers such as Pfcrt, Pfdhfr, Pfk13, etc."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies reported are for human NOS2 genotypes, not parasite drug-resistance loci."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected at Muhimbili Medical Center in Dar es Salaam, Tanzania — a sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Recruited May 1994 to January 1995, a window under 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from Tanzanian children; American samples are human host controls, not parasites."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study of a Tanzanian cohort."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Cohort described elsewhere (Anstey et al. J Exp Med 1996) — 191 Tanzanian children; this analyzes 180-185 of them, subset of a prior collection."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No parasite drug-resistance marker data exists in this human-genetics study; supplement would not change eligibility."
+    },
+    "markers_found": [],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1994,
+      1995
+    ],
+    "sample_size": 191,
+    "summary": "This study examines human host NOS2 promoter polymorphisms (G-954C SNP and CCTTT microsatellite) in Tanzanian children with malaria and their association with disease severity and nitric oxide production. It reports no P. falciparum drug-resistance markers, so it is ineligible.",
+    "exclusion_reasons": [
+      "Does not report any curated P. falciparum drug-resistance marker codon positions",
+      "Frequencies reported are for human host NOS2 genotypes, not parasite drug-resistance loci"
+    ]
+  }
+}

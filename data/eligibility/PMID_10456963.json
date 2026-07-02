@@ -1,0 +1,61 @@
+{
+  "id": "PMID_10456963",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Gabonese children with prior mild or severe P. falciparum malaria."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Paper studies host factors (NO/NOS, cytokines, NOS2 promoter and TNF-a promoter polymorphisms). No P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No drug-resistance marker frequencies; only NO/NOS activity and cytokine levels reported as means."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from Albert Schweitzer Hospital in Lambaréné, Gabon (sub-national site)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates given; recruited from an ongoing longitudinal study, no usable time window stated."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical samples from Gabonese children in Lambaréné, Gabon."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical immunological study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Participants recruited from an ongoing longitudinal prospective study at Albert Schweitzer Hospital, but not a drug-resistance dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No drug-resistance data exist in this paper; supplement would not help."
+    },
+    "markers_found": [],
+    "countries": [
+      "Gabon"
+    ],
+    "collection_years": [],
+    "sample_size": 28,
+    "summary": "Immunological study measuring NO production, NOS activity, and plasma cytokine levels in 28 Gabonese children with prior mild or severe P. falciparum malaria. Reports no drug-resistance markers or frequencies.",
+    "exclusion_reasons": [
+      "No curated P. falciparum drug-resistance markers reported",
+      "No extractable per-locus resistance frequencies",
+      "No usable collection time window given"
+    ]
+  }
+}

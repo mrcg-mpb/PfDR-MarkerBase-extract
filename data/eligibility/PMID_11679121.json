@@ -1,0 +1,63 @@
+{
+  "id": "PMID_11679121",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum isolates; 100% (172/172) P. falciparum-infected (Table 1)."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt codon 76 (T76), pfmdr1 codon 86 (Y86), and pfdhfr codon 108 (N108) — all curated positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "pfcrt T76 69% (118/172), pfmdr1 Y86 66% (114/172), pfdhfr N108 80% (137/172); with numerator/denominator counts throughout Tables 2 and 3."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from pregnant women at the District Hospital in Agogo, Ghana — a specific town/site well below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Women enrolled in November/December 1998 — a single collection window well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates from pregnant women at antenatal care in Agogo, Ghana; lab strains Dd2/Hb3 used only as controls."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Retrospective cross-sectional primary empirical study with PCR-RFLP genotyping of field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples drawn from a larger cohort of 530 women enrolled Nov/Dec 1998; 'Malariological indices and data on drug consumption and pfdhfr alleles have been presented previously (Mockenhaupt et al. 2000, 2001)' — pfdhfr N108 data likely overlap with prior publication."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All marker frequencies with counts are provided in the main text and Tables 1-3; site is Agogo only."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Ghana"
+    ],
+    "collection_years": [
+      1998
+    ],
+    "sample_size": 172,
+    "summary": "Cross-sectional study of 172 parasitaemic pregnant women in Agogo, Ghana (collected Nov/Dec 1998) reporting extractable frequencies for pfcrt T76 (69%), pfmdr1 Y86 (66%), and pfdhfr N108 (80%). Single town site and single collection year satisfy resolution requirements. Note pfdhfr data may overlap with prior publications from the same 530-woman cohort.",
+    "exclusion_reasons": []
+  }
+}

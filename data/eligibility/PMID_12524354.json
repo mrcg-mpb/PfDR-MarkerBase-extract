@@ -1,0 +1,60 @@
+{
+  "id": "PMID_12524354",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a study of human genetic variation (G6PD gene) in relation to malarial selection. P. falciparum is discussed only as the selective agent; no P. falciparum parasites were genotyped."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper reports human G6pd and L1cam nucleotide polymorphisms (coding sites 202, 376, etc.), not any P. falciparum drug-resistance markers such as Pfcrt, Pfk13, Pfdhfr, etc."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies reported are for human G6PD deficiency alleles (~20% A- in Africa), not parasite drug-resistance codon frequencies."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Samples tied to human populations from South Africa, Zaire, Namibia, Gambia, Nigeria etc.; but these are human host samples, irrelevant to parasite markers."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No parasite collection times relevant to drug-resistance markers; human DNA samples are from a Y-Chromosome Consortium collection with no collection dates."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "African samples are human DNA (e.g., Pedi, Mbuti, Serere), not P. falciparum field isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study sequencing G6pd and L1cam in 47 humans."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Human samples from Y-Chromosome Consortium DNA collection, but irrelevant to parasite marker database."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No parasite marker data exists anywhere; supplement would not help."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a human population genetics study of nucleotide variability at the human G6pd (glucose-6-phosphate dehydrogenase) gene and the neighboring L1cam locus, examining the signature of malarial selection on the human genome. P. falciparum is discussed only as the historical selective agent. No P. falciparum parasites were genotyped and no drug-resistance markers or frequencies are reported.",
+    "exclusion_reasons": [
+      "Not a study of P. falciparum parasites; it studies human host G6PD genetic variation",
+      "No curated P. falciparum drug-resistance markers reported",
+      "No parasite drug-resistance frequencies",
+      "Samples are human DNA, not P. falciparum field isolates"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "PMID_9449279",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of 69 Kenyan Plasmodium falciparum field isolates and their DHFR genotypes."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr codons 51, 59, and 108 (target markers), plus codon 164."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Frequencies given: 'alleles that carried a mutation at codon 59 (61%) were more frequent than those that carried a mutation at codon 51 (35%)'; 'only about 8% of Kenyan field isolates now have the wild-type DHFR'; '92% of isolates resistant.' Tables give n per genotype group."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Field isolates collected in Kilifi, on the Kenyan coast — a sub-national town/site location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Isolates collected between 1993 and 1995 in Kilifi — a 3-year window (<=3y)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Kenyan P. falciparum field isolates collected from patients during a clinical trial in Kilifi, Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study: in vitro chemosensitivity testing and PCR genotyping of collected field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Field isolates were collected during a clinical trial of CPG-DDS in Kilifi (Amukoye et al. 1997, ref 1); samples derive from that named trial and may overlap with other publications from the same collection."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequency data (percentages and n per genotype group) are present in the main text and Tables 1-3; no supplementary tables referenced."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      1993,
+      1994,
+      1995
+    ],
+    "sample_size": 69,
+    "summary": "Study of 69 Kenyan P. falciparum field isolates from Kilifi (collected 1993-1995) correlating DHFR genotypes at codons 51, 59, 108 (and 164) with in vitro antifolate sensitivity. Reports mutation frequencies (codon 59: 61%, codon 51: 35%, wild-type DHFR: ~8%) tied to a single sub-national site (Kilifi) within a 3-year window. All criteria appear met, though frequencies are only per-genotype-group (single-allele subset of 32/69) rather than clean per-codon numerator/denominator, and samples derive from a named clinical trial.",
+    "exclusion_reasons": []
+  }
+}

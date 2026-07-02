@@ -1,0 +1,63 @@
+{
+  "id": "PMID_18304270",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum drug resistance markers Pfcrt T76 and Pfmdr-1 Y86."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt codon 76 (T76) and Pfmdr1 codon 86 (Y86), both curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives % (n/N) for Pfcrt K76/T76 and Pfmdr-1 N86/Y86 across TTF, new infection, and ACPR groups (e.g. ACPR mutant T76 59.2% (100/169))."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Study conducted in two sites (north EIR 15-20, centre EIR 50-60), but Table 1 pools frequencies by treatment outcome only. It states prevalence 'did not differ between sites' but no per-site numerator/denominator breakdown is provided."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection year or window is stated anywhere in the paper; cannot bind the frequencies to a <=3 year interval."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates collected from children aged 6 months to 15 years in Burkina Faso via WHO 28-day in vivo test."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in vivo efficacy trial with molecular marker analysis (short communication reporting original data)."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Routine field collection in Burkina Faso; no mention of consortium or shared dataset, though authors reference related prior Burkina Faso studies by same group."
+    },
+    "supplement": {
+      "needed": true,
+      "evidence": "Per-site frequency breakdown (north vs centre) would lift this to sub-country resolution but is not tabulated; such data, plus collection dates, may reside in supplementary material not provided."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Burkina Faso"
+    ],
+    "collection_years": [],
+    "sample_size": 195,
+    "summary": "Primary in vivo amodiaquine efficacy study in Burkina Faso reporting extractable Pfcrt T76 and Pfmdr-1 Y86 frequencies (Table 1), but frequencies are pooled by treatment outcome across two sites without per-site breakdown, and no collection year/window is stated, failing sub-country spatial and temporal resolution requirements.",
+    "exclusion_reasons": [
+      "Frequencies pooled across two sites by treatment outcome with no per-site (sub-country) numerator/denominator breakdown",
+      "No collection date or year given, so frequencies cannot be bound to a <=3-year window"
+    ]
+  }
+}

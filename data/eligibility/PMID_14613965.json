@@ -1,0 +1,60 @@
+{
+  "id": "PMID_14613965",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum parasitemia and mild malaria attack in Burkina Faso."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Study focuses on human hemoglobin genotypes (HbA, HbS, HbC) and host genetic protection; no P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) are examined."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only human hemoglobin allele frequencies reported (HbA 0.814, HbC 0.139, HbS 0.047); no parasite marker frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from urban district of Bobo-Dioulasso, Burkina Faso — sub-national location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Longitudinal study conducted over 2 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical samples from families living in Bobo-Dioulasso, Burkina Faso."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary longitudinal family-based association study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Study population described elsewhere (ref 29,30) but concerns host genetics, not drug-resistance data of interest."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary drug-resistance data referenced; paper does not study parasite markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Burkina Faso"
+    ],
+    "collection_years": [],
+    "sample_size": 256,
+    "summary": "Longitudinal family-based study in Bobo-Dioulasso, Burkina Faso examining association of human hemoglobin C with reduced P. falciparum parasitemia and mild malaria attack. It reports host hemoglobin genotype frequencies, not any P. falciparum drug-resistance markers.",
+    "exclusion_reasons": [
+      "Does not report any curated P. falciparum drug-resistance markers",
+      "No extractable parasite drug-resistance frequencies — only human hemoglobin allele data"
+    ]
+  }
+}

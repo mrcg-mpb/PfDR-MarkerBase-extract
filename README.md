@@ -16,9 +16,73 @@ human only when it genuinely needs a decision.
 
 <!-- ROSTER:START -->
 
-**0 paper(s) · estimated spend $0.00** (eligibility $0.00 · extraction $0.00) · updated 2026-07-02
+**100 paper(s) · estimated spend $17.41** (eligibility $17.41 · extraction $0.00) · updated 2026-07-02
 
-_No papers in the roster yet._
+| id | source | status | eligible | confidence | duplicate_risk | needs_supplement | spec_version | first_seen | last_assessed | supp_attempts | supplement_fp | elig_model | elig_tok_in | elig_tok_out | extract_model | extract_tok_in | extract_tok_out | notes | est_$ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| PMID_10456963 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 21608 | 743 |  |  |  |  | 0.1266 |
+| PMID_10470338 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25725 | 844 |  |  |  |  | 0.1497 |
+| PMID_10471565 | master | INELIGIBLE | False | medium | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 20225 | 1122 |  |  |  |  | 0.1292 |
+| PMID_10558957 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 32818 | 814 |  |  |  |  | 0.1844 |
+| PMID_10762551 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 40279 | 878 |  |  |  |  | 0.2233 |
+| PMID_10813484 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27592 | 1020 |  |  |  |  | 0.1635 |
+| PMID_10950805 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17735 | 825 |  |  |  |  | 0.1093 |
+| PMID_11090624 | master | INELIGIBLE | False | high | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 67683 | 1169 |  |  |  |  | 0.3676 |
+| PMID_11172152 | master | INELIGIBLE | False | medium | low | True | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 29675 | 1085 |  |  |  |  | 0.1755 |
+| PMID_11294676 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17124 | 743 |  |  |  |  | 0.1042 |
+| PMID_11294677 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 18644 | 1014 |  |  |  |  | 0.1186 |
+| PMID_11372041 | master | INELIGIBLE | False | medium | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17564 | 1014 |  |  |  |  | 0.1132 |
+| PMID_11679121 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27823 | 920 |  |  |  |  | 0.1621 |
+| PMID_11679122 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 21976 | 967 |  |  |  |  | 0.1341 |
+| PMID_11679123 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 22646 | 763 |  |  |  |  | 0.1323 |
+| PMID_11807721 | master | INELIGIBLE | False | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 38291 | 1269 |  |  |  |  | 0.2232 |
+| PMID_11857052 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 16756 | 759 |  |  |  |  | 0.1028 |
+| PMID_11865433 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 13534 | 910 |  |  |  |  | 0.0904 |
+| PMID_11969121 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 60630 | 926 |  |  |  |  | 0.3263 |
+| PMID_12142257 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 32708 | 727 |  |  |  |  | 0.1817 |
+| PMID_12201581 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 23423 | 1077 |  |  |  |  | 0.1440 |
+| PMID_12224572 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25229 | 1044 |  |  |  |  | 0.1522 |
+| PMID_12351583 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 46997 | 833 |  |  |  |  | 0.2558 |
+| PMID_12378426 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 59444 | 894 |  |  |  |  | 0.3196 |
+| PMID_12447777 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17696 | 895 |  |  |  |  | 0.1109 |
+| PMID_12524354 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 48689 | 916 |  |  |  |  | 0.2663 |
+| PMID_12884171 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 9782 | 797 |  |  |  |  | 0.0688 |
+| PMID_14613965 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 26641 | 779 |  |  |  |  | 0.1527 |
+| PMID_14622411 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 41431 | 834 |  |  |  |  | 0.2280 |
+| PMID_14728622 | master | ELIGIBLE | True | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27673 | 881 |  |  |  |  | 0.1604 |
+| PMID_15031793 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25114 | 1047 |  |  |  |  | 0.1517 |
+| PMID_15117308 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 24363 | 922 |  |  |  |  | 0.1449 |
+| PMID_15130119 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 50777 | 1366 |  |  |  |  | 0.2880 |
+| PMID_15216481 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 31527 | 851 |  |  |  |  | 0.1789 |
+| PMID_15272415 | master | ELIGIBLE | True | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 13810 | 851 |  |  |  |  | 0.0903 |
+| PMID_15383440 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27135 | 687 |  |  |  |  | 0.1528 |
+| PMID_15499534 | master | INELIGIBLE | False | high | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 39558 | 1164 |  |  |  |  | 0.2269 |
+| PMID_15679556 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25874 | 801 |  |  |  |  | 0.1494 |
+| PMID_15679557 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 31997 | 890 |  |  |  |  | 0.1822 |
+| PMID_15686571 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 46917 | 827 |  |  |  |  | 0.2553 |
+| PMID_15717281 | master | ELIGIBLE | True | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17079 | 818 |  |  |  |  | 0.1058 |
+| PMID_15814601 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 16952 | 780 |  |  |  |  | 0.1043 |
+| PMID_15941416 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27736 | 911 |  |  |  |  | 0.1615 |
+| PMID_16135198 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 33602 | 958 |  |  |  |  | 0.1920 |
+| PMID_16185238 | master | INELIGIBLE | False | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 31151 | 1083 |  |  |  |  | 0.1828 |
+| PMID_16186171 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 29153 | 877 |  |  |  |  | 0.1677 |
+| PMID_16206082 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 28250 | 892 |  |  |  |  | 0.1636 |
+| PMID_16235185 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 23417 | 1061 |  |  |  |  | 0.1436 |
+| PMID_16319183 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 24904 | 1011 |  |  |  |  | 0.1498 |
+| PMID_16359407 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 18017 | 852 |  |  |  |  | 0.1114 |
+| PMID_16420747 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 40510 | 856 |  |  |  |  | 0.2239 |
+| PMID_16518760 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 33636 | 1043 |  |  |  |  | 0.1943 |
+| PMID_16640612 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 36098 | 1158 |  |  |  |  | 0.2094 |
+| PMID_16703518 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17836 | 945 |  |  |  |  | 0.1128 |
+| PMID_16779725 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 33714 | 1101 |  |  |  |  | 0.1961 |
+| PMID_16845638 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 33146 | 897 |  |  |  |  | 0.1882 |
+| PMID_17002724 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 37556 | 956 |  |  |  |  | 0.2117 |
+| PMID_17093247 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 29694 | 848 |  |  |  |  | 0.1697 |
+| PMID_17158810 | master | INELIGIBLE | False | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 20761 | 939 |  |  |  |  | 0.1273 |
+| PMID_17176345 | master | INELIGIBLE | False | medium | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 20262 | 1066 |  |  |  |  | 0.1280 |
+| … 40 more rows |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+_The table above is a static snapshot. For a searchable, filterable view (paginated for large sets), open [`data/roster.csv`](data/roster.csv) — GitHub renders CSV files as an interactive table._
 
 <!-- ROSTER:END -->
 

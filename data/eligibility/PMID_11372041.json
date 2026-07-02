@@ -1,0 +1,69 @@
+{
+  "id": "PMID_11372041",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum pfcrt codon 76 in 111 Cameroonian isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Analyzes pfcrt codon 76 (Lys76Thr) and pfmdr1 codon 86 — both target markers."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figure 1 shows distribution of 93 isolates by wild type/mutant/mixed pfcrt allele; counts of discordant isolates given, but overall precise numerator/denominator per allele is not clearly tabulated for the full 111 sample set."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from patients residing in Yaoundé (city, sub-national) — recruited at Nlongkak Catholic missionary dispensary."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "Samples collected from randomized clinical trials in Yaoundé 'from 1994 through 1998' — a 5-year span, and frequencies are pooled across this whole period with no per-year or <=3-year breakdown."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from patients with acute uncomplicated malaria residing in Yaoundé, Cameroon."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analyzing 111 field isolates by PCR-RFLP."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'all available polymorphism and phenotype correlational data from our study site since 1994 were recapitulated' and refs 7-9,13 describe overlapping pfmdr1/cg2 characterization of the same Cameroonian isolates in prior publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary materials referenced; frequency data are in main text/Figure 1."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Cameroon"
+    ],
+    "collection_years": [
+      1994,
+      1995,
+      1996,
+      1997,
+      1998
+    ],
+    "sample_size": 111,
+    "summary": "Primary study of P. falciparum pfcrt codon 76 (and pfmdr1 86) in 111 clinical isolates from Yaoundé, Cameroon, collected 1994-1998, correlating with in vivo/in vitro chloroquine response. Sub-country location (Yaoundé) is clear, but frequencies are pooled over a 5-year collection span with no finer temporal breakdown, failing the <=3-year resolution criterion. High duplicate risk as data overlap prior publications from the same study site.",
+    "exclusion_reasons": [
+      "Frequencies pooled across a 5-year collection window (1994-1998) with no per-year or <=3-year temporal breakdown",
+      "High risk of overlap with previously published data from the same Yaoundé study site (refs 7-9, 13)"
+    ]
+  }
+}

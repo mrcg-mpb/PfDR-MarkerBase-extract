@@ -1,0 +1,61 @@
+{
+  "id": "PMID_17093247",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of children with uncomplicated Plasmodium falciparum malaria; PfCRT codon 76 assayed."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Assays for the T76 molecular marker in PfCRT (Pfcrt codon 76), one of the curated positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "'Assays for the T76 molecular marker for chloroquine resistance in PfCRT were successfully performed on 199 of the 210 filter-paper samples... All samples had the wild-type K76 PfCRT genotype' — 0/199 mutant, extractable frequency."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected at Ndirande District Health Centre, a township on the outskirts of Blantyre, Malawi — a specific sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "'From May through November 2005... Follow-up continued through December 2005.' Collection within a single year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from children in Blantyre, Malawi (African country), field/clinical samples."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary randomized clinical trial (ClinicalTrials.gov NCT00125489) with original molecular data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection from a specific 2005 trial at the Blantyre Malaria Project; related prior surveys (Kublin 2003) exist but this is a distinct new collection."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Supplementary Appendix mentioned only for sequencing details; the extractable frequency (0/199 K76 wild-type) is in the main text."
+    },
+    "markers_found": [
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Malawi"
+    ],
+    "collection_years": [
+      2005
+    ],
+    "sample_size": 199,
+    "summary": "Randomized clinical trial in Blantyre (Ndirande), Malawi, May–Dec 2005, of chloroquine vs SP in 210 children with P. falciparum malaria. Pfcrt K76T assayed successfully in 199 enrollment samples; all were wild-type K76 (0/199 mutant), giving an extractable frequency tied to a sub-country site and a single-year window. Eligible on all criteria.",
+    "exclusion_reasons": []
+  }
+}

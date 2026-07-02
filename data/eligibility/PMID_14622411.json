@@ -1,0 +1,61 @@
+{
+  "id": "PMID_14622411",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum 3D7 strain gene expression."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "PfMDR1 is discussed as a differentially expressed gene (upregulated ~5.5-fold by SAGE), but no codon 86 (or any resistance codon) genotyping is reported. This is a gene expression study, not a marker frequency study."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only transcript fold-changes and tag counts are given; no allele/mutation frequencies (numerator/denominator) at any codon."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "In vitro laboratory culture of 3D7 strain; no field sampling location at any level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No field collection window; laboratory cultured parasites only."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "3D7 is a laboratory reference strain cultured in vitro; no African field/clinical isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical SAGE and RT-PCR/Northern experiments on cultured parasites."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Laboratory culture experiment; no shared field cohort."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary data would provide resistance-marker frequencies; the study is a transcriptomic experiment on a lab strain."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a laboratory transcriptomics study using SAGE to profile chloroquine-induced gene expression changes in the cultured P. falciparum 3D7 reference strain. Although PfMDR1 is mentioned as upregulated, the paper reports only transcript fold-changes, not drug-resistance codon genotype frequencies. It uses a lab strain, not African field isolates, and has no sub-national or temporal field-sampling data.",
+    "exclusion_reasons": [
+      "No drug-resistance codon markers genotyped (only gene expression of PfMDR1)",
+      "No extractable per-locus allele frequencies",
+      "No sub-country field location (in vitro 3D7 lab strain)",
+      "No field collection time window",
+      "Uses laboratory reference strain, not African field/clinical isolates"
+    ]
+  }
+}

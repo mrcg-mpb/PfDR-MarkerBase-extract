@@ -1,0 +1,76 @@
+{
+  "id": "PMID_9393853",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study is about Plasmodium falciparum chloroquine resistance and cg2 gene mapping."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper focuses on cg2 and cg1 genes (a novel ~330 kDa protein). Tables 2 lists dhfr/ts and pfmdr1 polymorphisms at codons 108,59,51,50 (dhfr) and pfmdr1 86,184,1034,1042,1246; pfmdr1 86 is a target marker and dhfr 51,59,108 are targets. However these are reported per lab-adapted clone/isolate line, not as population frequencies."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Data are given as genotypes of individual named parasite clones/lines (e.g., Dd2, HB3, PAR, KMWII, RB1) rather than as numerator/denominator frequencies at a location. No per-site allele frequencies are reported."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Parasite lines are labeled by broad origin (e.g., 'Sudan', 'Kenya', 'South Africa', 'Mali', 'Uganda', 'Liberia', 'Sao Tome') at country level only, and these are geographically diverse stocks maintained at NIH, not field-collected frequencies tied to sub-national sites."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates are given for the parasite lines; they are archival lab stocks from various sources with no usable collection time window."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Parasites are lab-adapted reference clones/isolates maintained in culture at NIH (Dolan et al., 1993), including many that are cloned/culture-adapted; these are not fresh African field-frequency data."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study mapping the CQR determinant and identifying cg2."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Parasites were obtained from geographically diverse stocks maintained at the National Institutes of Health (Dolan et al., 1993) or provided by various investigators; these standard reference lines appear widely in the literature."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Supplemental Table 4 concerns microsatellite primer sequences, not per-locus frequency counts or site-level locations."
+    },
+    "markers_found": [
+      "Pfmdr1 86",
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Sudan",
+      "Kenya",
+      "South Africa",
+      "Mali",
+      "Uganda",
+      "Liberia",
+      "Sierra Leone",
+      "Guinea Bissau",
+      "Sao Tome and Principe"
+    ],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This 1997 Cell paper maps the chloroquine resistance determinant to a 36 kb segment of chromosome 7 and identifies the cg2 gene. It surveys polymorphisms across individual named lab-adapted P. falciparum clones/reference lines (including African-origin lines) and reports pfmdr1 and dhfr/ts genotypes per clone. It does not report population-level allele frequencies, provides only country-level origins for archival lab stocks, and gives no collection dates.",
+    "exclusion_reasons": [
+      "No extractable per-locus population frequencies (numerator/denominator); data are single-clone genotypes",
+      "Locations only at country level for archival stocks, no sub-national resolution",
+      "No collection dates/temporal windows provided",
+      "Samples are lab-adapted reference clones maintained at NIH, not fresh African field-frequency data",
+      "Target curated markers not reported as frequencies"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "PMID_11865433",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyzes pfcrt gene of Plasmodium falciparum isolates from Madagascar and the Comoro Islands."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt K76T mutation (codon 76), a curated Pfcrt target position."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives counts: 0/40, 0/24, 0/19 in Madagascar; 33 (67%) of 49 in Comoro Islands; text notes 62% (30/48) of Comoro isolates harbored K76T."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Sub-national resolution given: Mahajanga region of Madagascar (northwestern coast), Grande Comore/Moroni region of Comoro Islands, and isolate groups distributed across Madagascar island."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection dated 2000–2001 for Madagascar and 2001 for Comoro Islands (study performed February 2001), within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field isolates from Madagascar and the Comoro Islands, both African/Indian Ocean countries; collected via national RER surveillance from malaria cases."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study comparing nucleotide sequences of 49 Comoro and 83 Madagascar isolates, published as a correspondence letter reporting original data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples collected through national network 'Réseau d'Etude de la Résistance du Paludisme (RER)' surveillance and Madagascar national survey, raising possibility of overlap with other RER-derived publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "K76T frequency counts and sub-national locations available in main text and Tables 1-2; no supplement pointer."
+    },
+    "markers_found": [
+      "Pfcrt K76T"
+    ],
+    "countries": [
+      "Madagascar",
+      "Comoros"
+    ],
+    "collection_years": [
+      2000,
+      2001
+    ],
+    "sample_size": 132,
+    "summary": "Correspondence reporting pfcrt K76T frequencies in P. falciparum isolates from Madagascar (0/83 across island, Mahajanga region) and the Comoro Islands (33/49 = 67% in Grande Comore/Moroni region), collected 2000-2001 via the RER surveillance network. Reports extractable per-locus counts at sub-national resolution within a <=3-year window.",
+    "exclusion_reasons": []
+  }
+}

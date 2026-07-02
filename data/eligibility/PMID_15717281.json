@@ -1,0 +1,63 @@
+{
+  "id": "PMID_15717281",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum uncomplicated malaria in children, analyzing pfcrt K76T and pfmdr1 N86Y SNPs."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt codon 76 (K76T) and pfmdr1 codon 86 (N86Y), both curated target markers."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives counts (140/29/20 of 189) and frequencies; pfcrt 76T 185/190 (0.974); pfmdr1 86Y 160/209 (0.766)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from Kivunge (Unguja Island) and Micheweni (Pemba Island), Zanzibar — named sub-national sites."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collected between October 2002 and February 2003, a window well under 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with uncomplicated malaria in Zanzibar, Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in vivo artemether-lumefantrine follow-up clinical trial with molecular analysis."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Part of Zanzibar Malaria Control Program clinical trial; routine field collection, no explicit statement of dataset overlap with a larger published dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency data present in main text and Tables 1-2."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2002,
+      2003
+    ],
+    "sample_size": 189,
+    "summary": "In vivo artemether-lumefantrine trial in 200 children in Kivunge (Unguja) and Micheweni (Pemba), Zanzibar, Oct 2002-Feb 2003. Reports extractable pfcrt K76T and pfmdr1 N86Y allele frequencies before and after treatment. Meets all criteria: P. falciparum, target markers with counts, sub-national sites, <3y window, African field samples, primary study.",
+    "exclusion_reasons": []
+  }
+}

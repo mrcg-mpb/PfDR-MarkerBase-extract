@@ -1,0 +1,67 @@
+{
+  "id": "PMID_12142257",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated falciparum malaria; DHFR/DHPS mutations in P. falciparum assessed."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr 51,108 and Pfdhps 437,540 — all target codons; Table 1 gives prevalences."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1: DHFR 108 88.0% (n=100), 51 52.6% (n=97), DHPS 437 16.4% (n=110), 540 0% (n=70)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from Buenaventura, a single seaport town on the Pacific coast of Colombia — a sub-national location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Conducted February 1999 to May 2000, within a 3-year window."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples collected in Buenaventura, Colombia (South America), not in an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical cohort study of 120 subjects treated and followed."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection in Buenaventura; no mention of consortium or shared dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies present in Table 1 in the main text."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Colombia"
+    ],
+    "collection_years": [
+      1999,
+      2000
+    ],
+    "sample_size": 120,
+    "summary": "Primary study of 120 falciparum malaria patients in Buenaventura, Colombia (1999–2000), reporting extractable Pfdhfr and Pfdhps mutation frequencies. Fails eligibility solely because samples are from Colombia, not Africa.",
+    "exclusion_reasons": [
+      "Samples were collected in Colombia (South America), not an African country."
+    ]
+  }
+}

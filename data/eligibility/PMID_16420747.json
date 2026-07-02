@@ -1,0 +1,60 @@
+{
+  "id": "PMID_16420747",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a review focused on mouse models of malaria and trypanosomiasis, using murine malaria parasites (P. berghei, P. yoelii, P. vinckei, P. chabaudi). P. falciparum is mentioned only in passing regarding drug resistance biology, not studied empirically."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "No curated P. falciparum drug-resistance codon positions (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) are reported. Only general mentions of Dhfr mutations and murine genetic QTL loci."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No per-locus mutation frequency counts or percentages for P. falciparum markers are provided; the paper reports mouse QTL loci, not parasite allele frequencies."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No field-collected parasite samples with geographic locations are reported. This is a review/mouse-model paper."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No parasite sample collection windows are reported."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Uses laboratory mouse strains and lab parasite lines, not African human field isolates."
+      },
+      "is_primary_study": {
+        "met": false,
+        "evidence": "This is a review article ('Briefings in Functional Genomics and Proteomics') summarizing mouse models of malaria and trypanosomiasis, not a primary empirical field study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Review article; no field dataset involved."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary parasite frequency data relevant; paper is a review of mouse genetics."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a 2005 review article on the role of the mouse in studying malaria and African trypanosomiasis, focusing on murine parasite species and host QTL genetics. It does not report P. falciparum drug-resistance marker frequencies from African field isolates.",
+    "exclusion_reasons": [
+      "Review article, not a primary empirical study",
+      "Focuses on murine malaria parasites and mouse host genetics, not P. falciparum field data",
+      "No curated drug-resistance markers or extractable frequencies",
+      "No African human field/clinical isolates with locations or collection dates"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "PMID_11679122",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyses P. falciparum isolates: 'These isolates were examined for point mutations in the genes of DHFR... and DHPS' in P. falciparum from Mauritania."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Table 1 reports DHFR codons 51, 59, 108 and DHPS codons 436, 437, 540, 581, 613 — all curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives counts and percentages per codon per site, e.g. DHFR 51-isoleucine Aioun 10 (16.95), Kobeni 13 (12.62); DHPS 437-glycine Aioun 13 (22.03) of n=59."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies reported separately for two towns: Aioun (n=59 pos) and Kobeni (n=101/103) in Hodh El Gharbi, south-east Mauritania."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected 'during an in vivo study on resistance to chloroquine in 1998' — a single collection year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical samples from febrile patients at health centres in Aioun and Kobeni, Mauritania (African country)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical field survey with PCR/RFLP analysis of collected blood samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Described as part of one of the first surveys on malaria drug resistance in Mauritania, collected during an in vivo chloroquine study in 1998; no named consortium or overlapping published dataset stated."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All per-codon frequencies present in Table 1 of the main text."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Mauritania"
+    ],
+    "collection_years": [
+      1998
+    ],
+    "sample_size": 162,
+    "summary": "Primary field study of P. falciparum antifolate-resistance markers in DHFR (51,59,108) and DHPS (436,437,540,581,613) from 162 PCR-positive samples collected in 1998 at two sites (Aioun n=59, Kobeni n=~101) in Hodh El Gharbi, south-east Mauritania. Table 1 provides extractable per-codon counts and percentages by site. Sub-national resolution and single collection year satisfy spatial and temporal criteria.",
+    "exclusion_reasons": []
+  }
+}

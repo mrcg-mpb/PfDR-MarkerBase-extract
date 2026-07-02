@@ -1,0 +1,69 @@
+{
+  "id": "PMID_11172152",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of chloroquine-resistant Plasmodium falciparum malaria in patients in Mali."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt 76 (T76), 220 (S220), 271 (E271), 326 (S326), 356 (T356), 371 (I371), and Pfmdr1 86 (Y86) with counts in Table 1."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives numerator/denominator counts, e.g. pfcrt T76 47/116 (41%), pfmdr1 Y86 58/115 (50%), pfcrt S326 13/46 (28%)."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Subjects enrolled in Mopti and Bandiagara in central Mali, but the frequency tables (Table 1, Table 2) pool samples across both sites; no site-level breakdown of marker frequencies is provided."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Subjects enrolled from August through December 1997 — a single collection window well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from patients with uncomplicated falciparum malaria collected in Mopti and Bandiagara, Mali."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical drug-efficacy trial with molecular analysis of field samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection from a drug-efficacy trial in Mali (1997); no explicit mention of consortium/network overlap, though the Malaria Research and Training Center in Mali has multiple related studies."
+    },
+    "supplement": {
+      "needed": true,
+      "evidence": "Frequencies are pooled across Mopti and Bandiagara; site-specific breakdowns are not in the main text. Detailed technique info is pointed to an external URL, but per-site frequency tables would be needed to meet sub-country resolution."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfcrt 220",
+      "Pfcrt 271",
+      "Pfcrt 326",
+      "Pfcrt 356",
+      "Pfcrt 371",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Mali"
+    ],
+    "collection_years": [
+      1997
+    ],
+    "sample_size": 116,
+    "summary": "Primary chloroquine-efficacy trial in Mali (Mopti and Bandiagara, Aug–Dec 1997) reporting P. falciparum pfcrt (76,220,271,326,356,371) and pfmdr1 (86) mutation frequencies with extractable numerator/denominator counts (Table 1). Collection window is within 3 years. However, the reported frequencies pool samples across the two study sites with no sub-national breakdown, so frequencies cannot be tied to a location below the two-town aggregate — failing the sub-country resolution requirement as reported.",
+    "exclusion_reasons": [
+      "Marker frequencies are pooled across Mopti and Bandiagara without a site-level breakdown, so extractable frequencies cannot be tied to a single sub-national location."
+    ]
+  }
+}

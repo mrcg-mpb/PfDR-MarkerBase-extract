@@ -1,0 +1,68 @@
+{
+  "id": "PMID_19841150",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated malaria caused by Plasmodium falciparum; genotyped pfdhfr and pfdhps genes."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped pfdhfr residues 51,59,108,164 and pfdhps residues 436,437,540,581,613 — including curated targets Pfdhfr 51,59,108 and Pfdhps 436,437,540,581,613."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figs 1-2 give per-site genotype frequencies; text gives codon-specific prevalences (e.g. codon 437 Gly 97% Rukara, 80% Mashesha; codon 581 Gly 60% Rukara, 29% Mashesha; 164-Leu 11.4% Rukara). Denominators 725 total; Tables 1-2 give counts."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All frequencies reported for two named sites: Rukara (eastern province) and Mashesha/Muganza (western province), below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples from the 2006 CPG-DDS+A vs AQ+SP trial (NCT00461578); collection bounded to 2006, within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with uncomplicated malaria collected at two sites in Rwanda."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical genotyping study of trial isolates with original frequency data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples derive from a previously published randomised trial (Fanello et al. 2008, NCT00461578); molecular data may overlap with that trial's clinical dataset, though the marker frequencies appear reported here first."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-locus frequencies and site-level breakdowns are given in main text figures and tables; no supplementary pointer for extraction."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Rwanda"
+    ],
+    "collection_years": [
+      2006
+    ],
+    "sample_size": 725,
+    "summary": "Molecular study of pfdhfr and pfdhps antifolate-resistance mutations in 725 P. falciparum isolates from Rwandan children at two sites (Rukara, eastern; Mashesha/Muganza, western) during a 2006 drug trial. Reports site-level codon frequencies for curated markers (pfdhfr 51,59,108; pfdhps 436,437,540,581,613), meeting all eligibility criteria.",
+    "exclusion_reasons": []
+  }
+}

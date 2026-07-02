@@ -1,0 +1,63 @@
+{
+  "id": "PMID_15383440",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study mentions Plasmodium falciparum malaria and parasitaemia in Kenyan children."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "No drug-resistance markers or codon positions are reported; this is a clinical prognostic study of capillary refill time."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Reports clinical prevalence of malaria parasitaemia, not molecular marker frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study conducted at Kilifi District Hospital, Kilifi, Kenya - a sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection period 1 September 1999 to 31 December 2000 (<3 years)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Kenyan children admitted to Kilifi District Hospital."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical retrospective clinical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single-site clinical dataset from Kilifi District Hospital."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No molecular marker data referenced anywhere; supplement would not help."
+    },
+    "markers_found": [],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      1999,
+      2000
+    ],
+    "sample_size": 4160,
+    "summary": "This is a clinical prognostic study evaluating delayed capillary refill time in Kenyan children admitted to Kilifi District Hospital. It concerns malaria and P. falciparum only as clinical diagnoses, and reports no drug-resistance markers or molecular frequency data whatsoever.",
+    "exclusion_reasons": [
+      "Does not report any curated P. falciparum drug-resistance marker codon positions",
+      "No extractable per-locus molecular resistance frequencies; study is about clinical capillary refill time prognosis"
+    ]
+  }
+}

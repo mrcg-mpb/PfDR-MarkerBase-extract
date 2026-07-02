@@ -1,0 +1,62 @@
+{
+  "id": "PMID_15679556",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated falciparum malaria; children with microscopically confirmed monoinfection of Plasmodium falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports point mutations on dhfr codon 108 and dhps codon 437, both in the target list (Pfdhfr:108, Pfdhps:437)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 3: dhfr(108) Resistant 104/113 (92.0%), Mixed 6, Sensitive 3; dhps(437) Resistant 50/113 (44.3%), Mixed 17, Sensitive 46."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from clinic H, Maheba Refugee Settlement, North-Western Province, Zambia — a specific site well below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Study conducted between March and June 2002; day 0 samples collected within a single year, <=3y."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from children in Maheba Refugee Settlement, Zambia (African field site)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary randomized efficacy/effectiveness trial with genomic analysis of collected samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Related prior adherence study on the same site (Depoortere et al. 2004), but molecular marker data appear to be a new field collection specific to this trial."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-locus frequency counts are fully provided in Table 3 within the main paper."
+    },
+    "markers_found": [
+      "Pfdhfr 108",
+      "Pfdhps 437"
+    ],
+    "countries": [
+      "Zambia"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 113,
+    "summary": "Randomized efficacy/effectiveness trial of SP+artesunate in children in Maheba Refugee Settlement, Zambia (March–June 2002). All 113 day-0 PCR samples analysed for dhfr(108) and dhps(437) mutations, with extractable counts in Table 3, tied to the clinic H site and a single collection year.",
+    "exclusion_reasons": []
+  }
+}

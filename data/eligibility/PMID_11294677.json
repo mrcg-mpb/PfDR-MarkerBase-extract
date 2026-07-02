@@ -1,0 +1,70 @@
+{
+  "id": "PMID_11294677",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum field isolates from patients with uncomplicated falciparum malaria in Kampala."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt 74,75,76,220,271,326,356,371 and pfmdr-1 86 — several are curated target positions (pfcrt 72... no; but 74,75,76,220,271,326,356,371 and Pfmdr1 86 are all curated)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "K76T present in 100% of 114 isolates; Table 2 gives genotype counts (mutant/wild/mixed) per codon for the 30-sample case-control set, e.g. N326S sensitive 3 mutant/9 wild/2 mixed."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from Kampala, Uganda — a named city (sub-national resolution). Single site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected in Kampala from August 1998 through March 1999, a window well under 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical field isolates collected before treatment from patients in Kampala, Uganda; blood blotted on filter paper."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analyzing 114 samples for pfcrt/pfmdr-1 polymorphisms with PCR."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples are 'a randomly selected subset of 114 samples from our recent evaluation of chloroquine efficacy in 258 children and adults in Kampala [9]' — subset of a previously-published clinical study cohort."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency data present in main text and Table 2; no supplementary materials referenced."
+    },
+    "markers_found": [
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76",
+      "Pfcrt 220",
+      "Pfcrt 271",
+      "Pfcrt 326",
+      "Pfcrt 356",
+      "Pfcrt 371",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [
+      1998,
+      1999
+    ],
+    "sample_size": 114,
+    "summary": "Primary field study of P. falciparum isolates from Kampala, Uganda (Aug 1998–Mar 1999). K76T pfcrt mutation found in 100% of 114 pre-treatment isolates; Table 2 gives per-codon genotype counts for pfcrt (74,75,76,220,271,326,356,371) and pfmdr-1 (86) in a 30-sample case-control subset. Single named city (sub-country) and <3y collection window satisfy resolution criteria. Samples are a subset of a previously published efficacy cohort, giving medium duplicate risk.",
+    "exclusion_reasons": []
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "PMID_18419347",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyzes P. falciparum dhfr/dhps and other resistance markers in clinical malaria episodes."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr-51,59,108; dhps-437,540; pfcrt-76; pfmdr1-86 — all curated positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Tables 1 and 2 give No. (%) of patients with wild type/mutant/mixed for each codon with denominators (e.g., dhps-437 mutant 43(61) of n=70)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Conducted in Manhiça, southern Mozambique — a single sub-national site (district), so frequencies tie below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "Study nested in an IPTi trial with infants dosed at 3,4,9 months and follow-up to 24 months. No explicit calendar collection years are given, and samples span the full trial follow-up period; cannot confirm the sampling window is within 3 years or bin frequencies temporally."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates (filter paper blood samples from microscopically confirmed malaria episodes) collected in Manhiça, Mozambique."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical molecular analysis of samples from a randomized IPTi trial."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "Samples are from the IPTi trial cohort [ref 4, Macete et al. 2006, J Infect Dis 194:276–85]; 'This study was performed in the context of a randomized, double-blind, placebo-controlled trial of IPTi with SP' and 'a parallel study of this same cohort of children.' The parent trial and parallel studies may report overlapping data."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced for the frequency data; Tables 1 and 2 contain the counts."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Mozambique"
+    ],
+    "collection_years": [],
+    "sample_size": 174,
+    "summary": "Primary molecular study of P. falciparum resistance markers (dhfr, dhps, pfcrt-76, pfmdr1-86) in clinical malaria episodes among Mozambican infants in an IPTi-SP trial in Manhiça. Extractable frequencies with denominators are given in Tables 1 and 2 at a single sub-national site. However, no explicit calendar collection dates are provided and samples span the trial's full follow-up period, so the <=3-year temporal resolution cannot be confirmed. Duplicate risk is high because samples come from the published IPTi trial cohort.",
+    "exclusion_reasons": [
+      "No usable collection year/window reported; cannot confirm frequencies tie to a collection window of at most three years."
+    ]
+  }
+}

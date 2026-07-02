@@ -1,0 +1,70 @@
+{
+  "id": "PMID_15499534",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study focuses on P. falciparum dhfr alleles from patient samples in 5 African countries."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr codons 51, 59, 108 (51I/59R/108N triple mutant), all curated Pfdhfr targets."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Table 1 reports colony counts of unselected genotypes per site (wt, 51/108, 59/108, 51/59/108) - e.g. Kilifi 42 triple-mutant colonies of a total. These are colony-level (allele-level from yeast) counts, not per-patient frequencies, and the authors explicitly state 'The very small numbers of patients and the method we used preclude a direct estimation of the prevalence of any particular allele.'"
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Named towns/sites: Kisarawe (Tanzania), Kilifi (Kenya), Blantyre (Malawi), Lambaréné (Gabon), Ibadan (Nigeria)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected between March and December 2000 (single year)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates (dried blood spots) collected in Kenya, Tanzania, Malawi, Gabon, Nigeria from a phase 3 trial."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical yeast-expression screening study of field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'The P. falciparum DNA examined was collected as part of the phase 3 safety and efficacy trial comparing... chlorproguanil-dapsone with S/P [34].' (Alloueche et al. Lancet 2004) - samples are a subset of a larger multi-site trial dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables pointed to; all data are in Tables 1-2 and Figures. The limitation is methodological, not missing supplement."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Kenya",
+      "Tanzania",
+      "Malawi",
+      "Gabon",
+      "Nigeria"
+    ],
+    "collection_years": [
+      2000
+    ],
+    "sample_size": 25,
+    "summary": "Yeast-expression screening study of dhfr alleles from 25 patients (blood spots) at 5 African sites, part of a phase 3 chlorproguanil-dapsone vs S/P trial. Reports colony-level genotype counts per site (Table 1) including the triple mutant 51I/59R/108N and rare novel alleles. The design was to detect rare resistant alleles, not to estimate allele prevalence; the authors explicitly state the method precludes direct frequency estimation, so extractable per-locus population frequencies are not available.",
+    "exclusion_reasons": [
+      "No extractable per-locus mutation frequencies: yeast-colony genotype counts do not yield patient-level prevalence, and authors state the method 'preclude[s] a direct estimation of the prevalence of any particular allele'.",
+      "Samples are a subset of a larger multi-site phase 3 clinical trial (Alloueche et al. Lancet 2004), high duplicate/overlap risk."
+    ]
+  }
+}

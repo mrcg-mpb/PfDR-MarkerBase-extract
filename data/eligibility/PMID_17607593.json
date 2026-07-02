@@ -1,0 +1,63 @@
+{
+  "id": "PMID_17607593",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a review about the Duffy blood group system and its role as a receptor for Plasmodium vivax. It discusses P. falciparum invasion biology only in passing, not as a study of P. falciparum drug-resistance markers."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "No P. falciparum drug-resistance codons (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) are reported. The paper concerns human FY/DARC gene mutations (e.g. -33T>C, C265T)."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No per-locus parasite marker frequencies are given; the paper describes human blood group genetics, not malaria parasite allele frequencies."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No sub-national frequency data for any parasite marker are provided."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection windows for parasite marker frequencies are reported."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "This is a review; it cites studies from Brazil, Papua New Guinea, etc., but reports no African field parasite isolates of its own."
+      },
+      "is_primary_study": {
+        "met": false,
+        "evidence": "The article is a narrative review ('Very important progress has been made over the last years in understanding the Duffy blood group system'), not a primary empirical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Review article; no primary dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No relevant per-locus parasite frequency data would be found in supplements; the paper is a review of Duffy/malaria biology."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a narrative review on the Duffy blood group system (DARC) and its function as a receptor for Plasmodium vivax malaria. It does not report P. falciparum drug-resistance markers, no extractable per-locus frequencies, no African field isolates, and is not a primary study. It fails all eligibility criteria.",
+    "exclusion_reasons": [
+      "Not a study of P. falciparum drug-resistance markers (focuses on human Duffy/DARC and P. vivax)",
+      "No curated target drug-resistance codons reported",
+      "No extractable per-locus parasite frequencies",
+      "No sub-country resolution data",
+      "No temporal resolution data",
+      "No African field parasite isolates",
+      "Review article, not a primary empirical study"
+    ]
+  }
+}

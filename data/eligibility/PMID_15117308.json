@@ -1,0 +1,65 @@
+{
+  "id": "PMID_15117308",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum dhfr and dhps genes; inclusion criterion 'Plasmodium falciparum mono-infection'"
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr 51-Ile, 59-Arg, 108-Asn and dhps 437-Gly, 540-Glu — all curated target codons"
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figure 1 gives prevalence percentages per codon: dhfr 108 (94%), 51 (91%), 59-Arg (40%), dhps 437-Gly (24%), 540-Glu (43%), with denominator of 81 samples"
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "All samples collected in Kampala, Uganda — a single city. This is one location and functions as the finest resolution; the frequencies apply to Kampala only. This does provide a sub-national (city-level) placement."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "'This study took place between March and August 1999 in Kampala' — a single-year collection window"
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from patients enrolled in Kampala, Uganda"
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical clinical/molecular study of 106 SP-treated patients"
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "'Full details of the clinical trial have been reported elsewhere (Kamya et al. 2001)'; the same Kampala cohort/samples were also analyzed in Kyabayinze et al. 2003 (Validation study), indicating overlap with prior publications"
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Prevalence figures presented in main text and Figure 1; no supplementary tables referenced for extraction"
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [
+      1999
+    ],
+    "sample_size": 81,
+    "summary": "Primary study in Kampala, Uganda (March–August 1999) evaluating dhfr (51, 59, 108) and dhps (437, 540) mutations in relation to SP treatment outcome in 106 patients (81 with mutation data). Prevalence percentages per codon are extractable from Figure 1, all tied to a single city and single year. Sub-country resolution is at city level (Kampala only). Possible overlap with prior publications of the same cohort.",
+    "exclusion_reasons": []
+  }
+}

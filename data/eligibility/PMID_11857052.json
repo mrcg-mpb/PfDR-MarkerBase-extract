@@ -1,0 +1,61 @@
+{
+  "id": "PMID_11857052",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a study of human interferon gamma (IFN-γ) gene polymorphisms in relation to schistosomiasis, not P. falciparum. No Plasmodium parasite genetics involved."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Reports human IFN-γ SNPs at positions +2109, +3810, +5134 — not P. falciparum drug-resistance markers."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Allelic and genotype frequencies given (e.g. 95/134 A/A) but for human IFN-γ, not parasite markers."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Samples from a Sudanese village (Meisseria and Rawashda tribes), but data are human host genetics, irrelevant to P. falciparum markers."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No relevant collection timing for parasite markers; study is human genetics."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Sudanese population samples collected in an African country; but samples are human DNA, not parasite isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study describing new SNPs."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "No indication of parasite dataset overlap; not applicable to this human genetics study."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary parasite data referenced; paper is entirely about human IFN-γ SNPs."
+    },
+    "markers_found": [],
+    "countries": [
+      "Sudan"
+    ],
+    "collection_years": [],
+    "sample_size": 134,
+    "summary": "This paper describes three novel human interferon gamma (IFN-γ) gene polymorphisms in a Sudanese population studied for schistosomiasis susceptibility. It contains no P. falciparum drug-resistance marker data whatsoever.",
+    "exclusion_reasons": [
+      "Not a P. falciparum study — reports human IFN-γ gene polymorphisms",
+      "No curated P. falciparum drug-resistance markers reported",
+      "Data pertain to human host genetics, not parasite field isolates"
+    ]
+  }
+}

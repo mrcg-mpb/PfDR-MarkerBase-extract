@@ -1,0 +1,71 @@
+{
+  "id": "PMID_16185238",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of pre-treatment P. falciparum isolates: pfcrt K76T, dhfr and dhps genotyping."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt 76, Pfdhfr 51/59/108, Pfdhps 436/437/540 — all curated codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives n and n(%) per codon; Table 2 gives counts per city for pfcrt and dhfr/dhps categories."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Table 2 breaks down frequencies by urban region: Brazzaville and Pointe-Noire, e.g. pfcrt 76T pure mutant 83/96 Brazzaville, 39/42 Pointe-Noire."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "Genotyping frequencies pool samples collected 1999 (Pointe-Noire, Jan-Mar 1999), 2001 (Brazzaville Jane Vialle, Mar-Apr 2001), and 2002 (Makelekele, Feb-Apr 2002). Tables 1/2 pool 1999–2002 across >3 years; even per-city Brazzaville pools 2001 and 2002 collections without per-site frequency breakdown."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children under 5 in Brazzaville and Pointe-Noire, Republic of Congo."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical genotyping and drug-use survey study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples derive from patients assigned in a prior in vivo efficacy study (Nsimba et al. 2004), indicating overlap with a previously-published dataset from the same population."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary materials referenced; all frequency data in Tables 1–2."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Republic of Congo"
+    ],
+    "collection_years": [
+      1999,
+      2001,
+      2002
+    ],
+    "sample_size": 138,
+    "summary": "Primary study genotyping pfcrt, dhfr and dhps in P. falciparum isolates from children in Brazzaville and Pointe-Noire, Congo (1999–2002). Frequencies are extractable per codon and split by the two cities (Table 2). However, the pooled 1999–2002 frequencies span more than three years and per-city frequencies combine multiple collection periods without a temporal breakdown, failing the temporal-resolution criterion.",
+    "exclusion_reasons": [
+      "Temporal resolution >3 years: genotyping frequencies pool samples collected 1999–2002 without per-year/per-site (<=3y) frequency breakdown; Brazzaville data pool 2001 and 2002 collections."
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "PMID_11679123",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study genotyped P. falciparum isolates from febrile patients in Mauritania."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Only MSP1, MSP2, and GLURP polymorphic markers were analysed; no drug-resistance codon positions (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) were reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Allelic family frequencies (MSP1/MSP2) are given but none relate to curated drug-resistance markers."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from two named sites: Aioun and Kobeni in Hodh El Gharbi, southern Mauritania."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected at the end of 1998 during an epidemic - single year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field blood samples from febrile patients collected in Mauritania (African country)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical genotyping field study of 386 samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Samples collected during an in vivo drug resistance study in Hodh El Gharbi; routine field collection, no consortium overlap indicated."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary data referenced; the paper simply does not study drug-resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Mauritania"
+    ],
+    "collection_years": [
+      1998
+    ],
+    "sample_size": 173,
+    "summary": "Population structure study of P. falciparum from an epidemic in southern Mauritania (Aioun and Kobeni), genotyping MSP1, MSP2, and GLURP for genetic diversity. It reports no curated drug-resistance codon markers, so it is ineligible.",
+    "exclusion_reasons": [
+      "Does not report any target drug-resistance codon markers (only MSP1, MSP2, GLURP genotyping markers)",
+      "No extractable per-locus drug-resistance frequencies"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "PMID_16640612",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "In-vivo study of 254 patients with uncomplicated Plasmodium falciparum malaria in rural eastern Sudan."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper mentions pfcrt 76T, pfmdr1 86Y, and dhfr 108N with frequencies but only as citations to prior surveys (Abdel-Muhsin et al. 2003; Babiker et al. 2005; Giha et al. 2006). This clinical efficacy study itself did not genotype resistance markers; molecular data are 'manuscript in preparation' / 'unpublished data'."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies quoted (pfcrt 76T 0.73→0.97, pfmdr1 86Y 0.65→0.86, dhfr 108N 0.31→0.76) are from prior/other publications describing 1998-2002 surveys, not this study's own field samples with numerator/denominator."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study conducted in Daraweesh and Kajara villages, 15 km from Gedarif town, Eastern Sudan — sub-national resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "The in-vivo study was conducted October–December 2003; cited marker frequencies were from 1998-2002 surveys binned by year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from rural eastern Sudan (African country), field-based village study."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in-vivo drug efficacy study of 254 patients."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Study area is a long-running research site (Daraweesh); marker frequencies cited come from Abdel-Muhsin et al. 2003, Babiker et al. 2005, and Giha et al. 2006 covering overlapping samples from the same area."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "The molecular resistance data are described as 'manuscript in preparation' and 'unpublished data' rather than in a supplement to this paper; no per-locus frequencies for this study's own samples are provided or pointed to."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86",
+      "Pfdhfr 108",
+      "Pfdhfr 51"
+    ],
+    "countries": [
+      "Sudan"
+    ],
+    "collection_years": [
+      2003
+    ],
+    "sample_size": 254,
+    "summary": "This is a primary in-vivo SP/SP+CQ drug efficacy study in 254 P. falciparum patients from Daraweesh and Kajara villages, eastern Sudan (Oct–Dec 2003). While it mentions target marker frequencies (pfcrt 76T, pfmdr1 86Y, dhfr 108N/51I), these are drawn from prior/other publications and 'manuscript in preparation'/'unpublished' data covering 1998-2002 surveys, not molecular genotyping performed on this study's own samples. No extractable per-locus resistance frequencies from this study are reported.",
+    "exclusion_reasons": [
+      "No original drug-resistance marker genotyping data generated in this study — marker frequencies are cited from other publications/unpublished work",
+      "No extractable numerator/denominator per-locus frequencies for this study's own samples"
+    ]
+  }
+}

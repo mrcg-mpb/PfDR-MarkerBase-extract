@@ -1,0 +1,69 @@
+{
+  "id": "PMID_18471066",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated falciparum malaria; SNPs detected in dhfr and dhps of P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "dhfr codons 108, 51, 59 (triple mutant) and dhps codons 437, 540 (double mutant) — all curated target positions (Pfdhfr:51,59,108; Pfdhps:437,540)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives per-year mutation frequencies: Triple 14/93 (15.1%) 1998, 15/102 (14.7%) 2000, 26/130 (20.2%) 2002; Double 6/93, 5/102, 19/130; Quintuple 5/93, 4/102, 13/130."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Frequencies in Table 1 are reported by study year for Mpumalanga Province overall. Two clinics (Naas and Mangweni) are named in acknowledgments, but marker frequencies are not broken down by clinic — only pooled per year for the province."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Mutation frequencies reported separately by study year 1998, 2000, and 2002 (Table 1), each a single collection season."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from patients recruited at clinics in Mpumalanga Province, South Africa (Naas and Mangweni Clinics)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in vivo therapeutic efficacy studies conducted in 1998, 2000, 2002."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Study 'nested' within the South East African Combination Antimalarial Therapy evaluation (grant A00024); prior efficacy studies from same programme cited (Mabuza et al. 2001, 2005; Govere et al. 1999) may draw on overlapping collections."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced for finer spatial breakdown; the paper reports at province level only, with no indication of site-level frequency tables in a supplement."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "South Africa"
+    ],
+    "collection_years": [
+      1998,
+      2000,
+      2002
+    ],
+    "sample_size": 325,
+    "summary": "Primary SP efficacy study in Mpumalanga Province, South Africa (1998, 2000, 2002) reporting P. falciparum dhfr (51,59,108) and dhps (437,540) mutation frequencies per year with extractable numerator/denominator counts. However, frequencies are pooled at province level; samples came from two named clinics (Naas and Mangweni) but marker frequencies are not resolved below the provincial level.",
+    "exclusion_reasons": [
+      "Sub-country resolution not met: mutation frequencies reported only for Mpumalanga Province as a whole per study year, not broken down to the individual clinic (Naas/Mangweni) or finer level."
+    ]
+  }
+}

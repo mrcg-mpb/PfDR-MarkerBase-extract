@@ -1,0 +1,61 @@
+{
+  "id": "PMID_15686571",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study is entirely on Plasmodium falciparum (pfmdr1/pfcrt transfected strains)."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Focus is on pfmdr1 codons 1034, 1042, 1246 (and Y184F) — none of which are the curated target positions. The only curated marker discussed (pfmdr1 86, pfcrt 76) appears only in cited literature, not as data generated here; the study strains are all N86 wild-type."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "This is an in vitro fitness/competition experiment using transfected lab strains; it reports fitness costs and merozoite counts, not allele frequencies in field populations."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No field collection sites — laboratory transfected strains (D10, 7G8) obtained from WEHI, Melbourne."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No field sample collection window; lab culture experiment."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Uses laboratory transfected strains (D10, 7G8), not African human field isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical in vitro study with original competition experiments."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Lab-strain in vitro study; no field dataset overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No field frequency data exist in this paper regardless of supplement."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "An in vitro study measuring the fitness cost of pfmdr1 chloroquine-resistance mutations (codons 1034, 1042, 1246) using transfected laboratory P. falciparum strains (D10, 7G8). It is not a field survey, uses no African clinical isolates, reports no target-marker allele frequencies, and provides no geographic or temporal sampling data.",
+    "exclusion_reasons": [
+      "No curated target drug-resistance codon frequencies reported (focuses on pfmdr1 1034/1042/1246)",
+      "Uses laboratory transfected strains, not African field/clinical isolates",
+      "No extractable per-locus population frequencies",
+      "No sub-country location data",
+      "No sample collection time window"
+    ]
+  }
+}

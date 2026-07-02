@@ -1,0 +1,67 @@
+{
+  "id": "PMID_16359407",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum Pfcrt haplotypes: 'The cross-sectional screening of the Pfcrt-haplotypes was done on P. falciparum slide positive samples.'"
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt codons 72-76 including K76T mutation and haplotypes CVIET, SVMNT, CVMNK."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives n and % for haplotypes (CVIET 59, 67.8%; total 87), and 100% K76T mutation."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected in Luang Namtha Province, Laos — a sub-national admin unit."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected during a therapeutic efficacy study from September 2003 to January 2004 — within 3 years."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples were collected in Luang Namtha Province, Laos (Southeast Asia), not an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Cross-sectional survey of 88 Laotian field samples — primary empirical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples derive from a drug efficacy study by Stohrer et al. 2004 in Luang Namtha; 88 of 108 samples were a subset of that trial cohort."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency data are in Table 1 of the main text; no supplementary materials referenced."
+    },
+    "markers_found": [
+      "Pfcrt 72",
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Laos"
+    ],
+    "collection_years": [
+      2003,
+      2004
+    ],
+    "sample_size": 87,
+    "summary": "Cross-sectional study of Pfcrt haplotypes (c72-76, including K76T) in 87-88 P. falciparum field samples from Luang Namtha Province, Laos, collected Sept 2003-Jan 2004. Although it reports extractable per-locus frequencies at sub-national resolution within a 3-year window, the samples were collected in Laos (Southeast Asia), not an African country.",
+    "exclusion_reasons": [
+      "Samples are from Laos (Southeast Asia), not an African country — fails the African field samples criterion."
+    ]
+  }
+}

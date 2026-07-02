@@ -1,0 +1,73 @@
+{
+  "id": "PMID_19199542",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum infections; 'We only considered treatments for new P. falciparum infections' and species confirmed by PCR."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Table 1 reports dhfr 59R (108N,51I assumed present), dhps 437G, 540E, and pfmdr1 86N with prevalence counts. Target markers include Pfdhfr 51,59,108; Pfdhps 437,540; Pfmdr1 86."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives numerator/denominator: dhfr 59R 279/322, dhps 437G 310/323, 540E 304/323, pfmdr1 86N 96/322."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "All samples come from a single neighborhood cohort in Kampala, Uganda; frequencies in Table 1 are pooled across the whole cohort. Although the study distinguishes distance from a swamp for treatment failure, marker frequencies are reported only as one pooled total, not tied to sub-national sub-units per locus."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "The pooled marker prevalences (Table 1) span Nov 2004–Mar 2007 (~29 months, within 3y for the pooled figure), but samples collected Nov 2004 to Mar 2007 — the pooled total is within 3 years (approx 2.3y). Figure 3 gives per-quarter/per-period polymorphism prevalence but not per-locus counts."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children in Kampala, Uganda (African country)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary longitudinal clinical trial cohort with genotyping."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'as part of a longitudinal clinical trial'; 'an interim analysis of comparative results through June 2006 has been published [21]' (Dorsey et al. JAMA 2007) — samples are part of a larger randomized trial cohort with prior publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced for the marker frequency data; Table 1 contains the extractable counts."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [
+      2004,
+      2005,
+      2006,
+      2007
+    ],
+    "sample_size": 324,
+    "summary": "Longitudinal AQ+SP treatment cohort of 129 children in a Kampala, Uganda neighborhood (Nov 2004–Mar 2007). Reports extractable per-locus resistance marker frequencies (dhfr 51/59/108, dhps 437/540, pfmdr1 86, pfcrt 76 assumed fixed). However, the marker frequencies are pooled across the single Kampala cohort with no sub-national breakdown per locus (fails sub-country resolution beyond the city itself), and the pooled marker prevalences are not binned to <=3y in Table 1 (though total span is ~2.3y). Samples are part of a larger published randomized trial (high duplicate risk).",
+    "exclusion_reasons": [
+      "Marker frequencies reported only as pooled totals for a single Kampala neighborhood cohort; no per-locus sub-national breakdown",
+      "Per-locus marker frequencies (Table 1) are pooled across the entire study period rather than binned by finer temporal windows",
+      "High duplicate risk: samples part of larger previously published randomized trial cohort (Dorsey et al. JAMA 2007)"
+    ]
+  }
+}

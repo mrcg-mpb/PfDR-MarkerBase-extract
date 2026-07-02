@@ -1,0 +1,65 @@
+{
+  "id": "PMID_10950805",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum DHFR genotypes in Malian children."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr codons 108 (Asn), 51 (Ile), 59 (Arg); also Pfdhps 436 (Ser) and 437 (Gly)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Baseline village-wide n=119: 12.8% Asn-108, 4.2% Ile-51, 10.9% Arg-59; breakthrough n=52: 100% Asn-108, 50% Ile-51, 90% Arg-59 (Figure 1)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Tieneguebougou, a rural village ~30 km northeast of Bamako, Mali — a specific named site below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "'The study was conducted during the 1996 rainy season' — a single collection year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field samples collected from children in Tieneguebougou village, Mali, an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Prospective empirical study with PCR genotyping of field infections."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single-village prospective collection; no mention of consortium or shared dataset, though authors have related Mali studies (ref 9)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies given in main text and Figure 1; no external supplement required."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437"
+    ],
+    "countries": [
+      "Mali"
+    ],
+    "collection_years": [
+      1996
+    ],
+    "sample_size": 119,
+    "summary": "Prospective study in Tieneguebougou village, Mali (1996 rainy season) measuring pyrimethamine prophylaxis selection of Pfdhfr mutations in 109 children. Reports extractable Pfdhfr 108/51/59 frequencies at baseline (n=119) and in breakthrough infections (n=52); also detected Pfdhps 436/437. Site-level location and single collection year satisfy resolution criteria.",
+    "exclusion_reasons": []
+  }
+}

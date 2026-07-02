@@ -1,0 +1,65 @@
+{
+  "id": "PMID_17538894",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum: 'at least 95% of infections being due to P. falciparum'; genotyping of pfcrt-76 and pfmdr1-86."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt K76T (position 76) and pfmdr1 N86Y (position 86), both curated target codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "409/999 carried pfcrt-76T (40.9%); pfmdr1-86Y present 44.4% (91) ITC and 44.6% (91) non-ITC; frequencies by group given."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Study performed in Ziniaré and Boussé health districts (sub-national), but frequencies are reported only aggregated across 18 villages split into ITC vs non-ITC groups, not tied to individual named sub-national locations. Data are grouped by intervention arm rather than by district/village geography."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "In vivo study of CQ efficacy conducted August to November 2002 — sampling within a single year."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with uncomplicated malaria in Burkina Faso, West Africa."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in vivo efficacy and molecular study with enrolled children and genotyping results."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'Details of the study within which this work was nested have been published elsewhere [27]' — Diallo DA et al. Am J Trop Med Hyg 2007;76:237–44, describing the same 2002 CQ efficacy study and pfcrt/pfmdr1 distributions."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced; data are in main text and tables."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Burkina Faso"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 409,
+    "summary": "Primary in vivo chloroquine-efficacy study in Burkina Faso (Ziniaré and Boussé health districts, 2002) genotyping pfcrt-76T and pfmdr1-86Y in P. falciparum from children. Reports extractable marker frequencies (e.g., 40.9% pfcrt-76T; ~44% pfmdr1-86Y) but only stratified by ITC vs non-ITC intervention arms rather than tied to specific named sub-national locations. Marker and temporal criteria are met, but the sub-country spatial resolution is questionable, and there is a nested/prior-published companion dataset (ref 27) posing high duplicate risk.",
+    "exclusion_reasons": [
+      "Frequencies are aggregated by intervention arm (ITC vs non-ITC) across 18 villages rather than tied to specific named sub-national units/villages",
+      "High duplicate risk: study is nested within and its resistance-marker distributions published in Diallo et al. AJTMH 2007 (ref 27)"
+    ]
+  }
+}

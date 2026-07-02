@@ -1,0 +1,67 @@
+{
+  "id": "PMID_19055622",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum malaria in children; inclusion required 'P. falciparum infection with no other Plasmodium species detected.'"
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped at dhfr 51,59,108 and dhps 437,540,581,613 — all curated codons. Prevalences given: dhfr-59 66%, dhps-437 72%, dhps-540 67%."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figure 2 gives prevalence % per codon (n=212), and text gives dhfr-108/51 99%, dhfr-59 66%, dhps-437 72%, dhps-540 67%, quintuple mutant 43% (92/212)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected in Rutshuru, a district in Eastern DRC (four clinics) — a sub-national location, not just country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Trial conducted between June and September 2002 — a single collection window well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children 6-59 months collected in Rutshuru, DRC, an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary therapeutic efficacy trial with genotyping of 212 field samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collection from a therapeutic efficacy trial in Rutshuru 2002; genotyping funded by Global Network for Women's and Children's Health Research. No indication these specific samples were published elsewhere (contrasted with other DRC studies)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-locus frequencies are presented in Figure 2 and text within the main paper; no pointer to supplementary data for extraction."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Democratic Republic of the Congo"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 212,
+    "summary": "Primary SP therapeutic efficacy trial in Rutshuru, Eastern DRC (June-Sept 2002), genotyping 212 P. falciparum field samples at dhfr (51,59,108) and dhps (437,540,581,613) codons. Figure 2 provides per-codon prevalence (n=212), giving extractable frequencies at a sub-national location within a tight temporal window. All criteria appear met.",
+    "exclusion_reasons": []
+  }
+}

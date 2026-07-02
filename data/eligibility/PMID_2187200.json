@@ -1,0 +1,60 @@
+{
+  "id": "PMID_2187200",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study is about Plasmodium falciparum blood-stage recombinant proteins as vaccine candidates."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "This is a vaccine immunization study; no drug-resistance codon positions (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No drug-resistance marker frequencies reported; only antibody titers and parasitemia measurements."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No field-sample geographic frequency data; isolates are lab-adapted strains (FUP Palo Alto/Uganda, FCB-1/Colombia, FVO/Vietnam)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection windows for resistance data; not applicable."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Experiments used Aotus monkeys of Colombian origin and lab-adapted parasite isolates; no African human field/clinical isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary experimental vaccine study in Aotus monkeys."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "No indication of shared surveillance dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary drug-resistance data implied; the study concerns vaccine immunization, not resistance markers."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a 1990 vaccine immunization study testing recombinant P. falciparum blood-stage proteins (rp41 aldolase and 190N) in Aotus monkeys of Colombian origin, challenged with lab-adapted parasite isolates. It reports antibody titers and parasitemia, not drug-resistance marker frequencies, and involves no African field samples.",
+    "exclusion_reasons": [
+      "No target drug-resistance markers reported",
+      "No extractable per-locus resistance frequencies",
+      "No sub-country field-sample data",
+      "No African human field/clinical isolates (uses Aotus monkeys and lab strains)"
+    ]
+  }
+}

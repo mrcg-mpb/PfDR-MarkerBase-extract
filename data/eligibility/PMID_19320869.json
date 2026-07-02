@@ -1,0 +1,64 @@
+{
+  "id": "PMID_19320869",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Clinical trial for treatment of uncomplicated Plasmodium falciparum malaria."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper only performed PCR genotyping at msp1, msp2, and glurp to distinguish recrudescence from reinfection, and species-identification PCR. No drug-resistance codon markers (Pfcrt, Pfk13, Pfdhfr, Pfdhps, Pfmdr1, Pfcytb) were assessed."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No molecular resistance marker frequencies reported; only clinical cure/reinfection rates."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study site is Phuoc Chien Commune, Ninh Hai District, Ninh Thuan Province, Vietnam — sub-national resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Study conducted between September 2006 and December 2007 (within 3 years)."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples collected in central Vietnam, not an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary randomized clinical trial."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single field trial under the Vietnam Australia Defence Malaria Project; no evidence of pooled multi-site resistance dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary molecular data referenced; the study does not report target resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Vietnam"
+    ],
+    "collection_years": [
+      2006,
+      2007
+    ],
+    "sample_size": 116,
+    "summary": "Randomized clinical trial comparing DHP and AAQ for uncomplicated P. falciparum malaria in central Vietnam (2006-2007). It reports clinical efficacy/cure rates but no drug-resistance codon markers, and was conducted in Vietnam, not an African country.",
+    "exclusion_reasons": [
+      "No target drug-resistance markers reported (only msp1/msp2/glurp genotyping for recrudescence vs reinfection)",
+      "No extractable per-locus resistance marker frequencies",
+      "Samples collected in Vietnam, not an African country"
+    ]
+  }
+}

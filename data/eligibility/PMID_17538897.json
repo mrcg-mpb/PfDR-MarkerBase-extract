@@ -1,0 +1,82 @@
+{
+  "id": "PMID_17538897",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum isolates carrying wild-type and triple-mutant dhfr alleles from 11 African countries."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped dhfr SNPs at codons 51, 59, 108 (N51I, C59R, S108N) — all curated Pfdhfr target codons — plus 164."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives counts of WT/3M/4M dhfr alleles per country/location (e.g. Gabon Bakoumba WT 10, 3M 40)."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Table 1 gives sub-country locations for field-collected samples (Bakoumba, Kolle, Bougoula-Hameau, Pointe-Noire/Brazzaville, Hohoe/Navrongo, Kasangati), but a large fraction (173 isolates) are imported traveller cases diagnosed in France with only country known, and the dhfr counts in Table 1 combine 3 SNPs into an allele count rather than per-codon frequencies at each site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection years listed per location: Bakoumba 2000, Ghana 2003, Uganda 2003, Mali 2002-2003, Congo 1999-2002 (Pointe-Noire Jan-Mar 1999, Brazzaville 2001-2002); France travellers 2004 — all within 3-year windows."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "268 isolates are African field/clinical samples, but 173 isolates are imported traveller cases collected in France (marked with footnote a in Table 1); a lab clone FCM29 and a Thai comparator strain are also included."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study genotyping field isolates and microsatellite haplotypes."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "Isolates selected from CNRP and MRTC databases previously genotyped/published: 'Isolates from the CNRP repository and from the studies conducted in Congo and Gabon had previously been genotyped' [10,17,23]; samples are subsets of prior collections."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced for the frequency data; data are in Table 1 and Figures 1-2."
+    },
+    "markers_found": [
+      "Pfdhfr N51I (51)",
+      "Pfdhfr C59R (59)",
+      "Pfdhfr S108N (108)"
+    ],
+    "countries": [
+      "Benin",
+      "Cameroon",
+      "Comoros",
+      "Congo",
+      "Ivory Coast",
+      "Gabon",
+      "Ghana",
+      "Guinea",
+      "Mali",
+      "Senegal",
+      "Uganda"
+    ],
+    "collection_years": [
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004
+    ],
+    "sample_size": 441,
+    "summary": "Microsatellite/haplotype study of dhfr triple-mutant (N51I+C59R+S108N) alleles across 11 African countries. Reports allele counts per location in Table 1 with collection years. However, ~173 of 441 isolates are imported traveller cases diagnosed in France (country-only, non-field), samples are drawn from previously-published CNRP/MRTC databases (high duplicate risk), and the dhfr data are reported as combined triple-mutant allele counts rather than per-codon frequencies tied to sub-national sites for all samples.",
+    "exclusion_reasons": [
+      "Large share of isolates (173) are imported traveller cases collected in France with only country-of-infection known — not African field samples with sub-national location",
+      "High duplicate risk: isolates reused from previously published CNRP/MRTC datasets and prior Congo/Gabon studies",
+      "Sub-country frequency resolution not extractable per-codon for all samples; imported cases lack sub-national location"
+    ]
+  }
+}

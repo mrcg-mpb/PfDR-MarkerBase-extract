@@ -1,0 +1,62 @@
+{
+  "id": "PMID_17597460",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study examines associations between a+-thalassemia and Plasmodium falciparum malarial infection in Tanzania."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper studies human genetic markers (a3.7 thalassemia deletion, HbS sickle cell, and 15 autosomal STR loci). No P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies reported are for human hemoglobin genotypes/alleles, not parasite drug-resistance codons."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Data reported by 13 named villages in Kilimanjaro and Tanga regions (Table 1), but this applies to human genetic data, not parasite markers."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Cross-sectional surveys conducted in October and November 2001."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field samples collected from children in villages in northeastern Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary cross-sectional survey study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Conducted under the Joint Malaria Programme; data for Mgome derived from Lusingu et al. [19] and other villages from Drakeley et al. [17]."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No relevant drug-resistance marker data in supplement; the study concerns human genetics."
+    },
+    "markers_found": [],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2001
+    ],
+    "sample_size": 816,
+    "summary": "This study investigates associations between human hemoglobinopathies (a+-thalassemia a3.7 deletion and sickle cell HbS) and P. falciparum malaria transmission intensity across 13 villages in northeastern Tanzania. It reports human genetic allele frequencies, not any P. falciparum drug-resistance marker frequencies.",
+    "exclusion_reasons": [
+      "No curated P. falciparum drug-resistance markers reported; the study concerns human host genetic markers (a-thalassemia, HbS, autosomal STRs) rather than parasite resistance codons.",
+      "No extractable per-locus frequencies for any target drug-resistance marker."
+    ]
+  }
+}

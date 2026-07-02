@@ -1,0 +1,65 @@
+{
+  "id": "PMID_10762551",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "This is a human genetics study of the Duffy blood group locus (FY*O allele) related to Plasmodium vivax resistance. It does not study P. falciparum drug-resistance markers."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The study surveys human DNA sequence variation at the Duffy (DARC) locus; no P. falciparum drug-resistance markers (Pfcrt, Pfdhfr, Pfk13, etc.) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Reports human allele/haplotype frequencies at the Duffy locus, not parasite drug-resistance codon frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Populations tied to specific locations: Yaounde (Cameroon), Bamako area (The Gambia), Saradidi (Kenya), Central African Republic, though these are human host samples."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No sample collection dates given; irrelevant since not a parasite drug-resistance study."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human samples from sub-Saharan Africa (Cameroon, Gambia, CAR, Kenya), but these are human host DNA, not parasite isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical DNA sequencing study of Duffy locus variation."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Not applicable to the target database; independent human population genetics study."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No relevant P. falciparum drug-resistance data would be found in any supplement."
+    },
+    "markers_found": [],
+    "countries": [
+      "Cameroon",
+      "The Gambia",
+      "Central African Republic",
+      "Kenya"
+    ],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a human population-genetics study of the Duffy blood group (DARC/FY*O) locus examining the signature of natural selection related to Plasmodium vivax malaria resistance. It studies human host DNA, not P. falciparum parasites, and reports no P. falciparum drug-resistance markers or frequencies. Entirely out of scope.",
+    "exclusion_reasons": [
+      "Not a P. falciparum study — examines the human Duffy blood group locus (P. vivax resistance)",
+      "No target drug-resistance markers reported",
+      "No extractable parasite marker frequencies",
+      "Samples are human host DNA, not P. falciparum field isolates"
+    ]
+  }
+}

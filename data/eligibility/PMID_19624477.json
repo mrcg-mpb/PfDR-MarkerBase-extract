@@ -1,0 +1,66 @@
+{
+  "id": "PMID_19624477",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum blood samples from patients in Malawi."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped pfcrt K76T, dhfr N51I/C59R/S108N, dhps A437G/K540E — target codons Pfcrt76, Pfdhfr51/59/108, Pfdhps437/540."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives pfcrt mutant %, dhfr triple %, dhps double %, quintuple % with N=148 (Blantyre) and N=183 (Karonga) and 95% CIs."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Two named sub-national sites: Kaporo health centre, Karonga district (northern Malawi) and Queen Elizabeth Central Hospital, Blantyre. Frequencies reported per site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Karonga samples collected in May 2007; Blantyre samples collected in 2007 — single-year windows."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical fingerprick and whole blood samples from patients in Malawi."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary prevalence study with own DNA extraction, PCR genotyping and results."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Samples collected as part of an antimalarial drug resistance study approved by College of Medicine; new field collection, no consortium overlap stated. Mbeya data are from Schönfeld et al. (external, excluded)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All per-locus frequencies are in Table 1 of the main text."
+    },
+    "markers_found": [
+      "Pfcrt K76T",
+      "Pfdhfr N51I",
+      "Pfdhfr C59R",
+      "Pfdhfr S108N",
+      "Pfdhps A437G",
+      "Pfdhps K540E"
+    ],
+    "countries": [
+      "Malawi"
+    ],
+    "collection_years": [
+      2007
+    ],
+    "sample_size": 331,
+    "summary": "Primary prevalence study genotyping pfcrt K76T, dhfr and dhps mutations in P. falciparum from two Malawi sites (Karonga N=183, Blantyre N=148) collected in 2007. Table 1 provides extractable per-site mutant frequencies with CIs. Mbeya, Tanzania data are cited from another study and not used.",
+    "exclusion_reasons": []
+  }
+}

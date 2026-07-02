@@ -1,0 +1,63 @@
+{
+  "id": "PMID_15679557",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated Plasmodium falciparum malaria cases treated with CQ, SP or AQ."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "PCR genotyping used only msp-1 and msp-2 loci to distinguish recrudescence from re-infection; no molecular drug-resistance marker codons (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) were genotyped or reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only in vivo clinical efficacy failure proportions are reported (Table 4); no per-locus molecular marker frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Data reported by site: Freetown, Kabala, Kailahun, Makeni, Matru (Table 4)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected between October 2002 and May 2003, within a 3-year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Clinical isolates collected from children at hospital/clinic sites across Sierra Leone."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary in vivo efficacy study at five sites."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Part of the Sierra Leone Antimalarial Efficacy Study Collaboration, but this is a specific new field collection reported here."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No molecular marker data mentioned or pointed to in supplementary materials; study did not genotype resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Sierra Leone"
+    ],
+    "collection_years": [
+      2002,
+      2003
+    ],
+    "sample_size": 1034,
+    "summary": "An in vivo therapeutic efficacy study of chloroquine, sulphadoxine-pyrimethamine and amodiaquine at five sites in Sierra Leone (2002-2003). PCR genotyping used only msp-1 and msp-2 for recrudescence/re-infection distinction. No drug-resistance molecular markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1) were genotyped, so no extractable per-locus marker frequencies exist.",
+    "exclusion_reasons": [
+      "No target drug-resistance marker codons genotyped or reported (only clinical efficacy and msp-1/msp-2 typing)",
+      "No extractable per-locus molecular marker frequencies"
+    ]
+  }
+}

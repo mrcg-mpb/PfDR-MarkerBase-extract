@@ -1,0 +1,62 @@
+{
+  "id": "PMID_12351583",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Discusses P. falciparum extensively, but in the context of host genetic susceptibility, not parasite drug-resistance markers."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "This is a review of host genetic factors (hemoglobinopathies, HLA, TNF, CD36) and mouse Char loci. No P. falciparum drug-resistance codons (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, etc.) are reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No per-locus frequencies of parasite drug-resistance markers are given; it is a narrative review."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "No parasite marker frequency data tied to any location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection windows for marker frequency data; this is a review synthesizing prior studies."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Discusses African populations for host genetics and uses lab mouse strains for the animal model; no African parasite field isolates with resistance markers."
+      },
+      "is_primary_study": {
+        "met": false,
+        "evidence": "This is a review article ('Susceptibility to malaria as a complex trait') summarizing prior work, not a primary empirical study of drug resistance."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Review article; no primary sample dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No relevant marker frequency data would be found in a supplement; the paper is a review of host susceptibility genetics."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a review article on human/mouse genetic susceptibility to malaria (hemoglobin variants, G6PD, HLA, TNF, CD36, and mouse Char resistance loci). It does not report P. falciparum drug-resistance markers or extractable per-locus frequencies, and is not a primary empirical study of parasite drug resistance.",
+    "exclusion_reasons": [
+      "Not a primary study (review article)",
+      "No P. falciparum drug-resistance target markers reported",
+      "No extractable per-locus parasite marker frequencies",
+      "No sub-country resolution for marker data",
+      "No usable collection time for marker data",
+      "No African parasite field isolates with resistance markers"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "PMID_11090624",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum pfcrt gene and chloroquine resistance throughout."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Table 1 reports Pfcrt codons 72,74,75,76,97,220,271,326,356,371 and Pfmdr1 86 mentioned (86Y)."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Table 1 lists individual amino acid genotypes per named laboratory-adapted clone, not population frequency counts/percentages per locus per site. This is a molecular characterization of cultured lines, not a field frequency survey."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Table 1 gives only country/region-level origin labels (e.g. 'Kenya', 'Mali', 'Sudan') for culture-adapted reference clones — no sub-national site, clinic, or coordinates."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection years are given for the isolates; they are laboratory-adapted lines obtained from Su et al. 1997 with no sampling dates."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Isolates are 'Cultured-adapted lines' (lab-adapted reference clones such as Dd2, HB3, FCB, 3D7, NF54), not fresh human field/clinical isolates; core experiments are in vitro transfection studies."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical molecular/genetics study identifying pfcrt and performing transfection experiments."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "'Cultured-adapted lines were obtained from regions of Asia, Africa, and South America (Su et al., 1997).' The reference clones (Dd2, HB3, 3D7, etc.) are standard, previously published, widely reused strains."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Supplementary data referenced are plasmid maps and gene organization, not frequency or site-level location data."
+    },
+    "markers_found": [
+      "Pfcrt 72",
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76",
+      "Pfcrt 97",
+      "Pfcrt 220",
+      "Pfcrt 271",
+      "Pfcrt 326",
+      "Pfcrt 356",
+      "Pfcrt 371",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Kenya",
+      "Mali",
+      "Sudan",
+      "South Africa",
+      "Uganda",
+      "Liberia",
+      "Sierra Leone",
+      "Sao Tome"
+    ],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a molecular/functional study identifying the pfcrt gene and demonstrating its role in chloroquine resistance via transfection experiments. Table 1 catalogs pfcrt codon genotypes of individual laboratory-adapted reference clones from various global regions — these are lab-adapted culture lines, not fresh African field/clinical isolates, and are presented as single-clone genotypes rather than population frequencies. No sub-national locations or collection dates are provided, and the clones are standard previously published strains.",
+    "exclusion_reasons": [
+      "No extractable per-locus population frequencies (only individual clone genotypes)",
+      "No sub-country location resolution (only country/region labels)",
+      "No collection dates/temporal resolution",
+      "Isolates are laboratory-adapted reference clones, not fresh African field samples"
+    ]
+  }
+}

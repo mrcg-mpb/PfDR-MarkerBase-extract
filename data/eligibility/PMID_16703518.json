@@ -1,0 +1,65 @@
+{
+  "id": "PMID_16703518",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study analyzes Plasmodium falciparum Pfcrt codon 72-76 haplotypes in Korogwe District, Tanzania."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt codon 72-76 haplotypes (CVMNK, CVIET, SVMNT), covering codons 72, 74, 75, 76 - within target list (72,74,75,76)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives absolute numbers per haplotype per village per year; text gives frequencies with denominators (e.g. CVIET 95% n=54 Kwamasimba 2003, SVMNT 13% n=4 in 2004)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Data are broken down by two villages, Mkokola and Kwamasimba, in Korogwe District, northern Tanzania - sub-national resolution in Table 1 and Figure 1."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Surveys conducted July 2003 and March 2004, reported separately per year - single-year resolution."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Finger-prick blood samples from children/adolescents with confirmed P. falciparum infections collected in two villages in Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary cross-sectional field study with PCR/SSOP ELISA genotyping."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples collected 'As part of ongoing immunoepidemiological studies of malaria' and 'under the auspices of the Joint Malaria Programme,' suggesting possible overlap with other cohort/consortium studies."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Table 1 and Figure 1 provide the extractable per-village, per-year counts; no supplementary data required."
+    },
+    "markers_found": [
+      "Pfcrt 72",
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2003,
+      2004
+    ],
+    "sample_size": 319,
+    "summary": "Cross-sectional surveys in Kwamasimba and Mkokola villages, Korogwe District, Tanzania (2003 and 2004) genotyped Pfcrt codon 72-76 haplotypes (CVMNK, CVIET, SVMNT) in P. falciparum-positive samples. Table 1 provides absolute haplotype counts per village per year, giving sub-country and single-year resolution. First documentation of the SVMNT haplotype in Africa.",
+    "exclusion_reasons": []
+  }
+}

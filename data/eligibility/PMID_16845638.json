@@ -1,0 +1,61 @@
+{
+  "id": "PMID_16845638",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum FCB line, examining pfmdr1 copy number."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper discusses pfmdr1 copy number and mentions pfmdr1 N86Y as background, but does not report frequency data at codon 86; it works on a lab line's haplotype (86Y/184Y/1034S/1042N/1246D) rather than measured marker frequencies in field samples."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Data are IC50 drug-susceptibility values, transcript/protein levels, and copy number of engineered clones — not allele frequencies with numerator/denominator."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "This is an in vitro laboratory transfection study on the FCB line; no field sampling locations reported."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No field collection window; laboratory experiment."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Uses the cultured drug-resistant P. falciparum FCB laboratory line, genetically manipulated in vitro; not African field/clinical isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary experimental laboratory study with transfection and drug assays."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Laboratory line experiment; no consortium or field cohort overlap relevant to frequency data."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Table 1 IC50 values are noted as available online, but these are drug-susceptibility values not marker frequencies; supplement would not provide eligible data."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is an in vitro molecular study genetically disrupting one of two pfmdr1 copies in the laboratory FCB line to assess effects on drug susceptibility (MFQ, LUM, HF, QN, ART, CQ). It reports IC50 values, transcript, and protein levels — not drug-resistance marker allele frequencies from African field isolates. It does not meet the core criteria: no target-marker frequency data, no field samples, no sub-country locations, no collection window.",
+    "exclusion_reasons": [
+      "No extractable per-locus allele frequencies for curated codon positions",
+      "Uses laboratory FCB line, not African field/clinical isolates",
+      "No sub-country geographic resolution",
+      "No sample collection time information",
+      "Reports IC50/copy-number/expression data rather than marker frequencies"
+    ]
+  }
+}

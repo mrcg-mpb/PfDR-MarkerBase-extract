@@ -1,0 +1,60 @@
+{
+  "id": "PMID_17300628",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study genotypes Plasmodium falciparum parasitaemias using glurp, msp1 and msp2 loci."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The paper only genotypes msp1, msp2 and glurp for distinguishing recrudescence from new infection; no drug-resistance codon markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) are examined."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only frequencies of new vs recrudescent infections are given (Table 1), not per-locus drug-resistance codon frequencies."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Single site: Mbarara District Hospital, western Uganda."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Trial detailed in Priotto et al. 2003; a single-site short trial, though collection dates not explicitly given here."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children in Mbarara, Uganda."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical treatment/genotyping trial."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples come from the Priotto et al. 2003 Ugandan trial, part of a series of WHO/TDR coordinated combination therapy trials; a general report was to be published separately."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary drug-resistance marker data indicated; the study simply does not measure resistance markers."
+    },
+    "markers_found": [],
+    "countries": [
+      "Uganda"
+    ],
+    "collection_years": [],
+    "sample_size": 190,
+    "summary": "This is a molecular genotyping study distinguishing recrudescence from new infections in a P. falciparum treatment trial in Mbarara, Uganda, using msp1, msp2 and glurp. It does not examine any curated drug-resistance codon markers (Pfcrt, Pfdhfr, Pfdhps, Pfk13, Pfmdr1, Pfcytb) and reports no resistance-marker frequencies, so it is ineligible.",
+    "exclusion_reasons": [
+      "No target drug-resistance markers examined (only msp1/msp2/glurp genotyping)",
+      "No extractable per-locus drug-resistance codon frequencies"
+    ]
+  }
+}

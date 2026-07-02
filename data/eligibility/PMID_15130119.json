@@ -1,0 +1,74 @@
+{
+  "id": "PMID_15130119",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study is entirely on Plasmodium falciparum QTL mapping and PfNHE-1 polymorphism surveys."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "Paper focuses on QTL mapping (pfcrt, pfmdr1 loci) and PfNHE-1 microsatellite/point polymorphisms (codons 790, 894, 950). No curated target codon frequencies (e.g. pfcrt 76, pfmdr1 86 genotype frequencies) are reported; pfcrt/pfmdr1 are discussed only as QTL peaks, not as codon-level frequency data."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Table 2 lists individual isolate polymorphisms (PfNHE-1 codons and microsatellite types), not population frequencies at curated drug-resistance codons. No numerator/denominator counts per locus for target markers."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Table 2 origins are given at country level or broad region only (e.g. 'Kenya', 'Sudan', 'The Gambia', 'Ghana', 'Africa'); many entries are lab/culture-adapted clones with no sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates are provided for the surveyed isolates; these are archived culture-adapted lines with no usable collection time window."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Isolates in Table 2 are culture-adapted reference clones/lines (e.g. 3D7, HB3, Dd2, 7G8, Sudanese lines 106/1, 123/5) mixed with global origins; the core study is a genetic cross of lab clones HB3xDd2 (Honduras and Indochina), not African field surveillance."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical QTL-mapping and polymorphism-survey study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Isolate panel overlaps with previously published collections (e.g. Mu et al. 2003 outbred isolates, Wootton et al. 2002); PfNHE-1 survey of 71 lines drawn from established reference/lab strains reused across NIH studies."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Supplementary Tables S1 (progeny phenotypes/markers) and S2 (chr13 genes) do not contain target drug-resistance codon frequencies with sub-national/temporal metadata."
+    },
+    "markers_found": [
+      "Pfmdr1 (locus/QTL only, no codon 86 frequency)",
+      "Pfcrt (locus/QTL only, no codon frequencies)"
+    ],
+    "countries": [
+      "Kenya",
+      "Sudan",
+      "The Gambia",
+      "Ghana",
+      "Mali",
+      "Liberia",
+      "Sierra Leone",
+      "Guinea Bissau",
+      "South Africa"
+    ],
+    "collection_years": [],
+    "sample_size": 71,
+    "summary": "This is a QTL-mapping study of quinine response in the P. falciparum HB3xDd2 genetic cross, plus a survey of PfNHE-1 microsatellite/point polymorphisms (codons 790, 894, 950 — not curated targets) in 71 worldwide culture-adapted lines. It does not report curated drug-resistance codon frequencies (pfcrt/pfmdr1 codons) with extractable numerator/denominator counts, provides only country-level or lab-strain origins, and gives no collection dates. Samples are largely reference/lab clones rather than African field isolates.",
+    "exclusion_reasons": [
+      "No curated target drug-resistance codon frequencies reported (only PfNHE-1 non-target codons and QTL peaks)",
+      "No extractable per-locus population frequencies for target markers",
+      "Locations only at country level or lab strains, no sub-national resolution",
+      "No collection years/temporal windows given",
+      "Isolates are culture-adapted reference/lab clones, not African field surveillance samples"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "PMID_18621010",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": false,
+        "evidence": "The paper concerns HIV-1, DARC, and mentions Plasmodium vivax malaria resistance via the DARC-negative phenotype; it does not study P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "The only genetic marker studied is the host DARC T-46C (rs2814778) SNP and human chemokine gene polymorphisms (CCL5, CCR5), not any P. falciparum drug-resistance codon."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Frequencies reported are for human DARC genotypes in HIV+/HIV- and HGDP-CEPH populations, not parasite drug-resistance loci."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Samples are from the WHMC cohort (San Antonio, TX, USA) and the HGDP-CEPH worldwide DNA set; no P. falciparum sampling."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No malaria parasite collection is described; human cohort with no relevant temporal binning for parasite markers."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Human subjects are African Americans (US) and HGDP-CEPH samples; no African field/clinical parasite isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study combining in vitro HIV experiments and genetic-epidemiologic cohort analysis."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Not a malaria parasite dataset; irrelevant to duplication concerns for this database."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Supplementary material concerns admixture score details; no P. falciparum marker data would be present."
+    },
+    "markers_found": [],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a study of the host DARC T-46C polymorphism and its effect on HIV-1 acquisition and progression, with in vitro HIV trans-infection experiments. Plasmodium is mentioned only as background (DARC as the P. vivax receptor). It contains no P. falciparum drug-resistance marker data, no African field parasite isolates, and no target codon frequencies. Entirely out of scope.",
+    "exclusion_reasons": [
+      "Not a P. falciparum study (concerns HIV-1 and host DARC genetics)",
+      "No curated drug-resistance markers or codon frequencies reported",
+      "No African P. falciparum field/clinical isolates",
+      "No parasite collection location or time data"
+    ]
+  }
+}

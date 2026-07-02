@@ -1,0 +1,67 @@
+{
+  "id": "PMID_10813484",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum clinical isolates, sequencing dhfr-ts gene."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr codons 51, 59, 108 (Ile-51, Arg-59, Asn-108) among target markers."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Genotype counts given: 11 wild-type, 2 HB3-type (108), 2 K1-type (59/108), 14 W2-type (51/59/108), 5 mixed of 34 sequenced isolates."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "All isolates from a single city, Yaounde, Cameroon; the 34 sequenced isolates are pooled with no sub-city or site-level breakdown of genotype frequencies. Only one clinic (Nlongkak Catholic missionary dispensary) mentioned in acknowledgments but frequencies are not resolved to it separately."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Patients participated in clinical trials conducted in Yaounde between 1996 and 1998 (3-year window)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "42 clinical isolates obtained by venipuncture from patients in Yaounde, Cameroon."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study measuring in vitro responses and sequencing 42 field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Part of a series 'Molecular epidemiology of malaria in Yaounde, Cameroon. VI' with prior related studies (ref 12, Basco & Ringwald 1998) using Cameroonian isolates; samples from same recurring clinical trials in Yaounde may overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary materials referenced; data are all in main text/figures but lack sub-country resolution."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Cameroon"
+    ],
+    "collection_years": [
+      1996,
+      1997,
+      1998
+    ],
+    "sample_size": 42,
+    "summary": "Primary study of 42 P. falciparum clinical isolates from Yaounde, Cameroon (1996-1998), sequencing the dhfr domain and reporting Pfdhfr codon 51/59/108 genotype counts among 34 sequenced isolates. Reports extractable frequencies and target markers within a <=3-year window, but all samples come from a single city (Yaounde) with genotype frequencies pooled and no sub-city/site-level breakdown, failing the sub-country resolution requirement.",
+    "exclusion_reasons": [
+      "Frequencies can only be placed at the city/country level (Yaounde, Cameroon) with no sub-national/site-level breakdown of genotype frequencies."
+    ]
+  }
+}

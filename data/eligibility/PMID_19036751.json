@@ -1,0 +1,67 @@
+{
+  "id": "PMID_19036751",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum DHFR genotypes in isolates from three African countries."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "DHFR positions 51, 59, 108 reported (CIRNI triple mutant, CICNI/CNRNI double mutants); genotypes at positions 50,51,59,108,164."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figure 1 gives DHFR genotype frequencies per country (n=50 Congo, n=54 Ghana, n=55 Kenya); triple mutant 82% Congo, 81% Ghana, 27% Kenya. Prevalence percentages and counts provided."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples collected from Pointe-Noire, Brazzaville and Gamboma (Congo); three villages near Winneba (Ghana); two villages in Kisii District (Kenya). However, genotype frequencies in Fig 1 are aggregated at country level, not by individual site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Congo collected 2006, Ghana 2004, Kenya 1998 — each a single year, within 3-year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Blood samples from symptomatic/asymptomatic individuals in Republic of Congo, Ghana and Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical genotyping study of 159 field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "New field collections organized by the authors; no stated membership in a larger consortium or prior dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Genotype frequencies given in Figure 1 and microsatellite data in Figure 2 within the main paper."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Republic of Congo",
+      "Ghana",
+      "Kenya"
+    ],
+    "collection_years": [
+      1998,
+      2004,
+      2006
+    ],
+    "sample_size": 159,
+    "summary": "Primary study genotyping DHFR (positions 51,59,108) in 159 P. falciparum isolates from Republic of Congo (2006), Ghana (2004) and Kenya (1998). Reports genotype frequencies per country (Fig 1) with clear single-year collection windows. Sample sites are named towns/villages/districts, though the reported frequencies are country-aggregated; sites provide sub-country context for the samples.",
+    "exclusion_reasons": []
+  }
+}

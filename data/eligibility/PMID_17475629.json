@@ -1,0 +1,73 @@
+{
+  "id": "PMID_17475629",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study genotyped pfcrt in 66 P. falciparum monoinfection isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "pfcrt codons 72-76 haplotypes reported (CVMNK, CVIET, SVMNT), covering target positions 72,74,75,76."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives haplotype frequencies among 66 isolates (CVIET 43/66=65.2%, etc.)."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Isolates are imported traveller cases; frequencies pool 22 countries visited (Nigeria, Ghana, Gambia, Cambodia). No sub-national location can be tied to individual isolate genotypes."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "Sample collection window not clearly bounded to <=3y for the genotyped isolates; the associated 145-patient analysis spans August 2000-July 2005 (>3 years)."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Samples are UK-imported traveller cases collected in the UK, not African field isolates; one isolate from Cambodia; pooled across multiple countries."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study using multiplex real-time PCR on 66 patient isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Parasite DNA obtained from participants in a prior prospective study of disease severity (Jennings et al. 2006), so isolates overlap with a previously-published cohort."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Frequencies given in Table 1; no supplementary pointer that would resolve the fundamental resolution/geography issues."
+    },
+    "markers_found": [
+      "Pfcrt 72",
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "United Kingdom (imported)",
+      "Nigeria",
+      "Ghana",
+      "Gambia",
+      "Cambodia"
+    ],
+    "collection_years": [
+      2000,
+      2005
+    ],
+    "sample_size": 66,
+    "summary": "Study genotyped pfcrt codons 72-76 in 66 P. falciparum isolates from UK travellers returning with malaria, reporting haplotype frequencies. Although it reports target pfcrt markers with extractable frequencies, the samples are imported traveller cases (not African field collection), pooled across 22 countries with no sub-national resolution, and no clear <=3-year collection window is tied to the genotyped frequencies.",
+    "exclusion_reasons": [
+      "Not African field samples — imported traveller cases collected in the UK, including one Cambodian infection",
+      "No sub-country spatial resolution — frequencies pooled across 22 visited countries",
+      "No adequate temporal resolution — pooled samples with no clear <=3-year collection window"
+    ]
+  }
+}

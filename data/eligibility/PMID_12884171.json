@@ -1,0 +1,65 @@
+{
+  "id": "PMID_12884171",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Case of Plasmodium falciparum malaria; parasitemia and PCR confirmed P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Cytochrome b position 268 (Tyr268Ser) reported; Pfcytb:268 is a target marker. Also Pfdhfr mutations mentioned."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Single case report — presence/absence of Cytb 268 mutation in one traveler's isolates; no numerator/denominator frequency data."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Malaria acquired in Mombasa, Kenya (sub-national town), though this is a single traveler case."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Travel to Mombasa in January 2002; well within 3-year window."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "Infection acquired by a nonimmune traveler from Israel; sample obtained/analyzed in Israel/Canada — an imported/traveller case, not an African field sample."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary case report with genetic sequencing."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single case report; part of traveler surveillance but no dataset overlap concern for frequencies."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary data referenced; single case, no frequency tables."
+    },
+    "markers_found": [
+      "Pfcytb:268",
+      "Pfdhfr"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      2002
+    ],
+    "sample_size": 1,
+    "summary": "Single case report of atovaquone-proguanil-resistant P. falciparum acquired by a nonimmune Israeli traveler to Mombasa, Kenya. The recrudescent isolate carried a Pfcytb Tyr268Ser mutation. This is an imported/traveller case, not an African field-collected dataset, and it reports mutation presence in one patient rather than extractable population frequencies.",
+    "exclusion_reasons": [
+      "No extractable per-locus frequency counts — single case reporting presence/absence of mutation",
+      "Imported/traveller case rather than African field/clinical sample collected in an African country"
+    ]
+  }
+}

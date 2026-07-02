@@ -1,0 +1,62 @@
+{
+  "id": "PMID_8888283",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study concerns P. falciparum malaria treatment; blood films positive for P. falciparum in two children."
+      },
+      "reports_target_markers": {
+        "met": false,
+        "evidence": "This is a pharmacokinetic study of quinine metabolism; no molecular drug-resistance markers (Pfcrt, Pfdhfr, Pfk13, etc.) are genotyped or reported."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "No molecular marker frequencies reported; only pharmacokinetic parameters."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Samples from Hôpital Provincial, Port-Gentil, Gabon — a specific town/clinic below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Received 04 May 1995; study conducted around 1994-1995, a window of at most 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Fifteen Gabonese children treated for malaria at Port-Gentil, Gabon."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical pharmacokinetic study in enrolled children."
+      }
+    },
+    "duplicate_risk": {
+      "level": "none",
+      "evidence": "Single-site clinical pharmacokinetic study with no mention of consortium or shared dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No molecular data exists anywhere in this pharmacokinetic study; no supplement would provide target marker frequencies."
+    },
+    "markers_found": [],
+    "countries": [
+      "Gabon"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 15,
+    "summary": "A 1996 pharmacokinetic study comparing quinine metabolism in 15 malnourished vs normally-nourished Gabonese children with malaria. It reports pharmacokinetic parameters (clearance, half-life, AUC), not P. falciparum drug-resistance molecular markers or their frequencies. Fails the core marker/frequency criteria.",
+    "exclusion_reasons": [
+      "No curated drug-resistance codon markers genotyped",
+      "No extractable per-locus mutation frequencies (pharmacokinetic study only)"
+    ]
+  }
+}

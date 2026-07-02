@@ -1,0 +1,72 @@
+{
+  "id": "PMID_9395372",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum DHFR and DHPS mutations; samples were microscopically confirmed P. falciparum malaria."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfdhfr 51, 59, 108; Pfdhps 436, 437, 540, 581, 613 — all curated target codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Figures 2, 3, 6 give percent prevalence with N samples tested per site (e.g. Mali N=58, Kenya N=56, Malawi N=54, Bolivia N=59 for DHFR)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "African sites are sub-national: two clinics on outskirts of Bamako (Mali, 1995), district hospital in Kilifi coastal Kenya (1993), a clinic in town of Karonga Malawi (1995-1996)."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Mali collected 1995, Kenya 1993, Malawi 1995 and 1996 (Karonga), each within a <=3 year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Fingerstick blood from persons presenting to clinics with confirmed P. falciparum malaria in Mali, Kenya, Malawi (Bolivia is South American and excluded)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical PCR surveys conducted in four countries with mutation-specific PCR and sequencing."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Mali data overlaps with ref 23 (Djimde et al abstract, Am J Trop Med Hyg 1996) and prior Mali work (refs 1,10); Kenya samples relate to ref 22 (Khan et al). Some site data likely reported elsewhere."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-site frequencies and sample counts are given directly in Figures 2, 3, and 6."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Mali",
+      "Kenya",
+      "Malawi"
+    ],
+    "collection_years": [
+      1993,
+      1995,
+      1996
+    ],
+    "sample_size": null,
+    "summary": "Primary PCR survey of P. falciparum antifolate resistance mutations (DHFR 51/59/108, DHPS 436/437/540/581/613) at sub-national African sites: Bamako Mali (1995), Kilifi Kenya (1993), Karonga Malawi (1995-96), plus Bolivia (excluded, non-African). Extractable per-site frequencies with N given in figures. Eligible; some duplicate risk with related Mali/Kenya publications.",
+    "exclusion_reasons": []
+  }
+}

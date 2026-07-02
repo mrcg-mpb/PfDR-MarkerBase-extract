@@ -1,0 +1,73 @@
+{
+  "id": "PMID_19708897",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum drug resistance in Uige province, Angola; screened for resistance mutations in P. falciparum isolates."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt 74,75,76,72; Pfmdr1 86; Pfdhfr 51,59,108; Pfdhps 436,437,540,581,613 - many curated codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "pfcrt 74I-75E-76T 93.9% (n=62/66); pfmdr1 86 68.2% (45); dhfr 51I 95.4% (63/66), 108N 96.9% (64/66), 59R 36.4% (24/66); dhps 437G 92.4% (61/66), 436A 51.5% (34/66)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected at Uige Provincial Hospital, Uige province, Angola - a sub-national location."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected between 27 July and 12 August 2004 - single window well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "71 blood samples from children admitted to Pediatric Emergency Unit of Uige Provincial Hospital, Angola in 2004; human field/clinical isolates."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical molecular genotyping study of field samples with microsatellite analysis."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Routine new field collection at a single hospital in 2004; no mention of consortium or shared dataset overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All frequency data present in main text and Table 1/Figure 1."
+    },
+    "markers_found": [
+      "Pfcrt 72",
+      "Pfcrt 74",
+      "Pfcrt 75",
+      "Pfcrt 76",
+      "Pfmdr1 86",
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Angola"
+    ],
+    "collection_years": [
+      2004
+    ],
+    "sample_size": 66,
+    "summary": "Primary molecular study of 71 (66 fully characterized) P. falciparum isolates from children at Uige Provincial Hospital, Angola, collected July-August 2004. Reports extractable per-locus frequencies for multiple curated markers (pfcrt 74/75/76, pfmdr1 86, pfdhfr 51/59/108, pfdhps 436/437) at sub-national resolution and single-year temporal window. Meets all criteria.",
+    "exclusion_reasons": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "PMID_9076734",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum drug resistance (DHPS/DHFR mutations)."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports DHFR codons 51,59,108 and DHPS 436,437,540,581,613 in Tables 1-3."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Reports genotypes of individual laboratory clones/lines (HB3, Dd2, 3D7, K1, FCR3, M24, etc.) and cross progeny, not population frequencies with numerator/denominator counts."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Lines listed only by broad origin (e.g. 'Kenya', 'Gambia', 'Africa', 'Honduras', 'Thailand', 'Indochina'); these are lab strains, not field surveys with sub-country sites."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates given for the parasite lines used; these are established laboratory reference strains."
+      },
+      "african_field_samples": {
+        "met": false,
+        "evidence": "All parasites are laboratory-adapted clones/lines and cross progeny cultured in vitro (HB3-Dd2 genetic cross, 3D7, FCR3, etc.), not field/clinical isolates freshly collected in Africa."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical laboratory study with in vitro drug assays and DNA sequencing."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Uses well-established laboratory lines (HB3, Dd2, 3D7, FCR3, K1, M24) and the HB3-Dd2 genetic cross described previously (Wellems et al., 1990; Walker-Jonah et al., 1992); genotypes previously reported (Brooks et al., 1994)."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary frequency data referenced; the paper is a lab-strain characterization, not a field survey."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "Laboratory study characterizing SDX resistance in P. falciparum reference clones and HB3-Dd2 cross progeny via in vitro assays and DHPS/DHFR sequencing. It reports genotypes of individual lab strains, not population frequencies from African field isolates, and provides no collection dates or sub-national field locations.",
+    "exclusion_reasons": [
+      "Uses laboratory-adapted strains and cross progeny, not African field/clinical isolates",
+      "No extractable per-locus population frequencies (numerator/denominator)",
+      "No sub-country field locations; only broad strain origins",
+      "No collection dates/time windows for the parasites"
+    ]
+  }
+}

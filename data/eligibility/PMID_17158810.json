@@ -1,0 +1,62 @@
+{
+  "id": "PMID_17158810",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study investigates Plasmodium falciparum chloroquine resistance markers in children with uncomplicated malaria."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt codon 76 (K76T) and Pfmdr1 codon 86 (N86Y), both curated target positions."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives allele percentages per site; text gives numerator/denominator, e.g. 'Pfcrt T76... 80% (104/130) at Hohoe, 46% (48/105) at Navrongo, 98% (41/42) at Tarkwa, 61% (38/62) at Sunyani and 46% (31/67) at Yendi.'"
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Frequencies reported per sentinel site with coordinates: Hohoe, Navrongo, Tarkwa, Sunyani, Yendi in Ghana."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "The paper (published 2006) gives no explicit sample collection year or window anywhere in the text; no usable collection time is stated."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates from children with uncomplicated malaria collected at five sentinel sites in Ghana."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical PCR/RFLP study of 406 recruited patients."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Sentinel-site surveillance for the National Malaria Control Program, but described as a new field collection specific to this study; no explicit statement of overlap with a larger published dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All per-locus frequencies are in the main text and Table 1; no supplementary material referenced."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Ghana"
+    ],
+    "collection_years": [],
+    "sample_size": 406,
+    "summary": "Primary study of 406 Ghanaian children reporting Pfcrt 76 and Pfmdr1 86 mutant frequencies (with numerators/denominators) at five named sentinel sites (Hohoe, Navrongo, Tarkwa, Sunyani, Yendi). Markers, extractable frequencies, sub-country resolution, and African field samples are all satisfied. However, no sample collection date or time window is stated anywhere in the paper, so temporal resolution cannot be established.",
+    "exclusion_reasons": [
+      "No collection year or time window given for the samples, so temporal resolution <=3 years cannot be confirmed."
+    ]
+  }
+}

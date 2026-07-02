@@ -1,0 +1,67 @@
+{
+  "id": "PMID_18316104",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Discusses Plasmodium falciparum antifolate resistance throughout."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Mentions dhfr codons 51, 59, 108, 164 and dhps 437, 540 in commentary text."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "This is a leading article/commentary; it narratively describes another study's findings (14 of ~500 cases carried I164L) but provides no per-locus frequency tables of its own."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Only refers to 'an area of intense perennial transmission in Kenya' — no sub-national breakdown tied to frequencies; data belong to the Hamel et al. primary study."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection dates given for any data in this commentary."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Discusses Kenyan clinical isolates, but as reported by other studies."
+      },
+      "is_primary_study": {
+        "met": false,
+        "evidence": "This is a 'LEADING ARTICLE' commentary reviewing Hamel et al. and other studies, not a primary empirical study."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "It is a commentary summarizing the primary study by Hamel et al. (this issue) and McCollum et al. (2006); any data it mentions belong to those published papers."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary data would make this commentary a primary data source; the actual data are in Hamel et al. and McCollum et al."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [],
+    "sample_size": null,
+    "summary": "This is a leading article (commentary) by J.E. Hyde discussing antifolate resistance and the dhfr I164L quadruple mutant in Africa, summarizing findings from Hamel et al. and other primary studies. It is not a primary empirical study and reports no original extractable per-locus frequencies with sub-country or temporal resolution.",
+    "exclusion_reasons": [
+      "Not a primary study — it is a commentary/leading article",
+      "No original extractable per-locus frequency data",
+      "No sub-country spatial resolution tied to frequencies",
+      "No collection time information for any data",
+      "Data described belong to other published studies (duplicate/derivative)"
+    ]
+  }
+}

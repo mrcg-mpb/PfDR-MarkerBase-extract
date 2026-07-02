@@ -1,0 +1,69 @@
+{
+  "id": "PMID_9661026",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum isolates from Cameroonian patients treated with sulfadoxine-pyrimethamine."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Table 2 reports DHFR residues 51, 59, 108 and DHPS residues 436, 437, 540, 581, 613 — all curated target codons."
+      },
+      "reports_extractable_frequencies": {
+        "met": false,
+        "evidence": "Only 6 individual isolates are genotyped in Table 2 (individual sequences, not aggregate frequencies). Provides genotype per patient rather than numerator/denominator frequencies per locus for a population."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Patients residing in Yaoundé, Cameroon; samples collected at Nlongkak Catholic Missionary Dispensary — a sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": false,
+        "evidence": "No collection year or window is stated anywhere in the paper (received 1998); no usable collection date given."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Ten Cameroonian adult patients residing in Yaoundé, Cameroon — human field/clinical isolates from an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical clinical study with treatment follow-up and DNA sequencing."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Small standalone clinical study in Yaoundé; references a companion baseline study (ref 5) but this is a distinct in-vivo cohort."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary tables referenced; all data in main text tables."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540",
+      "Pfdhps 581",
+      "Pfdhps 613"
+    ],
+    "countries": [
+      "Cameroon"
+    ],
+    "collection_years": [],
+    "sample_size": 6,
+    "summary": "Small in-vivo SP resistance study of 6 Cameroonian adult P. falciparum isolates from Yaoundé, reporting individual DHFR (51,59,108) and DHPS (436,437,540,581,613) genotypes correlated with treatment outcome. Reports per-patient genotypes rather than aggregate locus frequencies, and gives no collection date.",
+    "exclusion_reasons": [
+      "No extractable population-level per-locus frequencies (only 6 individual isolate genotypes in Table 2)",
+      "No collection year or time window stated, so temporal resolution cannot be established"
+    ]
+  }
+}

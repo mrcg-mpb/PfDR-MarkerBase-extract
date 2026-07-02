@@ -1,0 +1,65 @@
+{
+  "id": "PMID_12224572",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum clinical isolates: 'A total of 64 Cameroonian isolates were used to characterize the in vitro drug sensitivity pattern and analyze the pfmdr1 polymorphisms.'"
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfmdr1 codon 86 (Asn/Tyr), a curated target marker: '88% carried the mutant codon Tyr-86'."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Frequencies given: 56 of 64 (88%) carried Tyr-86, 7 (11%) Asn-86, 1 mixed; per-isolate genotypes in Table 1."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All isolates collected at Nlongkak Catholic missionary dispensary in Yaoundé, Cameroon — a specific town/clinic site below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected between 1997 and 2000 — a window of ~3 years: 'conducted at the Nlongkak Catholic missionary dispensary in Yaoundé, Cameroon between 1997 and 2000'."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates from patients enrolled at a dispensary in Yaoundé, Cameroon (African country)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study with PCR/sequencing of 64 field isolates and in vitro drug assays."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Same study site and overlapping population as prior publications: 'This predominance of Tyr-86 (56 of 64 isolates, 88%) was reconfirmed in the present study... (1997–2000) at the same study site' and part of randomized clinical trials (refs 20,21); prior 1994-1996 data reported separately (refs 32,33). The 64 isolates here appear distinct (1997-2000) but part of a continuous surveillance series."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Per-isolate genotypes and codon frequencies fully reported in Table 1 and main text; no supplementary material required."
+    },
+    "markers_found": [
+      "Pfmdr1 86",
+      "Pfmdr1 184 (not in target list)"
+    ],
+    "countries": [
+      "Cameroon"
+    ],
+    "collection_years": [
+      1997,
+      1998,
+      1999,
+      2000
+    ],
+    "sample_size": 64,
+    "summary": "Primary study of 64 P. falciparum clinical isolates from Yaoundé, Cameroon (Nlongkak dispensary, 1997-2000), reporting pfmdr1 codon 86 frequencies (Tyr-86 in 56/64, 88%) plus codon 184, 1034, 1042, 1246. Target marker Pfmdr1 86 with extractable counts, sub-country site resolution, and a <=3-year collection window. Eligible.",
+    "exclusion_reasons": []
+  }
+}

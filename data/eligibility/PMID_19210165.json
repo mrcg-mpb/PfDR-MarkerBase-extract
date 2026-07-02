@@ -1,0 +1,62 @@
+{
+  "id": "PMID_19210165",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of children with uncomplicated P. falciparum malaria treated with AL or SP in Tanzania."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfcrt K76 (codon 76) and pfmdr1 N86 (codon 86) frequencies in Table 1."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives numerator/denominator: pfcrt K76 (26+23)/102=0.480 at D0; pfmdr1 N86 (27+30)/102=0.559 at D0, etc."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study conducted in Fukayosi, Bagamoyo District, Tanzania — a named sub-national site below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Samples collected during April–July 2004, a single-year window well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with uncomplicated P. falciparum malaria enrolled in Fukayosi, Tanzania. (Table 2 in vitro lab lines excluded.)"
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study analyzing samples from a clinical efficacy trial plus in vitro assays."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "Samples derive from a previously reported clinical trial in Fukayosi, Tanzania [ref 2, Martensson et al.], and the authors reference earlier related analyses of the same cohort; the baseline/recurrent samples originate from that trial."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Extractable per-locus frequencies with a named sub-country site and collection window are all in the main text and Table 1."
+    },
+    "markers_found": [
+      "Pfcrt 76",
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2004
+    ],
+    "sample_size": 106,
+    "summary": "Primary study analyzing pfcrt K76 and pfmdr1 N86 (and other) SNP frequencies in P. falciparum from children in a 2004 AL/SP efficacy trial in Fukayosi, Bagamoyo District, Tanzania. Table 1 provides extractable numerator/denominator frequencies at baseline and in recurrent infections, tied to a sub-country site and a single-year collection window. Table 2 lab-strain in vitro data are excluded from field-sample consideration. Meets all criteria, though samples come from a previously reported trial cohort (duplicate risk).",
+    "exclusion_reasons": []
+  }
+}

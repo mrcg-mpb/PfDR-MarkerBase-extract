@@ -1,0 +1,62 @@
+{
+  "id": "PMID_16186171",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study genotyped P. falciparum pfcrt gene in children with severe malaria; 'analysed by ... PCR and restriction digest for P. falciparum chloroquine resistance transporter gene (pfcrt) mutations (n=139)'."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfcrt codon 76 (T76/K76) genotypes, a curated target marker position."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1: Pfcrt genotype (T76/K76) 122/17 total, with breakdown by clinical subtype; 88% carried T76 variant (122 of 139)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Single site: Komfo Anokye Teaching Hospital (KATH) in Kumasi, Ghana — a named town/clinic below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection window 'November 2000–February 2001', well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with severe malaria admitted to a teaching hospital in Kumasi, Ghana."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Prospective clinical study of 189 consecutive patients with severe malaria."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Single-site prospective clinical collection at KATH, Kumasi, Nov 2000–Feb 2001. No mention of being part of a larger consortium or shared dataset."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Extractable pfcrt T76/K76 counts and single-site location are provided in the main text and Table 1."
+    },
+    "markers_found": [
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Ghana"
+    ],
+    "collection_years": [
+      2000,
+      2001
+    ],
+    "sample_size": 139,
+    "summary": "Prospective clinical study of Ghanaian children with severe malaria at Komfo Anokye Teaching Hospital, Kumasi (Nov 2000–Feb 2001). Pfcrt codon 76 genotyped in 139 patients: 122 T76 (mutant) / 17 K76 (wild type), with subtype breakdown in Table 1. Meets all criteria: P. falciparum, target marker Pfcrt76, extractable frequencies, sub-country (Kumasi) resolution, <=3y window, African field samples, primary study.",
+    "exclusion_reasons": []
+  }
+}

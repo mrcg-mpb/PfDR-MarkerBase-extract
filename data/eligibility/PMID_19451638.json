@@ -1,0 +1,69 @@
+{
+  "id": "PMID_19451638",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum placental malaria in Muheza, Tanzania; DHFR/DHPS resistance alleles examined."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Pyrosequencing at DHFR codons 51 and 59, and DHPS codons 540 and 581 — all curated target positions (Pfdhfr 51,59; Pfdhps 540,581)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Mean fraction of resistance allele reported: 0.92 at DHFR 51, 0.96 at DHFR 59, 0.90 at DHPS 540, 0.31 at DHPS 581, with allele fractions stratified by IPTp group (0.13 no IPTp vs 0.36 IPTp for DHPS 581); n=109 DHFR, n=107 DHPS."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected at Muheza Designated District Hospital, Muheza, Tanzania — a specific sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Cohort conducted from 2002 to 2005; however DHPS 581 fraction 'increased by 0.15 each year (P<0.001)' implies per-year data, but the pooled mean fractions span 4 years (2002-2005)."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human placental field/clinical isolates from pregnant women in Muheza, Tanzania (Africa)."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical prospective birth cohort study with molecular resistance genotyping."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples drawn from a previously described prospective birth cohort in Muheza (Mutabingwa TK, et al. 2005, PLoS Med 2:e407, ref 18), which has been used in other publications."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Allele fractions are reported in main text and figures; no supplementary pointer for the frequency data."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhps 540",
+      "Pfdhps 581"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "sample_size": 109,
+    "summary": "Prospective birth cohort in Muheza, Tanzania (2002-2005) examining IPTp effects on P. falciparum resistance alleles. Pyrosequencing gave mean resistance allele fractions at DHFR 51/59 and DHPS 540/581. The main extractable pooled frequencies span the 4-year collection window (2002-2005) without per-year binned per-locus frequencies, so a single pooled frequency covers >3 years, failing temporal resolution.",
+    "exclusion_reasons": [
+      "Extractable per-locus allele fraction frequencies are pooled across the full 2002-2005 collection window (>3 years); no per-year or <=3-year binned per-locus frequency table is provided, so frequencies cannot be reliably tied to a <=3-year window."
+    ]
+  }
+}

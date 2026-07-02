@@ -1,0 +1,65 @@
+{
+  "id": "PMID_17550470",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum isolates from 200 children treated with AL in Zanzibar."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports pfmdr1 N86Y (position 86) frequencies in Table 1 (86N: 23.4% at day 0, 47.4% in reinfections)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 gives numerator/denominator (e.g. 86N 29+20/189+20 = 23.4%) and 95% CIs."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "All samples collected in Zanzibar; frequencies pooled across the whole trial with no sub-national admin unit, town, clinic, or site-level breakdown reported."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Trial conducted between October 2002 and February 2003, well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field/clinical isolates from children with uncomplicated malaria in Zanzibar, Tanzania."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary molecular analysis of samples from a clinical trial."
+      }
+    },
+    "duplicate_risk": {
+      "level": "high",
+      "evidence": "Samples are from a previously published clinical trial (Martensson et al. 2005; Sisowath et al. 2005) and re-examine the same trial samples: 'we have re-examined samples from the same trial'."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "No supplementary materials referenced for finer spatial data; the location is simply Zanzibar with no sub-national breakdown available."
+    },
+    "markers_found": [
+      "Pfmdr1 86"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2002,
+      2003
+    ],
+    "sample_size": 200,
+    "summary": "Molecular study of pfmdr1 (including position 86) and other SNPs in 200 children treated with artemether-lumefantrine in Zanzibar (Oct 2002–Feb 2003). Reports extractable frequencies for pfmdr1 86N with numerators/denominators, but data are pooled at the Zanzibar level with no sub-national resolution. Also a re-analysis of previously published trial samples, indicating high duplicate risk.",
+    "exclusion_reasons": [
+      "No sub-country spatial resolution: frequencies are pooled for Zanzibar with no sub-national site/clinic breakdown",
+      "High duplicate risk: re-examination of samples from a previously published clinical trial (Martensson et al. 2005; Sisowath et al. 2005)"
+    ]
+  }
+}

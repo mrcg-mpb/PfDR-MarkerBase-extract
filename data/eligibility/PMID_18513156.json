@@ -1,0 +1,77 @@
+{
+  "id": "PMID_18513156",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of Plasmodium falciparum dhfr alleles from Kilifi, Kenya (title and throughout)."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports dhfr codons 51, 59, 108 (target markers: Pfdhfr 51,59,108). Table 2 gives amino acids at dhfr codons 51, 59, 108."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 2 gives 'Amino acids at dhfr codons 51, 59, and 108, no. (%)' per year (NCS, ICN, NRN, IRN with counts and percentages), and No. with data/total studied per period."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected in Kilifi District/Kilifi District Hospital, Kenya — a named sub-national coastal town, below country level."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Table 2 breaks down frequencies per single year (1987, 1988, 1993, 1994, 1995, 1997...2006), each within 3 years, even though the overall span is 1987-2006."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human field/clinical isolates (dried blood spots, whole blood) collected in Kilifi District Hospital, Kenya."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical study genotyping field isolates; reports original genotype/haplotype data."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples were reused from prior studies: 'All samples used in the current study were collected previously for other purposes' — dried blood spots (1987-88 [21]), frozen whole blood (1993-95 [22,23]), filter paper (1997-2006 Kilifi District Hospital). These original collections were published separately."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Extractable per-year, per-codon frequencies are in Table 2 of the main paper; supplementary tables contain primers and full microsatellite haplotype data but are not needed for dhfr codon frequency extraction."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108"
+    ],
+    "countries": [
+      "Kenya"
+    ],
+    "collection_years": [
+      1987,
+      1988,
+      1993,
+      1994,
+      1995,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006
+    ],
+    "sample_size": 425,
+    "summary": "Primary study genotyping P. falciparum dhfr codons 51, 59, 108 in field isolates from Kilifi District, Kenya collected 1987-2006. Table 2 provides per-year extractable frequencies (counts and percentages) of amino acid combinations at these codons, satisfying marker, frequency, sub-country, and temporal resolution criteria. Samples were reused from previously published collections, giving a medium duplicate risk.",
+    "exclusion_reasons": []
+  }
+}

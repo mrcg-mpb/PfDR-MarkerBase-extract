@@ -1,0 +1,64 @@
+{
+  "id": "PMID_16235185",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "medium",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of P. falciparum isolates from Lambaréné, Gabon; predominant species is P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports Pfmdr1 codon 86 (N86Y) and Pfcrt K76T mutation; both are curated target positions (Pfmdr1:86, Pfcrt:76)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "2002 study: 86Y prevalence 89% (30/34 exclusive plus 3 mixed), N86 11%; codon 184 not target. pfcrt K76T: 'all but one' of 34 carried K76T (33/34)."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples from Lambaréné, Gabon — a named town (sub-national location) at the Albert Schweitzer Hospital."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "1995 samples from chemotherapy study Jan 1995–Jan 1996; 2002 in vitro surveillance study Feb–June 2002. Each collection window is within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical/field isolates collected in Lambaréné, Gabon (African country); lab strains 3D7, HB3, 7G8, Dd2 used only as controls."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary empirical genotyping study of field isolates."
+      }
+    },
+    "duplicate_risk": {
+      "level": "medium",
+      "evidence": "Samples derived from previously published studies: 1995 chemotherapy trial (refs 13,14) and 2002 in vitro surveillance study (ref 11). Mawili-Mboumba 2002 (ref 14) also reported pfmdr1 alleles from the same 1995 Gabonese samples, suggesting possible overlap."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "Marker frequencies for pfmdr1 codon 86 and pfcrt K76T (from the 2002 subset) are given in the main text; no supplementary data pointer needed for extractable frequencies."
+    },
+    "markers_found": [
+      "Pfmdr1 86",
+      "Pfcrt 76"
+    ],
+    "countries": [
+      "Gabon"
+    ],
+    "collection_years": [
+      1995,
+      1996,
+      2002
+    ],
+    "sample_size": 34,
+    "summary": "Study of pfmdr1 amplification and point mutations in P. falciparum isolates from Lambaréné, Gabon, collected in 1995 (chemotherapy trial) and 2002 (in vitro surveillance). The 2002 subset (n=34 genotyped) reports extractable frequencies for pfmdr1 N86Y (86Y prevalence 89%, N86 11%) and pfcrt K76T (all but one of 34 = 33/34 carried K76T). Location is Lambaréné (sub-national) and collection windows are within 3 years, satisfying all criteria. Duplicate risk is moderate because samples derive from prior published studies of the same isolates.",
+    "exclusion_reasons": []
+  }
+}

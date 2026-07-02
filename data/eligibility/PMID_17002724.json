@@ -1,0 +1,66 @@
+{
+  "id": "PMID_17002724",
+  "source": "master",
+  "model": "opus",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study of uncomplicated P. falciparum malaria; genotyping of P. falciparum infections in Table 4."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Genotyped dhfr codons 51, 59, 108 and dhps codons 436, 437, 540 — all curated target positions (Pfdhfr:51,59,108; Pfdhps:436,437,540)."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 4 gives haplotype counts and percentages: dhfr (n=158) e.g. triple-mutant 51,59,108 CIRN 73 (46.2%); dhps (n=177) double-mutant 437,540 SGE 80 (45.2%). Allele-level frequencies extractable."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "All samples collected from the 'Divine Maitre' Health Centre of Shabunda town, South Kivu province, mid-east DRC — a specific sub-national site."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Collection window stated: 'Between 1 April and 13 May 2004, 435 children were screened' — single-year sampling, well within 3 years."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Human clinical isolates (day 0 blood spots) from children with uncomplicated malaria in DRC, an African country."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "Primary clinical trial with molecular genotyping of collected field samples."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "MSF-run single-site trial in Shabunda; no indication samples are part of a larger consortium dataset. Cohuet et al. reported separate DRC provinces (Equator, Oriental, Katanga), not this site."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All extractable frequency data present in Table 4 of the main text; no supplementary pointer needed."
+    },
+    "markers_found": [
+      "Pfdhfr 51",
+      "Pfdhfr 59",
+      "Pfdhfr 108",
+      "Pfdhps 436",
+      "Pfdhps 437",
+      "Pfdhps 540"
+    ],
+    "countries": [
+      "Democratic Republic of Congo"
+    ],
+    "collection_years": [
+      2004
+    ],
+    "sample_size": 180,
+    "summary": "Clinical trial of AS+AQ vs AS+SP in 180 children in Shabunda, South Kivu, DRC (April-May 2004). Molecular genotyping of day-0 samples gave dhfr (codons 51,59,108) and dhps (codons 436,437,540) haplotype counts and percentages (Table 4). Site-level location and single-year collection window satisfy resolution criteria. Eligible.",
+    "exclusion_reasons": []
+  }
+}

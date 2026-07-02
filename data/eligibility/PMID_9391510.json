@@ -1,0 +1,63 @@
+{
+  "id": "PMID_9391510",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study explicitly focuses on P. falciparum isolates from Tanzanian children. Title and throughout text confirm P. falciparum as sole study organism."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Reports DHFR mutations at codons 51 (asparagine to isoleucine), 59 (cysteine to arginine), and 108 (serine to asparagine). These are curated target markers (Pfdhfr: 51, 59, 108). Table 1 presents all mutation patterns for these loci."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 1 provides numerator/denominator counts for each DHFR mutation pattern: Wildtype n=0/44, 108-Asn only n=2/44, 51-Ile only n=1/44, 108-Asn+51-Ile only n=1/44, 108-Asn+59-Arg only n=6/44, 51-Ile+59-Arg only n=1/44, 108-Asn+51-Ile+59-Arg n=33/44. All frequencies are extractable with explicit counts."
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Study explicitly states 'Forty-four children aged 1–10 years were enrolled in the study in the village of Magoda, Tanga region, Tanzania.' Sampling location is specified at village level (Magoda), which is sub-national resolution."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Study conducted in 1995: 'a second therapeutic study was undertaken in 1995 in the same area among the same population as in 1994.' All samples collected within a single year (1995), well within the ≤3-year window."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Study involves human field/clinical isolates from infected blood samples of Tanzanian children with P. falciparum malaria collected in Africa (Tanzania). Samples are from naturally infected patients, not lab strains or imported cases."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study: a therapeutic trial conducted with 44 infected children, involving blood sampling, laboratory analysis (DNA extraction, PCR, enzyme digestion), and in vivo treatment outcomes. Not a review, meta-analysis, or modelling paper."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "Study reports a new 1995 therapeutic trial in Tanga region. While it references a prior 1994 study in 'the same area among the same population,' it explicitly states this is a 'second therapeutic study undertaken in 1995' with a distinct set of 44 children enrolled during that year. No indication that 1995 samples are part of a larger multi-site consortium or that they overlap with the 1994 cohort. Routine new field collection with clear temporal distinction."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All extractable frequency data are provided in the main text (Table 1) with numerator/denominator counts for all DHFR mutations. Location is specified at village level (Magoda, Tanga region) in the main text. No reference to supplementary material containing required extraction data or finer spatial details. Supplementary material not required for eligibility assessment."
+    },
+    "markers_found": [
+      "Pfdhfr:51",
+      "Pfdhfr:59",
+      "Pfdhfr:108"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      1995
+    ],
+    "sample_size": 44,
+    "summary": "Primary study of P. falciparum DHFR mutations in 44 Tanzanian children from Magoda village (Tanga region) sampled in 1995. All samples harbored mutations at codons 51, 59, and/or 108; 75% had all three mutations. Extractable frequency data provided with numerator/denominator counts. Sub-country location resolution (village level) and temporal resolution (single year) both meet eligibility criteria.",
+    "exclusion_reasons": []
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "PMID_38594679",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": false,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "Study clearly focuses on Plasmodium falciparum malaria: 'Efcacy and safety of artemether-lumefantrine for the treatment of uncomplicated falciparum malaria' (title); 'mono-infection of P. falciparum detected by microscopy' (methods); enrolled children with P. falciparum confirmed by microscopy."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Study genotyped and reports frequencies for pfmdr1 codon positions 86, 184, and 1246 (Table 4); also pfk13 (codon positions 440-600) analysed and reported (Table 5). Both are in the target marker list."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Table 4 presents numerator/denominator counts for pfk13 mutations (10/311, 0/42), pfmdr1 N86 (328/328, 43/43), pfmdr1 184F (108/328 = 32.9%, 24/43 = 55.8%), and pfmdr1 D1246 (327/327, 45/45) with percentages. Table 5 provides detailed SNP frequencies by site."
+      },
+      "sub_country_location": {
+        "met": false,
+        "evidence": "Data are aggregated to four sentinel sites (Karume-Mwanza, Ipinda-Mbeya, Simbo-Tabora, Nagaga-Mtwara) identified by region/district. While the geographic diversity is described as 'representative of the malaria epidemiology in Tanzania', molecular marker frequencies (Tables 4 and 5) are reported only for the four sites pooled together, not broken down further to sub-facility or named clinic level. The paper states sites are 'four of the eight NMCP sentinel sites' but does not provide site-level or finer sub-national breakdowns for the extractable marker frequencies in the main tables. Figure 1 shows site locations on a map, but the frequency data are aggregated across the four sites, making it impossible to tie individual mutation frequencies to locations finer than the four regional sites."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Study conducted 'between May and September 2019' (methods and results sections), a single year within a 3-year window. Samples collected on day 0 (enrollment) and follow-up days are all within the 2019 calendar year, satisfying the temporal resolution requirement."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Samples are from 'outpatient health facilities in Karume-Mwanza region, Ipinda-Mbeya region, Simbo-Tabora region, and Nagaga-Mtwara region' of 'mainland Tanzania' (methods); these are primary health care facilities collecting field/clinical isolates from children presenting with fever and confirmed P. falciparum malaria. No mention of lab strains, imported cases, or non-African sites."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical prospective drug efficacy trial (stated in abstract: 'single-arm prospective antimalarial drug efcacy trial'). It involves direct clinical follow-up and sample collection, not a review or meta-analysis. Published 2024 in Malaria Journal as a case report/primary research."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "The study states it was conducted at 'four of the eight NMCP sentinel sites' under the National Malaria Control Programme in collaboration with implementing partners, and mentions routine monitoring 'at least every two years as recommended by the WHO.' However, no concrete statement indicates these specific 2019 samples from these four sites overlap with or are a subset of a broader named consortium, prior publication, or larger pre-existing dataset. The study is presented as a new 2019 efficacy trial distinct from prior annual surveys. Routine sentinel site surveillance is standard; overlap risk is judged low absent explicit textual evidence of shared samples."
+    },
+    "supplement": {
+      "needed": true,
+      "evidence": "The paper references 'Additional file 1: Table S1. Locus-by-locus calls and final classification of recrudescence versus new infection' and 'Additional file 2: Table S2. PCR corrected cure rates based on 2/3 >= algorithm as recommended by WHO 2021'. While these supplementary tables are mentioned and the link is provided (https://doi.org/10.1186/s12936-024-04931-0), the actual supplementary PDFs are not included in the documents provided. However, the molecular marker frequency data (pfk13 and pfmdr1 frequencies) are fully reported in the main text Tables 4 and 5, so the extractable frequencies for the target markers are available. The key concern is whether finer site-level or sub-site location breakdowns for marker frequencies exist in supplementary material that is not provided."
+    },
+    "markers_found": [
+      "pfk13",
+      "pfmdr1 N86",
+      "pfmdr1 184F",
+      "pfmdr1 D1246"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2019
+    ],
+    "sample_size": 349,
+    "summary": "This is a primary prospective drug efficacy trial conducted in mainland Tanzania in 2019 on P. falciparum malaria. It reports extractable frequencies for target markers (pfmdr1 codons 86, 184, 1246; pfk13). However, the marker frequency data are reported only at the level of four aggregated regional sentinel sites (Karume, Ipinda, Simbo, Nagaga), with no finer sub-site or clinic-level breakdown provided. The study recruited 349 children from four health facilities across multiple regions, achieving good geographic spread, but the molecular marker frequencies cannot be tied to locations more specific than the four regional sites. This fails criterion 4 (sub-country resolution) because individual extractable mutation frequencies are only resolvable to the four-site regional level, not to named sub-facility locations or finer administrative units.",
+    "exclusion_reasons": [
+      "Marker frequencies reported only at aggregated four-site level without sub-site or clinic-level resolution; cannot tie individual extractable mutation frequencies to locations below the four regional sentinel site level, failing sub-country location criterion"
+    ]
+  }
+}

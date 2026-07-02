@@ -16,9 +16,19 @@ human only when it genuinely needs a decision.
 
 <!-- ROSTER:START -->
 
-**0 paper(s) · estimated spend $0.00** (eligibility $0.00 · extraction $0.00) · updated 2026-07-02
+**7 paper(s) · estimated spend $0.20** (eligibility $0.20 · extraction $0.00) · updated 2026-07-02
 
-_No papers in the roster yet._
+| id | source | status | eligible | confidence | duplicate_risk | needs_supplement | spec_version | first_seen | last_assessed | supp_attempts | supplement_fp | elig_model | elig_tok_in | elig_tok_out | extract_model | extract_tok_in | extract_tok_out | notes | est_$ |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| PMID_30898164 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-haiku-4-5 | 42644 | 1512 |  |  |  |  | 0.0502 |
+| PMID_38461239 | master | EXCLUDED |  |  |  |  |  | 2026-07-02 |  |  |  |  |  |  |  |  |  | on exclude.txt | 0.0000 |
+| PMID_38594679 | master | INELIGIBLE | False | high | low | True | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-haiku-4-5 | 36629 | 1503 |  |  |  |  | 0.0441 |
+| PMID_40666313 | master | EXCLUDED |  |  |  |  |  | 2026-07-02 |  |  |  |  |  |  |  |  |  | on exclude.txt | 0.0000 |
+| PMID_41379859 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-haiku-4-5 | 58699 | 1724 |  |  |  |  | 0.0673 |
+| PMID_9236824 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-haiku-4-5 | 12669 | 1101 |  |  |  |  | 0.0182 |
+| PMID_9391510 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-haiku-4-5 | 17682 | 1001 |  |  |  |  | 0.0227 |
+
+_The table above is a static snapshot. For a searchable, filterable view (paginated for large sets), open [`data/roster.csv`](data/roster.csv) — GitHub renders CSV files as an interactive table._
 
 <!-- ROSTER:END -->
 

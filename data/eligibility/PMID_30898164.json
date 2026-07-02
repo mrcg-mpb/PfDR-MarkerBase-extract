@@ -1,0 +1,64 @@
+{
+  "id": "PMID_30898164",
+  "source": "master",
+  "model": "haiku",
+  "spec_version": 1,
+  "assessed": "2026-07-02",
+  "assessment": {
+    "eligible": true,
+    "confidence": "high",
+    "checks": {
+      "is_p_falciparum": {
+        "met": true,
+        "evidence": "The study explicitly focuses on Plasmodium falciparum. Title and abstract state 'uncomplicated falciparum malaria', and methods confirm 'positive rapid diagnostic test' for P. falciparum identification. All enrolled samples (n=344) were P. falciparum."
+      },
+      "reports_target_markers": {
+        "met": true,
+        "evidence": "Paper reports Pfk13 (codon positions 440–600) and Pfmdr1 (codons N86Y, Y184F, D1246Y) polymorphisms. Pfk13 and Pfmdr1 are both in the curated marker list. Results show 'Seventeen samples (5.3%) had mutations in the Pfk13 gene' and Pfmdr1 prevalence at three codon positions reported in Table 4."
+      },
+      "reports_extractable_frequencies": {
+        "met": true,
+        "evidence": "Numerator/denominator counts are provided. For Pfmdr1: 'N86 and D1246 polymorphisms were found at a prevalence of greater than 98.9% across the four sites' (341/344 and 342/344 in Table 4). For 184F: prevalence ranged 34.1–46.6% with specific counts per site (Table 4). For Pfk13: '92.7% (n=319) and 100% (n=344) were successfully sequenced for Pfk13 and Pfmdr1 genes, respectively.' NFD haplotype: 'detected in 134 (39.0%) samples, and its prevalence ranged from 33.0% in Mlimba to 45.5% at Mkuzi.'"
+      },
+      "sub_country_location": {
+        "met": true,
+        "evidence": "Four distinct sentinel sites with sub-national geographic resolution: Kibaha (Kibaha district, Coastal region), Mkuzi (Muheza district, Tanga region), Mlimba (Kilombero district, Morogoro region), and Ujiji (Kigoma urban district, Kigoma region). All frequencies are tied to specific named health centres and districts. Figure 1 shows regional map with marked sites. Methods state 'study was carried out at four of the eight NMCP sentinel sites' with detailed location descriptions."
+      },
+      "temporal_resolution_within_3y": {
+        "met": true,
+        "evidence": "Study was 'conducted between April and October 2016' at enrolment. All samples collected 'at enrolment (day 0)' within a single year (2016). This is well within the ≤3 year temporal resolution requirement."
+      },
+      "african_field_samples": {
+        "met": true,
+        "evidence": "Field clinical isolates from Tanzania, an African country. Methods state 'Eligible patients were enrolled at the four sites, treated with standard doses of AL, and monitored for 28 days with clinical and laboratory assessments.' Samples are from 'human field/clinical isolates' collected at health facilities from patients with uncomplicated malaria during 2016."
+      },
+      "is_primary_study": {
+        "met": true,
+        "evidence": "This is a primary empirical study registered as a therapeutic efficacy study (TES) at ClinicalTrials.gov (NCT03387631). It reports original data collection (344 patients enrolled, samples analysed) and laboratory analysis of resistance markers. Not a review, meta-analysis, commentary, or modelling paper."
+      }
+    },
+    "duplicate_risk": {
+      "level": "low",
+      "evidence": "The paper indicates this was conducted at 'four of the eight NMCP sentinel sites' as part of Tanzania's 'regular therapeutic efficacy studies (TES)' surveillance programme coordinated by the National Malaria Control Programme. However, there is no explicit statement that these data are part of a multi-site consortium with overlapping samples from other publications, nor that the samples represent a subset of a previously published larger dataset. The study was independently conducted and analysed, with data shared with WHO post-collection. Routine new field collection in 2016 with new patients enrolled."
+    },
+    "supplement": {
+      "needed": false,
+      "evidence": "All extractable per-locus frequency data are present in the main paper. Table 4 provides Pfmdr1 SNP counts by site. Pfk13 mutation prevalence (92.7% sequencing success, 17 mutations, 6 non-synonymous) reported in main text and results. NFD haplotype prevalences by site (33.0–45.5%) provided. Sub-country location resolution is explicitly provided for all four sites with named health centres and districts. Supplementary Table 1 is referenced for timing of adverse events but is not needed for marker frequency extraction. No supplementary material pointer prevents data extraction for the curated markers."
+    },
+    "markers_found": [
+      "Pfk13_codon_440-600",
+      "Pfmdr1_N86Y",
+      "Pfmdr1_Y184F",
+      "Pfmdr1_D1246Y"
+    ],
+    "countries": [
+      "Tanzania"
+    ],
+    "collection_years": [
+      2016
+    ],
+    "sample_size": 344,
+    "summary": "A therapeutic efficacy study of artemether-lumefantrine conducted at four NMCP sentinel sites in mainland Tanzania (Kibaha, Mkuzi, Mlimba, Ujiji) between April and October 2016. A total of 344 children aged 6 months–10 years with uncomplicated P. falciparum malaria were enrolled and treated. Molecular analysis of Pfk13 (propeller domain, codons 440–600) and Pfmdr1 (codons N86Y, Y184F, D1246Y) was performed on day 0 samples. Pfk13 was successfully sequenced in 92.7% (n=319), with 5.3% having mutations, of which 1.9% were non-synonymous but none associated with artemisinin resistance. Pfmdr1 was sequenced in 100% (n=344); N86 and D1246 were found at >98.9% prevalence, 184F at 34.1–46.6%, and the NFD haplotype at 39.0% (range 33.0–45.5% by site). All frequencies are reported with numerator/denominator counts and are tied to specific sub-national sites and a single collection year, meeting all eligibility criteria.",
+    "exclusion_reasons": []
+  }
+}

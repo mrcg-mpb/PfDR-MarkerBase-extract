@@ -10,7 +10,7 @@ on:
         default: "10"
       model:
         description: "Model (haiku/sonnet/opus)"
-        default: "haiku"
+        default: "opus"
 
 permissions:
   contents: write

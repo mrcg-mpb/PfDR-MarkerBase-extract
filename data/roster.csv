@@ -1,8 +1,0 @@
-id,source,status,eligible,confidence,duplicate_risk,needs_supplement,spec_version,first_seen,last_assessed,supp_attempts,supplement_fp,elig_model,elig_tok_in,elig_tok_out,extract_model,extract_tok_in,extract_tok_out,notes
-PMID_30898164,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-haiku-4-5,42644,1512,,,,
-PMID_38461239,master,EXCLUDED,,,,,,2026-07-02,,,,,,,,,,on exclude.txt
-PMID_38594679,master,INELIGIBLE,False,high,low,True,1,2026-07-02,2026-07-02,0,,claude-haiku-4-5,36629,1503,,,,
-PMID_40666313,master,EXCLUDED,,,,,,2026-07-02,,,,,,,,,,on exclude.txt
-PMID_41379859,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-haiku-4-5,58699,1724,,,,
-PMID_9236824,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-haiku-4-5,12669,1101,,,,
-PMID_9391510,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-haiku-4-5,17682,1001,,,,

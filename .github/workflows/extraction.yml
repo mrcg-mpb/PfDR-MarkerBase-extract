@@ -9,7 +9,7 @@ on:
         description: "Max papers to extract this run"
         default: "10"
       model:
-        description: "Model (haiku/sonnet/opus)"
+        description: "Model (haiku/sonnet/opus/fable)"
         default: "haiku"
 
 permissions:

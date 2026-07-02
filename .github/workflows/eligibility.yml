@@ -6,6 +6,10 @@ on:
   schedule:
     - cron: "0 */4 * * *"
   workflow_dispatch:
+    inputs:
+      model:
+        description: "Model (haiku/sonnet/opus/fable)"
+        default: "haiku"
 
 # Needed so the job can commit the updated roster back to the repo.
 permissions:
@@ -48,7 +52,7 @@ jobs:
           DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
           DRIVE_SUPPLEMENT_FOLDER_ID: ${{ secrets.DRIVE_SUPPLEMENT_FOLDER_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MARKERBASE_MODEL: haiku
+          MARKERBASE_MODEL: ${{ inputs.model || 'haiku' }}
           MARKERBASE_MAX_PER_RUN: "100"
 
       # Commit only if something actually changed (no noisy empty commits).

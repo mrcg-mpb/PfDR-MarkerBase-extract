@@ -203,7 +203,7 @@ def _pdf_block(pdf_bytes):
 
 
 def extract(pdf_bytes, study_id, model_key="haiku", supplement_blocks=None,
-            eligibility_record=None, repair=None, client=None, max_tokens=8000):
+            eligibility_record=None, repair=None, client=None, max_tokens=16000):
     """Run the extractor. Returns the raw response; `resp.parsed_output` is an
     `Extraction` (or None on refusal).
 

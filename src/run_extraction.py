@@ -122,13 +122,16 @@ def extract_one(rid, pdf, supp_blocks, elig_ctx, roster):
     finally:
         shutil.rmtree(work, ignore_errors=True)
 
-    # Out of retries — record the failure for the digest.
+    # Record the failure for the digest. `last_err` is either a STAVE validation
+    # error (after up to MAX_REPAIRS repair attempts) or an extractor error such as
+    # a truncated/invalid response (which stops the loop immediately).
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "EXTRACTION_FAILED.md").write_text(
         f"# Extraction failed — study {rid}\n\n"
-        f"Hit the validation retry limit ({MAX_REPAIRS}) on {today()}.\n\n"
-        f"Last STAVE error:\n\n```\n{last_err}\n```\n", encoding="utf-8")
-    _set(roster, rid, store.EXTRACTION_FAILED, f"STAVE: {last_err[:160]}",
+        f"Could not produce STAVE-valid output on {today()} "
+        f"(up to {MAX_REPAIRS} validation retries).\n\n"
+        f"Last error:\n\n```\n{last_err}\n```\n", encoding="utf-8")
+    _set(roster, rid, store.EXTRACTION_FAILED, last_err[:160],
          model=model_id, tok_in=tok_in, tok_out=tok_out)
     print(f"  ! {rid}: EXTRACTION_FAILED — {last_err[:140]}")
     return False

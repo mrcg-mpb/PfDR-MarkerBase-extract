@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_11294677,PMID_11294677,Uganda,Kampala,0.3476,32.5825,city centroid,"Kampala, Uganda city centroid. Single urban study site.",clinical_trial,1998-08-01,1999-03-31,1998-11-30,midpoint of stated collection window August 1998 through March 1999,Samples from a clinical assessment of chloroquine resistance.

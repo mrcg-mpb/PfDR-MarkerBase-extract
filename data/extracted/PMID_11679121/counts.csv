@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_11679121,PMID_11679121,crt:76:T,118,172,pfcrt T76 mutant detected in 69% (118/172). Mixed alleles (K76+T76) counted with resistant per text 'Assigning mixed to resistant alleles'; here reporting the pure/overall resistant total as stated (118/172 exhibited T76 including mixed). See README.
+PMID_11679121,PMID_11679121,crt:76:K,54,172,pfcrt wild type K76. Derived as 172-118=54 pure wild-type isolates (Table 2 gives 37+15+2=54 pure K76 across NCQ/UCQ/SCQ). Mixed calls counted with resistant.
+PMID_11679121,PMID_11679121,mdr1:86:Y,114,172,"pfmdr1 Y86 mutant detected in 66% (114/172), including mixed alleles counted as resistant per text."
+PMID_11679121,PMID_11679121,mdr1:86:N,58,172,pfmdr1 wild type N86. Derived as 172-114=58 (text states 'sensitive genotypes' n=58).
+PMID_11679121,PMID_11679121,dhfr:108:N,137,172,"pfdhfr N108 mutant occurred in 80% (137/172). Note: pfdhfr data may overlap with prior publication (Mockenhaupt et al. 2001, AJTMH) from the same 530-woman cohort."
+PMID_11679121,PMID_11679121,dhfr:108:S,35,172,pfdhfr wild type S108. Derived as 172-137=35.

@@ -16,7 +16,7 @@ human only when it genuinely needs a decision.
 
 <!-- ROSTER:START -->
 
-**100 paper(s) · estimated spend $17.41** (eligibility $17.41 · extraction $0.00) · updated 2026-07-06
+**100 paper(s) · estimated spend $20.10** (eligibility $17.41 · extraction $2.69) · updated 2026-07-06
 
 | id | source | status | eligible | confidence | duplicate_risk | needs_supplement | spec_version | first_seen | last_assessed | supp_attempts | supplement_fp | elig_model | elig_tok_in | elig_tok_out | extract_model | extract_tok_in | extract_tok_out | notes | est_$ |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -26,31 +26,31 @@ human only when it genuinely needs a decision.
 | PMID_10558957 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 32818 | 814 |  |  |  |  | 0.1844 |
 | PMID_10762551 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 40279 | 878 |  |  |  |  | 0.2233 |
 | PMID_10813484 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27592 | 1020 |  |  |  |  | 0.1635 |
-| PMID_10950805 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17735 | 825 |  |  |  |  | 0.1093 |
+| PMID_10950805 | master | EXTRACTED | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17735 | 825 | claude-opus-4-8 | 19965 | 2218 | 2 survey(s), 6 count rows | 0.2646 |
 | PMID_11090624 | master | INELIGIBLE | False | high | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 67683 | 1169 |  |  |  |  | 0.3676 |
 | PMID_11172152 | master | INELIGIBLE | False | medium | low | True | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 29675 | 1085 |  |  |  |  | 0.1755 |
-| PMID_11294676 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17124 | 743 |  |  |  |  | 0.1042 |
-| PMID_11294677 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 18644 | 1014 |  |  |  |  | 0.1186 |
+| PMID_11294676 | master | EXTRACTED | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17124 | 743 | claude-opus-4-8 | 19267 | 1454 | 1 survey(s), 2 count rows | 0.2369 |
+| PMID_11294677 | master | EXTRACTED | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 18644 | 1014 | claude-opus-4-8 | 21074 | 2597 | 1 survey(s), 11 count rows | 0.2889 |
 | PMID_11372041 | master | INELIGIBLE | False | medium | high | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17564 | 1014 |  |  |  |  | 0.1132 |
-| PMID_11679121 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27823 | 920 |  |  |  |  | 0.1621 |
-| PMID_11679122 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 21976 | 967 |  |  |  |  | 0.1341 |
+| PMID_11679121 | master | EXTRACTED | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27823 | 920 | claude-opus-4-8 | 30146 | 2131 | 1 survey(s), 6 count rows | 0.3661 |
+| PMID_11679122 | master | EXTRACTED | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 21976 | 967 | claude-opus-4-8 | 24354 | 4293 | 2 survey(s), 28 count rows | 0.3631 |
 | PMID_11679123 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 22646 | 763 |  |  |  |  | 0.1323 |
 | PMID_11807721 | master | INELIGIBLE | False | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 38291 | 1269 |  |  |  |  | 0.2232 |
 | PMID_11857052 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 16756 | 759 |  |  |  |  | 0.1028 |
-| PMID_11865433 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 13534 | 910 |  |  |  |  | 0.0904 |
+| PMID_11865433 | master | EXTRACTED | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 13534 | 910 | claude-opus-4-8 | 15847 | 2451 | 3 survey(s), 4 count rows | 0.2309 |
 | PMID_11969121 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 60630 | 926 |  |  |  |  | 0.3263 |
 | PMID_12142257 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 32708 | 727 |  |  |  |  | 0.1817 |
 | PMID_12201581 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 23423 | 1077 |  |  |  |  | 0.1440 |
-| PMID_12224572 | master | ELIGIBLE | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25229 | 1044 |  |  |  |  | 0.1522 |
+| PMID_12224572 | master | EXTRACTED | True | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25229 | 1044 | claude-opus-4-8 | 27671 | 1442 | 1 survey(s), 2 count rows | 0.3266 |
 | PMID_12351583 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 46997 | 833 |  |  |  |  | 0.2558 |
 | PMID_12378426 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 59444 | 894 |  |  |  |  | 0.3196 |
-| PMID_12447777 | master | ELIGIBLE | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17696 | 895 |  |  |  |  | 0.1109 |
+| PMID_12447777 | master | EXTRACTED | True | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 17696 | 895 | claude-opus-4-8 | 20003 | 2395 | 2 survey(s), 5 count rows | 0.2707 |
 | PMID_12524354 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 48689 | 916 |  |  |  |  | 0.2663 |
 | PMID_12884171 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 9782 | 797 |  |  |  |  | 0.0688 |
 | PMID_14613965 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 26641 | 779 |  |  |  |  | 0.1527 |
 | PMID_14622411 | master | INELIGIBLE | False | high | none | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 41431 | 834 |  |  |  |  | 0.2280 |
-| PMID_14728622 | master | ELIGIBLE | True | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27673 | 881 |  |  |  |  | 0.1604 |
-| PMID_15031793 | master | ELIGIBLE | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25114 | 1047 |  |  |  |  | 0.1517 |
+| PMID_14728622 | master | EXTRACTED | True | medium | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 27673 | 881 | claude-opus-4-8 | 29963 | 2283 | 1 survey(s), 5 count rows | 0.3673 |
+| PMID_15031793 | master | EXTRACTION_FAILED | True | medium | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 25114 | 1047 | claude-opus-4-8 | 150653 | 14427 | STAVE_ERROR: study_id in counts_dataframe is not a valid identifier. It must: - consist only of English letters (upper or lower case), numbers (0-9), or undersc | 1.2657 |
 | PMID_15117308 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 24363 | 922 |  |  |  |  | 0.1449 |
 | PMID_15130119 | master | INELIGIBLE | False | high | medium | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 50777 | 1366 |  |  |  |  | 0.2880 |
 | PMID_15216481 | master | INELIGIBLE | False | high | low | False | 1 | 2026-07-02 | 2026-07-02 | 0 |  | claude-opus-4-8 | 31527 | 851 |  |  |  |  | 0.1789 |

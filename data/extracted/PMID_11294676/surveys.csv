@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_11294676,PMID_11294676,Mozambique,Manhiça,-25.4022,32.8078,town centroid,"Manhiça town, Maputo Province, southern Mozambique; patients recruited at Manhiça District Hospital outpatient clinic.",clinical_passive,1999-05-01,1999-07-31,1999-06-15,stated range midpoint,Patients recruited over a 2-month period from May through July 1999.

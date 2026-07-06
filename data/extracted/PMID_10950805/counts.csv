@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_10950805,PMID_10950805_baseline,dhfr:108:N,15,119,"Baseline village-wide, 12.8% of n=119 = 15.2, rounded to 15."
+PMID_10950805,PMID_10950805_baseline,dhfr:51:I,5,119,"Baseline village-wide, 4.2% of n=119 = 5.0."
+PMID_10950805,PMID_10950805_baseline,dhfr:59:R,13,119,"Baseline village-wide, 10.9% of n=119 = 13.0."
+PMID_10950805,PMID_10950805_breakthrough,dhfr:108:N,52,52,"Breakthrough infections, 100% of n=52."
+PMID_10950805,PMID_10950805_breakthrough,dhfr:51:I,26,52,"Breakthrough infections, 50% of n=52 = 26."
+PMID_10950805,PMID_10950805_breakthrough,dhfr:59:R,47,52,"Breakthrough infections, 90% of n=52 = 46.8, rounded to 47."

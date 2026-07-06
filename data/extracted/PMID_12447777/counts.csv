@@ -1,0 +1,6 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_12447777,PMID_12447777_kwevihombo_before,dhfr:51_59_108:I_R_N,15,42,"Table 1 DHFR Ile51-Arg59-Asn108 pure triple mutant, before treatment, Kwevihombo. Extracted haplotype as reported; no per-locus breakdown given."
+PMID_12447777,PMID_12447777_skimu_before,dhfr:51_59_108:I_R_N,21,55,"Table 1 DHFR Ile51-Arg59-Asn108 pure triple mutant, before treatment, Skimu."
+PMID_12447777,PMID_12447777_kwevihombo_before,dhps:436_437_540:S_G_E,15,41,"Table 1 DHPS Ser436-Gly437-Glu540 genotype, before treatment, Kwevihombo. Ser436 is reference at 436; encoded as reported haplotype."
+PMID_12447777,PMID_12447777_skimu_before,dhps:436_437_540:S_G_E,18,52,"Table 1 DHPS Ser436-Gly437-Glu540 genotype, before treatment, Skimu."
+PMID_12447777,PMID_12447777_skimu_before,dhps:581:G,3,50,Text: 3 of 50 samples collected in Skimu before treatment contained parasites with the Gly581 allele.

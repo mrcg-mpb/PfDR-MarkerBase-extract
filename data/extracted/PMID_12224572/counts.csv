@@ -1,0 +1,3 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_12224572,PMID_12224572,mdr1:86:Y,56,64,56/64 (88%) carried mutant Tyr-86; 7 (11%) wild-type Asn-86; 1 mixed. Total sequenced = 64 at codon 86.
+PMID_12224572,PMID_12224572,mdr1:86:N,7,64,"7/64 (11%) carried wild-type Asn-86. Wild-type reference amino acid encoded. One additional isolate had a mixed call (not uniquely allocatable to N or Y), so 56+7=63 of 64 with 1 mixed excluded from these two counts."

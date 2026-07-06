@@ -1,0 +1,5 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_11865433,PMID_11865433_madagascar,crt:76:K,64,64,Table 1: 0 of 40 'Random' isolates plus 0 of 24 IC50>=100nM isolates had K76T; all wild type (K76). Combined into island-wide Madagascar survey (both are island-distributed groups). Mahajanga region kept separate.
+PMID_11865433,PMID_11865433_mahajanga,crt:76:K,19,19,Table 1: 0 of 19 Mahajanga region isolates had K76T; all wild type (K76).
+PMID_11865433,PMID_11865433_comoros,crt:76:T,33,49,Table 1: 33 of 49 (67%) Comoro Islands isolates harbored K76T mutation. Text states 62% (30/48) - discrepancy noted; Table 1 values used as primary.
+PMID_11865433,PMID_11865433_comoros,crt:76:K,16,49,Table 1: 16 of 49 (33%) Comoro Islands isolates were wild type (no K76T).

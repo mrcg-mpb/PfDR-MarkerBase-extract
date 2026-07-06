@@ -1,0 +1,6 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_14728622,PMID_14728622,dhfr:108:N,50,97,Text states 52% of isolates harboured mutation at codon 108 (52% of 97 = ~50.4). Reported as percentage only; whole-number count approximated as 50/97. Denominator = 97 PCR-successful samples.
+PMID_14728622,PMID_14728622,dhfr:51_59_108:I_R_N,40,97,"Triple dhfr mutation reported as 41% (41% of 97 = ~39.8, ~40). Text: 41% had triple mutations at dhfr codons 51,59,108. Denominator 97."
+PMID_14728622,PMID_14728622,dhps:437:G,28,97,Text: mutations in dhps codon 437 in 29% (29% of 97 = ~28.1). Approximated as 28/97.
+PMID_14728622,PMID_14728622,dhps:436:A,26,97,Text: codon 436-alanine mutation in 27% (27% of 97 = ~26.2). Approximated as 26/97. None harboured the c436-phenylalanine genotype.
+PMID_14728622,PMID_14728622,dhps:540:K,97,97,Wild type imputed: text explicitly states none harboured mutations at codon 540. All 97 sequenced samples are wild type (K) at dhps codon 540.

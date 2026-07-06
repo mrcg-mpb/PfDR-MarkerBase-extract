@@ -1,0 +1,3 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_11294676,PMID_11294676,crt:76:T,51,56,Text: 51 of 56 pretreatment samples presented the T76 codon (85%). 4 of the 51 were mixed infections with both alleles but were counted as mutated allele carriers. Using the 56-sample pretreatment denominator rather than the Table 1 subset of 50 (which only covered subjects completing 14-day follow-up).
+PMID_11294676,PMID_11294676,crt:76:K,5,56,Wild-type K76: 56 total pretreatment samples minus 51 carrying T76 = 5 with wild-type only. Consistent with Table 1 (5 K76 among 50 followed-up subjects).

@@ -1,0 +1,12 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_11294677,PMID_11294677,crt:76:T,114,114,All 114 randomly selected pre-treatment isolates contained the K76T mutation; no mixed or wild-type found. Preferred over case-control subset (n=30) which is a lower-N subset of the same site.
+PMID_11294677,PMID_11294677,crt:74:I,25,25,"Table 2 case-control subset (sensitive 11 mutant + RIII 14 mutant = 25). 5 samples had no result. This is a subset of the 114 K76 samples but reports additional positions not covered by the K76 analysis, so retained. Denominator = successfully amplified (mutant+wild+mixed)."
+PMID_11294677,PMID_11294677,crt:75:E,30,30,"Table 2 case-control: sensitive 15 mutant + RIII 15 mutant = 30, all mutant, no wild/mixed/no result."
+PMID_11294677,PMID_11294677,crt:220:S,30,30,"Table 2 case-control: sensitive 15 + RIII 15 mutant, all mutant."
+PMID_11294677,PMID_11294677,crt:271:E,28,28,Table 2 case-control: sensitive 13 mutant + RIII 15 mutant = 28. 2 samples no result.
+PMID_11294677,PMID_11294677,crt:326:S,5,29,Table 2 N326S case-control: sensitive 3 mutant + RIII 2 mutant = 5 mutant; wild 9+13=22; mixed 2. Total amplified = 5+22+2=29. 1 no result excluded.
+PMID_11294677,PMID_11294677,crt:326:N,22,29,Wild-type at 326: sensitive 9 + RIII 13 = 22 wild. Mixed 2 not allocated to a single allele; denominator = amplified samples (29).
+PMID_11294677,PMID_11294677,crt:356:I,30,30,Table 2 I356T: only wild-type identified (sensitive 15 + RIII 15 = 30 wild type).
+PMID_11294677,PMID_11294677,crt:371:I,30,30,"Table 2 case-control: sensitive 15 + RIII 15 mutant, all mutant."
+PMID_11294677,PMID_11294677,mdr1:86:Y,23,30,Table 2 N86Y: sensitive 13 mutant + RIII 10 mutant = 23 mutant; wild 1; mixed 1+5=6. Total amplified = 30 (no no-result). Mixed not allocated to single allele.
+PMID_11294677,PMID_11294677,mdr1:86:N,1,30,Wild-type N86: sensitive 1 + RIII 0 = 1 wild. Mixed genotypes (6 total) not counted as single allele; denominator = 30 amplified.

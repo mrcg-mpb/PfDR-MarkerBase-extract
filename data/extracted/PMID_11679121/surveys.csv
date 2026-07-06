@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_11679121,PMID_11679121,Ghana,Agogo,6.7994,-1.0806,town centroid,"Agogo, Ashanti region, Ghana; site of the District/Presbyterian Mission Hospital where antenatal samples were collected. Coordinates are the town centroid.",clinical_anc,1998-11-01,1998-12-31,1998-12-01,stated range midpoint,Women enrolled November/December 1998; midpoint of the two-month window used as collection_day.

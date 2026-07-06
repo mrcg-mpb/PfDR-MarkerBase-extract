@@ -1,0 +1,29 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_11679122,PMID_11679122_aioun,dhfr:51:N,49,59,Table 1: 51-asparagine 49/59 (83.05%)
+PMID_11679122,PMID_11679122_aioun,dhfr:51:I,10,59,Table 1: 51-isoleucine 10/59 (16.95%)
+PMID_11679122,PMID_11679122_aioun,dhfr:59:C,49,59,Table 1: 59-cysteine 49/59 (83.05%)
+PMID_11679122,PMID_11679122_aioun,dhfr:59:R,10,59,Table 1: 59-arginine 10/59 (16.95%)
+PMID_11679122,PMID_11679122_aioun,dhfr:108:S,48,59,Table 1: 108-serine 48/59 (81.36%)
+PMID_11679122,PMID_11679122_aioun,dhfr:108:N,11,59,Table 1: 108-asparagine 11/59 (18.64%)
+PMID_11679122,PMID_11679122_aioun,dhps:436:S,27,59,Table 1: 436-serine 27/59 (45.76%)
+PMID_11679122,PMID_11679122_aioun,dhps:436:A,29,59,Table 1: 436-alanine 29/59 (49.15%)
+PMID_11679122,PMID_11679122_aioun,dhps:437:A,46,59,Table 1: 437-alanine 46/59 (77.97%)
+PMID_11679122,PMID_11679122_aioun,dhps:437:G,13,59,Table 1: 437-glycine 13/59 (22.03%)
+PMID_11679122,PMID_11679122_aioun,dhps:540:K,59,59,Table 1: 540-lysine 59/59 (100%); no 540-glutamic acid detected
+PMID_11679122,PMID_11679122_aioun,dhps:581:A,59,59,Table 1: 581-alanine 59/59 (100%); no 581-glycine detected
+PMID_11679122,PMID_11679122_aioun,dhps:613:A,55,59,Table 1: 613-alanine 55/59 (93.22%)
+PMID_11679122,PMID_11679122_aioun,dhps:613:S,4,59,Table 1: 613-serine 4/59 (6.78%); 613-threonine 0
+PMID_11679122,PMID_11679122_kobeni,dhfr:51:N,90,103,Table 1: 51-asparagine 90/103 (87.37%)
+PMID_11679122,PMID_11679122_kobeni,dhfr:51:I,13,103,Table 1: 51-isoleucine 13/103 (12.62%)
+PMID_11679122,PMID_11679122_kobeni,dhfr:59:C,90,103,Table 1: 59-cysteine 90/103 (87.37%)
+PMID_11679122,PMID_11679122_kobeni,dhfr:59:R,13,103,Table 1: 59-arginine 13/103 (12.62%)
+PMID_11679122,PMID_11679122_kobeni,dhfr:108:S,90,103,Table 1: 108-serine 90/103 (87.37%)
+PMID_11679122,PMID_11679122_kobeni,dhfr:108:N,13,103,Table 1: 108-asparagine 13/103 (12.62%)
+PMID_11679122,PMID_11679122_kobeni,dhps:436:S,51,101,Table 1: 436-serine 51/101 (50.50%)
+PMID_11679122,PMID_11679122_kobeni,dhps:436:A,47,101,Table 1: 436-alanine 47/101 (46.53%)
+PMID_11679122,PMID_11679122_kobeni,dhps:437:A,85,101,Table 1: 437-alanine 85/101 (84.16%)
+PMID_11679122,PMID_11679122_kobeni,dhps:437:G,16,101,Table 1: 437-glycine 16/101 (15.84%)
+PMID_11679122,PMID_11679122_kobeni,dhps:540:K,101,101,Table 1: 540-lysine 101/101 (100%); no 540-glutamic acid detected
+PMID_11679122,PMID_11679122_kobeni,dhps:581:A,101,101,Table 1: 581-alanine 101/101 (100%); no 581-glycine detected
+PMID_11679122,PMID_11679122_kobeni,dhps:613:A,98,101,Table 1: 613-alanine 98/101 (97.03%)
+PMID_11679122,PMID_11679122_kobeni,dhps:613:S,3,101,Table 1: 613-serine 3/101 (2.97%); 613-threonine 0

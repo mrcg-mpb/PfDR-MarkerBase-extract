@@ -34,30 +34,30 @@ PMID_15031793,master,EXTRACTION_FAILED,True,medium,medium,False,1,2026-07-02,202
 PMID_15117308,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,24363,922,,,,
 PMID_15130119,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,50777,1366,,,,
 PMID_15216481,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,31527,851,,,,
-PMID_15272415,master,ELIGIBLE,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,13810,851,,,,
+PMID_15272415,master,EXTRACTED,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,13810,851,claude-opus-4-8,16072,2089,"1 survey(s), 8 count rows"
 PMID_15383440,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,27135,687,,,,
 PMID_15499534,master,INELIGIBLE,False,high,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,39558,1164,,,,
-PMID_15679556,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,25874,801,,,,
+PMID_15679556,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,25874,801,claude-opus-4-8,28077,1926,"1 survey(s), 6 count rows"
 PMID_15679557,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,31997,890,,,,
 PMID_15686571,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,46917,827,,,,
-PMID_15717281,master,ELIGIBLE,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17079,818,,,,
-PMID_15814601,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,16952,780,,,,
-PMID_15941416,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,27736,911,,,,
-PMID_16135198,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33602,958,,,,
+PMID_15717281,master,EXTRACTED,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17079,818,claude-opus-4-8,19301,2051,"1 survey(s), 5 count rows"
+PMID_15814601,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,16952,780,claude-opus-4-8,19132,3198,"4 survey(s), 12 count rows"
+PMID_15941416,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,27736,911,claude-opus-4-8,30055,2603,"1 survey(s), 14 count rows"
+PMID_16135198,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33602,958,claude-opus-4-8,35976,2263,"1 survey(s), 4 count rows"
 PMID_16185238,master,INELIGIBLE,False,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,31151,1083,,,,
-PMID_16186171,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,29153,877,,,,
-PMID_16206082,master,ELIGIBLE,True,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,28250,892,,,,
-PMID_16235185,master,ELIGIBLE,True,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,23417,1061,,,,
+PMID_16186171,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,29153,877,claude-opus-4-8,31428,1515,"1 survey(s), 2 count rows"
+PMID_16206082,master,EXTRACTED,True,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,28250,892,claude-opus-4-8,30545,2186,"2 survey(s), 4 count rows"
+PMID_16235185,master,EXTRACTED,True,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,23417,1061,claude-opus-4-8,25880,2070,"1 survey(s), 5 count rows"
 PMID_16319183,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,24904,1011,,,,
 PMID_16359407,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,18017,852,,,,
 PMID_16420747,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,40510,856,,,,
-PMID_16518760,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33636,1043,,,,
+PMID_16518760,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33636,1043,claude-opus-4-8,36082,10110,"6 survey(s), 96 count rows"
 PMID_16640612,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,36098,1158,,,,
-PMID_16703518,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17836,945,,,,
+PMID_16703518,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17836,945,claude-opus-4-8,20186,3623,"4 survey(s), 12 count rows"
 PMID_16779725,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33714,1101,,,,
 PMID_16845638,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33146,897,,,,
-PMID_17002724,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,37556,956,,,,
-PMID_17093247,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,29694,848,,,,
+PMID_17002724,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,37556,956,claude-opus-4-8,39919,2330,"1 survey(s), 9 count rows"
+PMID_17093247,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,29694,848,claude-opus-4-8,31940,1285,"1 survey(s), 1 count rows"
 PMID_17158810,master,INELIGIBLE,False,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,20761,939,,,,
 PMID_17176345,master,INELIGIBLE,False,medium,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,20262,1066,,,,
 PMID_17300628,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,22347,847,,,,
@@ -67,36 +67,36 @@ PMID_17538897,master,INELIGIBLE,False,medium,high,False,1,2026-07-02,2026-07-02,
 PMID_17550470,master,INELIGIBLE,False,high,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,27964,906,,,,
 PMID_17597460,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,34022,860,,,,
 PMID_17607593,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,42183,884,,,,
-PMID_17956498,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,34343,897,,,,
+PMID_17956498,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,34343,897,claude-opus-4-8,36650,1912,"1 survey(s), 6 count rows"
 PMID_17990228,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,34705,924,,,,
 PMID_18304270,master,INELIGIBLE,False,medium,low,True,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,13813,979,,,,
 PMID_18316104,master,INELIGIBLE,False,high,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,12631,851,,,,
 PMID_18419347,master,INELIGIBLE,False,medium,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,25496,1086,,,,
-PMID_18471065,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,36223,1005,,,,
+PMID_18471065,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,36223,1005,claude-opus-4-8,82381,9185,"2 survey(s), 26 count rows"
 PMID_18471066,master,INELIGIBLE,False,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,35043,1106,,,,
-PMID_18513156,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,45779,1024,,,,
+PMID_18513156,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,45779,1024,claude-opus-4-8,48218,7613,"14 survey(s), 50 count rows"
 PMID_18621010,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,61517,892,,,,
-PMID_18682531,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30840,925,,,,
+PMID_18682531,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30840,925,claude-opus-4-8,33170,2533,"2 survey(s), 2 count rows"
 PMID_18779584,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,20244,784,,,,
 PMID_18808336,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,16788,938,,,,
 PMID_18809933,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,37305,983,,,,
-PMID_19036751,master,ELIGIBLE,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17474,908,,,,
+PMID_19036751,master,EXTRACTED,True,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,17474,908,claude-opus-4-8,19794,2604,"3 survey(s), 3 count rows"
 PMID_19055622,master,INELIGIBLE,False,medium,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,36760,945,,,,
 PMID_19199542,master,INELIGIBLE,False,medium,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,45872,1300,,,,
 PMID_19210165,master,REVIEW_DUPLICATE,True,medium,high,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,42851,924,,,,
 PMID_19320869,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33748,802,,,,
 PMID_19451638,master,INELIGIBLE,False,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,28409,1096,,,,
 PMID_19465909,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,60141,922,,,,
-PMID_19624477,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,15792,874,,,,
-PMID_19708897,master,ELIGIBLE,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,28308,979,,,,
-PMID_19841150,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30355,1013,,,,
+PMID_19624477,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,15792,874,claude-opus-4-8,18077,2018,"2 survey(s), 4 count rows"
+PMID_19708897,master,EXTRACTED,True,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,28308,979,claude-opus-4-8,64487,5696,"1 survey(s), 12 count rows"
+PMID_19841150,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30355,1013,claude-opus-4-8,32782,2877,"2 survey(s), 2 count rows"
 PMID_2187200,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,21953,792,,,,
 PMID_8888283,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,52456,764,,,,
 PMID_9076734,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,33791,1042,,,,
 PMID_9236824,master,INELIGIBLE,False,high,none,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,14598,711,,,,
-PMID_9391510,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,20686,953,,,,
+PMID_9391510,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,20686,953,claude-opus-4-8,23040,2111,"1 survey(s), 6 count rows"
 PMID_9393853,master,INELIGIBLE,False,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,42777,1277,,,,
-PMID_9395372,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30846,1034,,,,
+PMID_9395372,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,30846,1034,claude-opus-4-8,33298,3918,"3 survey(s), 18 count rows"
 PMID_9449279,master,INELIGIBLE,False,medium,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,31177,969,,,,
 PMID_9661026,master,INELIGIBLE,False,high,low,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,23330,912,,,,
-PMID_9735930,master,ELIGIBLE,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,22994,984,,,,
+PMID_9735930,master,EXTRACTED,True,high,medium,False,1,2026-07-02,2026-07-02,0,,claude-opus-4-8,22994,984,claude-opus-4-8,88670,16313,"3 survey(s), 26 count rows"

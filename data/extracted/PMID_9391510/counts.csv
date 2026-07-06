@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_9391510,PMID_9391510,dhfr:51_59_108:N_C_N,2,44,"'108-Asn only' pattern (Table 1): dhfr 108 mutant N; 51 wild N, 59 wild C. Codons 16 and 164 not target positions."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_S,1,44,'51-Ile only' pattern (Table 1): 51 mutant I; 59 wild C; 108 wild S.
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_C_N,1,44,"'108-Asn + 51-Ile only' pattern (Table 1): 51 I, 59 wild C, 108 N."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:N_R_N,6,44,"'108-Asn + 59-Arg only' pattern (Table 1): 51 wild N, 59 R, 108 N."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_S,1,44,"'51-Ile + 59-Arg only' pattern (Table 1): 51 I, 59 R, 108 wild S."
+PMID_9391510,PMID_9391510,dhfr:51_59_108:I_R_N,33,44,"'108-Asn + 51-Ile + 59-Arg' triple mutant pattern (Table 1): 51 I, 59 R, 108 N."

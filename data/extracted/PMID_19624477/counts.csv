@@ -1,0 +1,5 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_19624477,PMID_19624477_karonga,crt:76:T,16,183,pfcrt mutant 8.7% of N=183 = 15.9 -> 16. Mixed alleles classified as mutant per paper.
+PMID_19624477,PMID_19624477_karonga,crt:76:K,167,183,Wild-type imputed as N minus mutant (183-16). K76T was genotyped for all 183.
+PMID_19624477,PMID_19624477_blantyre,crt:76:T,0,148,pfcrt mutant 0.0% of N=148.
+PMID_19624477,PMID_19624477_blantyre,crt:76:K,148,148,Wild-type imputed: 0% mutant among 148 genotyped.

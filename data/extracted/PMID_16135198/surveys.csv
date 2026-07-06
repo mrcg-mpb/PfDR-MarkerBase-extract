@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_16135198,PMID_16135198,Ghana,"Tamale, Northern Region",9.4008,-0.8393,town centroid,"Isolates collected in Tamale, Northern Region, Ghana. Coordinates are Tamale town centroid.",clinical_trial,2002-08-01,2002-12-31,2002-10-16,stated range midpoint,Trial conducted at end of rainy season 2002 (August-December); midpoint used for collection_day.

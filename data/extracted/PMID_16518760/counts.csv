@@ -1,0 +1,97 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16518760,PMID_16518760_kanungu,crt:76:K,0,80,pfcrt Thr-76 wild type 0/80 (0%). Total=WT+mixed+pure=0+5+75=80.
+PMID_16518760,PMID_16518760_kanungu,crt:76:K/T,5,80,Mixed genotype (wt + mutant) 5/80 (6%).
+PMID_16518760,PMID_16518760_kanungu,crt:76:T,75,80,Pure mutant 75/80 (94%).
+PMID_16518760,PMID_16518760_mubende,crt:76:K,0,80,WT 0; mixed 3; pure 77; total 80.
+PMID_16518760,PMID_16518760_mubende,crt:76:K/T,3,80,Mixed 3/80 (4%).
+PMID_16518760,PMID_16518760_mubende,crt:76:T,77,80,Pure mutant 77/80 (96%).
+PMID_16518760,PMID_16518760_jinja,crt:76:K,1,80,WT 1; mixed 1; pure 78; total 80.
+PMID_16518760,PMID_16518760_jinja,crt:76:K/T,1,80,Mixed 1/80 (1%).
+PMID_16518760,PMID_16518760_jinja,crt:76:T,78,80,Pure mutant 78/80 (98%).
+PMID_16518760,PMID_16518760_arua,crt:76:K,3,80,WT 3; mixed 8; pure 69; total 80.
+PMID_16518760,PMID_16518760_arua,crt:76:K/T,8,80,Mixed 8/80 (10%).
+PMID_16518760,PMID_16518760_arua,crt:76:T,69,80,Pure mutant 69/80 (86%).
+PMID_16518760,PMID_16518760_tororo,crt:76:K,0,80,WT 0; mixed 1; pure 79; total 80.
+PMID_16518760,PMID_16518760_tororo,crt:76:K/T,1,80,Mixed 1/80 (1%).
+PMID_16518760,PMID_16518760_tororo,crt:76:T,79,80,Pure mutant 79/80 (99%).
+PMID_16518760,PMID_16518760_apac,crt:76:K,14,346,"Apac tested all samples for pfcrt 76. WT 14; mixed 94; pure 238; total=346. Percentages in Table 2 (4,27,69) computed on 346."
+PMID_16518760,PMID_16518760_apac,crt:76:K/T,94,346,Mixed 94/346 (27%).
+PMID_16518760,PMID_16518760_apac,crt:76:T,238,346,Pure mutant 238/346 (69%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:108:S,0,80,dhfr Asn-108 WT 0; mixed 1; pure 79; total 80.
+PMID_16518760,PMID_16518760_kanungu,dhfr:108:S/N,1,80,Mixed 1/80 (1%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:108:N,79,80,Pure mutant 79/80 (99%).
+PMID_16518760,PMID_16518760_mubende,dhfr:108:N,80,80,"dhfr Asn-108 pure mutant 80/80 (100%); WT 0, mixed 0."
+PMID_16518760,PMID_16518760_jinja,dhfr:108:S,0,80,WT 0; mixed 1; pure 79; total 80.
+PMID_16518760,PMID_16518760_jinja,dhfr:108:S/N,1,80,Mixed 1/80 (1%).
+PMID_16518760,PMID_16518760_jinja,dhfr:108:N,79,80,Pure mutant 79/80 (99%).
+PMID_16518760,PMID_16518760_arua,dhfr:108:N,80,80,Pure mutant 80/80 (100%).
+PMID_16518760,PMID_16518760_tororo,dhfr:108:N,80,80,Pure mutant 80/80 (100%).
+PMID_16518760,PMID_16518760_apac,dhfr:108:N,80,80,Pure mutant 80/80 (100%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:51:N,0,80,dhfr Ile-51 WT 0; mixed 5; pure 75; total 80.
+PMID_16518760,PMID_16518760_kanungu,dhfr:51:N/I,5,80,Mixed 5/80 (6%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:51:I,75,80,Pure mutant 75/80 (94%).
+PMID_16518760,PMID_16518760_mubende,dhfr:51:N,1,80,WT 1; mixed 3; pure 76; total 80.
+PMID_16518760,PMID_16518760_mubende,dhfr:51:N/I,3,80,Mixed 3/80 (4%).
+PMID_16518760,PMID_16518760_mubende,dhfr:51:I,76,80,Pure mutant 76/80 (95%).
+PMID_16518760,PMID_16518760_jinja,dhfr:51:N,1,80,WT 1; mixed 2; pure 77; total 80.
+PMID_16518760,PMID_16518760_jinja,dhfr:51:N/I,2,80,Mixed 2/80 (3%).
+PMID_16518760,PMID_16518760_jinja,dhfr:51:I,77,80,Pure mutant 77/80 (96%).
+PMID_16518760,PMID_16518760_arua,dhfr:51:I,80,80,"Pure mutant 80/80 (100%); WT 0, mixed 0."
+PMID_16518760,PMID_16518760_tororo,dhfr:51:N,0,80,WT 0; mixed 5; pure 75; total 80.
+PMID_16518760,PMID_16518760_tororo,dhfr:51:N/I,5,80,Mixed 5/80 (6%).
+PMID_16518760,PMID_16518760_tororo,dhfr:51:I,75,80,Pure mutant 75/80 (94%).
+PMID_16518760,PMID_16518760_apac,dhfr:51:I,80,80,Pure mutant 80/80 (100%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:59:C,98,353,"dhfr Arg-59 tested on all samples. WT 98; mixed 41; pure 214; total=353. Table 2 percentages (28,12,61) computed on 353."
+PMID_16518760,PMID_16518760_kanungu,dhfr:59:C/R,41,353,Mixed 41/353 (12%).
+PMID_16518760,PMID_16518760_kanungu,dhfr:59:R,214,353,Pure mutant 214/353 (61%).
+PMID_16518760,PMID_16518760_mubende,dhfr:59:C,86,344,WT 86; mixed 90; pure 168; total=344.
+PMID_16518760,PMID_16518760_mubende,dhfr:59:C/R,90,344,Mixed 90/344 (26%).
+PMID_16518760,PMID_16518760_mubende,dhfr:59:R,168,344,Pure mutant 168/344 (49%).
+PMID_16518760,PMID_16518760_jinja,dhfr:59:C,54,325,WT 54; mixed 55; pure 216; total=325.
+PMID_16518760,PMID_16518760_jinja,dhfr:59:C/R,55,325,Mixed 55/325 (17%).
+PMID_16518760,PMID_16518760_jinja,dhfr:59:R,216,325,Pure mutant 216/325 (66%).
+PMID_16518760,PMID_16518760_arua,dhfr:59:C,119,332,WT 119; mixed 48; pure 165; total=332. (Table 1 molecular N=342; sum of WT+mixed+pure=332.)
+PMID_16518760,PMID_16518760_arua,dhfr:59:C/R,48,332,Mixed 48/332 (14%).
+PMID_16518760,PMID_16518760_arua,dhfr:59:R,165,332,Pure mutant 165/332 (50%).
+PMID_16518760,PMID_16518760_tororo,dhfr:59:C,24,333,WT 24; mixed 122; pure 187; total=333.
+PMID_16518760,PMID_16518760_tororo,dhfr:59:C/R,122,333,Mixed 122/333 (37%).
+PMID_16518760,PMID_16518760_tororo,dhfr:59:R,187,333,Pure mutant 187/333 (56%).
+PMID_16518760,PMID_16518760_apac,dhfr:59:C,23,351,WT 23; mixed 140; pure 188; total=351.
+PMID_16518760,PMID_16518760_apac,dhfr:59:C/R,140,351,Mixed 140/351 (40%).
+PMID_16518760,PMID_16518760_apac,dhfr:59:R,188,351,Pure mutant 188/351 (54%).
+PMID_16518760,PMID_16518760_kanungu,dhps:437:A,52,353,dhps Gly-437 tested on all samples. WT 52; mixed 27; pure 274; total=353.
+PMID_16518760,PMID_16518760_kanungu,dhps:437:A/G,27,353,Mixed 27/353 (8%).
+PMID_16518760,PMID_16518760_kanungu,dhps:437:G,274,353,Pure mutant 274/353 (78%).
+PMID_16518760,PMID_16518760_mubende,dhps:437:A,73,340,WT 73; mixed 42; pure 225; total=340.
+PMID_16518760,PMID_16518760_mubende,dhps:437:A/G,42,340,Mixed 42/340 (12%).
+PMID_16518760,PMID_16518760_mubende,dhps:437:G,225,340,Pure mutant 225/340 (66%).
+PMID_16518760,PMID_16518760_jinja,dhps:437:A,20,324,WT 20; mixed 32; pure 272; total=324.
+PMID_16518760,PMID_16518760_jinja,dhps:437:A/G,32,324,Mixed 32/324 (10%).
+PMID_16518760,PMID_16518760_jinja,dhps:437:G,272,324,Pure mutant 272/324 (84%).
+PMID_16518760,PMID_16518760_arua,dhps:437:A,21,340,WT 21; mixed 32; pure 287; total=340.
+PMID_16518760,PMID_16518760_arua,dhps:437:A/G,32,340,Mixed 32/340 (9%).
+PMID_16518760,PMID_16518760_arua,dhps:437:G,287,340,Pure mutant 287/340 (84%).
+PMID_16518760,PMID_16518760_tororo,dhps:437:A,5,333,WT 5; mixed 48; pure 280; total=333.
+PMID_16518760,PMID_16518760_tororo,dhps:437:A/G,48,333,Mixed 48/333 (14%).
+PMID_16518760,PMID_16518760_tororo,dhps:437:G,280,333,Pure mutant 280/333 (84%).
+PMID_16518760,PMID_16518760_apac,dhps:437:A,16,352,WT 16; mixed 109; pure 227; total=352.
+PMID_16518760,PMID_16518760_apac,dhps:437:A/G,109,352,Mixed 109/352 (31%).
+PMID_16518760,PMID_16518760_apac,dhps:437:G,227,352,Pure mutant 227/352 (64%).
+PMID_16518760,PMID_16518760_kanungu,dhps:540:K,55,353,dhps Glu-540 tested on all samples. WT 55; mixed 32; pure 266; total=353.
+PMID_16518760,PMID_16518760_kanungu,dhps:540:K/E,32,353,Mixed 32/353 (9%).
+PMID_16518760,PMID_16518760_kanungu,dhps:540:E,266,353,Pure mutant 266/353 (75%).
+PMID_16518760,PMID_16518760_mubende,dhps:540:K,65,340,WT 65; mixed 71; pure 204; total=340.
+PMID_16518760,PMID_16518760_mubende,dhps:540:K/E,71,340,Mixed 71/340 (21%).
+PMID_16518760,PMID_16518760_mubende,dhps:540:E,204,340,Pure mutant 204/340 (60%).
+PMID_16518760,PMID_16518760_jinja,dhps:540:K,27,324,WT 27; mixed 47; pure 250; total=324.
+PMID_16518760,PMID_16518760_jinja,dhps:540:K/E,47,324,Mixed 47/324 (15%).
+PMID_16518760,PMID_16518760_jinja,dhps:540:E,250,324,Pure mutant 250/324 (77%).
+PMID_16518760,PMID_16518760_arua,dhps:540:K,43,334,WT 43; mixed 45; pure 246; total=334.
+PMID_16518760,PMID_16518760_arua,dhps:540:K/E,45,334,Mixed 45/334 (13%).
+PMID_16518760,PMID_16518760_arua,dhps:540:E,246,334,Pure mutant 246/334 (74%).
+PMID_16518760,PMID_16518760_tororo,dhps:540:K,8,333,WT 8; mixed 86; pure 239; total=333.
+PMID_16518760,PMID_16518760_tororo,dhps:540:K/E,86,333,Mixed 86/333 (26%).
+PMID_16518760,PMID_16518760_tororo,dhps:540:E,239,333,Pure mutant 239/333 (72%).
+PMID_16518760,PMID_16518760_apac,dhps:540:K,18,352,WT 18; mixed 130; pure 204; total=352.
+PMID_16518760,PMID_16518760_apac,dhps:540:K/E,130,352,Mixed 130/352 (37%).
+PMID_16518760,PMID_16518760_apac,dhps:540:E,204,352,Pure mutant 204/352 (58%).

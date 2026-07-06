@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_15679556,PMID_15679556,dhfr:108:N,104,113,Table 3 dhfr(108): Resistant (mutant 108N) 104/113. Mixed=6 and Sensitive(108S wild type)=3 recorded separately; not included in mutant count.
+PMID_15679556,PMID_15679556,dhfr:108:S,3,113,Table 3 dhfr(108): Sensitive (wild type S) 3/113. Directly reported.
+PMID_15679556,PMID_15679556,dhfr:108:S/N,6,113,Table 3 dhfr(108): Mixed 6/113 encoded as heterozygous wild/mutant call.
+PMID_15679556,PMID_15679556,dhps:437:G,50,113,Table 3 dhps(437): Resistant (mutant 437G) 50/113. Text reports 44.2%; table lists 44.3% and n=50.
+PMID_15679556,PMID_15679556,dhps:437:A,46,113,Table 3 dhps(437): Sensitive (wild type A) 46/113. Directly reported.
+PMID_15679556,PMID_15679556,dhps:437:A/G,17,113,Table 3 dhps(437): Mixed 17/113 encoded as heterozygous wild/mutant call.

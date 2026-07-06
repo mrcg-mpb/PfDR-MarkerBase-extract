@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_16186171,PMID_16186171,Ghana,"Komfo Anokye Teaching Hospital (KATH), Kumasi",6.6975,-1.6244,"KATH hospital location in Kumasi, Ghana",Coordinates for Komfo Anokye Teaching Hospital in Kumasi. Single study site.,clinical_passive,2000-11-01,2001-02-28,2000-12-30,midpoint of stated collection window,"Collection November 2000-February 2001, end of high and beginning of low malaria season."

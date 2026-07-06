@@ -1,0 +1,2 @@
+study_id,survey_id,country_name,site_name,latitude,longitude,location_method,location_notes,sample_source,collection_start,collection_end,collection_day,time_method,time_notes
+PMID_15272415,PMID_15272415,Mali,Kidal district (5 nomadic camps),18.4411,1.4078,district/town centroid,"Survey conducted in 5 nomadic camps in the Kidal district, northern Mali. Coordinates set to Kidal town/district centroid; exact camp locations not reported.",community_household,1999-10-11,1999-10-18,1999-10-14,stated range,Surveys done 11-18 October 1999; collection_day set to midpoint.

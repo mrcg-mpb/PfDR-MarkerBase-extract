@@ -1,0 +1,13 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_15814601,PMID_15814601_controls,crt:76:T,26,49,Non-pregnant controls: 26 mutant of 49 genotyped.
+PMID_15814601,PMID_15814601_controls,crt:76:K,6,49,Non-pregnant controls: 6 pure wild-type of 49 genotyped.
+PMID_15814601,PMID_15814601_controls,crt:76:K/T,17,49,Non-pregnant controls: 17 mixed wild-type+mutant of 49 genotyped.
+PMID_15814601,PMID_15814601_pregnancy_peripheral,crt:76:T,47,62,During pregnancy: 47 mutant of 62 infected pregnant women.
+PMID_15814601,PMID_15814601_pregnancy_peripheral,crt:76:K,11,62,During pregnancy: 11 pure wild-type of 62.
+PMID_15814601,PMID_15814601_pregnancy_peripheral,crt:76:K/T,4,62,During pregnancy: 4 mixed of 62.
+PMID_15814601,PMID_15814601_delivery_peripheral,crt:76:T,50,58,"At delivery, peripheral blood: 50 mutant of 58."
+PMID_15814601,PMID_15814601_delivery_peripheral,crt:76:K,3,58,"At delivery, peripheral blood: 3 wild-type of 58."
+PMID_15814601,PMID_15814601_delivery_peripheral,crt:76:K/T,5,58,"At delivery, peripheral blood: 5 mixed of 58."
+PMID_15814601,PMID_15814601_delivery_placental,crt:76:T,57,67,"At delivery, placental blood: 57 mutant of 67."
+PMID_15814601,PMID_15814601_delivery_placental,crt:76:K,2,67,"At delivery, placental blood: 2 wild-type of 67."
+PMID_15814601,PMID_15814601_delivery_placental,crt:76:K/T,8,67,"At delivery, placental blood: 8 mixed of 67."

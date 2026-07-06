@@ -1,0 +1,4 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_19036751,PMID_19036751_congo_2006,dhfr:51_59_108:I_R_N,41,50,"CIRNI triple mutant, 82% of n=50 = 41 (Figure 1). Positions 51(N->I), 59(C->R), 108(S->N) all mutant."
+PMID_19036751,PMID_19036751_ghana_2004,dhfr:51_59_108:I_R_N,44,54,"CIRNI triple mutant, 81% of n=54 = 43.7 ~ 44 (Figure 1). Approximate; exact count not tabulated."
+PMID_19036751,PMID_19036751_kenya_1998,dhfr:51_59_108:I_R_N,15,55,"CIRNI triple mutant, 27% of n=55 = 14.85 ~ 15 (Figure 1). Approximate; exact count not tabulated."

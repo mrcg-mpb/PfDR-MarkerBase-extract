@@ -1,0 +1,3 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_19841150,PMID_19841150_rukara,dhps:437:G,354,365,"Text: codon 437 Gly present in 97% of Rukara isolates. Rukara total for pfdhps estimated at 365 from Table 1 total genotyped (131+56 CPG arm=187, 70+120 AQ arm=190; total=377). Denominator uncertain; used 365 as best estimate. 97% of ~365 = ~354. NOTE: percentage-derived count, denominator approximate."
+PMID_19841150,PMID_19841150_mashesha,dhps:437:G,286,358,"Text: codon 437 Gly present in 80% of Mashesha isolates. Mashesha total estimated ~358 (Table 2: 122+46=168 CPG, 158+20=178 AQ, total=346). Denominator uncertain; percentage-derived. 80% used."

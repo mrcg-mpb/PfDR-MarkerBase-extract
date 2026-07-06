@@ -1,0 +1,13 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16703518,PMID_16703518_kwamasimba_2003,crt:72_74_75_76:C_M_N_K,1,57,CVMNK single-haplotype infections from Table 1. Denominator = total infections genotyped (57). Only single-haplotype infections counted to avoid ambiguous allocation of mixed infections.
+PMID_16703518,PMID_16703518_kwamasimba_2003,crt:72_74_75_76:C_I_E_T,47,57,CVIET single-haplotype infections from Table 1.
+PMID_16703518,PMID_16703518_kwamasimba_2003,crt:72_74_75_76:S_M_N_T,0,57,SVMNT single-haplotype infections from Table 1 (none in 2003).
+PMID_16703518,PMID_16703518_kwamasimba_2004,crt:72_74_75_76:C_M_N_K,3,40,CVMNK single-haplotype infections from Table 1. Denominator = total infections genotyped (40).
+PMID_16703518,PMID_16703518_kwamasimba_2004,crt:72_74_75_76:C_I_E_T,16,40,CVIET single-haplotype infections from Table 1.
+PMID_16703518,PMID_16703518_kwamasimba_2004,crt:72_74_75_76:S_M_N_T,3,40,SVMNT single-haplotype infections from Table 1.
+PMID_16703518,PMID_16703518_mkokola_2003,crt:72_74_75_76:C_M_N_K,3,99,CVMNK single-haplotype infections from Table 1. Denominator = total infections genotyped (99).
+PMID_16703518,PMID_16703518_mkokola_2003,crt:72_74_75_76:C_I_E_T,63,99,CVIET single-haplotype infections from Table 1.
+PMID_16703518,PMID_16703518_mkokola_2003,crt:72_74_75_76:S_M_N_T,0,99,SVMNT single-haplotype infections from Table 1 (none in 2003).
+PMID_16703518,PMID_16703518_mkokola_2004,crt:72_74_75_76:C_M_N_K,3,123,CVMNK single-haplotype infections from Table 1. Denominator = total infections genotyped (123).
+PMID_16703518,PMID_16703518_mkokola_2004,crt:72_74_75_76:C_I_E_T,62,123,CVIET single-haplotype infections from Table 1.
+PMID_16703518,PMID_16703518_mkokola_2004,crt:72_74_75_76:S_M_N_T,3,123,SVMNT single-haplotype infections from Table 1.

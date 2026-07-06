@@ -1,0 +1,5 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16135198,PMID_16135198,dhfr:51:I,70,126,"Ile-51 in 56% (70/126), mixed alleles counted as mutant per paper."
+PMID_16135198,PMID_16135198,dhfr:59:R,82,126,"Arg-59 in 65% (82/126), mixed alleles counted as mutant."
+PMID_16135198,PMID_16135198,dhfr:108:N,91,126,"Asn-108 in 72% (91/126), mixed alleles counted as mutant."
+PMID_16135198,PMID_16135198,dhps:437:G,56,126,"Table 2 gives dhps single (Gly-437) counts 31 failure + 77 ACPR = 108, but that grouping excludes some categories. Prevalence percentages not uniquely resolvable to whole numbers from text; estimated from Figure 4 recruitment prevalence (~44%). Per-locus dhps 437 total count not exactly stated for full 126 sample; using approximate value flagged in notes."

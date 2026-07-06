@@ -1,0 +1,13 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_19708897,PMID_19708897,crt:74_75_76:I_E_T,62,66,93.9% (62/66) harboured pfcrt 74I-75E-76T; 4 isolates carried wild type MNK haplotype.
+PMID_19708897,PMID_19708897,crt:74_75_76:M_N_K,4,66,4 isolates carried wild type MNK haplotype (codons 74/75/76).
+PMID_19708897,PMID_19708897,crt:72:C,66,66,"pfcrt 72S allele not found in any sample; all wild type C at codon 72 (imputed wild type, all 66 characterized for crt 72)."
+PMID_19708897,PMID_19708897,mdr1:86:Y,45,66,"68.2% (45/66) carried pfmdr1 86Y; 21 of these were mixed wild type/mutant, counted as mutant per authors."
+PMID_19708897,PMID_19708897,dhfr:51:I,63,66,95.4% (63/66) carried dhfr 51I.
+PMID_19708897,PMID_19708897,dhfr:59:R,24,66,36.4% (24/66) carried dhfr 59R.
+PMID_19708897,PMID_19708897,dhfr:108:N,64,66,96.9% (64/66) carried dhfr 108N.
+PMID_19708897,PMID_19708897,dhps:436:A,34,66,51.5% (34/66) carried dhps 436A residue.
+PMID_19708897,PMID_19708897,dhps:437:G,61,66,92.4% (61/66) carried dhps 437G.
+PMID_19708897,PMID_19708897,dhps:540:K,66,66,"dhps 540 mutation not detected; all wild type K (imputed, codon 540 characterized in all 66)."
+PMID_19708897,PMID_19708897,dhps:581:A,66,66,"dhps 581 mutation not detected; all wild type A (imputed, codon 581 characterized in all 66)."
+PMID_19708897,PMID_19708897,dhps:613:A,66,66,"dhps 613 mutation not detected; all wild type A (imputed, codon 613 characterized in all 66)."

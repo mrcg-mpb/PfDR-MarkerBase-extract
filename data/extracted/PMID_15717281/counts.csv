@@ -1,0 +1,6 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_15717281,PMID_15717281,crt:76:T,185,190,Pretreatment (baseline): 185 of 190 distinguishable parasite strains carried pfcrt 76T (freq 0.974). Denominator 190 reflects distinguishable strains counting mixed infections; 4 pure 76K infections noted.
+PMID_15717281,PMID_15717281,crt:76:K,5,190,Baseline wild-type: 190-185=5 non-76T strains among distinguishable parasite strains (text notes 4 pure 76K infections; remaining derived from stated 185/190).
+PMID_15717281,PMID_15717281,mdr1:86:Y,140,189,"Table 1, Day 0 (pretreatment): 86Y pure = 140 of 189 isolates."
+PMID_15717281,PMID_15717281,mdr1:86:N,29,189,"Table 1, Day 0 (pretreatment): 86N pure = 29 of 189 isolates."
+PMID_15717281,PMID_15717281,mdr1:86:N/Y,20,189,"Table 1, Day 0 (pretreatment): mixed 86Y+86N = 20 of 189 isolates."

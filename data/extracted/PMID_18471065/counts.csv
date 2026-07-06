@@ -1,0 +1,27 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_18471065,PMID_18471065_kabale,dhfr:51:N,0,51,Table 1 wild-type 51 N 0/51 (Kabale)
+PMID_18471065,PMID_18471065_kabale,dhfr:51:I,51,51,Table 1 mutant 51 I 51/51 (Kabale)
+PMID_18471065,PMID_18471065_kabale,dhfr:59:C,6,51,"Table 1 wild-type 59 C 6/51 (Kabale). Note: 59R mutant reported 48/51; wild-type+mutant exceed denominator due to mixed calls, so 59R is not separately emitted for this survey to avoid violating variant_num<=total_num per variant grouping."
+PMID_18471065,PMID_18471065_kabale,dhfr:108:S,0,51,Table 1 wild-type 108 S 0/51 (Kabale)
+PMID_18471065,PMID_18471065_kabale,dhps:436:S,60,60,Table 1 wild-type 436 S 60/60 (Kabale); no mutations at 436
+PMID_18471065,PMID_18471065_kabale,dhps:436:A,0,60,"Table 1 mutant 436 A,C,F 0/60 (Kabale)"
+PMID_18471065,PMID_18471065_kabale,dhps:437:A,1,60,"Table 1 wild-type 437 A 1/60 (Kabale). 437G mutant reported 60/60; 1+60 exceeds 60 due to mixed calls, so 437G not separately emitted to avoid double-counting mixed samples."
+PMID_18471065,PMID_18471065_kabale,dhps:540:K,1,60,"Table 1 wild-type 540 K 1/60 (Kabale). 540E mutant reported 60/60; 1+60 exceeds 60 due to mixed calls, so 540E not separately emitted."
+PMID_18471065,PMID_18471065_kabale,dhps:581:A,44,60,"Table 1 wild-type 581 A 44/60 (Kabale). 581G mutant reported 27/60; 44+27=71 exceeds 60 due to mixed calls, so 581G not separately emitted."
+PMID_18471065,PMID_18471065_kabale,dhps:613:A,60,60,Table 1 wild-type 613 A 60/60 (Kabale); no mutations at 613
+PMID_18471065,PMID_18471065_kabale,dhps:613:S,0,60,"Table 1 mutant 613 S,T 0/60 (Kabale)"
+PMID_18471065,PMID_18471065_kabale,dhps:613:T,0,60,"Table 1 mutant 613 S,T 0/60 (Kabale)"
+PMID_18471065,PMID_18471065_rukungiri,dhfr:51:N,0,72,Table 1 wild-type 51 N 0/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhfr:51:I,72,72,Table 1 mutant 51 I 72/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhfr:59:C,3,72,"Table 1 wild-type 59 C 3/72 (Rukungiri). 59R mutant reported 70/72; 3+70=73 exceeds 72 due to mixed calls, so 59R not separately emitted."
+PMID_18471065,PMID_18471065_rukungiri,dhfr:108:S,0,72,Table 1 wild-type 108 S 0/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhps:436:S,72,72,Table 1 wild-type 436 S 72/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhps:436:A,0,72,"Table 1 mutant 436 A,C,F 0/72 (Rukungiri)"
+PMID_18471065,PMID_18471065_rukungiri,dhps:437:A,1,72,"Table 1 wild-type 437 A 1/72 (Rukungiri). 437G mutant reported 71/72; 1+71=72 fits denominator, mutant emitted separately below."
+PMID_18471065,PMID_18471065_rukungiri,dhps:437:G,71,72,Table 1 mutant 437 G 71/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhps:540:K,1,72,"Table 1 wild-type 540 K 1/72 (Rukungiri). 540E mutant reported 71/72; 1+71=72 fits, mutant emitted separately below."
+PMID_18471065,PMID_18471065_rukungiri,dhps:540:E,71,72,Table 1 mutant 540 E 71/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhps:581:A,41,72,"Table 1 wild-type 581 A 41/72 (Rukungiri). 581G mutant reported 33/72; 41+33=74 exceeds 72 due to mixed calls, so 581G not separately emitted."
+PMID_18471065,PMID_18471065_rukungiri,dhps:613:A,72,72,Table 1 wild-type 613 A 72/72 (Rukungiri)
+PMID_18471065,PMID_18471065_rukungiri,dhps:613:S,0,72,"Table 1 mutant 613 S,T 0/72 (Rukungiri)"
+PMID_18471065,PMID_18471065_rukungiri,dhps:613:T,0,72,"Table 1 mutant 613 S,T 0/72 (Rukungiri)"

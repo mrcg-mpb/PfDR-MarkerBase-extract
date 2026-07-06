@@ -1,0 +1,27 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_9735930,PMID_9735930_1995_d0,dhfr:51:I,34,45,51-isoleucine (mutant) 34/45. Companion 51-asparagine wild type also reported (14/45) but mixed infections mean the two counts sum >45; only the mutant allele retained to satisfy per-position sum<=total constraint.
+PMID_9735930,PMID_9735930_1995_d0,dhfr:59:R,41,45,59-arginine (mutant) 41/45. Companion 59-cysteine (25/45) not stored because mixed calls make the sum >45.
+PMID_9735930,PMID_9735930_1995_d0,dhfr:108:N,44,45,108-asparagine (mutant) 44/45. 108-threonine 0. Companion 108-serine (8/45) not stored because mixed calls make the sum >45.
+PMID_9735930,PMID_9735930_1995_d0,dhps:436:A,9,45,436-alanine (mutant) 9/45. Companion 436-serine (45/45) not stored: mixed alanine/serine calls make the sum >45. 436-phenylalanine (not a curated target) 0.
+PMID_9735930,PMID_9735930_1995_d0,dhps:437:G,37,45,437-glycine (mutant) 37/45. Companion 437-alanine (26/45) not stored: mixed calls make the sum >45.
+PMID_9735930,PMID_9735930_1995_d0,dhps:540:E,36,45,540-glutamic acid (mutant) 36/45. Companion 540-lysine (25/45) not stored: mixed calls make the sum >45.
+PMID_9735930,PMID_9735930_1995_d0,dhps:581:A,45,45,581-alanine (wild type) 45/45; 581-glycine 0. No mixed calls at this position.
+PMID_9735930,PMID_9735930_1995_d0,dhps:613:A,45,45,613-alanine (wild type) 45/45; no 613-serine or 613-threonine detected.
+PMID_9735930,PMID_9735930_1996_d0,dhfr:51:I,27,27,"51-isoleucine 27/27; 51-asparagine 0. Wild type absent, so single mutant row exactly equals total."
+PMID_9735930,PMID_9735930_1996_d0,dhfr:59:R,25,27,59-arginine (mutant) 25/27. Companion 59-cysteine (9/27) not stored: mixed calls make the sum >27.
+PMID_9735930,PMID_9735930_1996_d0,dhfr:108:N,27,27,108-asparagine 27/27; 108-threonine 0. Companion 108-serine (1/27) not stored: mixed calls make the sum >27.
+PMID_9735930,PMID_9735930_1996_d0,dhps:436:A,5,27,436-alanine (mutant) 5/27. Companion 436-serine (27/27) not stored: mixed calls make the sum >27.
+PMID_9735930,PMID_9735930_1996_d0,dhps:437:G,23,27,437-glycine (mutant) 23/27. Companion 437-alanine (18/27) not stored: mixed calls make the sum >27.
+PMID_9735930,PMID_9735930_1996_d0,dhps:540:E,23,27,540-glutamic acid (mutant) 23/27. Companion 540-lysine (17/27) not stored: mixed calls make the sum >27.
+PMID_9735930,PMID_9735930_1996_d0,dhps:581:A,27,27,581-alanine (wild type) 27/27; 581-glycine 0.
+PMID_9735930,PMID_9735930_1996_d0,dhps:613:A,27,27,613-alanine 27/27; no serine/threonine.
+PMID_9735930,PMID_9735930_1996_d7,dhfr:51:I,26,26,51-isoleucine 26/26; 51-asparagine 0. No mixed calls at day 7.
+PMID_9735930,PMID_9735930_1996_d7,dhfr:59:R,21,26,59-arginine 21/26. No mixed calls at day 7.
+PMID_9735930,PMID_9735930_1996_d7,dhfr:59:C,5,26,"59-cysteine (wild type) 5/26. At day 7 no mixed infections were seen, so 21+5=26 reconciles; both alleles stored."
+PMID_9735930,PMID_9735930_1996_d7,dhfr:108:N,26,26,108-asparagine 26/26; 108-threonine 0; 108-serine 0. Single mutant row equals total.
+PMID_9735930,PMID_9735930_1996_d7,dhps:436:A,0,26,436-alanine 0/26 (selected out at day 7).
+PMID_9735930,PMID_9735930_1996_d7,dhps:436:S,26,26,"436-serine 26/26. At day 7 no mixed calls, so 0+26=26 reconciles; both alleles stored."
+PMID_9735930,PMID_9735930_1996_d7,dhps:437:G,22,26,"437-glycine (mutant) 22/26. Companion 437-alanine (4/26) not stored: paper reports 22 glycine + 4 alanine = 26, but stored only the mutant to be consistent; see README (day 7 437 could store both since 22+4=26)."
+PMID_9735930,PMID_9735930_1996_d7,dhps:540:E,22,26,540-glutamic acid (mutant) 22/26. Companion 540-lysine 4/26 reconciles (22+4=26) but only mutant stored for consistency; see README.
+PMID_9735930,PMID_9735930_1996_d7,dhps:581:A,26,26,581-alanine 26/26; 581-glycine 0.
+PMID_9735930,PMID_9735930_1996_d7,dhps:613:A,26,26,613-alanine 26/26; no serine/threonine.

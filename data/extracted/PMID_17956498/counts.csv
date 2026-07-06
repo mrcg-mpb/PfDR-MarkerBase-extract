@@ -1,0 +1,7 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_17956498,PMID_17956498,dhfr:51:I,78,80,Table 4: dhfr codon 51 Asn51Ile 78/80 (97.5%).
+PMID_17956498,PMID_17956498,dhfr:59:R,53,80,Table 4: dhfr codon 59 Cys59Arg 53/80 (66.25%).
+PMID_17956498,PMID_17956498,dhfr:108:N,79,80,Table 4: dhfr codon 108 Ser108Asn 79/80 (98.8%).
+PMID_17956498,PMID_17956498,dhps:436:A,10,80,Table 4: dhps codon 436 Ser436Ala 10/80 (12.5%).
+PMID_17956498,PMID_17956498,dhps:437:G,68,80,Table 4: dhps codon 437 Ala437Gly 68/80 (85%).
+PMID_17956498,PMID_17956498,dhps:540:K,80,80,"Lys540Glu substitution stated not found among the 80 sequenced isolates; dhps 540 was genotyped (Methods list codons 436,437,540,581,613). Wild type imputed as N=80."

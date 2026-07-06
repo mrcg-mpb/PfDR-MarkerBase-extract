@@ -1,0 +1,3 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_18682531,PMID_18682531_venous,crt:76:K,42,69,Table 2 text: 42 of 69 individuals harboured wild-type 76K in the periphery. Represents presence of wild-type allele (may include mixed infections). Denominator 69 corresponds to venous samples with data for matched comparison.
+PMID_18682531,PMID_18682531_placenta,crt:76:K,10,59,Text: 10 of 59 individuals harboured wild-type 76K in the placenta. Represents presence of wild-type allele. Denominator 59 as stated in text (differs from 69 placentas sequenced; used the explicitly paired figure).

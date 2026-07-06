@@ -1,0 +1,9 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_15272415,PMID_15272415,crt:76:T,45,57,Mutant 76T in 45/57 (79%) infected patients.
+PMID_15272415,PMID_15272415,crt:76:K,11,57,Wild-type K76 in 11/57 (19%) infected patients.
+PMID_15272415,PMID_15272415,crt:76:K/T,1,57,Mixed wild-type and mutant forms detected in 1 patient. 45+11+1=57.
+PMID_15272415,PMID_15272415,dhfr:108:N,10,22,S108N prevalence 45% among 22 fully-typed samples; 0.45*22=9.9 -> 10.
+PMID_15272415,PMID_15272415,dhfr:59:R,8,22,C59R prevalence 35% among 22 samples; 0.35*22=7.7 -> 8 (approx).
+PMID_15272415,PMID_15272415,dhfr:51:I,7,22,N51I prevalence 30% among 22 samples; 0.30*22=6.6 -> 7 (approx).
+PMID_15272415,PMID_15272415,dhps:437:G,1,22,dhps A437G detected in 1 patient (along with dhfr triple) among the 22 fully-typed samples.
+PMID_15272415,PMID_15272415,dhps:540:E,0,22,K540E: quintuple mutant not detected in any sample; no K540E reported. Wild-type imputed for all 22 fully-typed samples (dhps 540 was assayed as part of the 5-marker panel).

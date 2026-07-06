@@ -1,0 +1,5 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16206082,PMID_16206082_cases,crt:76:T,104,162,pfcrt 76T prevalence 63.9% among SM cases; denominator = 162 cases with 3-locus data. 0.639*162=103.5 ~ 104. Approximated from percentage.
+PMID_16206082,PMID_16206082_cases,mdr1:86:Y,74,162,pfmdr1 86Y prevalence 45.4% among SM cases; 0.454*162=73.5 ~ 74. Approximated from percentage; denominator uncertain (3-locus data n=162 assumed).
+PMID_16206082,PMID_16206082_controls,crt:76:T,72,135,pfcrt 76T prevalence 53.7% among matched controls; 135 controls matched with 3-locus data. 0.537*135=72.5 ~ 72. Approximated from percentage.
+PMID_16206082,PMID_16206082_controls,mdr1:86:Y,57,135,pfmdr1 86Y prevalence 42.0% among controls; 0.420*135=56.7 ~ 57. Approximated from percentage; denominator uncertain (matched 3-locus n=135 assumed).

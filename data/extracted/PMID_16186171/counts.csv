@@ -1,0 +1,3 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16186171,PMID_16186171,crt:76:T,122,139,Pfcrt T76 (mutant) in 122 of 139 genotyped patients. No mixed genotypes observed.
+PMID_16186171,PMID_16186171,crt:76:K,17,139,Pfcrt K76 (wild type) in 17 of 139 genotyped patients.

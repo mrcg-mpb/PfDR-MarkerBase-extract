@@ -1,0 +1,6 @@
+study_id,survey_id,variant_string,variant_num,total_num,notes
+PMID_16235185,PMID_16235185,mdr1:86:Y,30,34,86Y exclusively detected in 30 samples; plus 3 mixed N86/Y86 samples not counted here (overall 86Y prevalence reported as 89%). Denominator = 34 samples genotyped for codon 86.
+PMID_16235185,PMID_16235185,mdr1:86:N,1,34,"Only 1 sample exclusively N86 (wild type). 3 additional samples were mixed N86/Y86 and are not uniquely allocable, so excluded. Reported overall N86 prevalence 11%."
+PMID_16235185,PMID_16235185,mdr1:86:N/Y,3,34,3 mixed samples with both N86 and Y86 alleles detected. Denominator = 34 genotyped.
+PMID_16235185,PMID_16235185,crt:76:T,33,34,All but one of the 34 samples carried the pfcrt K76T mutation (33/34). Wild-type K76 imputed for the remaining 1 sample.
+PMID_16235185,PMID_16235185,crt:76:K,1,34,One K76 (wild-type) isolate; text states 'all but one carried the pfcrt K76T mutation'. Wild type imputed from stated 33/34 mutant among 34 genotyped.

@@ -16,7 +16,7 @@ human only when it genuinely needs a decision.
 
 <!-- ROSTER:START -->
 
-**100 paper(s) · estimated spend $26.68** (eligibility $17.41 · extraction $9.26) · updated 2026-07-07
+**100 paper(s) · estimated spend $26.68** (eligibility $17.41 · extraction $9.26) · updated 2026-07-08
 
 | id | source | status | eligible | confidence | duplicate_risk | needs_supplement | spec_version | first_seen | last_assessed | supp_attempts | supplement_fp | elig_model | elig_tok_in | elig_tok_out | extract_model | extract_tok_in | extract_tok_out | notes | est_$ |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
